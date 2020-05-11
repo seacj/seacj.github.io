@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>声纹识别 - 标签 - 草祭の博客</title>
+        <link>https://seacj.github.io/tags/%E5%A3%B0%E7%BA%B9%E8%AF%86%E5%88%AB/</link>
+        <description>声纹识别 - 标签 - 草祭の博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
+            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Thu, 02 Jan 2020 20:13:20 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E5%A3%B0%E7%BA%B9%E8%AF%86%E5%88%AB/" rel="self" type="application/rss+xml" /><item>
+    <title>声纹识别X-Vector</title>
+    <link>https://seacj.github.io/posts/x-vector/</link>
+    <pubDate>Thu, 02 Jan 2020 20:13:20 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/x-vector/</guid>
+    <description><![CDATA[背景 声纹识别上x-vector被作为很多赛事的baseline使用，包括aishell2018、ASVspoof2019。介绍x-vecto]]></description>
+</item></channel>
+</rss>

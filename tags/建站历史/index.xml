@@ -1,0 +1,50 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>建站历史 - 标签 - 草祭の博客</title>
+        <link>https://seacj.github.io/tags/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2/</link>
+        <description>建站历史 - 标签 - 草祭の博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
+            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Wed, 08 Apr 2020 16:22:17 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2/" rel="self" type="application/rss+xml" /><item>
+    <title>建站历史006</title>
+    <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2006/</link>
+    <pubDate>Wed, 08 Apr 2020 16:22:17 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2006/</guid>
+    <description><![CDATA[修改文章分类 修改字体大小（修改LeaveIt\assets\css_common_page\post.scss中的font-size） 新增音]]></description>
+</item><item>
+    <title>建站历史005</title>
+    <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2005/</link>
+    <pubDate>Wed, 26 Feb 2020 20:30:05 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2005/</guid>
+    <description><![CDATA[修改阅读进度条外观 在主页增加邮箱联系方式 删除Tool页面 修改引用内容的背景色 同时部署 Hugo 静态博客到 Netlify 和 Github Pages seacj.netlify.com 在阿里云新增4个国际DNS服务器(]]></description>
+</item><item>
+    <title>建站历史004</title>
+    <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2004/</link>
+    <pubDate>Fri, 20 Sep 2019 21:46:59 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2004/</guid>
+    <description><![CDATA[添加即使通讯 修改主页 添加Tool页面 相关链接 添加即使通讯 博客添加在线通讯 LeaveIt主题配置 LeaveIt Hugo Theme 作者github]]></description>
+</item><item>
+    <title>建站历史003</title>
+    <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2003/</link>
+    <pubDate>Fri, 23 Aug 2019 12:43:09 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2003/</guid>
+    <description><![CDATA[添加侧边导航栏 修改代码高亮 添加阅读进度条 相关链接 侧边导航栏 Hugo博客侧边导航栏 代码高亮 代码高亮 添加阅读进度条 为 LeaveIt 主题添加阅读进度条]]></description>
+</item><item>
+    <title>建站历史002</title>
+    <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2002/</link>
+    <pubDate>Mon, 01 Jul 2019 17:58:52 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2002/</guid>
+    <description><![CDATA[添加鼠标跟随的鲸鱼特效 添加访客人次计数功能(相同访客不重复累加) 绑定价值199RMB的域名yyqx.online/ 添加网页图标 相关链接 鲸鱼特]]></description>
+</item><item>
+    <title>建站历史001</title>
+    <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2001/</link>
+    <pubDate>Sun, 30 Jun 2019 13:23:35 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2001/</guid>
+    <description><![CDATA[建站有一段时间了，中途其实折腾了挺多东西的，特别是在 hugo-theme-learn 这个主题上折腾了太久，现在换成 LeaveIt 感觉好看多了。 &ldquo;博客搭建&quot;这个t]]></description>
+</item></channel>
+</rss>

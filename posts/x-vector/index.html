@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>声纹识别X-Vector - 草祭の博客</title>
+        <meta name="Description" content=""><meta property="og:title" content="声纹识别X-Vector" />
+<meta property="og:description" content="背景 声纹识别上x-vector被作为很多赛事的baseline使用，包括aishell2018、ASVspoof2019。介绍x-vecto" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seacj.github.io/posts/x-vector/" />
+<meta property="article:published_time" content="2020-01-02T20:13:20+08:00" />
+<meta property="article:modified_time" content="2020-01-02T20:13:20+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="声纹识别X-Vector"/>
+<meta name="twitter:description" content="背景 声纹识别上x-vector被作为很多赛事的baseline使用，包括aishell2018、ASVspoof2019。介绍x-vecto"/>
+<meta name="application-name" content="草祭の博客">
+<meta name="apple-mobile-web-app-title" content="草祭の博客"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/x-vector/" /><link rel="prev" href="https://seacj.github.io/posts/%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91/" /><link rel="next" href="https://seacj.github.io/posts/%E7%BD%97%E6%8A%80k480%E8%93%9D%E7%89%99%E9%94%AE%E7%9B%98%E4%BD%93%E9%AA%8C/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "声纹识别X-Vector",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seacj.github.io\/posts\/x-vector\/"
+        },"genre": "posts","keywords": "声纹识别, 机器学习","wordcount":  2646 ,
+        "url": "https:\/\/seacj.github.io\/posts\/x-vector\/","datePublished": "2020-01-02T20:13:20+08:00","dateModified": "2020-01-02T20:13:20+08:00","author": {
+                "@type": "Person",
+                "name": "草祭"
+            },"description": ""
+    }
+    </script></head>
+    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="草祭の博客">草祭の博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/" title="About"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="草祭の博客">草祭の博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="About">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">声纹识别X-Vector</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>草祭</a></span>&nbsp;
+                    <span class="post-category">收录于<a href="/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/">
+                                <i class="far fa-folder fa-fw"></i>编程-ღ-技术
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-01-02>2020-01-02</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 2646 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 6 分钟&nbsp;<span id="/posts/x-vector/" class="leancloud_visitors" data-flag-title="声纹识别X-Vector">
+                        <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#背景">背景</a></li>
+      </ul>
+    </li>
+    <li><a href="#核心思路">核心思路</a></li>
+    <li><a href="#x-vector系统">x-vector系统</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#step-1-time-delay-neural-networks-tdnn">Step 1. Time Delay Neural Networks (TDNN)</a></li>
+            <li><a href="#step-2-statistics-pooling">Step 2. Statistics pooling</a></li>
+            <li><a href="#step-3-extract-embedding">Step 3. extract embedding</a></li>
+            <li><a href="#step-4-plda-backend">Step 4. PLDA backend</a>
+              <ul>
+                <li><a href="#建模">建模</a></li>
+                <li><a href="#训练">训练</a></li>
+                <li><a href="#测试">测试</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#论文结论">论文结论</a></li>
+      </ul>
+    </li>
+    <li><a href="#参考资料">参考资料</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="背景">背景</h2>
+<p>声纹识别上x-vector被作为很多赛事的baseline使用，包括aishell2018、ASVspoof2019。介绍x-vector的文章主要有[1] [2]两篇，[1]介绍x-vector的整体和细节部分，[2]对实验进行了补充分析。</p>
+<p>Prerequisites： TDNN，embedding。</p>
+<h1 id="核心思路">核心思路</h1>
+<p>将系统分成两个部分：</p>
+<ol>
+<li>Embedding：将<strong>不定长的语音</strong>通过加噪和加混响进行数据扩充，然后经由深度神经网络映射成<strong>定长的向量</strong>，将映射之后的向量称为x-vector。</li>
+<li>Compare pairs of embeddings：采用<strong>PLDA</strong>。</li>
+</ol>
+<h1 id="x-vector系统">x-vector系统</h1>
+<p><strong>输入</strong>：24维filterbanks(在[1]中是20维MFCC)，帧长25ms，经过 a. 3秒滑动窗口的均值归一化 b. speech activity detection(SAD)去除没有说话人语音的帧 处理。</p>
+<p><strong>系统框架</strong>：</p>
+<p><img src="https://pic.downk.cc/item/5e0edc9076085c328986ab40.jpg" alt="Deep Neural Network Embeddings" style="zoom: 50%;" /></p>
+<p><strong>系统参数</strong>:</p>
+<p><img src="https://pic.downk.cc/item/5e0edcec76085c328986b5a9.jpg" alt="参数" style="zoom:50%;" /></p>
+<h3 id="step-1-time-delay-neural-networks-tdnn">Step 1. Time Delay Neural Networks (TDNN)</h3>
+<p><em>系统框架</em>图中的Statistics Pooling之前的部分就是TDNN，下图是TDNN的示意图，来源为 [3]。</p>
+<p><img src="https://pic.downk.cc/item/5e0f003e76085c32898bff8f.jpg" alt="TDNN示意图" style="zoom: 50%;" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://pic.downk.cc/item/5e0f368176085c328992ff87.jpg"
+        data-srcset="https://pic.downk.cc/item/5e0f368176085c328992ff87.jpg, https://pic.downk.cc/item/5e0f368176085c328992ff87.jpg 1.5x, https://pic.downk.cc/item/5e0f368176085c328992ff87.jpg 2x"
+        data-sizes="auto"
+        alt="TDNN"
+        title="TDNN" /></p>
+<p>根据<em>系统参数</em>有如下图的TDNN：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://pic.downk.cc/item/5e0f2c9276085c3289918c4c"
+        data-srcset="https://pic.downk.cc/item/5e0f2c9276085c3289918c4c, https://pic.downk.cc/item/5e0f2c9276085c3289918c4c 1.5x, https://pic.downk.cc/item/5e0f2c9276085c3289918c4c 2x"
+        data-sizes="auto"
+        alt="根据系统绘制的TDNN"
+        title="根据系统绘制的TDNN" /></p>
+<p>根据<em>系统参数</em>所示，frame5的output是1500，因此每一次TDNN的输入都是15帧，输出都是1500维的向量。</p>
+<p>对语音每15帧提取一次1500维的向量，如果输入的语音有T帧长，那么最终就能得到T个1500维的向量。</p>
+<p>p.s. 如果说输入的语音特征总共有T帧，在边缘不补零的情况下，输出是T-2*7帧，而不是刚好T帧。这里说得到T个向量是为了与论文一致，后文也将沿用论文的说法。(p.s.具体实现的时候可以用dilation，可参见<a href="https://github.com/cvqluu/TDNN" target="_blank" rel="noopener noreffer">代码</a>)</p>
+<h3 id="step-2-statistics-pooling">Step 2. Statistics pooling</h3>
+<p>对这T个向量计算均值和方差(因为每个1500维的向量都是从一个15帧的数据提取的，这样能够集合不同时间上的信息)，将均值和方差合并起来，则得到一个2x1500=3000维的向量。</p>
+<p>与<em>系统框架</em>所示，pooling之后，使用两层全连接层，最后softmax之后的输出长度是说话人的数量K(p.s.在[2]中说话人数量的符号是N，为了与损失函数公式符号保持一致，这里统一用K表示说话人数量)。</p>
+<p>模型的损失函数为下式的多分类交叉熵：</p>
+<p><img src="https://pic.downk.cc/item/5e0df59976085c32896af6ee.jpg" alt="损失函数" style="zoom: 67%;" /></p>
+<p>其中，有K个说话人，每人说了N个片段(segment)。当对说话人片段n打上的标签是k时，$d_{n k} $是1，否则为0。</p>
+<p>第n段语音的loss计算可以用以下的表格表示：</p>
+<table>
+<thead>
+<tr>
+<th>*</th>
+<th>说话人A</th>
+<th>说话人B</th>
+<th>说话人K</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Label</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Pred</td>
+<td>0.3</td>
+<td>0.6</td>
+<td>0.1</td>
+</tr>
+</tbody>
+</table>
+<p>$$
+\text {loss}=-(0 \times \log (0.3)+1 \times \log (0.6)+0 \times \log (0.1)
+$$</p>
+<h3 id="step-3-extract-embedding">Step 3. extract embedding</h3>
+<p>神经网络并不仅仅是一个分类器，而是一个特征提取器和分类器的结合，每一层都有极强的特征提取能力。因此可以将模型的一部分作为特征提取器，也就是embeddings。</p>
+<p>在训练完前述模型之后，截取模型的前一部分。截取哪部分要考量两点：</p>
+<ol>
+<li>选取能够利用整段语音信息的部分(所以选取pooling之后的部分) 。</li>
+<li>输出不宜过长(pooling之后的输出结果的长度为3000，所以选择经过全连接层的，输出结果长度为512)。</li>
+</ol>
+<ul>
+<li>
+<p>如<em>系统参数</em>所示，文献[1]选取segment6的输出作为embeddings。</p>
+</li>
+<li>
+<p>如<em>系统框架</em>所示，文献[2]选取了两种embedding方法进行对比，并增加了联合两种embedding的方法(<code> Instead of concatenating embeddingstogether,wecomputeseparatePLDAbackendsfor each embedding, and average the scores</code>)，效果如下图：</p>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://pic.downk.cc/item/5e0f426e76085c328994663c.jpg"
+        data-srcset="https://pic.downk.cc/item/5e0f426e76085c328994663c.jpg, https://pic.downk.cc/item/5e0f426e76085c328994663c.jpg 1.5x, https://pic.downk.cc/item/5e0f426e76085c328994663c.jpg 2x"
+        data-sizes="auto"
+        alt="对比embedding"
+        title="对比embedding" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://pic.downk.cc/item/5e0f43ca76085c3289948b09.jpg"
+        data-srcset="https://pic.downk.cc/item/5e0f43ca76085c3289948b09.jpg, https://pic.downk.cc/item/5e0f43ca76085c3289948b09.jpg 1.5x, https://pic.downk.cc/item/5e0f43ca76085c3289948b09.jpg 2x"
+        data-sizes="auto"
+        alt="跨语言对比"
+        title="跨语言对比" /></p>
+<p>结论：1. 测试语音比较长时，i-vector的优势比较明显；2. 测试语音在5-20s时，dnn效果较好；3. embedding的综合要比只用单个embedding好；4. dnn对out of domain 的效果优于i-vector</p>
+<h3 id="step-4-plda-backend">Step 4. PLDA backend</h3>
+<p>PLDA(Probabilistic Linear Discriminant Analysis)是一种<strong>信道补偿算法</strong>，号称概率形式的LDA算法，PLDA算法的信道补偿能力比LDA更好，已经成为目前最好的信道补偿算法。</p>
+<p>利用前述的embeddings训练PLDA模型, 使用PLDA的方法和i-vector是一样的。具体做法如下：</p>
+<h4 id="建模">建模</h4>
+<p>定义第i个说话人的第j条语音为x<sub>ij</sub>，然后定义x<sub>ij</sub>的生成模型为$x_{i j}=\mu+F h_{i}+G w_{i j}+\epsilon_{i j}$。</p>
+<p>模型分为两部分：</p>
+<ol>
+<li>信号部分：$\mu+F h_{i}$，只与说话人身份有关，该项描述了**个体之间**的差异。</li>
+<li>噪声部分：$G w_{i j}+\epsilon_{i j}$，同一个人每次说话也会有差异，描述了**个体内部**的差异。</li>
+</ol>
+<p>$\mu$是全体训练数据的平均值；</p>
+<p><strong>F</strong>可以看做是身份空间，包含了可以用来表示各种身份的基底；</p>
+<p>$h_i$就可以看做是一个人的身份(或者是人物在身份空间中的位置)；</p>
+<p><strong>G</strong>可以看做是误差空间，包含了可以用来表示同一身份不同变化的基底；</p>
+<p>$w_{ij}$表示的是在误差空间中的位置；</p>
+<p>$\epsilon_{i j}$ 用来表示随机误差，该项为零均高斯分布，方差为 Σ。</p>
+<p>由于我们只关心区分说话人，所以并不需要计算误差空间，所以可以把噪声部分的两项合并，则得到$X_{i j}=\mu+F h_{i}+\epsilon_{i j}$，其中$\epsilon$~N(0, Σ),$h_i$~N(0,1)。</p>
+<h4 id="训练">训练</h4>
+<p>训练PLDA模型，就是通过训练数据估计出参数$\phi$和Σ。估计这两个参数的方法是<strong>经典EM算法迭代求解</strong>，即猜（E-step)-反思（M-step）,重复。</p>
+<h4 id="测试">测试</h4>
+<p>模型测试阶段的思想是使用对数似然比来计算得分：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://img-blog.csdn.net/20150804193441304"
+        data-srcset="https://img-blog.csdn.net/20150804193441304, https://img-blog.csdn.net/20150804193441304 1.5x, https://img-blog.csdn.net/20150804193441304 2x"
+        data-sizes="auto"
+        alt="测试模型公式"
+        title="测试模型公式" /></p>
+<p>n1和n2分别是两个语音的x-vector(或i-vector)矢量，这两条语音来自同一空间的假设为Hs，来自不同的空间的假设为Hd。</p>
+<p>其中p(n1, n2 | hs)为两条语音来自同一空间的似然函数；</p>
+<p>p(n1 | hd)，p(n2 | hd)分别为n1和n2来子不同空间的似然函数。通过计算对数似然比，就能衡量两条语音的相似程度。</p>
+<p>得分越高，两条语音属于同一说话人的可能性越大。</p>
+<p>具体的PLDA得分计算也有不同的实现，[4]中介绍了在i-vector上用的Gaussian PLDA(GPLDA)。</p>
+<h2 id="论文结论">论文结论</h2>
+<p>文献[2]主要是对数据扩充对不同模型的影响进行了对比分析，性能结果如下图：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://pic.downk.cc/item/5e0f453a76085c328994b141.jpg"
+        data-srcset="https://pic.downk.cc/item/5e0f453a76085c328994b141.jpg, https://pic.downk.cc/item/5e0f453a76085c328994b141.jpg 1.5x, https://pic.downk.cc/item/5e0f453a76085c328994b141.jpg 2x"
+        data-sizes="auto"
+        alt="各模型性能对比"
+        title="各模型性能对比" /></p>
+<p>文献[2]的结论：</p>
+<ol>
+<li>
+<p>x-vector取得了比另外两种ivector更优异的效果，尤其是在out-domain（Cantonese）上保持了优势；</p>
+</li>
+<li>
+<p>本文所提出的data augmentation 可以大大减少EER，同时data augmentation在xvector上效果最好；</p>
+</li>
+<li>
+<p>PLDA aug 或者extractor aug 在三种模型上都有所改进，但是二者结合取得的效果最好；</p>
+</li>
+</ol>
+<blockquote>
+<h1 id="参考资料">参考资料</h1>
+<ul>
+<li>[1] Snyder D, Garcia-Romero D, Povey D, et al. Deep Neural Network Embeddings for Text-Independent Speaker Verification[C]//Interspeech. 2017: 999-1003.</li>
+<li>[2] Snyder D, Garcia-Romero D, Sell G, et al. X-vectors: Robust dnn embeddings for speaker recognition[C]//2018 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). IEEE, 2018: 5329-5333.</li>
+<li>[3] Peddinti V, Povey D, Khudanpur S. A time delay neural network architecture for efficient modeling of long temporal contexts[C]//Sixteenth Annual Conference of the International Speech Communication Association. 2015.</li>
+<li>[4] Garcia-Romero D, Espy-Wilson C Y. Analysis of i-vector length normalization in speaker recognition systems[C]//Twelfth Annual Conference of the International Speech Communication Association. 2011.</li>
+<li>Embedding的优势 <a href="https://towardsdatascience.com/deep-learning-4-embedding-layers-f9a02d55ac12">https://towardsdatascience.com/deep-learning-4-embedding-layers-f9a02d55ac12</a></li>
+<li>Embedding的讲解(以NLP为例) <a href="https://zhuanlan.zhihu.com/p/34975871">https://zhuanlan.zhihu.com/p/34975871</a></li>
+<li>TDNN相关资料 <a href="https://www.jianshu.com/p/0207536ebc6c">https://www.jianshu.com/p/0207536ebc6c</a></li>
+<li>交叉熵相关 <a href="https://blog.csdn.net/tsyccnh/article/details/79163834">https://blog.csdn.net/tsyccnh/article/details/79163834</a></li>
+<li>PLDA算法解释 1. <a href="https://blog.csdn.net/xmu_jupiter/article/details/47281211">https://blog.csdn.net/xmu_jupiter/article/details/47281211</a> 2. <a href="https://blog.csdn.net/shuzfan/article/details/51672050">https://blog.csdn.net/shuzfan/article/details/51672050</a> 3. <a href="https://blog.csdn.net/weixin_38206214/article/details/81115275">https://blog.csdn.net/weixin_38206214/article/details/81115275</a></li>
+</ul>
+</blockquote>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>本文于 2020-01-02 更新</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%A3%B0%E7%BA%B9%E8%AF%86%E5%88%AB/">声纹识别</a>,&nbsp;<a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91/" class="prev" rel="prev" title="谓词逻辑"><i class="fas fa-angle-left fa-fw"></i>谓词逻辑</a>
+            <a href="/posts/%E7%BD%97%E6%8A%80k480%E8%93%9D%E7%89%99%E9%94%AE%E7%9B%98%E4%BD%93%E9%AA%8C/" class="next" rel="next" title="罗技K480蓝牙键盘の体验">罗技K480蓝牙键盘の体验<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.6"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript">
+    window.config = {"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{"valine":{"appId":"xsBQ6wXUkm1km876o5DMLW4R-gzGzoHsz","appKey":"5H8DU1HXMV5Xg4PRuahFsNqU","avatar":"mm","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-facebook@5.0.1/img/facebook/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":null,"highlight":true,"lang":"zh-cn","placeholder":"说点什么吧...","recordIP":null,"visitor":true}},"headerMode":{"desktop":null,"mobile":null},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};
+</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

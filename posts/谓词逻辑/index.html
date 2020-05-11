@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>谓词逻辑 - 草祭の博客</title>
+        <meta name="Description" content=""><meta property="og:title" content="谓词逻辑" />
+<meta property="og:description" content="题记 由于有些東西是命题逻辑没办法表示的，所以引出谓词逻辑，需要说明的是不管是命题逻辑也好，谓词逻辑也好，只是逻辑学中被广泛使用的其中的分支而" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seacj.github.io/posts/%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91/" />
+<meta property="article:published_time" content="2019-12-15T18:07:01+08:00" />
+<meta property="article:modified_time" content="2019-12-15T18:07:01+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="谓词逻辑"/>
+<meta name="twitter:description" content="题记 由于有些東西是命题逻辑没办法表示的，所以引出谓词逻辑，需要说明的是不管是命题逻辑也好，谓词逻辑也好，只是逻辑学中被广泛使用的其中的分支而"/>
+<meta name="application-name" content="草祭の博客">
+<meta name="apple-mobile-web-app-title" content="草祭の博客"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91/" /><link rel="prev" href="https://seacj.github.io/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E7%9A%84%E8%AF%AD%E4%B9%89/" /><link rel="next" href="https://seacj.github.io/posts/x-vector/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "谓词逻辑",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seacj.github.io\/posts\/%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91\/"
+        },"genre": "posts","keywords": "计算机科学中的逻辑学, 数学","wordcount":  1060 ,
+        "url": "https:\/\/seacj.github.io\/posts\/%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91\/","datePublished": "2019-12-15T18:07:01+08:00","dateModified": "2019-12-15T18:07:01+08:00","author": {
+                "@type": "Person",
+                "name": "草祭"
+            },"description": ""
+    }
+    </script></head>
+    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="草祭の博客">草祭の博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/" title="About"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="草祭の博客">草祭の博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="About">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">谓词逻辑</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>草祭</a></span>&nbsp;
+                    <span class="post-category">收录于<a href="/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/">
+                                <i class="far fa-folder fa-fw"></i>编程-ღ-技术
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-12-15>2019-12-15</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 1060 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 3 分钟&nbsp;<span id="/posts/%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91/" class="leancloud_visitors" data-flag-title="谓词逻辑">
+                        <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#题记">题记</a></li>
+      </ul>
+    </li>
+    <li><a href="#对谓词的介绍">对谓词的介绍</a></li>
+    <li><a href="#一个谓词逻辑公式的例子">一个谓词逻辑公式的例子</a></li>
+    <li><a href="#自由变量和约束变量">自由变量和约束变量</a></li>
+    <li><a href="#代换">代换</a></li>
+    <li><a href="#谓词逻辑的自然推演">谓词逻辑的自然推演</a></li>
+    <li><a href="#相关资料">相关资料</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="题记">题记</h2>
+<p>由于有些東西是命题逻辑没办法表示的，所以引出谓词逻辑，需要说明的是不管是命题逻辑也好，谓词逻辑也好，只是逻辑学中被广泛使用的其中的分支而已，根据实际应用需要可以使用其中的方法，自己创造一种新的逻辑(虽然不容易)也是完全没问题的。</p>
+<h1 id="对谓词的介绍">对谓词的介绍</h1>
+<p>谓词逻辑也被称为一阶逻辑(first-order logic), <strong>谓词</strong>(predicate)其实就是一种<strong>关系</strong>，只是为了方便起见我们规定一些符号，并给符号一些定义。</p>
+<p><code>S(x)</code>就是一个一元关系，它可以表示<code>x是一个学生</code>。</p>
+<p><code>Y(x,y)</code>是一个二元关系，它可以是<code>x比y年龄更老</code>。</p>
+<p>为什么计算机专业要学谓词逻辑：其实一个计算机语言(C、java等)的实现离不开包括谓词逻辑在内的各种逻辑，比如一个等号<code>=</code>可以看作一个二元的谓词，更直观的说，<code>a=b</code>可以看作<code>=(a,b)</code>。其实谓词逻辑还有各种用途，比如Type Theory类型理论，这里不做过多介绍。</p>
+<p>和命题逻辑一样，我们给出谓词逻辑的formal的形式，首先formal的谓词逻辑语言包括三个部分：</p>
+<ol>
+<li>A set of predicate symbols 谓词符号 P (谓词符号是定义域D,值域{0,1}的映射.这一点区别于函数)</li>
+<li>A set of function symbols 函数符号 F</li>
+<li>A set of constant symbols 常量符号 C (其实常量就是没有自变量的函数，不过为了方便，还是称作常量)</li>
+</ol>
+<p>为方便起见，我们先定义<code>项</code>的概念，如下图所示：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://pic1.superbed.cn/item/5df61674a4fbc8614a90d424.jpg"
+        data-srcset="https://pic1.superbed.cn/item/5df61674a4fbc8614a90d424.jpg, https://pic1.superbed.cn/item/5df61674a4fbc8614a90d424.jpg 1.5x, https://pic1.superbed.cn/item/5df61674a4fbc8614a90d424.jpg 2x"
+        data-sizes="auto"
+        alt="项的定义"
+        title="项的定义" /></p>
+<p>谓词逻辑的<code>公式</code>定义，如下图所示，其中t_1,t_2等是项：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://pic1.superbed.cn/item/5df60cdda4fbc8614a8edb8c.jpg"
+        data-srcset="https://pic1.superbed.cn/item/5df60cdda4fbc8614a8edb8c.jpg, https://pic1.superbed.cn/item/5df60cdda4fbc8614a8edb8c.jpg 1.5x, https://pic1.superbed.cn/item/5df60cdda4fbc8614a8edb8c.jpg 2x"
+        data-sizes="auto"
+        alt="formulas"
+        title="formulas" /></p>
+<h1 id="一个谓词逻辑公式的例子">一个谓词逻辑公式的例子</h1>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://pic2.superbed.cn/item/5df61713a4fbc8614a90f31a.jpg"
+        data-srcset="https://pic2.superbed.cn/item/5df61713a4fbc8614a90f31a.jpg, https://pic2.superbed.cn/item/5df61713a4fbc8614a90f31a.jpg 1.5x, https://pic2.superbed.cn/item/5df61713a4fbc8614a90f31a.jpg 2x"
+        data-sizes="auto"
+        alt="一个谓词逻辑公式的例子"
+        title="一个谓词逻辑公式的例子" /></p>
+<h1 id="自由变量和约束变量">自由变量和约束变量</h1>
+<p>定义见下图：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://pic3.superbed.cn/item/5df6193ca4fbc8614a914c96.jpg"
+        data-srcset="https://pic3.superbed.cn/item/5df6193ca4fbc8614a914c96.jpg, https://pic3.superbed.cn/item/5df6193ca4fbc8614a914c96.jpg 1.5x, https://pic3.superbed.cn/item/5df6193ca4fbc8614a914c96.jpg 2x"
+        data-sizes="auto"
+        alt="自由变量和约束变量的定义"
+        title="自由变量和约束变量的定义" /></p>
+<p>如下图，是公式$(\forall x(P(x) \wedge Q(x))) \rightarrow(\neg P(x) \vee Q(y))$的语法树，并标注自由变量和约束变量。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://pic1.superbed.cn/item/5df6181ba4fbc8614a911f5e.jpg"
+        data-srcset="https://pic1.superbed.cn/item/5df6181ba4fbc8614a911f5e.jpg, https://pic1.superbed.cn/item/5df6181ba4fbc8614a911f5e.jpg 1.5x, https://pic1.superbed.cn/item/5df6181ba4fbc8614a911f5e.jpg 2x"
+        data-sizes="auto"
+        alt="自由变量和约束变量的例子"
+        title="自由变量和约束变量的例子" /></p>
+<p>也就是说，虽然在公式中都写作x，但是其实有可能是不同的(如上图右边自由的x和左边约束的x是不同的)。</p>
+<h1 id="代换">代换</h1>
+<p>代换(substitution)定义：给定一个变量$x$, 一个项$t$，和公式$\phi $。我们就可以定义公式$\phi[t / x]$，它是通过将$\phi $中所有是自由变量的$x$替换成$t$得来的。</p>
+<p>Example: 将上图[自由变量和约束变量的例子]，使用替换，表示成公式$\phi[f(x, y) / x]$，代换之后的结果如下图所示：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://pic.superbed.cn/item/5df61ea0a4fbc8614a93b957.jpg"
+        data-srcset="https://pic.superbed.cn/item/5df61ea0a4fbc8614a93b957.jpg, https://pic.superbed.cn/item/5df61ea0a4fbc8614a93b957.jpg 1.5x, https://pic.superbed.cn/item/5df61ea0a4fbc8614a93b957.jpg 2x"
+        data-sizes="auto"
+        alt="代换的例子"
+        title="代换的例子" /></p>
+<h1 id="谓词逻辑的自然推演">谓词逻辑的自然推演</h1>
+<p>和命题逻辑一样，谓词逻辑也有自然推演的规则，命题推演规则在谓词逻辑里同样适用，这里就不列出全部的规则，只给出2道证明题作为例子。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://pic.superbed.cn/item/5df62cada4fbc8614a96f240.jpg"
+        data-srcset="https://pic.superbed.cn/item/5df62cada4fbc8614a96f240.jpg, https://pic.superbed.cn/item/5df62cada4fbc8614a96f240.jpg 1.5x, https://pic.superbed.cn/item/5df62cada4fbc8614a96f240.jpg 2x"
+        data-sizes="auto"
+        alt="谓词逻辑证明的例子(中文版教材第80页)"
+        title="谓词逻辑证明的例子(中文版教材第80页)" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://pic.superbed.cn/item/5df6262ba4fbc8614a9557a1.jpg"
+        data-srcset="https://pic.superbed.cn/item/5df6262ba4fbc8614a9557a1.jpg, https://pic.superbed.cn/item/5df6262ba4fbc8614a9557a1.jpg 1.5x, https://pic.superbed.cn/item/5df6262ba4fbc8614a9557a1.jpg 2x"
+        data-sizes="auto"
+        alt="谓词逻辑证明的例子(中文版教材第75页)"
+        title="谓词逻辑证明的例子(中文版教材第75页)" /></p>
+<p>这里需要注意的一个要点是，假设的条件只能在框内有效，否则会引发&quot;只要有一个x满足性质P，则所有x都满足P&quot;的经典逻辑语义危机，见下图例子。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://pic1.superbed.cn/item/5df62959a4fbc8614a95e1e0.jpg"
+        data-srcset="https://pic1.superbed.cn/item/5df62959a4fbc8614a95e1e0.jpg, https://pic1.superbed.cn/item/5df62959a4fbc8614a95e1e0.jpg 1.5x, https://pic1.superbed.cn/item/5df62959a4fbc8614a95e1e0.jpg 2x"
+        data-sizes="auto"
+        alt="只要有一个x满足性质P，则所有x都满足P"
+        title="只要有一个x满足性质P，则所有x都满足P" /></p>
+<h1 id="相关资料">相关资料</h1>
+<ul>
+<li>英文版教材[《logic in computer science》] (<a href="http://dcn.icc.spbstu.ru/~karpov/%D0%9A%D1%83%D1%80%D1%81%20%D0%9B%D0%9E%D0%93%D0%98%D0%9A%D0%90/%D0%94%D0%9E%D0%9F%D0%9E%D0%9B%D0%9D%D0%98%D0%A2%D0%95%D0%9B%D0%AC%D0%9D%D0%9E%D0%95%20%D0%A7%D1%82%D0%B5%D0%BD%D0%B8%D0%B5/LogicInCS.pdf">http://dcn.icc.spbstu.ru/~karpov/%D0%9A%D1%83%D1%80%D1%81%20%D0%9B%D0%9E%D0%93%D0%98%D0%9A%D0%90/%D0%94%D0%9E%D0%9F%D0%9E%D0%9B%D0%9D%D0%98%D0%A2%D0%95%D0%9B%D0%AC%D0%9D%D0%9E%D0%95%20%D0%A7%D1%82%D0%B5%D0%BD%D0%B8%D0%B5/LogicInCS.pdf</a>) (p.s. 中文版的书名叫《面向计算机科学的数理逻辑 系统建模与推理》)</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>本文于 2019-12-15 更新</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%80%BB%E8%BE%91%E5%AD%A6/">计算机科学中的逻辑学</a>,&nbsp;<a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E7%9A%84%E8%AF%AD%E4%B9%89/" class="prev" rel="prev" title="命题逻辑的语义"><i class="fas fa-angle-left fa-fw"></i>命题逻辑的语义</a>
+            <a href="/posts/x-vector/" class="next" rel="next" title="声纹识别X-Vector">声纹识别X-Vector<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.6"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript">
+    window.config = {"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{"valine":{"appId":"xsBQ6wXUkm1km876o5DMLW4R-gzGzoHsz","appKey":"5H8DU1HXMV5Xg4PRuahFsNqU","avatar":"mm","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-facebook@5.0.1/img/facebook/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":null,"highlight":true,"lang":"zh-cn","placeholder":"说点什么吧...","recordIP":null,"visitor":true}},"headerMode":{"desktop":null,"mobile":null},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};
+</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

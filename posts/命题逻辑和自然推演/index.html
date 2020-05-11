@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>命题逻辑和自然推演 - 草祭の博客</title>
+        <meta name="Description" content=""><meta property="og:title" content="命题逻辑和自然推演" />
+<meta property="og:description" content="题记 为了严谨地描述一些问题，我们需要一些语言去表达问题中的逻辑结构，这篇博客将讲述其中一种语言——命题逻辑(propositional logic), 声明" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seacj.github.io/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94/" />
+<meta property="article:published_time" content="2019-09-22T12:19:26+08:00" />
+<meta property="article:modified_time" content="2019-09-22T12:19:26+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="命题逻辑和自然推演"/>
+<meta name="twitter:description" content="题记 为了严谨地描述一些问题，我们需要一些语言去表达问题中的逻辑结构，这篇博客将讲述其中一种语言——命题逻辑(propositional logic), 声明"/>
+<meta name="application-name" content="草祭の博客">
+<meta name="apple-mobile-web-app-title" content="草祭の博客"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94/" /><link rel="prev" href="https://seacj.github.io/posts/hugo%E5%8D%9A%E5%AE%A2latex%E6%B8%B2%E6%9F%93/" /><link rel="next" href="https://seacj.github.io/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E7%9A%84%E8%AF%AD%E4%B9%89/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "命题逻辑和自然推演",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seacj.github.io\/posts\/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94\/"
+        },"genre": "posts","keywords": "计算机科学中的逻辑学, 数学","wordcount":  1699 ,
+        "url": "https:\/\/seacj.github.io\/posts\/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94\/","datePublished": "2019-09-22T12:19:26+08:00","dateModified": "2019-09-22T12:19:26+08:00","author": {
+                "@type": "Person",
+                "name": "草祭"
+            },"description": ""
+    }
+    </script></head>
+    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="草祭の博客">草祭の博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/" title="About"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="草祭の博客">草祭の博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="About">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">命题逻辑和自然推演</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>草祭</a></span>&nbsp;
+                    <span class="post-category">收录于<a href="/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/">
+                                <i class="far fa-folder fa-fw"></i>编程-ღ-技术
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-09-22>2019-09-22</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 1699 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 4 分钟&nbsp;<span id="/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94/" class="leancloud_visitors" data-flag-title="命题逻辑和自然推演">
+                        <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#题记">题记</a></li>
+      </ul>
+    </li>
+    <li><a href="#声明式语言declarative-sentences">声明式语言(Declarative sentences)</a>
+      <ul>
+        <li><a href="#格式化声明式语言formalize-declarative-sentences">格式化声明式语言(Formalize declarative sentences)</a>
+          <ul>
+            <li><a href="#example">Example</a></li>
+            <li><a href="#structures">Structures</a></li>
+            <li><a href="#formal-argument">Formal argument</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#自然推演natural-deduction">自然推演(Natural deduction)</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#rules-for-conjunction">Rules for conjunction</a></li>
+            <li><a href="#rules-of-double-negation">Rules of double negation</a></li>
+            <li><a href="#rules-of-implication">Rules of implication</a></li>
+            <li><a href="#rules-of-disjunction">Rules of disjunction</a></li>
+            <li><a href="#rules-of-negation">Rules of negation</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#例题">例题</a></li>
+    <li><a href="#总结">总结</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="题记">题记</h2>
+<p>为了严谨地描述一些问题，我们需要一些语言去表达问题中的逻辑结构，这篇博客将讲述其中一种语言——命题逻辑(propositional logic),</p>
+<h1 id="声明式语言declarative-sentences">声明式语言(Declarative sentences)</h1>
+<p>命题逻辑是基于声明式(declarative)语句的,即<strong>能够判别真假</strong>的语句.</p>
+<p>(It is based on <em>propositions</em>, or <em>declarative sentences</em> which one can, in principle, argue as being true or false. )</p>
+<p>声明式语句的例子:</p>
+<ul>
+<li>The sum of the numbers 3 and 5 equals 8.</li>
+</ul>
+<p>非声明式(non-declarative)语句的例子:</p>
+<ul>
+<li>
+<p>Could you please pass me the salt?</p>
+</li>
+<li>
+<p>Ready, steady, go!</p>
+</li>
+</ul>
+<p>相比非声明式, 我们专注于声明式语句，是因为它符合计算机系统/程序的行为，此外,使用声明式语句能够用于判断程序是否满足需求/规格说明(specification).</p>
+<h2 id="格式化声明式语言formalize-declarative-sentences">格式化声明式语言(Formalize declarative sentences)</h2>
+<p>所谓Formalize, 主要是为了3点:</p>
+<ul>
+<li>能够有效地进行论证</li>
+<li>能够严密地定义(defined rigorously)</li>
+<li>能够被执行</li>
+</ul>
+<p>非常自然的formalize的方法就是使用<strong>符号</strong>(symbol).</p>
+<h3 id="example">Example</h3>
+<ol>
+<li>
+<ul>
+<li>如果公交车晚点, 而且没有出租车, 那么John就会迟到.</li>
+<li>John没有迟到</li>
+<li>火车晚点了</li>
+<li><em>因此</em>, 有出租车</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>下雨了, Jane没带伞, 那么Jane就会淋湿</li>
+<li>Jane没有淋湿</li>
+<li>下雨了</li>
+<li><em>因此</em>, ,Jane带伞了</li>
+</ul>
+</li>
+</ol>
+<h3 id="structures">Structures</h3>
+<table>
+<thead>
+<tr>
+<th>Example1</th>
+<th>Example2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>公交车晚点</td>
+<td>下雨了</td>
+</tr>
+<tr>
+<td>有出租车</td>
+<td>Jane带伞了</td>
+</tr>
+<tr>
+<td>John迟到了</td>
+<td>Jane淋湿了</td>
+</tr>
+</tbody>
+</table>
+<h3 id="formal-argument">Formal argument</h3>
+<p>其实上面的两个问题属于同一个问题，可以用下面的符号来表示.</p>
+<p>If p and not q, then r. -&gt; Not r.p. Therefore, q.</p>
+<h1 id="自然推演natural-deduction">自然推演(Natural deduction)</h1>
+<p>我们希望建立一套规则(a set of rules)去通过给定的前提(premise)来推出一些结论(conclusion). 其中一个非常重要且普遍的规则称为自然推演.</p>
+<p>先了解一些名词和符号:</p>
+<ul>
+<li>
+<p>¬ :negation 逻辑否定</p>
+</li>
+<li>
+<p>∧ :conjunction 逻辑合取</p>
+</li>
+<li>
+<p>∨ :disjunction逻辑析取</p>
+</li>
+<li>
+<p>→:implication蕴涵</p>
+</li>
+<li>
+<p>sequent : 一种通过前提证明出结果的意图(intension), 相当于一个证明题的提问部分(区别于证明完成之后的结论)<img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://www.zhihu.com/equation?tex=%5CGamma%5Cvdash%5CDelta"
+        data-srcset="https://www.zhihu.com/equation?tex=%5CGamma%5Cvdash%5CDelta, https://www.zhihu.com/equation?tex=%5CGamma%5Cvdash%5CDelta 1.5x, https://www.zhihu.com/equation?tex=%5CGamma%5Cvdash%5CDelta 2x"
+        data-sizes="auto"
+        alt="sequent"
+        title="sequent" />.</p>
+</li>
+</ul>
+<p>在谈及自然推演规则之前想聊一些别的话题。其实自然推演我们早就在中学或者本科的离散数学里学习过，中学课程会告诉我们这是很正常的思想(比如否定的否定就是不变,¬¬p可以变成p)，本科会通过真值表定义这些规则. 但是逻辑学想说的是，这些<strong>符号规则本身没有意义</strong>, 也就是说我们完全可以定义一套规则说¬p可以变成p, 而我们之所以默认使用自然推演这套规则,仅仅是因为他能解决实际生活中的很多问题(比如之前John迟到的例子). 很多数学家一生所做的事情就是自己根据自己制定的规则，然后不断推导，得到一些性质，这些规则本身其实毫无意义，只不过如果幸运的话这套规则可能能够运用到一些场景中，想到一句话——数学不是科学，因为数学不能被证伪.</p>
+<p>现在给出自然推演的一些规则，需要说明的下面使用的表达方法可能以前少见，但是它是在顶刊中大家公认的表达方式，即</p>
+<p>$$
+\frac{premise \ premise}{conclusion} rule
+$$
+其中上面的&quot;rule&quot;只是指规则的名字，比如某个规则名为&quot;$\wedge i$&rdquo;. 推演规则分类为introduction(用于定义符号)和elimination（用于消去符号，以达到推演的目的）.</p>
+<h3 id="rules-for-conjunction">Rules for conjunction</h3>
+<ul>
+<li>And-introduction rule</li>
+</ul>
+<p>$$\frac{\phi \qquad  \psi}{\phi \wedge \psi} \wedge i$$</p>
+<ul>
+<li>And-elimination rules</li>
+</ul>
+<p>$$
+\frac{\phi \wedge \psi}{\phi} \wedge e_{1}
+$$</p>
+<p>$$
+\frac{\phi \wedge \psi}{\psi} \wedge e_{2}
+$$</p>
+<h3 id="rules-of-double-negation">Rules of double negation</h3>
+<ul>
+<li>Introduction rule
+$$
+\frac{\phi}{\neg \neg \phi} \neg \neg i
+$$</li>
+<li>Elimination rules
+$$
+\frac{\neg \neg \phi}{\phi} \neg \neg e
+$$</li>
+</ul>
+<p>现在我们用上面的规则就可以解下面这道题目了(第三行&quot;$\neg \neg i \ 1$&quot;的意思是根据规则&quot;$\neg \neg i$&quot;和第一行的p，后面同理).
+<img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://ae01.alicdn.com/kf/H911fe87c6cbe44b58144128d1ff323bcg.jpg"
+        data-srcset="https://ae01.alicdn.com/kf/H911fe87c6cbe44b58144128d1ff323bcg.jpg, https://ae01.alicdn.com/kf/H911fe87c6cbe44b58144128d1ff323bcg.jpg 1.5x, https://ae01.alicdn.com/kf/H911fe87c6cbe44b58144128d1ff323bcg.jpg 2x"
+        data-sizes="auto"
+        alt="例题1"
+        title="例题1" /></p>
+<h3 id="rules-of-implication">Rules of implication</h3>
+<ul>
+<li>Introduction
+这里使用到<strong>假设</strong>的方法，用方框框住的区域为假设区域，假设的内容只在方框内有效, 方框内可以使用方框外的信息.
+<img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://ae01.alicdn.com/kf/Haa71aeef733f4351b552e32b75941c24H.jpg"
+        data-srcset="https://ae01.alicdn.com/kf/Haa71aeef733f4351b552e32b75941c24H.jpg, https://ae01.alicdn.com/kf/Haa71aeef733f4351b552e32b75941c24H.jpg 1.5x, https://ae01.alicdn.com/kf/Haa71aeef733f4351b552e32b75941c24H.jpg 2x"
+        data-sizes="auto"
+        alt="implies introduction"
+        title="implies introduction" /></li>
+<li>Implies-elimination rule
+$$
+\frac{\phi \quad \phi \rightarrow \psi}{\psi} \rightarrow e
+$$</li>
+<li>Modus Tollens (MT for short) rule 即 逆否命题，可以通过其他规则(primitive rule)推导得出的规则(称为derived rule)
+$$
+\frac{\phi \rightarrow \psi\quad \neg \psi}{\neg \phi} \mathrm{MT}
+$$</li>
+</ul>
+<h3 id="rules-of-disjunction">Rules of disjunction</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://ae01.alicdn.com/kf/Hfb7cd4844c4345799f21cb8e4b58ba35a.jpg"
+        data-srcset="https://ae01.alicdn.com/kf/Hfb7cd4844c4345799f21cb8e4b58ba35a.jpg, https://ae01.alicdn.com/kf/Hfb7cd4844c4345799f21cb8e4b58ba35a.jpg 1.5x, https://ae01.alicdn.com/kf/Hfb7cd4844c4345799f21cb8e4b58ba35a.jpg 2x"
+        data-sizes="auto"
+        alt="Rules of disjunction"
+        title="Rules of disjunction" /></p>
+<h3 id="rules-of-negation">Rules of negation</h3>
+<p>为了定义否命题(注意前面只是定义了double negation)，需要引入<strong>contradiction</strong>（矛盾）来完备自然推演这套规则.
+定义contradiction:
+Contradictions are expressions of the form $\neg \phi \wedge \phi$ or $\phi \wedge \neg \phi$, where $\phi$ is an arbitrary formula.</p>
+<p>(Note that $p \wedge \neg p \vdash q$ is valid. 可以理解成如果你连矛盾的事情都能推出来, 还有什么推不出来呢,。但是注意这样只是便于理解，要记住符号本身没有任何意义.)</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://ae01.alicdn.com/kf/H1e62389be32342fbb03fc825c8fcecb9L.jpg"
+        data-srcset="https://ae01.alicdn.com/kf/H1e62389be32342fbb03fc825c8fcecb9L.jpg, https://ae01.alicdn.com/kf/H1e62389be32342fbb03fc825c8fcecb9L.jpg 1.5x, https://ae01.alicdn.com/kf/H1e62389be32342fbb03fc825c8fcecb9L.jpg 2x"
+        data-sizes="auto"
+        alt="Negation-introduction"
+        title="Negation-introduction" /></p>
+<ul>
+<li>Bottom-elimination 即
+$$
+\frac{\perp}{\phi} \perp \mathrm{e}
+$$</li>
+<li>Not-elimination
+$$
+\frac{\phi \quad \neg \phi}{\perp} \neg e
+$$</li>
+</ul>
+<h1 id="例题">例题</h1>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://ae01.alicdn.com/kf/He5ba13c74b584491af639e8c48da4723m.jpg"
+        data-srcset="https://ae01.alicdn.com/kf/He5ba13c74b584491af639e8c48da4723m.jpg, https://ae01.alicdn.com/kf/He5ba13c74b584491af639e8c48da4723m.jpg 1.5x, https://ae01.alicdn.com/kf/He5ba13c74b584491af639e8c48da4723m.jpg 2x"
+        data-sizes="auto"
+        alt="例题2"
+        title="例题2" /></p>
+<h1 id="总结">总结</h1>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://ae01.alicdn.com/kf/H6fd629422cb84578a76578ce98e7cdc01.jpg"
+        data-srcset="https://ae01.alicdn.com/kf/H6fd629422cb84578a76578ce98e7cdc01.jpg, https://ae01.alicdn.com/kf/H6fd629422cb84578a76578ce98e7cdc01.jpg 1.5x, https://ae01.alicdn.com/kf/H6fd629422cb84578a76578ce98e7cdc01.jpg 2x"
+        data-sizes="auto"
+        alt="自然推演规则"
+        title="自然推演规则" /></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>本文于 2019-09-22 更新</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%80%BB%E8%BE%91%E5%AD%A6/">计算机科学中的逻辑学</a>,&nbsp;<a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/hugo%E5%8D%9A%E5%AE%A2latex%E6%B8%B2%E6%9F%93/" class="prev" rel="prev" title="Hugo博客LaTeX渲染"><i class="fas fa-angle-left fa-fw"></i>Hugo博客LaTeX渲染</a>
+            <a href="/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E7%9A%84%E8%AF%AD%E4%B9%89/" class="next" rel="next" title="命题逻辑的语义">命题逻辑的语义<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.6"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript">
+    window.config = {"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{"valine":{"appId":"xsBQ6wXUkm1km876o5DMLW4R-gzGzoHsz","appKey":"5H8DU1HXMV5Xg4PRuahFsNqU","avatar":"mm","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-facebook@5.0.1/img/facebook/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":null,"highlight":true,"lang":"zh-cn","placeholder":"说点什么吧...","recordIP":null,"visitor":true}},"headerMode":{"desktop":null,"mobile":null},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};
+</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>部署博客到阿里云服务器 - 草祭の博客</title>
+        <meta name="Description" content=""><meta property="og:title" content="部署博客到阿里云服务器" />
+<meta property="og:description" content="题记 终于还是花了100RMB钱买了一年的阿里云服务器，现在把github pages的网站部署到服务器上。由于踩的坑有点多，所以全篇下来可能有" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seacj.github.io/posts/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" />
+<meta property="article:published_time" content="2020-02-29T19:18:30+08:00" />
+<meta property="article:modified_time" content="2020-02-29T19:18:30+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="部署博客到阿里云服务器"/>
+<meta name="twitter:description" content="题记 终于还是花了100RMB钱买了一年的阿里云服务器，现在把github pages的网站部署到服务器上。由于踩的坑有点多，所以全篇下来可能有"/>
+<meta name="application-name" content="草祭の博客">
+<meta name="apple-mobile-web-app-title" content="草祭の博客"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" /><link rel="prev" href="https://seacj.github.io/posts/git_hooks%E5%88%9D%E6%8E%A2/" /><link rel="next" href="https://seacj.github.io/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "部署博客到阿里云服务器",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seacj.github.io\/posts\/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8\/"
+        },"genre": "posts","keywords": "博客搭建, linux","wordcount":  2245 ,
+        "url": "https:\/\/seacj.github.io\/posts\/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8\/","datePublished": "2020-02-29T19:18:30+08:00","dateModified": "2020-02-29T19:18:30+08:00","author": {
+                "@type": "Person",
+                "name": "草祭"
+            },"description": ""
+    }
+    </script></head>
+    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="草祭の博客">草祭の博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/" title="About"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="草祭の博客">草祭の博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="About">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">部署博客到阿里云服务器</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>草祭</a></span>&nbsp;
+                    <span class="post-category">收录于<a href="/categories/%E5%8D%9A%E5%AE%A2/">
+                                <i class="far fa-folder fa-fw"></i>博客
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-02-29>2020-02-29</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 2245 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 5 分钟&nbsp;<span id="/posts/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="leancloud_visitors" data-flag-title="部署博客到阿里云服务器">
+                        <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#题记">题记</a></li>
+      </ul>
+    </li>
+    <li><a href="#准备工作">准备工作</a></li>
+    <li><a href="#部署博客到阿里云服务器">部署博客到阿里云服务器</a>
+      <ul>
+        <li><a href="#step-1-配置nginx">Step 1. 配置nginx</a></li>
+        <li><a href="#step-2-配置服务器git仓库">Step 2. 配置服务器git仓库</a>
+          <ul>
+            <li><a href="#命令行切换到服务器网页根目录">命令行切换到服务器网页根目录</a></li>
+            <li><a href="#创建用户adduser-git">创建用户：<code>adduser git</code></a></li>
+            <li><a href="#配置公钥">配置公钥</a></li>
+            <li><a href="#创建git仓库目录">创建git仓库目录</a></li>
+            <li><a href="#配置git-hooks">配置git hooks</a></li>
+          </ul>
+        </li>
+        <li><a href="#step-3-修改用户权限">Step 3. 修改用户权限</a></li>
+        <li><a href="#step-4-配置本地git仓库">Step 4. 配置本地git仓库</a></li>
+      </ul>
+    </li>
+    <li><a href="#参考资料">参考资料</a></li>
+    <li><a href="#不重要的知识">不重要的知识</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="题记">题记</h2>
+<p>终于还是花了100RMB钱买了一年的阿里云服务器，现在把github pages的网站部署到服务器上。由于踩的坑有点多，所以全篇下来可能有点啰嗦。</p>
+<h1 id="准备工作">准备工作</h1>
+<ul>
+<li>Hugo博客（参见 <a href="https://www.bilibili.com/video/av51574688?from=search&seid=14677638545211064475" target="_blank">Hugo搭建博客视频教程</a>）</li>
+<li>云服务器 （我的系统是Ubuntu）</li>
+<li>域名</li>
+</ul>
+<h1 id="部署博客到阿里云服务器">部署博客到阿里云服务器</h1>
+<h2 id="step-1-配置nginx">Step 1. 配置nginx</h2>
+<p>初次阿里云服务器需要在控制台重置密码，之后重启。</p>
+<p>登陆的时候使用root用户名。</p>
+<ul>
+<li>
+<p>安装nginx<code>sudo apt-get install nginx</code>我安装的版本是nginx 1.14.0 (Ubuntu)。</p>
+</li>
+<li>
+<p>开启nginx<code>service nginx start</code>
+p.s. 停止命令：<code>service nginx stop</code> ，重启命令<code>nginx -s reload</code></p>
+</li>
+<li>
+<p>在阿里云安全组配置中开启HTTP 80端口</p>
+<p>ref. <a href="https://yq.aliyun.com/articles/225815" target="_blank" rel="noopener noreffer">阿里云服务器怎么开启或关闭8080端口</a></p>
+</li>
+</ul>
+<p>在开启HTTP服务之后，在浏览器中输入你的公网ip就能看见Welcome to nginx的网页页面了。</p>
+<ul>
+<li>
+<p>创建一个网站目录，如<code>/home/user/www/blog／</code>，并在里面新建一个index.html文件</p>
+<p>内容随意，只是用来测试而已，我就直接在里面写了个HI。
+注意：index.html文件需要放在具有可执行权限的文件夹中，不要放在权限如<code>drwx------</code>的文件夹里面，我自己是放在权限为<code>drwxr-xr-x</code>的目录里的。</p>
+</li>
+<li>
+<p>查看nginx的配置文件路径
+<code>nginx -t</code></p>
+</li>
+<li>
+<p>编辑nginx的配置文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">    location / {
+        root   你的index.html所在的文件路径;
+    }
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<p>这一步我查阅的方法绝大部分是在nginx的配置文件找到location字段，将root后面的项改成你的index.html所在的文件路径即可。但是我发现我自己版本的nginx的<code>/etc/nginx/nginx.conf</code>中没有这个字段，所以我是将 <code>/etc/nginx/sites-enabled/default</code>文件，将预设的<code>root  /var/www/html;</code>修改成<code> root   你的index.html所在的文件路径;</code>。</p>
+<p>很多发行版为了方便管理，在nginx.conf底部加了一条include sites-enabled/*.conf, 但不会 include sites-available。</p>
+<ul>
+<li>
+<p>重启nginx服务</p>
+<p><code>nginx -s reload</code></p>
+<p>重启之后在浏览器访问你的公网IP，就能显示出index.html所展示的内容了。如果此时网页页面显示<code>403 Forbidden</code>的错误，说明index.html所在的文件夹缺少权限，此时应该换一个文件夹或添加权限。</p>
+</li>
+</ul>
+<h2 id="step-2-配置服务器git仓库">Step 2. 配置服务器git仓库</h2>
+<p>​    可参考<a href="https://git-scm.com/book/zh/v2/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-Git-%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8" target="_blank" rel="noopener noreffer">服务器上的 Git - 配置服务器</a></p>
+<h3 id="命令行切换到服务器网页根目录">命令行切换到服务器网页根目录</h3>
+<h3 id="创建用户adduser-git">创建用户：<code>adduser git</code></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">root@xxx:/xxx/xxx# adduser git
+Adding user `git&#39; ...
+Adding new group `git&#39; (1000) ...
+Adding new user `git&#39; (1000) with group `git&#39; ...
+Creating home directory `/home/git&#39; ...
+Copying files from `/etc/skel&#39; ...
+Enter new UNIX password: 
+Retype new UNIX password: 
+</code></pre></td></tr></table>
+</div>
+</div><p>好像有的时候创建用户不会跳出配置密码，此时可以用<code>passwd git</code>配置密码。</p>
+<h3 id="配置公钥">配置公钥</h3>
+<ul>
+<li>
+<p>切换到git用户：<code>su git</code> ，切换用户之后会自动切换到该用户的根目录中。</p>
+</li>
+<li>
+<p>创建.ssh目录：<code>mkdir .ssh &amp;&amp; chmod 700 .ssh</code></p>
+</li>
+<li>
+<p>然后在云服务创建<code>authorized_keys</code>公钥保存文件：<code>touch .ssh/authorized_keys &amp;&amp; chmod 600 .ssh/authorized_keys</code></p>
+</li>
+<li>
+<p>将公钥添加到<code>authorized_keys</code>文件中。</p>
+</li>
+</ul>
+<p>如果不知道公钥是什么的话可以参见https://gitee.com/help/articles/4181#article-header0 来配置公钥。Windows系统生成的公钥会存放在<code>C:\Users\xxx\.ssh</code>中。</p>
+<p>公钥看起来是这样的：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cat /xxx/id_rsa.john.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCB007n/ww+ouN4gSLKssMxXnBOvf9LGt4L
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="创建git仓库目录">创建git仓库目录</h3>
+<p><code>mkdir 裸仓库路径</code> 你的仓库路径如<code>/home/git/repo</code></p>
+<p><code>cd 裸仓库路径</code></p>
+<p><code>git init --bare blog.git</code></p>
+<p><strong>裸仓库</strong>与 <code>git init</code> 初使化的仓库不太一样，裸仓库其实相当于通过克隆来的仓库里的.git文件夹，整个裸仓库中只有git索引（index），不包含工作目录。</p>
+<h3 id="配置git-hooks">配置git hooks</h3>
+<p>关于git hooks我也写了一篇<a href="/posts/git_hooks%e5%88%9d%e6%8e%a2" rel="">博客</a>，不过只是非常简单的描述，我对git的学习并不深入。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://misc.aotu.io/pfan123/githook/githook_3.png"
+        data-srcset="https://misc.aotu.io/pfan123/githook/githook_3.png, https://misc.aotu.io/pfan123/githook/githook_3.png 1.5x, https://misc.aotu.io/pfan123/githook/githook_3.png 2x"
+        data-sizes="auto"
+        alt="图片来源：https://aotu.io/notes/2017/04/10/githooks/index.html"
+        title="图片来源：https://aotu.io/notes/2017/04/10/githooks/index.html" /></p>
+<ul>
+<li>
+<p><code>cd 你的仓库路径</code>/blog.git/hooks`</p>
+</li>
+<li>
+<p><code>vim post-receive</code></p>
+<p>参考了一些资料，我最后写的内容是以下	：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/sh
+</span><span class="cp"></span><span class="nb">set</span> -e
+<span class="nv">DIR_ONE</span><span class="o">=</span>/home/user/www/blog/  <span class="c1">#此目录为服务器页面展示目录</span> 
+<span class="nb">cd</span> <span class="nv">$DIR_ONE</span>
+  
+git --work-tree<span class="o">=</span>./ --git-dir<span class="o">=</span>裸仓库路径/blog.git checkout -f
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><code>chmod 771 post-receive</code> 用于赋予文件可执行权限</p>
+</li>
+</ul>
+<h2 id="step-3-修改用户权限">Step 3. 修改用户权限</h2>
+<p>如跳过本步骤，直接进行Step 4，可能会报<code>remote: error: could not lock config file /home/user/www/blog/.git/config: Permission denied</code>的错误。</p>
+<p>此时我们只需要执行命令：</p>
+<p><code>chown git 服务器页面展示目录</code></p>
+<p><code>chgrp git 服务器页面展示目录</code></p>
+<h2 id="step-4-配置本地git仓库">Step 4. 配置本地git仓库</h2>
+<p>切换到本地仓库，如果是Hugo搭建的博客，就是<code>public</code>文件夹。</p>
+<p><code>git remote set-url --add origin xxx.git</code></p>
+<p>其中<code>xxx.git</code>为<code>usrname@服务器ip地址:/裸仓库路径/blog.git</code></p>
+<p>此时输入<code>git remote -v</code>即可查看是否正确添加。</p>
+<p>输入错了的时候的删除命令: <code>git remote set-url --delete origin xxx.git</code></p>
+<p>接着<code>git push</code></p>
+<p>你的服务器在服务器页面展示目录就会出现你push的代码，此时再用浏览器访问，你的网站就出来了！！</p>
+<h1 id="参考资料">参考资料</h1>
+<ul>
+<li>
+<p>linux目录权限中，r（浏览目录）和x（进入目录）的区别 <a href="https://www.zhihu.com/question/20880277" target="_blank" rel="noopener noreffer">知乎回答</a></p>
+</li>
+<li>
+<p>HEXO 部署到云服务器详细指南 <a href="https://www.jianshu.com/p/70bf58c48010" target="_blank" rel="noopener noreffer">HEXO 部署到云服务器详细指南</a></p>
+</li>
+<li>
+<p>如何使用阿里云+Hexo搭建个人静态博客 <a href="https://www.zhihu.com/question/60329559/answer/179892883" target="_blank" rel="noopener noreffer">知乎孔晨皓的回答</a></p>
+</li>
+<li>
+<p>用 Git 钩子进行简单自动部署 <a href="https://aotu.io/notes/2017/04/10/githooks/index.html" target="_blank" rel="noopener noreffer">图文讲解</a></p>
+</li>
+<li>
+<p>Git Hooks实现代码自动部署 <a href="https://blog.hgtweb.com/2019/git-hooks%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/" target="_blank" rel="noopener noreffer">姑苏流白的博客</a></p>
+</li>
+<li>
+<p>Hexo博客同时部署到GitHub Page和个人服务器 <a href="https://leeyuxun.github.io/Hexo%E5%8D%9A%E5%AE%A2%E5%90%8C%E6%97%B6%E9%83%A8%E7%BD%B2%E5%88%B0GitHub-Page%E5%92%8C%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8.html" target="_blank" rel="noopener noreffer">Leeyuxun&rsquo;s blog</a></p>
+</li>
+</ul>
+<h1 id="不重要的知识">不重要的知识</h1>
+<ul>
+<li>
+<p>Git Hooks中有个<code>post-update</code>的hook，是<code>post-receive</code>的阉割版本</p>
+<p><em>The &lsquo;post-update&rsquo; hook can tell what are the heads that were pushed, but it does not know what their original and updated values are, so it is a poor place to do log old..new. The <code>&lt;post-receive&gt;</code> hook does get both original and updated values of the refs. You might consider it instead if you need them.</em></p>
+<p>—— <a href="https://stackoverflow.com/questions/9653165/whats-the-difference-between-post-receive-and-post-update">https://stackoverflow.com/questions/9653165/whats-the-difference-between-post-receive-and-post-update</a></p>
+</li>
+<li>
+<p><code>git init</code>多次是安全的</p>
+<p><em>Running git init in an existing repository is safe. It will not overwrite things that are already there. The primary reason for rerunning git init is to pick up newly added templates.</em> ——http://www.voidcn.com/article/p-cvrvucje-bsk.html</p>
+</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>本文于 2020-02-29 更新</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a>,&nbsp;<a href="/tags/linux/">linux</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/git_hooks%E5%88%9D%E6%8E%A2/" class="prev" rel="prev" title="Git hooks初探"><i class="fas fa-angle-left fa-fw"></i>Git hooks初探</a>
+            <a href="/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/" class="next" rel="next" title="记一次配置Ubuntu服务器图形化界面">记一次配置Ubuntu服务器图形化界面<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.6"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript">
+    window.config = {"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{"valine":{"appId":"xsBQ6wXUkm1km876o5DMLW4R-gzGzoHsz","appKey":"5H8DU1HXMV5Xg4PRuahFsNqU","avatar":"mm","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-facebook@5.0.1/img/facebook/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":null,"highlight":true,"lang":"zh-cn","placeholder":"说点什么吧...","recordIP":null,"visitor":true}},"headerMode":{"desktop":null,"mobile":null},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};
+</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

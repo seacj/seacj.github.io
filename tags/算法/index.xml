@@ -1,0 +1,78 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>算法 - 标签 - 草祭の博客</title>
+        <link>https://seacj.github.io/tags/%E7%AE%97%E6%B3%95/</link>
+        <description>算法 - 标签 - 草祭の博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
+            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Thu, 05 Sep 2019 21:12:31 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+    <title>并查集</title>
+    <link>https://seacj.github.io/posts/%E5%B9%B6%E6%9F%A5%E9%9B%86/</link>
+    <pubDate>Thu, 05 Sep 2019 21:12:31 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E5%B9%B6%E6%9F%A5%E9%9B%86/</guid>
+    <description><![CDATA[题记 今天上了数理统计和数学模型与优化，感觉终于上到了我认为的好课。第一眼看到数学模型与优化的董文永老师感觉自带气场，带着帽子上课，不过讲课还]]></description>
+</item><item>
+    <title>回溯算法</title>
+    <link>https://seacj.github.io/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/</link>
+    <pubDate>Mon, 26 Aug 2019 20:31:48 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/</guid>
+    <description><![CDATA[概念 类似穷举的方法，不断搜索可能解的路径，当发现不满足的条件时，就回溯返回，返回后再继续尝试别的路径。 (如下图示, 为了找到迷宫的出口，不断尝]]></description>
+</item><item>
+    <title>每日Leetcode03</title>
+    <link>https://seacj.github.io/posts/leetcodedaily3/</link>
+    <pubDate>Sat, 24 Aug 2019 18:48:25 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/leetcodedaily3/</guid>
+    <description><![CDATA[39. Combination Sum tag. array Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target. The same repeated number may be chosen from candidates unlimited number of times. Example 1: 1 2 3 4 5 6 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ] So]]></description>
+</item><item>
+    <title>每日Leetcode02</title>
+    <link>https://seacj.github.io/posts/leetcodedaily2/</link>
+    <pubDate>Wed, 21 Aug 2019 19:34:02 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/leetcodedaily2/</guid>
+    <description><![CDATA[35. Search Insert Position tags. Array 向有序列表里找到需要插入值的index，且You may assume no duplicates in the array. Example 1: 1 2 Input: [1,3,5,6], 5 Output: 2 我的Solution： 1 2 3 4 5 6 class Solution: def searchInsert(self, nums: List[int], target:]]></description>
+</item><item>
+    <title>每日Leetcode01</title>
+    <link>https://seacj.github.io/posts/leetcodedaily1/</link>
+    <pubDate>Mon, 19 Aug 2019 16:16:22 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/leetcodedaily1/</guid>
+    <description><![CDATA[从今天起开始做每日LeetCode这个系列，从array, string, tree, linkedlist, math标签里选题做。 189. Rotate Array tag. array Solution来源 ：https://lee]]></description>
+</item><item>
+    <title>Leetcode300 最长上升子序列</title>
+    <link>https://seacj.github.io/posts/leetcode300longest-increasing-subsequence/</link>
+    <pubDate>Tue, 02 Jul 2019 13:21:12 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/leetcode300longest-increasing-subsequence/</guid>
+    <description><![CDATA[LeetCode 300 longest-increasing-subsequence 最长上升子序列 LeetCode试题链接 问题描述： 给定一个无序的整数数组，找到其中最长上升子序列(LIS)的长度。 示例: 输入: [10,9,2,5,3,7,101,18] 输出: 4]]></description>
+</item><item>
+    <title>动态规划</title>
+    <link>https://seacj.github.io/posts/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+    <pubDate>Tue, 02 Jul 2019 01:27:53 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
+    <description><![CDATA[动态规划总结篇 dynamic programming, DP 什么是动态规划？ 一句话解释：大事化小，小事化了 简单的解释：想办法将一个复杂的大问题拆成几个子问题，分别求解这些子问题，从]]></description>
+</item><item>
+    <title>Leetcode44 通配符匹配</title>
+    <link>https://seacj.github.io/posts/leetcode44wildcard-matching/</link>
+    <pubDate>Mon, 01 Jul 2019 23:33:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/leetcode44wildcard-matching/</guid>
+    <description><![CDATA[LeetCode第44题是leetcode难度为hard的一个，解题方法是使用动态规划。题目内容可点击下面的黑色三角展开题目详情。 点击展开题]]></description>
+</item><item>
+    <title>Leetcode712 两个字符串的最小ASCII删除和</title>
+    <link>https://seacj.github.io/posts/leetcode712minimum-ascii-delete-sum-for-two-strings/</link>
+    <pubDate>Mon, 01 Jul 2019 23:17:45 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/leetcode712minimum-ascii-delete-sum-for-two-strings/</guid>
+    <description><![CDATA[Leetcode 712 Minimum ASCII Delete Sum for Two Strings 两个字符串的最小ASCII删除和(动态规划) LeetCode试题来源链接 问题描述： 给定两个字符串s1, s2，找到使两个字符]]></description>
+</item><item>
+    <title>Leetcode70 爬楼梯</title>
+    <link>https://seacj.github.io/posts/leetcode70climbing-stairs/</link>
+    <pubDate>Mon, 01 Jul 2019 22:07:17 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/leetcode70climbing-stairs/</guid>
+    <description><![CDATA[LeetCode 70 Climbing Stairs爬楼梯 LeetCode试题链接(英文) 问题描述： 有一座高度是N（N是大于0的整数）级台阶的楼梯，从下往上走，每跨一步只能向]]></description>
+</item></channel>
+</rss>

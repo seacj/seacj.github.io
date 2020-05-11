@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>并查集 - 草祭の博客</title>
+        <meta name="Description" content=""><meta property="og:title" content="并查集" />
+<meta property="og:description" content="题记 今天上了数理统计和数学模型与优化，感觉终于上到了我认为的好课。第一眼看到数学模型与优化的董文永老师感觉自带气场，带着帽子上课，不过讲课还" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seacj.github.io/posts/%E5%B9%B6%E6%9F%A5%E9%9B%86/" />
+<meta property="article:published_time" content="2019-09-05T21:12:31+08:00" />
+<meta property="article:modified_time" content="2019-09-05T21:12:31+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="并查集"/>
+<meta name="twitter:description" content="题记 今天上了数理统计和数学模型与优化，感觉终于上到了我认为的好课。第一眼看到数学模型与优化的董文永老师感觉自带气场，带着帽子上课，不过讲课还"/>
+<meta name="application-name" content="草祭の博客">
+<meta name="apple-mobile-web-app-title" content="草祭の博客"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/%E5%B9%B6%E6%9F%A5%E9%9B%86/" /><link rel="prev" href="https://seacj.github.io/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" /><link rel="next" href="https://seacj.github.io/posts/englishdictation01/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "并查集",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seacj.github.io\/posts\/%E5%B9%B6%E6%9F%A5%E9%9B%86\/"
+        },"genre": "posts","keywords": "算法","wordcount":  1423 ,
+        "url": "https:\/\/seacj.github.io\/posts\/%E5%B9%B6%E6%9F%A5%E9%9B%86\/","datePublished": "2019-09-05T21:12:31+08:00","dateModified": "2019-09-05T21:12:31+08:00","author": {
+                "@type": "Person",
+                "name": "草祭"
+            },"description": ""
+    }
+    </script></head>
+    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="草祭の博客">草祭の博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/" title="About"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="草祭の博客">草祭の博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="About">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">并查集</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>草祭</a></span>&nbsp;
+                    <span class="post-category">收录于<a href="/categories/%E7%AE%97%E6%B3%95/">
+                                <i class="far fa-folder fa-fw"></i>算法
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-09-05>2019-09-05</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 1423 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 3 分钟&nbsp;<span id="/posts/%E5%B9%B6%E6%9F%A5%E9%9B%86/" class="leancloud_visitors" data-flag-title="并查集">
+                        <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#题记">题记</a></li>
+      </ul>
+    </li>
+    <li><a href="#noip-2015-信息传递">NOIP 2015 信息传递</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#step-0-初始化">Step 0. 初始化</a></li>
+            <li><a href="#step-1-扫描1">Step 1. 扫描1</a></li>
+            <li><a href="#step-2-扫描2">Step 2. 扫描2</a></li>
+            <li><a href="#step-3-扫描3">Step 3. 扫描3</a></li>
+            <li><a href="#step-4-扫描4">Step 4. 扫描4</a></li>
+            <li><a href="#step-5-扫描5">Step 5. 扫描5</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#参考资料">参考资料</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="题记">题记</h2>
+<p>今天上了数理统计和数学模型与优化，感觉终于上到了我认为的好课。第一眼看到数学模型与优化的董文永老师感觉自带气场，带着帽子上课，不过讲课还是挺幽默的。非常想吐槽一下教室的设备，两个教室的麦克风完全没声音，幸好坐在前排，要是抢不到位置估计很难听到吧（或者是我带耳机久了，听力下降了吗）。</p>
+<p>上<strong>数学模型与优化</strong>的时候，有道题还是没弄清楚，所以这里来解决一下。这道题的解法不止一种，课上老师介绍的方法是<strong>并查集</strong>。</p>
+<h1 id="noip-2015-信息传递">NOIP 2015 信息传递</h1>
+<details>
+         <summary><b>点击展开题目详情</b></summary>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://ae01.alicdn.com/kf/H30d4c06f8dc94c76ab31e966259a7d66r.jpg"
+        data-srcset="https://ae01.alicdn.com/kf/H30d4c06f8dc94c76ab31e966259a7d66r.jpg, https://ae01.alicdn.com/kf/H30d4c06f8dc94c76ab31e966259a7d66r.jpg 1.5x, https://ae01.alicdn.com/kf/H30d4c06f8dc94c76ab31e966259a7d66r.jpg 2x"
+        data-sizes="auto"
+        alt="题目详情"
+        title="题目详情" /></p>
+</details>
+<p>以下的所有说明围绕样例进行说明。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://ae01.alicdn.com/kf/H653777b67e0c48829ffb9c10c3b3ad0dJ.jpg"
+        data-srcset="https://ae01.alicdn.com/kf/H653777b67e0c48829ffb9c10c3b3ad0dJ.jpg, https://ae01.alicdn.com/kf/H653777b67e0c48829ffb9c10c3b3ad0dJ.jpg 1.5x, https://ae01.alicdn.com/kf/H653777b67e0c48829ffb9c10c3b3ad0dJ.jpg 2x"
+        data-sizes="auto"
+        alt="样例"
+        title="样例" /></p>
+<p>当从别人那里得知自己的生日，实质上就是形成了一个环。所以这道题实际上是：<br>
+找到所构建的图中的<strong>最小环</strong>的长度。</p>
+<p>找最小环的过程，这里我们用<strong>并查集</strong>的方法。即<strong>把每个同学都看成点，A同学将信息传给B同学，就相当于在A和B之间建立了一条有向条边，将其加入并查集中，当遇到两个点的祖先节点相同时，则说明他们已经在同一个集合，那么就能构成环，此时判断一下环的长度即可。</strong></p>
+<h3 id="step-0-初始化">Step 0. 初始化</h3>
+<p>初始化的状态可以表示成下图所示，此时我们把每个节点看成一棵只有一个节点的<strong>树</strong>，那么每棵树的根自然就是唯一的那个节点。
+<img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://ae01.alicdn.com/kf/He1a246a55aef4a46acdb42a975ff48887.jpg"
+        data-srcset="https://ae01.alicdn.com/kf/He1a246a55aef4a46acdb42a975ff48887.jpg, https://ae01.alicdn.com/kf/He1a246a55aef4a46acdb42a975ff48887.jpg 1.5x, https://ae01.alicdn.com/kf/He1a246a55aef4a46acdb42a975ff48887.jpg 2x"
+        data-sizes="auto"
+        alt="初始化"
+        title="初始化" /></p>
+<p>代码来表示上图，创建两个数组a和b，其中a中每个元素表示每棵树的根节点，b来存放传递信息的方向。<br>
+为了方便起见，这里的index 0设置为空。</p>
+<table>
+<thead>
+<tr>
+<th>index</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>b</td>
+<td>2</td>
+<td>4</td>
+<td>2</td>
+<td>3</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>从左到右开始同时扫描一遍两个数组(即一个for循环)。</p>
+<h3 id="step-1-扫描1">Step 1. 扫描1</h3>
+<p>当扫描到1时，发现1传递信息给2(即b[1]值为2)，可以用以下的有向图表示。</p>
+<p>此时1和2连在了一起，从两棵树合并成了一棵树，树的<strong>根</strong>我们定义成所指向的那个节点（需要注意, 并查集是<strong>孩子节点指向父节点</strong>，这点与一般的树相反）。
+<img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://ae01.alicdn.com/kf/H5ef9a92eb82c476e89e0ec8318d969e9Z.jpg"
+        data-srcset="https://ae01.alicdn.com/kf/H5ef9a92eb82c476e89e0ec8318d969e9Z.jpg, https://ae01.alicdn.com/kf/H5ef9a92eb82c476e89e0ec8318d969e9Z.jpg 1.5x, https://ae01.alicdn.com/kf/H5ef9a92eb82c476e89e0ec8318d969e9Z.jpg 2x"
+        data-sizes="auto"
+        alt="1"
+        title="1" /></p>
+<p>我们首先判断是否构成了环：</p>
+<ol>
+<li>查看<font color=red>1</font>所指向的节点, 即b[1] = 2</li>
+<li>查看2的父节点, 即a[2] = 2, 因为此时<font color=blue>2</font>的父节点就是它自己，所以停止搜索。此刻认定<font color=red>1</font>所指向的节点的根是<font color=blue>2</font></li>
+<li>判断<font color=red>1</font>是不是<em><font color=red>1</font>所指向的节点</em>的根，即<font color=red>1</font>是否等于<font color=blue>2</font></li>
+<li>此时不相等，所以没有构成环。没有构成环则更新1的根，即更新a[1]的值为2。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>index</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td><strong>2</strong></td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>b</td>
+<td>2</td>
+<td>4</td>
+<td>2</td>
+<td>3</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-2-扫描2">Step 2. 扫描2</h3>
+<p>当扫描到2时，发现2传递信息给4(即b[2]值为4)，可以用以下的有向图表示。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://ae01.alicdn.com/kf/Hb99fad92c06b4999959004b9ddf35e810.jpg"
+        data-srcset="https://ae01.alicdn.com/kf/Hb99fad92c06b4999959004b9ddf35e810.jpg, https://ae01.alicdn.com/kf/Hb99fad92c06b4999959004b9ddf35e810.jpg 1.5x, https://ae01.alicdn.com/kf/Hb99fad92c06b4999959004b9ddf35e810.jpg 2x"
+        data-sizes="auto"
+        alt="2"
+        title="2" /></p>
+<table>
+<thead>
+<tr>
+<th>index</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>2</td>
+<td><strong>4</strong></td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>b</td>
+<td>2</td>
+<td>4</td>
+<td>2</td>
+<td>3</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-3-扫描3">Step 3. 扫描3</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://ae01.alicdn.com/kf/H4ae65cedd5b74f8782b57230a344afe0Q.jpg"
+        data-srcset="https://ae01.alicdn.com/kf/H4ae65cedd5b74f8782b57230a344afe0Q.jpg, https://ae01.alicdn.com/kf/H4ae65cedd5b74f8782b57230a344afe0Q.jpg 1.5x, https://ae01.alicdn.com/kf/H4ae65cedd5b74f8782b57230a344afe0Q.jpg 2x"
+        data-sizes="auto"
+        alt="3"
+        title="3" /></p>
+<table>
+<thead>
+<tr>
+<th>index</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>2</td>
+<td>4</td>
+<td><strong>2</strong></td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>b</td>
+<td>2</td>
+<td>4</td>
+<td>2</td>
+<td>3</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-4-扫描4">Step 4. 扫描4</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://ae01.alicdn.com/kf/Hc51229a8d30f42229206181d14ddf70ao.jpg"
+        data-srcset="https://ae01.alicdn.com/kf/Hc51229a8d30f42229206181d14ddf70ao.jpg, https://ae01.alicdn.com/kf/Hc51229a8d30f42229206181d14ddf70ao.jpg 1.5x, https://ae01.alicdn.com/kf/Hc51229a8d30f42229206181d14ddf70ao.jpg 2x"
+        data-sizes="auto"
+        alt="4"
+        title="4" /></p>
+<table>
+<thead>
+<tr>
+<th>index</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>2</td>
+<td>4</td>
+<td>2</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>b</td>
+<td>2</td>
+<td>4</td>
+<td>2</td>
+<td>3</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>从图上我们可以发现出现了一个环，代码上是如何发现的呢：</p>
+<ol>
+<li>查看<font color=red>4</font>所指向的节点, 即b[4] = 3</li>
+<li>查看3的父节点, 即a[3] = 2</li>
+<li>查看2的父节点, 即a[2] = 4</li>
+<li>查看4的父节点, 即a[4] = 4, 因为此时<font color=blue>4</font>的父节点就是它自己，所以停止搜索。此刻<font color=red>4</font>所指向的节点的根是<font color=blue>4</font></li>
+<li>判断4是不是 <em>4所指向的节点</em> 的根，即<font color=red>4</font>是否等于<font color=blue>4</font></li>
+<li>如果相同则认为构成了环。此时构成了环，为了避免循环，则<strong>不更新a[4]</strong></li>
+</ol>
+<h3 id="step-5-扫描5">Step 5. 扫描5</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://ae01.alicdn.com/kf/H1b8a1ff7096744d694794b9ebb8c6936G.jpg"
+        data-srcset="https://ae01.alicdn.com/kf/H1b8a1ff7096744d694794b9ebb8c6936G.jpg, https://ae01.alicdn.com/kf/H1b8a1ff7096744d694794b9ebb8c6936G.jpg 1.5x, https://ae01.alicdn.com/kf/H1b8a1ff7096744d694794b9ebb8c6936G.jpg 2x"
+        data-sizes="auto"
+        alt="5"
+        title="5" /></p>
+<table>
+<thead>
+<tr>
+<th>index</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>2</td>
+<td>4</td>
+<td>2</td>
+<td>4</td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td>b</td>
+<td>2</td>
+<td>4</td>
+<td>2</td>
+<td>3</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://duoluoluo.blog.luogu.org/solution-p2661" target="_blank" rel="noopener noreffer">题解 P2661 【信息传递】</a>代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C" data-lang="C"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;cstdio&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="n">using</span> <span class="n">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">200010</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">fa</span><span class="p">[</span><span class="n">N</span><span class="p">],</span> <span class="n">ans</span> <span class="o">=</span> <span class="mh">0x3f3f3f3f</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">get</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">cnt</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//cnt记录环的长度 
+</span><span class="c1"></span>    <span class="n">cnt</span> <span class="o">++</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">fa</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">)</span> <span class="k">return</span> <span class="n">x</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">return</span> <span class="n">get</span><span class="p">(</span><span class="n">fa</span><span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="n">cnt</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span><span class="p">)</span>
+        <span class="n">fa</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">f</span><span class="p">;</span>
+        <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">f</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">get</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">cnt</span><span class="p">)</span> <span class="o">==</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">ans</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span> <span class="n">cnt</span><span class="p">);</span> <span class="c1">//维护最小的环 
+</span><span class="c1"></span>        <span class="p">}</span><span class="k">else</span>
+            <span class="n">fa</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="n">ans</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="参考资料">参考资料</h1>
+<blockquote>
+<p>Graph Editor <a href="https://csacademy.com/app/graph_editor/">https://csacademy.com/app/graph_editor/</a> (画图论相关的图片非常好用)<br>
+P2661 信息传递 题解  <a href="https://www.luogu.org/problemnew/solution/P2661">https://www.luogu.org/problemnew/solution/P2661</a> （提供这道题的C代码）</p>
+<p>题解 P2661 【信息传递】https://duoluoluo.blog.luogu.org/solution-p2661 （提供这道题的C代码）</p>
+</blockquote>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>本文于 2019-09-05 更新</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" class="prev" rel="prev" title="回溯算法"><i class="fas fa-angle-left fa-fw"></i>回溯算法</a>
+            <a href="/posts/englishdictation01/" class="next" rel="next" title="English Dictation 01">English Dictation 01<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.6"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript">
+    window.config = {"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{"valine":{"appId":"xsBQ6wXUkm1km876o5DMLW4R-gzGzoHsz","appKey":"5H8DU1HXMV5Xg4PRuahFsNqU","avatar":"mm","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-facebook@5.0.1/img/facebook/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":null,"highlight":true,"lang":"zh-cn","placeholder":"说点什么吧...","recordIP":null,"visitor":true}},"headerMode":{"desktop":null,"mobile":null},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};
+</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

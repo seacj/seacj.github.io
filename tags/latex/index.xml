@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>LaTeX - 标签 - 草祭の博客</title>
+        <link>https://seacj.github.io/tags/latex/</link>
+        <description>LaTeX - 标签 - 草祭の博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
+            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Sat, 21 Sep 2019 14:58:31 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/latex/" rel="self" type="application/rss+xml" /><item>
+    <title>Hugo博客LaTeX渲染</title>
+    <link>https://seacj.github.io/posts/hugo%E5%8D%9A%E5%AE%A2latex%E6%B8%B2%E6%9F%93/</link>
+    <pubDate>Sat, 21 Sep 2019 14:58:31 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/hugo%E5%8D%9A%E5%AE%A2latex%E6%B8%B2%E6%9F%93/</guid>
+    <description><![CDATA[题记 写博客的时候有时候会需要写公式，我自己的习惯是用Typora进行博客编写，本地上Typora自带latex支持，但是推送到网页的话只能显]]></description>
+</item><item>
+    <title>LaTeX初体验</title>
+    <link>https://seacj.github.io/posts/latex%E5%88%9D%E4%BD%93%E9%AA%8C/</link>
+    <pubDate>Wed, 31 Jul 2019 16:32:27 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/latex%E5%88%9D%E4%BD%93%E9%AA%8C/</guid>
+    <description><![CDATA[感觉做科研的话很多人都在用LaTeX，这里记录一下初次使用LaTeX的心得。 使用TeXworks编辑器，排版工具使用TeXworks上的Xe]]></description>
+</item></channel>
+</rss>

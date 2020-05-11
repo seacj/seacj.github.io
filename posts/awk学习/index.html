@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Awk学习 - 草祭の博客</title>
+        <meta name="Description" content=""><meta property="og:title" content="Awk学习" />
+<meta property="og:description" content="题记 awk是unix下很实用的文本编辑语言。可以快速处理很多操作。参考资料是b站up主正月点灯笼的awk入门教程。这篇博客用来记录一下awk" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seacj.github.io/posts/awk%E5%AD%A6%E4%B9%A0/" />
+<meta property="article:published_time" content="2020-03-12T00:55:02+08:00" />
+<meta property="article:modified_time" content="2020-03-12T00:55:02+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Awk学习"/>
+<meta name="twitter:description" content="题记 awk是unix下很实用的文本编辑语言。可以快速处理很多操作。参考资料是b站up主正月点灯笼的awk入门教程。这篇博客用来记录一下awk"/>
+<meta name="application-name" content="草祭の博客">
+<meta name="apple-mobile-web-app-title" content="草祭の博客"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/awk%E5%AD%A6%E4%B9%A0/" /><link rel="prev" href="https://seacj.github.io/posts/git%E5%AD%A6%E4%B9%A0/" /><link rel="next" href="https://seacj.github.io/posts/%E5%9C%A8ubuntu%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E6%90%AD%E5%BB%BAminecraft/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Awk学习",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seacj.github.io\/posts\/awk%E5%AD%A6%E4%B9%A0\/"
+        },"genre": "posts","keywords": "linux","wordcount":  1426 ,
+        "url": "https:\/\/seacj.github.io\/posts\/awk%E5%AD%A6%E4%B9%A0\/","datePublished": "2020-03-12T00:55:02+08:00","dateModified": "2020-03-12T00:55:02+08:00","author": {
+                "@type": "Person",
+                "name": "草祭"
+            },"description": ""
+    }
+    </script></head>
+    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="草祭の博客">草祭の博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/" title="About"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="草祭の博客">草祭の博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="About">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Awk学习</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>草祭</a></span>&nbsp;
+                    <span class="post-category">收录于<a href="/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/">
+                                <i class="far fa-folder fa-fw"></i>编程-ღ-技术
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-03-12>2020-03-12</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 1426 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 3 分钟&nbsp;<span id="/posts/awk%E5%AD%A6%E4%B9%A0/" class="leancloud_visitors" data-flag-title="Awk学习">
+                        <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#题记">题记</a></li>
+      </ul>
+    </li>
+    <li><a href="#待处理的文本">待处理的文本</a></li>
+    <li><a href="#打印内容">打印内容</a></li>
+    <li><a href="#搜索">搜索</a></li>
+    <li><a href="#分割符">分割符</a></li>
+    <li><a href="#变量">变量</a></li>
+    <li><a href="#正则表达式">正则表达式</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="题记">题记</h2>
+<p><code>awk</code>是unix下很实用的文本编辑语言。可以快速处理很多操作。参考资料是b站up主正月点灯笼的<a href="https://www.bilibili.com/video/av4282247" target="_blank" rel="noopener noreffer">awk入门教程</a>。这篇博客用来记录一下awk里面非常基础的操作。</p>
+<h1 id="待处理的文本">待处理的文本</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-txt" data-lang="txt">gold 1 1986 USA American Eagle
+gold 1 1908 Austria-Hungary Franz josef 100 Korona
+silver 10 1981 USA ingot
+gold 1 1984 Switzerland ingot
+gold 1 1979 RSA Krugerrand
+gold 0.5 1981 RSA Krugerrand
+gold 0.1 1986 PRC Panda
+silver 1 1986 USA Liberty dollar
+gold 0.25 1986 USA Liberty 5-dollar piece
+silver 1 1986 USA Liberty 50-cent piece
+silver 1 1987 USA Constitution dollar
+gold 0.25 1987 USA Constitution 5-dollar piece
+gold 1 1988 Canada Maple leaf
+</code></pre></td></tr></table>
+</div>
+</div><p>命名为coins.txt, 每一列从左到右分别表示材料、重量、生产时间、生产地、产品名称。</p>
+<h1 id="打印内容">打印内容</h1>
+<ul>
+<li><code>awk '{print NR &quot;\t&quot; $0 &quot;\t&quot; $5}' coins.txt'</code></li>
+</ul>
+<p><strong>知识点</strong>：</p>
+<ol>
+<li>行是record，列是field。打印行号用NR</li>
+<li>$1表示第一列</li>
+<li>$0表示打印全部内容</li>
+<li>注意原本设想的<em>产品名称</em> 列被拆成了多列，比如American Eagle被拆成了2列。</li>
+</ol>
+<details>
+<summary>点击展开输出结果</summary>
+```awk
+1	gold 1 1986 USA American Eagle	American
+2	gold 1 1908 Austria-Hungary Franz josef 100 Korona	Franz
+3	silver 10 1981 USA ingot	ingot
+4	gold 1 1984 Switzerland ingot	ingot
+5	gold 1 1979 RSA Krugerrand	Krugerrand
+6	gold 0.5 1981 RSA Krugerrand	Krugerrand
+7	gold 0.1 1986 PRC Panda	Panda
+8	silver 1 1986 USA Liberty dollar	Liberty
+9	gold 0.25 1986 USA Liberty 5-dollar piece	Liberty
+10	silver 1 1986 USA Liberty 50-cent piece	Liberty
+11	silver 1 1987 USA Constitution dollar	Constitution
+12	gold 0.25 1987 USA Constitution 5-dollar piece	Constitution
+13	gold 1 1988 Canada Maple leaf	Maple
+```
+</details>
+<ul>
+<li><code>awk '{print NR NR, NR}' coins.txt</code></li>
+</ul>
+<p><strong>知识点</strong>：用<code>,</code>逗号来分开，只用空格会被直接忽略掉。</p>
+<p><code>NR NR</code>的打印结果中间没有空格，而<code>NR, NR</code>打印结果是有空格的(注意命令中逗号后面有一个空格)。</p>
+<details>
+<summary>点击展开输出结果</summary>
+```awk
+11 1
+22 2
+33 3
+44 4
+55 5
+66 6
+77 7
+88 8
+99 9
+1010 10
+1111 11
+1212 12
+1313 13
+```
+</details>
+<h1 id="搜索">搜索</h1>
+<ul>
+<li><code>awk '$3==1986{print $0}' coins.txt</code></li>
+</ul>
+<p>打印满足第三列是1986的所有行。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-awk" data-lang="awk"><span class="nx">gold</span> <span class="mi">1</span> <span class="mi">1986</span> <span class="nx">USA</span> <span class="nx">American</span> <span class="nx">Eagle</span>
+<span class="nx">gold</span> <span class="mf">0.1</span> <span class="mi">1986</span> <span class="nx">PRC</span> <span class="nx">Panda</span>
+<span class="nx">silver</span> <span class="mi">1</span> <span class="mi">1986</span> <span class="nx">USA</span> <span class="nx">Liberty</span> <span class="nx">dollar</span>
+<span class="nx">gold</span> <span class="mf">0.25</span> <span class="mi">1986</span> <span class="nx">USA</span> <span class="nx">Liberty</span> <span class="mi">5</span><span class="o">-</span><span class="nx">dollar</span> <span class="nx">piece</span>
+<span class="nx">silver</span> <span class="mi">1</span> <span class="mi">1986</span> <span class="nx">USA</span> <span class="nx">Liberty</span> <span class="mi">50</span><span class="o">-</span><span class="nx">cent</span> <span class="nx">piece</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>awk '$3==1986&amp;&amp;$1==&quot;gold&quot;{print $0}' coins.txt</code></li>
+</ul>
+<p><strong>知识点</strong>：对字符串的匹配要加上双引号，否则会被当做变量名</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-awk" data-lang="awk"><span class="nx">gold</span> <span class="mi">1</span> <span class="mi">1986</span> <span class="nx">USA</span> <span class="nx">American</span> <span class="nx">Eagle</span>
+<span class="nx">gold</span> <span class="mf">0.1</span> <span class="mi">1986</span> <span class="nx">PRC</span> <span class="nx">Panda</span>
+<span class="nx">gold</span> <span class="mf">0.25</span> <span class="mi">1986</span> <span class="nx">USA</span> <span class="nx">Liberty</span> <span class="mi">5</span><span class="o">-</span><span class="nx">dollar</span> <span class="nx">piece</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="分割符">分割符</h1>
+<p>为了方便演示，使用<code>Hello,world</code>作为输入。</p>
+<p><strong>知识点</strong>：</p>
+<ol>
+<li>awk分割符分为输入分割符和输出分割符</li>
+<li>BEGIN 模式：是指 awk 将在读取任何输入行之前立即执行BEGIN 中指定的动作</li>
+<li>和C语言一样，分号<code>;</code>用来分开多个语句</li>
+</ol>
+<ul>
+<li>
+<p><code>echo Hello,world | awk '{print $1, NF}'</code></p>
+<p>输出：<code>Hello,world 1</code></p>
+</li>
+<li>
+<p><code>echo Hello,world | awk 'BEGIN{FS=&quot;,&quot;} {print $1, $2, NF}'</code></p>
+<p>输出：<code>Hello world 2</code></p>
+</li>
+<li>
+<p><code>echo Hello,world | awk 'BEGIN{FS=&quot;,&quot;; OFS=&quot;,&quot;} {print $1, $2, NF}'</code></p>
+<p>输出：<code>Hello,world,2</code></p>
+</li>
+</ul>
+<h1 id="变量">变量</h1>
+<ul>
+<li><code>awk '{$3=&quot;xxx&quot;; print FILENAME $0}' coins.txt</code></li>
+</ul>
+<p><strong>知识点</strong>：</p>
+<ol>
+<li><code>FILENAME</code>可以输出文件名，比如coins.txt.</li>
+<li><code>$3=&quot;xxx&quot;</code>把第三列替换了</li>
+</ol>
+<details>
+<summary>点击展开输出结果</summary>
+```awk
+coins.txtgold 1 xxx USA American Eagle
+coins.txtgold 1 xxx Austria-Hungary Franz josef 100 Korona
+coins.txtsilver 10 xxx USA ingot
+coins.txtgold 1 xxx Switzerland ingot
+coins.txtgold 1 xxx RSA Krugerrand
+coins.txtgold 0.5 xxx RSA Krugerrand
+coins.txtgold 0.1 xxx PRC Panda
+coins.txtsilver 1 xxx USA Liberty dollar
+coins.txtgold 0.25 xxx USA Liberty 5-dollar piece
+coins.txtsilver 1 xxx USA Liberty 50-cent piece
+coins.txtsilver 1 xxx USA Constitution dollar
+coins.txtgold 0.25 xxx USA Constitution 5-dollar piece
+coins.txtgold 1 xxx Canada Maple leaf
+```
+</details>
+<ul>
+<li><code>awk '{print $NF &quot;\t&quot; $(NF-1)}' coins.txt</code></li>
+</ul>
+<p><strong>知识点</strong>：<code>$NF</code>可以用来打印倒数第某列</p>
+<details>
+<summary>点击展开输出结果</summary>
+```awk
+Eagle	American
+Korona	100
+ingot	USA
+ingot	Switzerland
+Krugerrand	RSA
+Krugerrand	RSA
+Panda	PRC
+dollar	Liberty
+piece	5-dollar
+piece	50-cent
+dollar	Constitution
+piece	5-dollar
+leaf	Maple
+```
+</details>
+<h1 id="正则表达式">正则表达式</h1>
+<ul>
+<li><code>awk '/^g/{print $0}' coins.txt</code></li>
+</ul>
+<p>匹配开头是g的行。</p>
+<details>
+<summary>点击展开输出结果</summary>
+```awk
+gold 1 1986 USA American Eagle
+gold 1 1908 Austria-Hungary Franz josef 100 Korona
+gold 1 1984 Switzerland ingot
+gold 1 1979 RSA Krugerrand
+gold 0.5 1981 RSA Krugerrand
+gold 0.1 1986 PRC Panda
+gold 0.25 1986 USA Liberty 5-dollar piece
+gold 0.25 1987 USA Constitution 5-dollar piece
+gold 1 1988 Canada Maple leaf
+```
+</details>
+<p>正则表达式语法：</p>
+<ul>
+<li>
+<p><code>.</code>匹配任何单字符，要匹配 . ，需使用 <code>\.</code></p>
+<p><code>/a.c/</code> 能够匹配abc, axc等</p>
+</li>
+<li>
+<p><code>^</code>和<code>$</code>分别表示开始和结尾</p>
+</li>
+<li>
+<p><code>[]</code>表示匹配方括号中的一个字符</p>
+<p><code>/a[xy]b/</code>能够匹配axb, ayb.</p>
+<p><code>/a[a-zA-Z]b/</code>能够匹配axb, aXb等.</p>
+</li>
+<li>
+<p><code>^</code>在方括号中表示否定</p>
+<p><code>/a[^a-z]c/</code>能够匹配aAc，但不能匹配aac.</p>
+</li>
+<li>
+<p><code>*</code>表示可以匹配0次或多次</p>
+</li>
+<li>
+<p><code>+</code>表示匹配1次或多次</p>
+</li>
+<li>
+<p><code>?</code>表示前面的字符可以有也可以没有</p>
+<p><code>/a?b/</code>可以匹配ab，b。</p>
+</li>
+<li>
+<p><code>{}</code>用于匹配多个重复字符</p>
+<p><code>/a{3}c/</code>可匹配aaac。</p>
+<p><code>/a{1,3}c/</code>可匹配ac，aac，aaac。</p>
+<p><code>/a{2,}c/</code>可匹配aac，aaaaac等。</p>
+</li>
+<li>
+<p><code>()</code>标记一个子表达式的开始和结束位置</p>
+<p><code>/(ab)+c/</code>可匹配abc, ababababc.</p>
+</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>本文于 2020-03-12 更新</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">linux</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/git%E5%AD%A6%E4%B9%A0/" class="prev" rel="prev" title="Git学习"><i class="fas fa-angle-left fa-fw"></i>Git学习</a>
+            <a href="/posts/%E5%9C%A8ubuntu%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E6%90%AD%E5%BB%BAminecraft/" class="next" rel="next" title="Ubuntu搭建minecraft服务器">Ubuntu搭建minecraft服务器<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.6"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript">
+    window.config = {"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{"valine":{"appId":"xsBQ6wXUkm1km876o5DMLW4R-gzGzoHsz","appKey":"5H8DU1HXMV5Xg4PRuahFsNqU","avatar":"mm","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-facebook@5.0.1/img/facebook/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":null,"highlight":true,"lang":"zh-cn","placeholder":"说点什么吧...","recordIP":null,"visitor":true}},"headerMode":{"desktop":null,"mobile":null},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};
+</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

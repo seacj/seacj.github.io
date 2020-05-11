@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Ubuntu搭建minecraft服务器 - 草祭の博客</title>
+        <meta name="Description" content=""><meta property="og:title" content="Ubuntu搭建minecraft服务器" />
+<meta property="og:description" content="题记 最近在b站刷了好几个游戏区up主更新了Minecraft(我的世界)的视频，心血来潮我也想开始玩一玩，依稀记得好像Minecraft可以" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seacj.github.io/posts/%E5%9C%A8ubuntu%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E6%90%AD%E5%BB%BAminecraft/" />
+<meta property="article:published_time" content="2020-03-13T01:53:35+08:00" />
+<meta property="article:modified_time" content="2020-03-13T01:53:35+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Ubuntu搭建minecraft服务器"/>
+<meta name="twitter:description" content="题记 最近在b站刷了好几个游戏区up主更新了Minecraft(我的世界)的视频，心血来潮我也想开始玩一玩，依稀记得好像Minecraft可以"/>
+<meta name="application-name" content="草祭の博客">
+<meta name="apple-mobile-web-app-title" content="草祭の博客"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/%E5%9C%A8ubuntu%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E6%90%AD%E5%BB%BAminecraft/" /><link rel="prev" href="https://seacj.github.io/posts/awk%E5%AD%A6%E4%B9%A0/" /><link rel="next" href="https://seacj.github.io/posts/%E5%A5%87%E5%A5%87%E6%80%AA%E6%80%AA%E7%9A%84%E6%A2%A6/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Ubuntu搭建minecraft服务器",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seacj.github.io\/posts\/%E5%9C%A8ubuntu%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E6%90%AD%E5%BB%BAminecraft\/"
+        },"genre": "posts","keywords": "minecraft, linux","wordcount":  1931 ,
+        "url": "https:\/\/seacj.github.io\/posts\/%E5%9C%A8ubuntu%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E6%90%AD%E5%BB%BAminecraft\/","datePublished": "2020-03-13T01:53:35+08:00","dateModified": "2020-03-13T01:53:35+08:00","author": {
+                "@type": "Person",
+                "name": "草祭"
+            },"description": ""
+    }
+    </script></head>
+    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="草祭の博客">草祭の博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/" title="About"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="草祭の博客">草祭の博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="About">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Ubuntu搭建minecraft服务器</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>草祭</a></span>&nbsp;
+                    <span class="post-category">收录于<a href="/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/">
+                                <i class="far fa-folder fa-fw"></i>编程-ღ-技术
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-03-13>2020-03-13</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 1931 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 4 分钟&nbsp;<span id="/posts/%E5%9C%A8ubuntu%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E6%90%AD%E5%BB%BAminecraft/" class="leancloud_visitors" data-flag-title="Ubuntu搭建minecraft服务器">
+                        <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#题记">题记</a></li>
+      </ul>
+    </li>
+    <li><a href="#我的服务器配置">我的服务器配置</a></li>
+    <li><a href="#服务器搭建">服务器搭建</a></li>
+    <li><a href="#本地客户端连接">本地客户端连接</a></li>
+    <li><a href="#最后一步">最后一步</a></li>
+    <li><a href="#追加mod">追加mod</a>
+      <ul>
+        <li><a href="#下载forge">下载Forge</a></li>
+        <li><a href="#运行forge">运行Forge</a></li>
+        <li><a href="#运行服务端">运行服务端</a></li>
+        <li><a href="#在客户端追加mod">在客户端追加mod</a></li>
+        <li><a href="#装载mod">装载mod</a></li>
+      </ul>
+    </li>
+    <li><a href="#参考资料">参考资料</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="题记">题记</h2>
+<p>最近在b站刷了好几个游戏区up主更新了<strong>Minecraft</strong>(我的世界)的视频，心血来潮我也想开始玩一玩，依稀记得好像Minecraft可以装在远程，然后多人共同使用，查了一下<em>同时联机人数为5或以下，内存需要512MB</em> ，所以心血来潮在我的<strong>乞丐配置</strong>的服务器上建一个Minecraft服务器。我主要参照<a href="https://linux.cn/article-9480-1.html" target="_blank" rel="noopener noreffer">如何搭建一个“我的世界”服务器 - 快速指南</a>进行搭建，这篇博客就来记录一下我搭建的过程。</p>
+<h1 id="我的服务器配置">我的服务器配置</h1>
+<ul>
+<li>Ubuntu系统</li>
+<li>2G内存</li>
+<li>1核CPU</li>
+<li>带宽1M（我在使用1.15.2的版本进行多人游戏时，需要升级带宽到2M，否则当玩家大于2人时就会出现频繁断线，甚至连接不上的情况）</li>
+</ul>
+<h1 id="服务器搭建">服务器搭建</h1>
+<ul>
+<li>
+<p><code>mkdir minecraft</code> 新建一个名为minecraft的文件夹</p>
+</li>
+<li>
+<p><code> cd minecraft</code> 进入minecraft文件夹</p>
+</li>
+<li>
+<p>打开25565号端口，如果是阿里云服务器直接通过控制台的安全组就能配置。</p>
+</li>
+<li>
+<p><code> wget https://s3.amazonaws.com/Minecraft.Download/versions/1.12.2/minecraft_server.1.12.2.jar</code> 下载minecraft服务器，这里版本为1.12.2.</p>
+</li>
+<li>
+<p><code>sudo apt install default-jdk</code> 安装JDK，如果你的服务器执行<code>javac -version</code>命令，能够打印出javac版本号，则跳过此步。</p>
+</li>
+<li>
+<p><code>sudo apt-get install screen</code> 安装screen，用于让minecraft在服务器后台运行。</p>
+</li>
+<li>
+<p><code>free -m</code>查看内存（我的空闲内存只有986M(ㄒoㄒ)）</p>
+<p>​					total        used        free      shared  buff/cache   available
+Mem:           1993         215         986           3         790        1601
+Swap:           947         160         786</p>
+</li>
+<li>
+<p><code>java -Xms1024M -Xmx2048M -jar minecraft_server.1.12.2.jar nogui</code></p>
+<p>-Xms设置服务器最小内存 -Xmx是最大内存。</p>
+<p>此时会报一个错，是正常的, 此时会生成一些文件，其中一个名为eula.txt。</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">[03:53:30] [Server thread/INFO]: Starting minecraft server version 1.12.2
+[03:53:30] [Server thread/INFO]: Loading properties
+[03:53:30] [Server thread/WARN]: server.properties does not exist
+[03:53:30] [Server thread/INFO]: Generating new properties file
+[03:53:30] [Server thread/WARN]: Failed to load eula.txt
+[03:53:30] [Server thread/INFO]: You need to agree to the EULA in order to run the server. Go to eula.txt for more info.
+[03:53:30] [Server thread/INFO]: Stopping server
+[03:53:30] [Server Shutdown Thread/INFO]: Stopping server
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p><code>sed -i.orig 's/eula=false/eula=true/g' eula.txt</code> 执行这个命令，来修改里面的内容，相当于安装软件时勾选同意协议的意思。</p>
+</li>
+<li>
+<p><code>java -Xms1024M -Xmx2048M -jar minecraft_server.1.12.2.jar nogui</code> 运行minecraft服务器。</p>
+</li>
+</ul>
+<p>一切正常的话会显示<code> [04:05:03] [Server thread/INFO]: Done (4.439s)! For help, type &quot;help&quot; or &quot;?&quot;</code>。此时服务器就在运行了。</p>
+<h1 id="本地客户端连接">本地客户端连接</h1>
+<p>在本地(我是windows10系统，使用的HMCL启动器)，打开minecraft（注意版本要和服务器一样），点击<code>Direct Connect</code>（<code>Add Server</code>可以存下ip地址，就不需要每次输入了），输入你服务器的ip地址。
+<img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://pic.downk.cc/item/5e6a9d8ce83c3a1e3a4c4a91.jpg"
+        data-srcset="https://pic.downk.cc/item/5e6a9d8ce83c3a1e3a4c4a91.jpg, https://pic.downk.cc/item/5e6a9d8ce83c3a1e3a4c4a91.jpg 1.5x, https://pic.downk.cc/item/5e6a9d8ce83c3a1e3a4c4a91.jpg 2x"
+        data-sizes="auto"
+        alt="示意图"
+        title="示意图" /></p>
+<p>如果此时你没有连上，且你的服务器显示如下的信息：</p>
+<p><code> xxxxxxxxx@xxxxxxx[id=&lt;null&gt;,name=xxxxx,properties={},legacy=false] (/xxxxxxxx:50786) lost connection: Disconnected</code></p>
+<p>这是因为非正版玩家被设定成禁止进入了。</p>
+<p>此时在服务器上修改<code>minecraft</code>目录中的<code>server.properties</code>文件，将<code>online-mode=true</code>修改成<code>online-mode=false</code>.</p>
+<p>再次启动服务器之后，在本地就可以进入了！</p>
+<h1 id="最后一步">最后一步</h1>
+<p>正式运行minecraft服务器，在之前的步骤中，启动mincraft服务器之后，窗口不能关闭，否则服务器就会断开，现在让服务器一直在服务器后台开启。</p>
+<ul>
+<li><code>screen -S mc </code>创建名为mc的session。</li>
+<li><code>java -Xms1024M -Xmx2048M -jar minecraft_server.1.12.2.jar nogui</code>启动服务器。</li>
+</ul>
+<p>Screen的指令：</p>
+<p><code>screen -ls</code>  查看所有session，会打印出如后台的名称。</p>
+<p><code>screen -r mc</code> 会切换到名为mc的session中。</p>
+<p>先按住<code>ctrl+a</code>，然后按<code>d</code>. 能够跳出当前的session，但是后台程序依然会继续运行。</p>
+<p><code>exit</code>严格来说这不是Screen的命令，而是Linux中退出shell的命令，但是screen中的会在你退出最后一个程序(通常就是shell)的时候自动关闭，所以可以用来彻底关闭session用。</p>
+<h1 id="追加mod">追加mod</h1>
+<p>Note：我自己重新搭建了1.15.2版本的服务器，注意与上文1.12.2区分开，请选择你需要的版本.</p>
+<h2 id="下载forge">下载Forge</h2>
+<p>官网下载地址: <a href="http://files.minecraftforge.net/" target="_blank" rel="noopener noreffer">http://files.minecraftforge.net</a></p>
+<p>下载相应版本的Forge，我自己下载的是forge-1.15.2-31.1.0-installer.jar</p>
+<h2 id="运行forge">运行Forge</h2>
+<p><code>java -jar ./forge-1.15.2-31.1.0-installer.jar nogui --installServer</code></p>
+<p>将下载好的jar包放在<code>minecraft_server.1.15.2.jar</code>所在目录，然后在服务器上输入上面的命令，然后就会经过漫长的下载过程，途中可能因为下载的资源在外网，所以会由于网络问题断开，多重复输入命令就能全部下载下来。</p>
+<p>执行完毕之后会生成几个新的文件夹，和<code>forge-1.15.2-31.1.0.jar</code>文件。</p>
+<h2 id="运行服务端">运行服务端</h2>
+<p><code>java -jar forge-1.15.2-31.1.0.jar</code></p>
+<p>使用这个命令就会让服务器运行了。</p>
+<h2 id="在客户端追加mod">在客户端追加mod</h2>
+<p>我自己是HMCL的客户端，直接在线安装就很方便地安装上了。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://s1.ax1x.com/2020/04/02/GJTdMt.png"
+        data-srcset="https://s1.ax1x.com/2020/04/02/GJTdMt.png, https://s1.ax1x.com/2020/04/02/GJTdMt.png 1.5x, https://s1.ax1x.com/2020/04/02/GJTdMt.png 2x"
+        data-sizes="auto"
+        alt="客户端追加mod"
+        title="客户端追加mod" /></p>
+<h2 id="装载mod">装载mod</h2>
+<p>有些mod需要同时装在服务器和客户端(比如<a href="https://www.mcbbs.net/forum.php?mod=viewthread&amp;tid=845552&amp;extra=page%3D2%26filter%3Dsortid%26sortid%3D1%26typeid%3D135" target="_blank" rel="noopener noreffer">矿工的优势</a>)上，有的只需要装在客户端上(比如<a href="https://www.mcbbs.net/forum.php?mod=viewthread&amp;tid=616156&amp;ordertype=1" target="_blank" rel="noopener noreffer">Xaero地图</a>)。</p>
+<p>客户端将jar包放在.minecraft\mods目录下，服务器将jar包放在mods目录下即可。需要重启程序才能装载mod。</p>
+<h1 id="参考资料">参考资料</h1>
+<ul>
+<li>阿里云ECS搭建我的世界服务器 <a href="https://yq.aliyun.com/articles/675070">https://yq.aliyun.com/articles/675070</a></li>
+<li>Ubuntu下搭建我的世界服务器 <a href="https://blog.csdn.net/CSDNzyq/article/details/52735097">https://blog.csdn.net/CSDNzyq/article/details/52735097</a></li>
+<li>Linux下搭建带mod的Minecraft服务器 <a href="https://www.jianshu.com/p/89f14756d16c">https://www.jianshu.com/p/89f14756d16c</a></li>
+<li>Minecraft Forge 安装 <a href="https://blog.csdn.net/oschina_41734362/article/details/79319399">https://blog.csdn.net/oschina_41734362/article/details/79319399</a></li>
+<li>linux下建立可加载mod的minecraft服务器 <a href="https://blog.csdn.net/github_39068149/article/details/72910409#243-%E5%8A%A0%E8%BD%BDliteloader">https://blog.csdn.net/github_39068149/article/details/72910409#243-%E5%8A%A0%E8%BD%BDliteloader</a></li>
+<li>我的世界中文论坛MCBBS <a href="https://www.mcbbs.net/portal.php">https://www.mcbbs.net/portal.php</a></li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>本文于 2020-03-13 更新</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/minecraft/">minecraft</a>,&nbsp;<a href="/tags/linux/">linux</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/awk%E5%AD%A6%E4%B9%A0/" class="prev" rel="prev" title="Awk学习"><i class="fas fa-angle-left fa-fw"></i>Awk学习</a>
+            <a href="/posts/%E5%A5%87%E5%A5%87%E6%80%AA%E6%80%AA%E7%9A%84%E6%A2%A6/" class="next" rel="next" title="奇奇怪怪的梦">奇奇怪怪的梦<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.6"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript">
+    window.config = {"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{"valine":{"appId":"xsBQ6wXUkm1km876o5DMLW4R-gzGzoHsz","appKey":"5H8DU1HXMV5Xg4PRuahFsNqU","avatar":"mm","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-facebook@5.0.1/img/facebook/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":null,"highlight":true,"lang":"zh-cn","placeholder":"说点什么吧...","recordIP":null,"visitor":true}},"headerMode":{"desktop":null,"mobile":null},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};
+</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

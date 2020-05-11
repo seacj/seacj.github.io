@@ -1,0 +1,36 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>数学 - 标签 - 草祭の博客</title>
+        <link>https://seacj.github.io/tags/%E6%95%B0%E5%AD%A6/</link>
+        <description>数学 - 标签 - 草祭の博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
+            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Sun, 15 Dec 2019 18:07:01 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E6%95%B0%E5%AD%A6/" rel="self" type="application/rss+xml" /><item>
+    <title>谓词逻辑</title>
+    <link>https://seacj.github.io/posts/%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91/</link>
+    <pubDate>Sun, 15 Dec 2019 18:07:01 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91/</guid>
+    <description><![CDATA[题记 由于有些東西是命题逻辑没办法表示的，所以引出谓词逻辑，需要说明的是不管是命题逻辑也好，谓词逻辑也好，只是逻辑学中被广泛使用的其中的分支而]]></description>
+</item><item>
+    <title>命题逻辑的语义</title>
+    <link>https://seacj.github.io/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E7%9A%84%E8%AF%AD%E4%B9%89/</link>
+    <pubDate>Fri, 13 Dec 2019 20:55:38 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E7%9A%84%E8%AF%AD%E4%B9%89/</guid>
+    <description><![CDATA[题记 本来这个系列的博客是打算上一两节课就更新一次，结果一转眼《计算机科学中的逻辑学》这门课已经结课了，打算花两天时间整理一遍，作为记录，也作]]></description>
+</item><item>
+    <title>命题逻辑和自然推演</title>
+    <link>https://seacj.github.io/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94/</link>
+    <pubDate>Sun, 22 Sep 2019 12:19:26 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94/</guid>
+    <description><![CDATA[题记 为了严谨地描述一些问题，我们需要一些语言去表达问题中的逻辑结构，这篇博客将讲述其中一种语言——命题逻辑(propositional logic), 声明]]></description>
+</item><item>
+    <title>计算机科学中的逻辑学题记</title>
+    <link>https://seacj.github.io/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%80%BB%E8%BE%91%E5%AD%A6/</link>
+    <pubDate>Sat, 21 Sep 2019 14:23:03 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%80%BB%E8%BE%91%E5%AD%A6/</guid>
+    <description><![CDATA[题记 上了三周袁梦霆老师的计算机科学中的逻辑学课程，不得不说是一节开拓视野的课程，从逻辑学的角度看待计算机非常有意思。第一节课的时候老师开玩笑]]></description>
+</item></channel>
+</rss>

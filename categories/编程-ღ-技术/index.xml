@@ -1,0 +1,78 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>编程-ღ-技术 - 分类 - 草祭の博客</title>
+        <link>https://seacj.github.io/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/</link>
+        <description>编程-ღ-技术 - 分类 - 草祭の博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
+            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Fri, 20 Mar 2020 21:28:16 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/" rel="self" type="application/rss+xml" /><item>
+    <title>音频重采样简述</title>
+    <link>https://seacj.github.io/posts/%E9%9F%B3%E9%A2%91%E9%87%8D%E9%87%87%E6%A0%B7/</link>
+    <pubDate>Fri, 20 Mar 2020 21:28:16 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E9%9F%B3%E9%A2%91%E9%87%8D%E9%87%87%E6%A0%B7/</guid>
+    <description><![CDATA[题记 需要实现一个音频重采样的功能，发现没有我想象的那么简单，这里通过学习python中librosa的代码，来学习一下重采样，这里将以48k]]></description>
+</item><item>
+    <title>Ubuntu搭建minecraft服务器</title>
+    <link>https://seacj.github.io/posts/%E5%9C%A8ubuntu%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E6%90%AD%E5%BB%BAminecraft/</link>
+    <pubDate>Fri, 13 Mar 2020 01:53:35 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E5%9C%A8ubuntu%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E6%90%AD%E5%BB%BAminecraft/</guid>
+    <description><![CDATA[题记 最近在b站刷了好几个游戏区up主更新了Minecraft(我的世界)的视频，心血来潮我也想开始玩一玩，依稀记得好像Minecraft可以]]></description>
+</item><item>
+    <title>Awk学习</title>
+    <link>https://seacj.github.io/posts/awk%E5%AD%A6%E4%B9%A0/</link>
+    <pubDate>Thu, 12 Mar 2020 00:55:02 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/awk%E5%AD%A6%E4%B9%A0/</guid>
+    <description><![CDATA[题记 awk是unix下很实用的文本编辑语言。可以快速处理很多操作。参考资料是b站up主正月点灯笼的awk入门教程。这篇博客用来记录一下awk]]></description>
+</item><item>
+    <title>Git学习</title>
+    <link>https://seacj.github.io/posts/git%E5%AD%A6%E4%B9%A0/</link>
+    <pubDate>Tue, 03 Mar 2020 18:24:03 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/git%E5%AD%A6%E4%B9%A0/</guid>
+    <description><![CDATA[题记 Git是一个非常优秀的开源的分布式版本控制系统，非常值得好好学习一下。 这里分享一个可能是学习git的最好的网站：https://lear]]></description>
+</item><item>
+    <title>记一次配置Ubuntu服务器图形化界面</title>
+    <link>https://seacj.github.io/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/</link>
+    <pubDate>Sun, 01 Mar 2020 15:29:17 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/</guid>
+    <description><![CDATA[题记 以前配实验室的服务器的时候经常出现各种问题，但是因为又不是自己的服务器，所以不敢乱整，很多问题只要影响不大就将就着用了。不过现在买了个服]]></description>
+</item><item>
+    <title>Git hooks初探</title>
+    <link>https://seacj.github.io/posts/git_hooks%E5%88%9D%E6%8E%A2/</link>
+    <pubDate>Sat, 29 Feb 2020 17:57:41 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/git_hooks%E5%88%9D%E6%8E%A2/</guid>
+    <description><![CDATA[题记 由于打算把博客从Git Pages同步到自己的服务器上，需要借助Git hooks技术，所以来简单学习一下。 Git hooks是什么 Git Hooks就]]></description>
+</item><item>
+    <title>Shell学习</title>
+    <link>https://seacj.github.io/posts/shell%E5%AD%A6%E4%B9%A0/</link>
+    <pubDate>Fri, 10 Jan 2020 16:25:48 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/shell%E5%AD%A6%E4%B9%A0/</guid>
+    <description><![CDATA[题记 由于要跑kaldi(一个语音识别工具)，里面有很多shell脚本要运行，所以快速学习一遍shell，主要是参考https://www.r]]></description>
+</item><item>
+    <title>声纹识别X-Vector</title>
+    <link>https://seacj.github.io/posts/x-vector/</link>
+    <pubDate>Thu, 02 Jan 2020 20:13:20 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/x-vector/</guid>
+    <description><![CDATA[背景 声纹识别上x-vector被作为很多赛事的baseline使用，包括aishell2018、ASVspoof2019。介绍x-vecto]]></description>
+</item><item>
+    <title>谓词逻辑</title>
+    <link>https://seacj.github.io/posts/%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91/</link>
+    <pubDate>Sun, 15 Dec 2019 18:07:01 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91/</guid>
+    <description><![CDATA[题记 由于有些東西是命题逻辑没办法表示的，所以引出谓词逻辑，需要说明的是不管是命题逻辑也好，谓词逻辑也好，只是逻辑学中被广泛使用的其中的分支而]]></description>
+</item><item>
+    <title>命题逻辑的语义</title>
+    <link>https://seacj.github.io/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E7%9A%84%E8%AF%AD%E4%B9%89/</link>
+    <pubDate>Fri, 13 Dec 2019 20:55:38 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E7%9A%84%E8%AF%AD%E4%B9%89/</guid>
+    <description><![CDATA[题记 本来这个系列的博客是打算上一两节课就更新一次，结果一转眼《计算机科学中的逻辑学》这门课已经结课了，打算花两天时间整理一遍，作为记录，也作]]></description>
+</item></channel>
+</rss>

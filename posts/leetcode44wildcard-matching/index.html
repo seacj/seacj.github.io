@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Leetcode44 通配符匹配 - 草祭の博客</title>
+        <meta name="Description" content=""><meta property="og:title" content="Leetcode44 通配符匹配" />
+<meta property="og:description" content="LeetCode第44题是leetcode难度为hard的一个，解题方法是使用动态规划。题目内容可点击下面的黑色三角展开题目详情。 点击展开题" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seacj.github.io/posts/leetcode44wildcard-matching/" />
+<meta property="article:published_time" content="2019-07-01T23:33:47+08:00" />
+<meta property="article:modified_time" content="2019-07-01T23:33:47+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Leetcode44 通配符匹配"/>
+<meta name="twitter:description" content="LeetCode第44题是leetcode难度为hard的一个，解题方法是使用动态规划。题目内容可点击下面的黑色三角展开题目详情。 点击展开题"/>
+<meta name="application-name" content="草祭の博客">
+<meta name="apple-mobile-web-app-title" content="草祭の博客"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/leetcode44wildcard-matching/" /><link rel="prev" href="https://seacj.github.io/posts/leetcode712minimum-ascii-delete-sum-for-two-strings/" /><link rel="next" href="https://seacj.github.io/posts/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Leetcode44 通配符匹配",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seacj.github.io\/posts\/leetcode44wildcard-matching\/"
+        },"genre": "posts","keywords": "算法, leetcode","wordcount":  2823 ,
+        "url": "https:\/\/seacj.github.io\/posts\/leetcode44wildcard-matching\/","datePublished": "2019-07-01T23:33:47+08:00","dateModified": "2019-07-01T23:33:47+08:00","author": {
+                "@type": "Person",
+                "name": "草祭"
+            },"description": ""
+    }
+    </script></head>
+    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="草祭の博客">草祭の博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/" title="About"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="草祭の博客">草祭の博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="About">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Leetcode44 通配符匹配</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>草祭</a></span>&nbsp;
+                    <span class="post-category">收录于<a href="/categories/%E7%AE%97%E6%B3%95/">
+                                <i class="far fa-folder fa-fw"></i>算法
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-07-01>2019-07-01</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 2823 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 6 分钟&nbsp;<span id="/posts/leetcode44wildcard-matching/" class="leancloud_visitors" data-flag-title="Leetcode44 通配符匹配">
+                        <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#case-1">Case 1</a>
+          <ul>
+            <li><a href="#输入">输入:</a></li>
+            <li><a href="#输出">输出:</a></li>
+            <li><a href="#演绎">演绎</a></li>
+          </ul>
+        </li>
+        <li><a href="#case-2">Case 2</a>
+          <ul>
+            <li><a href="#输入-1">输入:</a></li>
+            <li><a href="#输出-1">输出:</a></li>
+            <li><a href="#演绎-1">演绎</a></li>
+          </ul>
+        </li>
+        <li><a href="#case-3">Case 3</a>
+          <ul>
+            <li><a href="#输入-2">输入:</a></li>
+            <li><a href="#输出-2">输出:</a></li>
+            <li><a href="#演绎-2">演绎</a></li>
+            <li><a href="#说明">说明</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#字符模式中包含的情况">字符模式中包含*的情况</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#输入-3">输入:</a></li>
+            <li><a href="#输出-3">输出:</a></li>
+            <li><a href="#演绎-3">演绎</a></li>
+            <li><a href="#过程">过程</a></li>
+            <li><a href="#解释">解释</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>LeetCode第44题是leetcode难度为hard的一个，解题方法是使用动态规划。题目内容可点击下面的黑色三角展开题目详情。</p>
+<details>
+<summary>点击展开题目详情</summary>
+<blockquote>
+<p>题目来源：力扣（LeetCode）<br>
+链接：https://leetcode-cn.com/problems/wildcard-matching<br>
+给定一个字符串 (s) 和一个字符模式 (p) ，实现一个支持 &lsquo;?&rsquo; 和 &lsquo;*&rsquo; 的通配符匹配。
+&rsquo;?&rsquo; 可以匹配任何单个字符。
+&rsquo;*&rsquo; 可以匹配任意字符串（包括空字符串）。
+两个字符串完全匹配才算匹配成功。
+说明:<br>
+s 可能为空，且只包含从 a-z 的小写字母。
+p 可能为空，且只包含从 a-z 的小写字母，以及字符 ? 和 *。
+<strong>示例 1:</strong><br>
+输入:<br>
+s = &ldquo;aa&rdquo;<br>
+p = &ldquo;a&rdquo;<br>
+输出: false<br>
+解释: &ldquo;a&rdquo; 无法匹配 &ldquo;aa&rdquo; 整个字符串。<br>
+<strong>示例 2:</strong><br>
+输入:<br>
+s = &ldquo;aa&rdquo;<br>
+p = &ldquo;*&rdquo;<br>
+输出: true<br>
+解释: &lsquo;*&rsquo; 可以匹配任意字符串。<br>
+<strong>示例 3:</strong><br>
+输入:<br>
+s = &ldquo;cb&rdquo;<br>
+p = &ldquo;?a&rdquo;<br>
+输出: false<br>
+解释: &lsquo;?&rsquo; 可以匹配 &lsquo;c&rsquo;, 但第二个 &lsquo;a&rsquo; 无法匹配 &lsquo;b&rsquo;。<br>
+<strong>示例 4:</strong><br>
+输入:<br>
+s = &ldquo;adceb&rdquo;<br>
+p = &ldquo;*a*b&rdquo;<br>
+输出: true<br>
+解释: 第一个 &lsquo;*&rsquo; 可以匹配空字符串, 第二个 &lsquo;*&rsquo; 可以匹配字符串 &ldquo;dce&rdquo;.</p>
+</blockquote>
+</details>  
+<p>这道题的难点在于对星号(*)的处理。</p>
+<details>
+<summary>点击展开字符模式中不包含\*的情况</summary>
+**个人认为如果没有\*就是另外一种思路，建议直接看包含\*的情况，但是也可以把没有\*的情况当练练手。**
+# 字符模式中不包含\*的情况
+<h2 id="case-1">Case 1</h2>
+<h3 id="输入">输入:</h3>
+<p>s: 为空<br>
+p: 为空</p>
+<h3 id="输出">输出:</h3>
+<p>true</p>
+<h3 id="演绎">演绎</h3>
+<table>
+<thead>
+<tr>
+<th align="center">null</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>null</strong></td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="case-2">Case 2</h2>
+<h3 id="输入-1">输入:</h3>
+<p>s: azc<br>
+p: ab?</p>
+<h3 id="输出-1">输出:</h3>
+<p>false</p>
+<h3 id="演绎-1">演绎</h3>
+<table>
+<thead>
+<tr>
+<th align="center">null</th>
+<th align="center">a</th>
+<th align="center">z</th>
+<th align="center">c</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>null</strong></td>
+<td align="center">1</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><strong>a</strong></td>
+<td align="center"></td>
+<td align="center">1</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><strong>b</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">0</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><strong>?</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="case-3">Case 3</h2>
+<h3 id="输入-2">输入:</h3>
+<p>s: abc<br>
+p: ?b??</p>
+<h3 id="输出-2">输出:</h3>
+<p>false</p>
+<h3 id="演绎-2">演绎</h3>
+<table>
+<thead>
+<tr>
+<th align="center">null</th>
+<th align="center">?</th>
+<th align="center">b</th>
+<th align="center">?</th>
+<th align="center">?</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>null</strong></td>
+<td align="center">1</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><strong>a</strong></td>
+<td align="center"></td>
+<td align="center">1</td>
+<td align="center"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><strong>b</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><strong>c</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><strong>1</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="说明">说明</h3>
+<p>如Case 1所示，base case当s和p均为空的情况下，匹配成功，记为1.<br>
+如Case 2,3所示，在没有*的情况下，s和q上的每一格应该是一一对应的关系，所以只需要沿着对角线一一匹配就可以了。<br>
+满足公式：<code>s[i]==p[j] 或 s[i] == '?'</code>时，表示前i个p和s成功匹配，<br>
+如Case 2所示，当前i个中出现不能匹配的情况，则后面就不需要匹配了，即当前i个字符出现不匹配的情况，前i+1个字符也必然不匹配，如若az不能与ab匹配，则azc也必然不能与ab?匹配。
+所以当扫描到第i行第i列出现不匹配时，可以直接输出结果false。<br>
+如Case 3所示，当匹配到对角线的最后一格(Case 3图中加粗字体处的[c,?])，若仍有需要匹配的(即右方或下方还有空格)，表示匹配失败。若没有需要匹配的，表示匹配成功，返回true。</p>
+</details>  
+<h1 id="字符模式中包含的情况">字符模式中包含*的情况</h1>
+<h3 id="输入-3">输入:</h3>
+<p>s: abab<br>
+p: *b*</p>
+<h3 id="输出-3">输出:</h3>
+<p>true</p>
+<h3 id="演绎-3">演绎</h3>
+<table>
+<thead>
+<tr>
+<th align="center">null</th>
+<th align="center">*</th>
+<th align="center">b</th>
+<th align="center">*</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>null</strong></td>
+<td align="center">1</td>
+<td align="center">①1</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><strong>a</strong></td>
+<td align="center"></td>
+<td align="center">①<font color=red >1</font></td>
+<td align="center">②0</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><strong>b</strong></td>
+<td align="center"></td>
+<td align="center">①1</td>
+<td align="center">③<font color=red >1</font></td>
+<td align="center">⑥1</td>
+</tr>
+<tr>
+<td align="center"><strong>a</strong></td>
+<td align="center"></td>
+<td align="center">①<font color=blue >1</font></td>
+<td align="center">④0</td>
+<td align="center">⑥1</td>
+</tr>
+<tr>
+<td align="center"><strong>b</strong></td>
+<td align="center"></td>
+<td align="center">①1</td>
+<td align="center">⑤<font color=blue >1</font></td>
+<td align="center">⑥1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="过程">过程</h3>
+<p>Step 1. 初始化[null,null]为1.<br>
+Step 2. 扫描到p[0]处的*， 找到左格为1的格子，从这一格开始(包括这一格)往下一列格子置1(即将表格中的①全部置1).<br>
+Step 3. 扫描到p[1]处的b，找到左上格(即[null,*])为1的格子, 从这个格子开始从上到下依次进行字符匹配运算,字符匹配运算公式为<code>左上格==1 and (s[i]==p[j] or s[i] == '?')</code>.<br>
+Step 4. 扫描到p[2]处的*， 找到左格(即④)为1的格子, 从这个格子开始(包括这一格)往下的所有列置为1(即将表格中的⑥全部置1).</p>
+<h3 id="解释">解释</h3>
+<p><strong>思考问题1</strong>. 为什么扫描到*需要找左格为1的格子？之后又需要往下一列置1？<br>
+因为*能匹配空串,所以要找左格为1.<br>
+如下表,&ldquo;a*&ldquo;可以和&quot;a&quot;匹配：</p>
+<table>
+<thead>
+<tr>
+<th align="center">null</th>
+<th align="center">a</th>
+<th align="center">*</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>null</strong></td>
+<td align="center">1</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>a</strong></td>
+<td align="center"></td>
+<td align="center">1</td>
+<td align="center"><font color=red >1</font></td>
+</tr>
+<tr>
+<td align="center">因为*能够匹配字串后面所有的字符，所以下面可以一次性全部置1.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">如下表,&ldquo;a*&ldquo;可以和&quot;ab&quot;匹配，也可以和&quot;abb匹配&rdquo;：</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="center">null</th>
+<th align="center">a</th>
+<th align="center">*</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>null</strong></td>
+<td align="center">1</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>a</strong></td>
+<td align="center"></td>
+<td align="center">1</td>
+<td align="center"><font color=red >1</font></td>
+</tr>
+<tr>
+<td align="center"><strong>b</strong></td>
+<td align="center"></td>
+<td align="center">1</td>
+<td align="center"><font color=red >1</font></td>
+</tr>
+<tr>
+<td align="center"><strong>b</strong></td>
+<td align="center"></td>
+<td align="center">1</td>
+<td align="center"><font color=red >1</font></td>
+</tr>
+</tbody>
+</table>
+<p><strong>思考问题2</strong>. 为什么扫描到非*找到左上格为1的格子?之后又需要从上到下依次进行匹配计算？<br>
+先看为什么要依次比较一遍，这是*通配符带来的，看下面的例子。&quot;*b&quot;与&quot;a&quot;不匹配不意味着&rdquo;*b&quot;与&quot;ab&quot;不匹配。</p>
+<table>
+<thead>
+<tr>
+<th align="center">null</th>
+<th align="center">*</th>
+<th align="center">b</th>
+<th align="center">？</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>null</strong></td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><strong>a</strong></td>
+<td align="center"></td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><strong>b</strong></td>
+<td align="center"></td>
+<td align="center">1</td>
+<td align="center"><font color=red >1</font></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><strong>b</strong></td>
+<td align="center"></td>
+<td align="center">1</td>
+<td align="center"><font color=blue >1</font></td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">在扫描非*的时候，我们希望找到左上方为1的格子(通过对比上下两个表格感受一下)。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>在下面的表格(把上面的表格中的*换成?)中：<br>
+我们注意到&quot;ab&quot;与&rdquo;?&ldquo;不匹配,&ldquo;abb&quot;与&rdquo;?b&quot;也必然不匹配（即使后面的匹配上了p[1]==s[2]==b，前面的子串没匹配上也白搭）</p>
+<table>
+<thead>
+<tr>
+<th align="center">null</th>
+<th align="center">？</th>
+<th align="center">b</th>
+<th align="center">？</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>null</strong></td>
+<td align="center">1</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><strong>a</strong></td>
+<td align="center"></td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><strong>b</strong></td>
+<td align="center"></td>
+<td align="center">0</td>
+<td align="center"><font color=red >1</font></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><strong>b</strong></td>
+<td align="center"></td>
+<td align="center">0</td>
+<td align="center"><font color=yellow >0</font></td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>点击展开代码</summary>
+我写的python3实现代码，感觉简洁度上差了一点，主要是为了便于理解，多了一些中间变量什么的。  
+而且实际上table不需要显式写在代码里的，因为可以发现table只需要记录扫描到的部分的左边一列就够了。但个人认为作为学习来讲，掌握算法思路的前提下，保障代码可懂性也是必要的。  
+```python3
+class Solution:        
+<pre><code>def isMatch(self, s: str, p: str) -&gt; bool:
+    table = []
+    n_row = len(s) + 1
+    n_column = len(p) + 1
+    table = [[None] * n_column for _ in range(n_row)]
+    table[0][0] = True
+    for j in range(len(p)):
+        table_j = j+1
+        cur_p = p[j] #current p当前扫描到的通配符
+        left_column = [e[table_j-1] for e in table]
+        if cur_p == '*':
+            # 找到左格为1的格子, 注意一下p[0]所在位置对应的是table[:][1]
+            has_one = False
+            for table_i,left in enumerate(left_column):
+                if left == True:
+                    # 从这一格开始往下全部置为1
+                    for sub_i in range(table_i,n_row):
+                        has_one = True
+                        table[sub_i][table_j] = True
+                    break
+            if has_one == False: #左格没有为1的格子
+                return False
+        else:
+            # 找到左上格为1的格子.如果没有则返回false
+            has_one = False
+            for start_i,left in enumerate(left_column):
+                if left == True and start_i&lt;n_row-1: #如果只有最后一行是1也不行
+                    has_one = True
+                    break
+            if has_one == False:
+                return False
+            for table_i in range(start_i+1,n_row):
+                if  table[table_i-1][table_j-1] == 1 and (cur_p == '?' or cur_p == s[table_i-1]):
+                    table[table_i][table_j] = True
+                else:
+                    table[table_i][table_j] = False
+
+    if table[-1][-1] == None: #p扫描完了，但是s还有多余。比如&quot;ab&quot;和&quot;?&quot;
+        return False
+    return table[-1][-1]
+</code></pre>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">另一个别人的代码，runtime要比我快，思路跟我的有些不一样：
+
+​```python3
+作者：powcai
+链接：https://leetcode-cn.com/problems/two-sum/solution/shuang-zhi-zhen-he-dong-tai-gui-hua-by-powcai/
+注释补充参考：
+作者：*晴儿*
+链接：https://blog.csdn.net/qq_34919415/article/details/86686508
+class Solution:
+    def isMatch(self, s, p):
+        &#34;&#34;&#34;
+        :type s: str
+        :type p: str
+        :rtype: bool
+        &#34;&#34;&#34;
+        i = 0
+        j = 0
+        start = -1
+        match = 0
+        while i &lt; len(s):
+            # 非&#34;*&#34;的情况，一对一匹配,匹配成功一起往右下角移
+            if j &lt; len(p) and (s[i] == p[j] or p[j] == &#34;?&#34;):
+                i += 1
+                j += 1
+            # 是&#34;*&#34;，记录i,j的位置。因为*能匹配空串，所以i不需要加1.
+            elif j &lt; len(p) and p[j] == &#34;*&#34;:
+                start = j
+                match = i
+                j += 1
+            # p[j] 不是*，且前面有*，且不能匹配
+            # 那么有可能是*未匹配完，
+            # 所以回到最开始i的位置(这个回溯是这个思路的精髓所在)，j要指向p的后一个字母开始尝试匹配
+            elif start != -1:
+                j = start + 1
+                match += 1
+                i = match
+            else:
+                return False
+         # s匹配完了，将多余的 * 直接匹配空串
+        return all(x == &#34;*&#34; for x in p[j:])
+</code></pre></td></tr></table>
+</div>
+</div></details>
+<p>下图为展开代码中的另一种方法的示意图：</p>
+<table>
+<thead>
+<tr>
+<th align="center">null</th>
+<th align="center">*</th>
+<th align="center">b</th>
+<th align="center">c</th>
+<th align="center">*</th>
+<th align="center">?</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>null</strong></td>
+<td align="center">1</td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><strong>a</strong></td>
+<td align="center"></td>
+<td align="center">①1</td>
+<td align="center">②0</td>
+<td align="center"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><strong>b</strong></td>
+<td align="center"></td>
+<td align="center">③1</td>
+<td align="center">④1</td>
+<td align="center"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><strong>b</strong></td>
+<td align="center"></td>
+<td align="center">⑥1</td>
+<td align="center">⑦1</td>
+<td align="center">⑤0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><strong>c</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">⑧1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><strong>d</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">⑨1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>推荐阅读</p>
+</blockquote>
+<blockquote>
+<ul>
+<li><a href="/posts/%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92" rel="">动态规划总结</a></li>
+</ul>
+</blockquote>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>本文于 2019-07-01 更新</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>,&nbsp;<a href="/tags/leetcode/">leetcode</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/leetcode712minimum-ascii-delete-sum-for-two-strings/" class="prev" rel="prev" title="Leetcode712 两个字符串的最小ASCII删除和"><i class="fas fa-angle-left fa-fw"></i>Leetcode712 两个字符串的最小ASCII删除和</a>
+            <a href="/posts/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="next" rel="next" title="动态规划">动态规划<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.6"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript">
+    window.config = {"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{"valine":{"appId":"xsBQ6wXUkm1km876o5DMLW4R-gzGzoHsz","appKey":"5H8DU1HXMV5Xg4PRuahFsNqU","avatar":"mm","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-facebook@5.0.1/img/facebook/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":null,"highlight":true,"lang":"zh-cn","placeholder":"说点什么吧...","recordIP":null,"visitor":true}},"headerMode":{"desktop":null,"mobile":null},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};
+</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

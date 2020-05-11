@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Hugo博客侧边导航栏 - 草祭の博客</title>
+        <meta name="Description" content=""><meta property="og:title" content="Hugo博客侧边导航栏" />
+<meta property="og:description" content="感觉博客TOC(侧边导航栏,Table of Content)还是挺有必要的，在LeaveIt主题issue有人谈到TOC，但是我实践了一遍好像不" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seacj.github.io/posts/%E5%8D%9A%E5%AE%A2%E4%BE%A7%E8%BE%B9%E5%AF%BC%E8%88%AA%E6%A0%8F/" />
+<meta property="article:published_time" content="2019-08-22T14:20:08+08:00" />
+<meta property="article:modified_time" content="2019-08-22T14:20:08+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo博客侧边导航栏"/>
+<meta name="twitter:description" content="感觉博客TOC(侧边导航栏,Table of Content)还是挺有必要的，在LeaveIt主题issue有人谈到TOC，但是我实践了一遍好像不"/>
+<meta name="application-name" content="草祭の博客">
+<meta name="apple-mobile-web-app-title" content="草祭の博客"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/%E5%8D%9A%E5%AE%A2%E4%BE%A7%E8%BE%B9%E5%AF%BC%E8%88%AA%E6%A0%8F/" /><link rel="prev" href="https://seacj.github.io/posts/leetcodedaily2/" /><link rel="next" href="https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2003/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Hugo博客侧边导航栏",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seacj.github.io\/posts\/%E5%8D%9A%E5%AE%A2%E4%BE%A7%E8%BE%B9%E5%AF%BC%E8%88%AA%E6%A0%8F\/"
+        },"genre": "posts","keywords": "博客搭建","wordcount":  1581 ,
+        "url": "https:\/\/seacj.github.io\/posts\/%E5%8D%9A%E5%AE%A2%E4%BE%A7%E8%BE%B9%E5%AF%BC%E8%88%AA%E6%A0%8F\/","datePublished": "2019-08-22T14:20:08+08:00","dateModified": "2019-08-22T14:20:08+08:00","author": {
+                "@type": "Person",
+                "name": "草祭"
+            },"description": ""
+    }
+    </script></head>
+    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="草祭の博客">草祭の博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/" title="About"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="草祭の博客">草祭の博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="About">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Hugo博客侧边导航栏</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>草祭</a></span>&nbsp;
+                    <span class="post-category">收录于<a href="/categories/%E5%8D%9A%E5%AE%A2/">
+                                <i class="far fa-folder fa-fw"></i>博客
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-08-22>2019-08-22</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 1581 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 4 分钟&nbsp;<span id="/posts/%E5%8D%9A%E5%AE%A2%E4%BE%A7%E8%BE%B9%E5%AF%BC%E8%88%AA%E6%A0%8F/" class="leancloud_visitors" data-flag-title="Hugo博客侧边导航栏">
+                        <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#step-1-新建并编写tochtml文件">Step 1. 新建并编写toc.html文件</a></li>
+        <li><a href="#step-2--修改singlehtml文件">Step 2.  修改single.html文件</a></li>
+        <li><a href="#step-3-处理手机兼容性的问题">Step 3. 处理手机兼容性的问题</a></li>
+        <li><a href="#step-4-可选优化代码">Step 4. （可选）优化代码</a></li>
+        <li><a href="#测试一下">测试一下</a></li>
+      </ul>
+    </li>
+    <li><a href="#h1">H1</a>
+      <ul>
+        <li><a href="#h2">H2</a>
+          <ul>
+            <li><a href="#h3">H3</a>
+              <ul>
+                <li><a href="#h4">H4</a>
+                  <ul>
+                    <li><a href="#h5">H5</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#这是一个很长的用来测试的h1标题这是一个很长的用来测试的标题">这是一个很长的用来测试的H1标题，这是一个很长的用来测试的标题</a>
+      <ul>
+        <li><a href="#这是一个很长的用来测试的h2标题这是一个很长的用来测试的标题很多个h1">这是一个很长的用来测试的H2标题，这是一个很长的用来测试的标题很多个H1</a></li>
+        <li><a href="#很多个h2">很多个H2</a></li>
+        <li><a href="#很多个h2-1">很多个H2</a></li>
+        <li><a href="#很多个h2-2">很多个H2</a></li>
+        <li><a href="#很多个h2-3">很多个H2</a></li>
+        <li><a href="#很多个h2-4">很多个H2</a></li>
+        <li><a href="#很多个h2-5">很多个H2</a></li>
+        <li><a href="#很多个h2-6">很多个H2</a></li>
+        <li><a href="#很多个h2-7">很多个H2</a></li>
+        <li><a href="#很多个h2-8">很多个H2</a></li>
+        <li><a href="#很多个h2结束">很多个H2结束</a></li>
+        <li><a href="#文章字数统计">文章字数统计</a></li>
+      </ul>
+    </li>
+    <li><a href="#参考资料">参考资料</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>感觉博客TOC(侧边导航栏,Table of Content)还是挺有必要的，在LeaveIt主题issue有人谈到TOC，但是我实践了一遍好像不太行，所以我自己又另找了方法, 需要说明的是我并没有系统学过前端开发，所以可能会有疏漏的地方，不过从结果上来看是能用的。</p>
+<p>这篇文章是根据LeaveIt主题来做的，所以部分文件名可能会有差别。此外，这个方法的toc主要在Chrome浏览器上进行测试。</p>
+<h2 id="step-1-新建并编写tochtml文件">Step 1. 新建并编写toc.html文件</h2>
+<p>在文件夹<code>\layouts\partials</code>中新建文件toc.html，写入以下代码。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html">{{ if (.Params.toc | default true ) }}
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-toc&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;post-toc&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>{{.Title}}<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+    {{ $emtLiPtrn := &#34;(?s)<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>\\s<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>\\s<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>(.*)<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>\\s<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>&#34; }}
+    {{ $rplcEmtLi := &#34;<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>$1&#34; }}
+    {{ .TableOfContents | replaceRE $emtLiPtrn $rplcEmtLi | safeHTML }}
+    <span class="c">&lt;!-- https://github.com/gohugoio/hugo/issues/1778#issuecomment-483880269 --&gt;</span>
+    <span class="c">&lt;!-- {{.TableOfContents}} --&gt;</span>
+<span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;toc-toggle&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+{{ end }}
+</code></pre></td></tr></table>
+</div>
+</div><p>说明：</p>
+<p>实际上{{.TableOfContents}} 就够用了，但是在<a href="https://github.com/gohugoio/hugo/issues/1778" target="_blank" rel="noopener noreffer">Hugo TOC 的issue</a>里面存在一个开头没有H1的bug，所以以上代码是一种改进方案。</p>
+<h2 id="step-2--修改singlehtml文件">Step 2.  修改single.html文件</h2>
+<p>在<code>layouts\_default</code>文件夹中找到single.html这个文件，single.html是文章的布局文件，在合适的位置(我直接写在文件的最前面)插入以下代码。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;position: fixed; right:5px;max-width:300px; overflow:auto; top: 100px; width: 10vw; bottom:50px&#34;</span><span class="p">&gt;</span>
+{{ partial &#34;toc.html&#34; . }}
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>说明：</p>
+<p>max-width:300px;当TOC的内容过长时会换行。</p>
+<p>overflow:auto; top: 100px; bottom:50px作用为TOC过长时，出现滚轮。</p>
+<p>p.s.优化滚轮外观：</p>
+<p>因为默认的滚轮宽度很宽很违和，添加以下代码可以使滚轮变窄(在Chrome浏览器上有效，但是Edge浏览器上样式不会变)。可以直接将下面的代码写入single.html文件开头，即<code>&lt;head&gt;&lt;style type=&quot;text/css&quot;&gt;这里是下面的代码&lt;/style&gt;&lt;/head&gt;</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="p">::</span><span class="nd">-webkit-scrollbar</span> <span class="p">{</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">height</span><span class="p">:</span> <span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">::</span><span class="nd">-webkit-scrollbar-thumb</span> <span class="p">{</span>
+  <span class="k">height</span><span class="p">:</span> <span class="mi">40</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#eee</span><span class="p">;</span>
+  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+  <span class="err">&amp;:hover</span> <span class="err">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#ddd</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="err">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="step-3-处理手机兼容性的问题">Step 3. 处理手机兼容性的问题</h2>
+<p>设置成：如果是移动设备就不要显示TOC了。</p>
+<p>在<code>\assets\css\_custom.scss</code>文件中加入以下代码。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="p">@</span><span class="k">media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">1224px</span><span class="o">)</span> <span class="p">{</span>
+    <span class="p">.</span><span class="nc">post-toc</span> <span class="p">{</span>
+        <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span> 
+</code></pre></td></tr></table>
+</div>
+</div><p>这样就已经完工了~</p>
+<h2 id="step-4-可选优化代码">Step 4. （可选）优化代码</h2>
+<p>p.s. 如果想将样式分离（这样可能可以避免后期出现滚轮样式冲突的问题），就继续在<code>\assets\css\_custom.scss</code>文件中写入下面的代码。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.post-toc</span><span class="p">{</span>
+    <span class="nt">position</span><span class="nd">:</span> <span class="nt">fixed</span><span class="p">;</span> <span class="nt">left</span><span class="nd">:20px</span><span class="p">;</span><span class="nt">max-width</span><span class="nd">:300px</span><span class="p">;</span> <span class="nt">overflow</span><span class="nd">:auto</span><span class="p">;</span> <span class="nt">top</span><span class="nd">:</span> <span class="nt">100px</span><span class="p">;</span> <span class="nt">bottom</span><span class="nd">:50px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.toc-wrapper</span> <span class="p">{</span>
+    <span class="nd">::-webkit-scrollbar</span> <span class="p">{</span>
+      <span class="nt">width</span><span class="nd">:</span> <span class="nt">6px</span><span class="p">;</span>
+      <span class="nt">height</span><span class="nd">:</span> <span class="nt">8px</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nd">::-webkit-scrollbar-thumb</span> <span class="p">{</span>
+      <span class="nt">height</span><span class="nd">:</span> <span class="nt">40px</span><span class="p">;</span>
+      <span class="nt">background-color</span><span class="nd">:</span> <span class="nn">#eee</span><span class="p">;</span>
+      <span class="nt">border-radius</span><span class="nd">:</span> <span class="nt">16px</span><span class="p">;</span>
+      <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span>
+        <span class="nt">background-color</span><span class="nd">:</span> <span class="nn">#ddd</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>并将在Step2介绍的<code>\layouts\partials\toc.html</code>的代码修改成下面的代码(注意class一定要改成toc-wrapper)，并删除Step2里面外观优化的<code>&lt;head&gt;&lt;style type=&quot;text/css&quot;&gt;这里是下面的代码&lt;/style&gt;&lt;/head&gt;</code> 这段代码。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class </span><span class="o">=</span> <span class="s">&#34;toc-wrapper&#34;</span><span class="p">&gt;</span>
+{{ partial &#34;toc.html&#34; . }}
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="测试一下">测试一下</h2>
+<h1 id="h1">H1</h1>
+<h2 id="h2">H2</h2>
+<h3 id="h3">H3</h3>
+<h4 id="h4">H4</h4>
+<h5 id="h5">H5</h5>
+<h1 id="这是一个很长的用来测试的h1标题这是一个很长的用来测试的标题">这是一个很长的用来测试的H1标题，这是一个很长的用来测试的标题</h1>
+<h2 id="这是一个很长的用来测试的h2标题这是一个很长的用来测试的标题很多个h1">这是一个很长的用来测试的H2标题，这是一个很长的用来测试的标题很多个H1</h2>
+<h2 id="很多个h2">很多个H2</h2>
+<h2 id="很多个h2-1">很多个H2</h2>
+<h2 id="很多个h2-2">很多个H2</h2>
+<h2 id="很多个h2-3">很多个H2</h2>
+<h2 id="很多个h2-4">很多个H2</h2>
+<h2 id="很多个h2-5">很多个H2</h2>
+<h2 id="很多个h2-6">很多个H2</h2>
+<h2 id="很多个h2-7">很多个H2</h2>
+<h2 id="很多个h2-8">很多个H2</h2>
+<h2 id="很多个h2结束">很多个H2结束</h2>
+<hr>
+<h2 id="文章字数统计">文章字数统计</h2>
+<p>可以在侧边栏里面加上字数统计，如果字数多的时候才显示侧边栏。主要利用的是Hugo的一个Variable——<code>WordCount</code>,修改<code>toc.html</code>文件，最终修改之后的代码如下。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-toc&#34;</span><span class="p">&gt;</span>
+{{ if and (gt .WordCount 80 ) (.Params.toc | default true ) }} <span class="c">&lt;!-- 关键是这一行 --&gt;</span>
+<span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>{{.Title}}の字数: {{ .WordCount }}<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span> 
+    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+    {{- $toc := .TableOfContents -}}
+    {{- $toc := replaceRE `<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>\n<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>\n<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>` `<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>` $toc -}}
+    {{- safeHTML $toc -}}
+<span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;toc-toggle&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+{{ end }} <span class="c">&lt;!-- 不要忘记写end --&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="参考资料">参考资料</h1>
+<blockquote>
+<ol>
+<li>添加 gitalk 评论和 disqus 懒加载；添加文章目录导航 <a href="https://github.com/liuzc/LeaveIt/pull/11/commits/d5aa80b08057bbdf5ac7f7c319ce68e5646226b9">https://github.com/liuzc/LeaveIt/pull/11/commits/d5aa80b08057bbdf5ac7f7c319ce68e5646226b9</a></li>
+<li>Hugo官方文档TOC <a href="https://gohugo.io/content-management/toc/">https://gohugo.io/content-management/toc/</a></li>
+<li>Hugo TOC的issue <a href="https://github.com/gohugoio/hugo/issues/1778">https://github.com/gohugoio/hugo/issues/1778</a></li>
+</ol>
+</blockquote>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>本文于 2019-08-22 更新</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/leetcodedaily2/" class="prev" rel="prev" title="每日Leetcode02"><i class="fas fa-angle-left fa-fw"></i>每日Leetcode02</a>
+            <a href="/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2003/" class="next" rel="next" title="建站历史003">建站历史003<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.6"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript">
+    window.config = {"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{"valine":{"appId":"xsBQ6wXUkm1km876o5DMLW4R-gzGzoHsz","appKey":"5H8DU1HXMV5Xg4PRuahFsNqU","avatar":"mm","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-facebook@5.0.1/img/facebook/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":null,"highlight":true,"lang":"zh-cn","placeholder":"说点什么吧...","recordIP":null,"visitor":true}},"headerMode":{"desktop":null,"mobile":null},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};
+</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
