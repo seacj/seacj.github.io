@@ -4,7 +4,14 @@
         <link>https://seacj.github.io/categories/%E5%8D%9A%E5%AE%A2/</link>
         <description>博客 - 分类 - 草祭の博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
-            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Mon, 11 May 2020 17:45:40 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/categories/%E5%8D%9A%E5%AE%A2/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Tue, 12 May 2020 13:00:23 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/categories/%E5%8D%9A%E5%AE%A2/" rel="self" type="application/rss+xml" /><item>
+    <title>建站历史007</title>
+    <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2007/</link>
+    <pubDate>Tue, 12 May 2020 13:00:23 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2007/</guid>
+    <description><![CDATA[添加即使通讯 修改Hugo主题为LoveIt 修改彩蛋页面 新增站内搜索（第一次配置好了之后，以后更新博客只需要运行hugo-algolia -s就]]></description>
+</item><item>
     <title>测试博客新主题</title>
     <link>https://seacj.github.io/posts/%E6%B5%8B%E8%AF%95%E6%96%B0%E4%B8%BB%E9%A2%98loveit/</link>
     <pubDate>Mon, 11 May 2020 17:45:40 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2003/</guid>
     <description><![CDATA[添加侧边导航栏 修改代码高亮 添加阅读进度条 相关链接 侧边导航栏 Hugo博客侧边导航栏 代码高亮 代码高亮 添加阅读进度条 为 LeaveIt 主题添加阅读进度条]]></description>
-</item><item>
-    <title>Hugo博客侧边导航栏</title>
-    <link>https://seacj.github.io/posts/%E5%8D%9A%E5%AE%A2%E4%BE%A7%E8%BE%B9%E5%AF%BC%E8%88%AA%E6%A0%8F/</link>
-    <pubDate>Thu, 22 Aug 2019 14:20:08 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%8D%9A%E5%AE%A2%E4%BE%A7%E8%BE%B9%E5%AF%BC%E8%88%AA%E6%A0%8F/</guid>
-    <description><![CDATA[感觉博客TOC(侧边导航栏,Table of Content)还是挺有必要的，在LeaveIt主题issue有人谈到TOC，但是我实践了一遍好像不]]></description>
 </item></channel>
 </rss>

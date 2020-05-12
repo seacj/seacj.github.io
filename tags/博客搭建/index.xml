@@ -4,7 +4,14 @@
         <link>https://seacj.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
         <description>博客搭建 - 标签 - 草祭の博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
-            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Mon, 11 May 2020 17:45:40 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Tue, 12 May 2020 13:00:23 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="self" type="application/rss+xml" /><item>
+    <title>建站历史007</title>
+    <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2007/</link>
+    <pubDate>Tue, 12 May 2020 13:00:23 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2007/</guid>
+    <description><![CDATA[添加即使通讯 修改Hugo主题为LoveIt 修改彩蛋页面 新增站内搜索（第一次配置好了之后，以后更新博客只需要运行hugo-algolia -s就]]></description>
+</item><item>
     <title>测试博客新主题</title>
     <link>https://seacj.github.io/posts/%E6%B5%8B%E8%AF%95%E6%96%B0%E4%B8%BB%E9%A2%98loveit/</link>
     <pubDate>Mon, 11 May 2020 17:45:40 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://seacj.github.io/posts/hugo%E5%8D%9A%E5%AE%A2latex%E6%B8%B2%E6%9F%93/</guid>
     <description><![CDATA[题记 写博客的时候有时候会需要写公式，我自己的习惯是用Typora进行博客编写，本地上Typora自带latex支持，但是推送到网页的话只能显]]></description>
-</item><item>
-    <title>建站历史004</title>
-    <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2004/</link>
-    <pubDate>Fri, 20 Sep 2019 21:46:59 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2004/</guid>
-    <description><![CDATA[添加即使通讯 修改主页 添加Tool页面 相关链接 添加即使通讯 博客添加在线通讯 LeaveIt主题配置 LeaveIt Hugo Theme 作者github]]></description>
 </item></channel>
 </rss>
