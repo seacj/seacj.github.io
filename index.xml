@@ -5,12 +5,19 @@
         <description>草祭の博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
             <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Mon, 17 Jun 2019 18:11:42 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/" rel="self" type="application/rss+xml" /><item>
+    <title>图片生成器Artbreeder</title>
+    <link>https://seacj.github.io/posts/artbreeder/</link>
+    <pubDate>Mon, 18 May 2020 14:03:39 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/artbreeder/</guid>
+    <description><![CDATA[题记 想给我的博客换个头像，顺便查了一下avatar的词源，是印度教里面神仙下凡的意思，觉得也是挺有意思的。那既然是avatar，肯定是想要“]]></description>
+</item><item>
     <title>建站历史007</title>
     <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2007/</link>
     <pubDate>Tue, 12 May 2020 13:00:23 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2007/</guid>
-    <description><![CDATA[添加即使通讯 修改Hugo主题为LoveIt 修改彩蛋页面 新增站内搜索（第一次配置好了之后，以后更新博客只需要运行hugo-algolia -s就]]></description>
+    <description><![CDATA[添加即时通讯 修改Hugo主题为LoveIt 修改彩蛋页面 新增站内搜索（第一次配置好了之后，以后更新博客只需要运行hugo-algolia -s就]]></description>
 </item><item>
     <title>测试博客新主题</title>
     <link>https://seacj.github.io/posts/%E6%B5%8B%E8%AF%95%E6%96%B0%E4%B8%BB%E9%A2%98loveit/</link>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://seacj.github.io/posts/git%E5%AD%A6%E4%B9%A0/</guid>
     <description><![CDATA[题记 Git是一个非常优秀的开源的分布式版本控制系统，非常值得好好学习一下。 这里分享一个可能是学习git的最好的网站：https://lear]]></description>
-</item><item>
-    <title>记一次配置Ubuntu服务器图形化界面</title>
-    <link>https://seacj.github.io/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/</link>
-    <pubDate>Sun, 01 Mar 2020 15:29:17 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/</guid>
-    <description><![CDATA[题记 以前配实验室的服务器的时候经常出现各种问题，但是因为又不是自己的服务器，所以不敢乱整，很多问题只要影响不大就将就着用了。不过现在买了个服]]></description>
 </item></channel>
 </rss>
