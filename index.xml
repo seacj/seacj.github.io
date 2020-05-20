@@ -5,6 +5,13 @@
         <description>草祭の博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
             <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Mon, 17 Jun 2019 18:11:42 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/" rel="self" type="application/rss+xml" /><item>
+    <title>VSCode上安装LaTeX</title>
+    <link>https://seacj.github.io/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/</link>
+    <pubDate>Wed, 20 May 2020 17:21:34 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/</guid>
+    <description><![CDATA[题记 最近又要用到latex，虽然说我自己不喜欢用（比如我觉得几秒的编译影响体验，能做到像markdown一样几乎是即时展示的就好了），真希望]]></description>
+</item><item>
     <title>图片生成器Artbreeder</title>
     <link>https://seacj.github.io/posts/artbreeder/</link>
     <pubDate>Mon, 18 May 2020 14:03:39 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://seacj.github.io/posts/awk%E5%AD%A6%E4%B9%A0/</guid>
     <description><![CDATA[题记 awk是unix下很实用的文本编辑语言。可以快速处理很多操作。参考资料是b站up主正月点灯笼的awk入门教程。这篇博客用来记录一下awk]]></description>
-</item><item>
-    <title>Git学习</title>
-    <link>https://seacj.github.io/posts/git%E5%AD%A6%E4%B9%A0/</link>
-    <pubDate>Tue, 03 Mar 2020 18:24:03 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/git%E5%AD%A6%E4%B9%A0/</guid>
-    <description><![CDATA[题记 Git是一个非常优秀的开源的分布式版本控制系统，非常值得好好学习一下。 这里分享一个可能是学习git的最好的网站：https://lear]]></description>
 </item></channel>
 </rss>
