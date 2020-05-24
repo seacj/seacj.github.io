@@ -4,10 +4,10 @@
         <link>https://seacj.github.io/posts/</link>
         <description>所有文章 | 草祭の博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
-            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Wed, 20 May 2020 17:21:34 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Wed, 20 May 2020 17:22:34 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>VSCode上安装LaTeX</title>
     <link>https://seacj.github.io/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/</link>
-    <pubDate>Wed, 20 May 2020 17:21:34 &#43;0800</pubDate>
+    <pubDate>Wed, 20 May 2020 17:22:34 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://seacj.github.io/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/</guid>
     <description><![CDATA[题记 最近又要用到latex，虽然说我自己不喜欢用（比如我觉得几秒的编译影响体验，能做到像markdown一样几乎是即时展示的就好了），真希望]]></description>

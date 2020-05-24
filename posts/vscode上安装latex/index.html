@@ -10,8 +10,8 @@
 <meta property="og:description" content="题记 最近又要用到latex，虽然说我自己不喜欢用（比如我觉得几秒的编译影响体验，能做到像markdown一样几乎是即时展示的就好了），真希望" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://seacj.github.io/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/" />
-<meta property="article:published_time" content="2020-05-20T17:21:34+08:00" />
-<meta property="article:modified_time" content="2020-05-20T17:21:34+08:00" />
+<meta property="article:published_time" content="2020-05-20T17:22:34+08:00" />
+<meta property="article:modified_time" content="2020-05-20T17:22:34+08:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="VSCode上安装LaTeX"/>
 <meta name="twitter:description" content="题记 最近又要用到latex，虽然说我自己不喜欢用（比如我觉得几秒的编译影响体验，能做到像markdown一样几乎是即时展示的就好了），真希望"/>
@@ -27,8 +27,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/seacj.github.io\/posts\/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex\/"
-        },"genre": "posts","keywords": "LaTeX","wordcount":  1696 ,
-        "url": "https:\/\/seacj.github.io\/posts\/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex\/","datePublished": "2020-05-20T17:21:34+08:00","dateModified": "2020-05-20T17:21:34+08:00","author": {
+        },"genre": "posts","keywords": "LaTeX","wordcount":  1917 ,
+        "url": "https:\/\/seacj.github.io\/posts\/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex\/","datePublished": "2020-05-20T17:22:34+08:00","dateModified": "2020-05-20T17:22:34+08:00","author": {
                 "@type": "Person",
                 "name": "草祭"
             },"description": ""
@@ -106,7 +106,7 @@
                                 <i class="far fa-folder fa-fw"></i>教程-ღ-点评
                             </a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-05-20>2020-05-20</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>约 1696 字&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 1917 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>预计阅读 4 分钟&nbsp;<span id="/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/" class="leancloud_visitors" data-flag-title="VSCode上安装LaTeX">
                         <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -135,17 +135,22 @@
         </li>
       </ul>
     </li>
-    <li><a href="#简单的使用">简单的使用</a></li>
+    <li><a href="#简单的使用">简单的使用</a>
+      <ul>
+        <li><a href="#优势">优势</a></li>
+        <li><a href="#结论">结论</a></li>
+      </ul>
+    </li>
     <li><a href="#参考资料">参考资料</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="题记">题记</h2>
 <p>最近又要用到latex，虽然说我自己不喜欢用（比如我觉得几秒的编译影响体验，能做到像markdown一样几乎是即时展示的就好了），真希望所有期刊和会议都像ICASSP2020一样有那么好用的word模板（好用指各种格式直接有母板，一键格式化，序号全都自动生成。不过word写公式依然是个问题，有一些兼容性的问题）。</p>
-<p>之前是用TeXworks或者WinEdt去写latex，总觉得界面丑（主要原因），而且每次都要重新编译（也可能只是我不会用）觉得不方便。搜索latex教程的适合偶然发现可以用VSCode写LaTeX。所以决定用一下，这篇博客记录一下<strong>安装过程</strong>和简单的<strong>使用</strong>。</p>
+<p>之前是用TeXworks或者WinEdt去写latex，总觉得界面丑（主要原因），而且不会自动重新编译（也可能只是我不会用）觉得不方便。搜索latex教程的时候偶然发现可以用VSCode写LaTeX。所以决定用一下，这篇博客记录一下<strong>安装过程</strong>和简单的<strong>使用</strong>。</p>
 <h1 id="安装">安装</h1>
 <h2 id="1-安装-texlive">1. 安装 texlive</h2>
 <p>Liam Huang的博客写的很详细：<a href="https://liam.page/texlive/" target="_blank" rel="noopener noreffer">TeX Live 下载及安装说明</a></p>
-<p>由于我是Windows直接选择下面链接的镜像下载了。</p>
+<p>由于我是Windows系统，就直接选择下面链接的镜像下载了。</p>
 <p><a href="http://mirror.ctan.org/systems/texlive/Images/texlive2020.iso">http://mirror.ctan.org/systems/texlive/Images/texlive2020.iso</a></p>
 <p>下载得到的是一个近4G的texlive2020.iso，双击进入之后，用管理员身份运行。</p>
 <p><figure><a class="lightgallery" href="https://gitee.com/seacj/typora-image/raw/master/image/202005/20/173459-226380.jpeg" title="安装 texlive" data-thumbnail="https://gitee.com/seacj/typora-image/raw/master/image/202005/20/173459-226380.jpeg" data-sub-html="<h2>安装 texlive</h2><p>安装 texlive</p>">
@@ -169,7 +174,7 @@
             alt="把不需要的语言和宏包去掉" />
     </a><figcaption class="image-caption">把不需要的语言和宏包去掉</figcaption>
     </figure></p>
-<p>安装过程非常久，我安装了1个小时，这一点非常不友好，能像python那样需要什么包再装就好了。可以先同时开始进行下一步。</p>
+<p>安装过程非常久，我安装了<strong>1个小时</strong>，这一点非常不友好，能像python那样需要什么包再装就好了。可以先<strong>同时开始</strong>进行下一步。</p>
 <p><figure><a class="lightgallery" href="https://gitee.com/seacj/typora-image/raw/master/image/202005/20/184111-247471.jpeg" title="安装完成" data-thumbnail="https://gitee.com/seacj/typora-image/raw/master/image/202005/20/184111-247471.jpeg" data-sub-html="<h2>安装完成</h2><p>安装完成</p>">
         <img
             class="lazyload"
@@ -225,9 +230,9 @@
             alt="View LaTeX PDF" />
     </a><figcaption class="image-caption">View LaTeX PDF</figcaption>
     </figure></p>
-<p>现在其实已经简单使用了，但是想要充分利用，就要对插件进行配置。</p>
+<p>现在其实已经可以简单使用了，但是想要充分利用，就要对插件进行配置。</p>
 <h2 id="3-配置latex插件">3. 配置LaTeX插件</h2>
-<p>Setp 1. <code>Ctrl+Shift+P</code> 打开命令面板</p>
+<p>Step 1. <code>Ctrl+Shift+P</code> 打开命令面板</p>
 <p>Step 2. 选择Settings JSON,点击进入。</p>
 <p><figure><a class="lightgallery" href="https://gitee.com/seacj/typora-image/raw/master/image/202005/20/185746-755556.jpeg" title="Settings JSON" data-thumbnail="https://gitee.com/seacj/typora-image/raw/master/image/202005/20/185746-755556.jpeg" data-sub-html="<h2>Settings JSON</h2><p>Settings JSON</p>">
         <img
@@ -239,7 +244,7 @@
             alt="Settings JSON" />
     </a><figcaption class="image-caption">Settings JSON</figcaption>
     </figure></p>
-<p>settings.json如下图所示，里面有个remote.SSH那个是我自己安装的另一个插件的配置，不需要管它。</p>
+<p>settings.json如下图所示，里面有个remote.SSH&hellip;那个是我自己安装的另一个插件的配置，不需要管它。</p>
 <p><figure><a class="lightgallery" href="https://gitee.com/seacj/typora-image/raw/master/image/202005/20/192020-400927.jpeg" title="setting JSON" data-thumbnail="https://gitee.com/seacj/typora-image/raw/master/image/202005/20/192020-400927.jpeg" data-sub-html="<h2>setting.json</h2><p>setting JSON</p>">
         <img
             class="lazyload"
@@ -304,7 +309,7 @@
     </figure></p>
 <p>在pdf中直接双击就可以跳到tex中了。</p>
 <h3 id="c-取消保存自动编译">c. 取消保存自动编译</h3>
-<p>默认是会保存就自动编译，这就意味着每次保存，pdf也会随之改变。习惯用markdown，所以我自己是<strong>不设置</strong>这个的。</p>
+<p>默认是会<code>Ctrl S</code>保存就自动编译，这就意味着每次保存，pdf也会随之改变。我习惯用markdown，所以我自己是<strong>不设置</strong>这个的。</p>
 <p>如果想取消保存自动编译可以加上下面这条。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -336,7 +341,15 @@
             alt="简单的使用" />
     </a><figcaption class="image-caption">简单的使用</figcaption>
     </figure></p>
-<p>界面是我喜欢的风格，左下角有个导航感觉挺好的，其他東西就慢慢摸索，等需要的时候再用吧。其他东西都不重要，好看就行。应该是再也不会用WinEdt了。</p>
+<p>非常简单的使用了一下，目前感觉有以下三大优势。</p>
+<h2 id="优势">优势</h2>
+<ul>
+<li>好看（VSCode的界面非常整洁，风格我也很喜欢，另外可能是因为是windows的产品做了优化的原因，我总感觉字体很柔顺）</li>
+<li>自动代码填充（和一般的代码填充类似，比如1. 输入一个<code>\be</code>，就会跳出<code>\begin</code> 之类的让你选择，按回车就键入补全了 2. 输入一个<code>\begin{figure}</code>，就会自动出来一个<code>\end{figure}</code>）</li>
+<li>VSCode上还有其他的一些插件可以配合使用，比如<code>Spell Right</code>进行像Word一样的拼写检查，不过检查不出语法错误。</li>
+</ul>
+<h2 id="结论">结论</h2>
+<p>其实好看这一点就赢了，应该是再也不会用WinEdt了。</p>
 <h1 id="参考资料">参考资料</h1>
 <ul>
 <li>
