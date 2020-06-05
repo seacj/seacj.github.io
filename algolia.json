@@ -1,0 +1,776 @@
+[
+    {
+        "title": "About",
+        "uri": "About",
+        "content": "2015                                B                       lc3369 columbia edu                    Hugo             Leaveit        b up CodeSheep                                                                               4 0     CC BY NC 4 0                            yyqx online                                                                                                                                                                                                                                                  https   yyqx online  Blog                                                URL  about   playhouse html",
+        "objectID": "About",
+        "date": "2019-06-17T10:11:42.000Z",
+        "menu": "main"
+    },
+    {
+        "title": "2020年4月4日举国哀悼",
+        "uri": "posts/2020年4月4日举国哀悼",
+        "content": "Fight ONE",
+        "objectID": "posts/2020年4月4日举国哀悼",
+        "date": "2020-04-04T09:31:28.000Z",
+        "categories": [
+            "随笔-ღ-心得"
+        ],
+        "tags": [
+            "抗击新冠肺炎"
+        ],
+        "author": "草祭"
+    },
+    {
+        "title": "并查集",
+        "uri": "posts/并查集",
+        "content": "NOIP 2015                                                                                                                     A       B        A B                                                                        Step 0                                                                              a b   a               b                      index 0        index   1   2   3   4   5                                                    1   2   3   4   5     b   2   4   2   3   1                       for     Step 1    1     1    1     2  b 1   2                 1 2                                                                                   1         b 1    2   2       a 2    2      2                     1         2   1   1          1    2                       1      a 1    2    index   1   2   3   4   5                                                     2   2   3   4   5     b   2   4   2   3   1   Step 2    2     2    2     4  b 2   4                 index   1   2   3   4   5                                                     2   4  3   4   5     b   2   4   2   3   1   Step 3    3   index   1   2   3   4   5                                                     2   4   2  4   5     b   2   4   2   3   1   Step 4    4   index   1   2   3   4   5                                                     2   4   2   4   5     b   2   4   2   3   1                                 4         b 4    3   3       a 3    2   2       a 2    4   4       a 4    4      4                   4         4   4    4           4    4                               a 4  Step 5    5   index   1   2   3   4   5                                                     2   4   2   4   1     b   2   4   2   3   1      P2661            C  include  include using namespace std  const int N   200010  int n  fa N   ans   0x3f3f3f3f  int  int x  int  cnt      cnt       cnt      fa x     x  return x  else return get fa x   cnt     int main      scanf   d    n    int   1  Graph Editor https   csacademy com app graph_editor                   P2661         https   www luogu org problemnew solution P2661        C           P2661       https   duoluoluo blog luogu org solution p2661        C",
+        "objectID": "posts/并查集",
+        "date": "2019-09-05T13:12:31.000Z",
+        "categories": [
+            "算法"
+        ],
+        "tags": [
+            "算法"
+        ]
+    },
+    {
+        "title": "Hugo博客侧边导航栏",
+        "uri": "posts/博客侧边导航栏",
+        "content": "TOC       Table Content          LeaveIt  issue    TOC                                                                                LeaveIt                            toc   Chrome          Step 1       toc html        layouts partials     toc html          html      Params toc   default true         Title       emtLiPtrn       s   s  s      s         rplcEmtLi      1         TableOfContents   replaceRE  emtLiPtrn  rplcEmtLi   safeHTML       end                TableOfContents           Hugo TOC  issue          H1 bug                Step 2    single html    layouts _default      single html     single html                                     html    partial  toc html             max width 300px  TOC           overflow auto  top  100px  bottom 50px   TOC          p s                                       Chrome         Edge                       single html                css    webkit scrollbar   width  8px  height  8px       webkit scrollbar thumb   height  40px  background color   eee  border radius  16px    hover   background color   ddd        Step 3                             TOC     assets css _custom scss            css  media screen  max width  1224px     post toc   display  none                  Step 4           p s                                       assets css _custom scss             scss  post toc  position  fixed  left 20px max width 300px  overflow auto  top  100px  bottom 50px     toc wrapper      webkit scrollbar   width  6px  height  8px       webkit scrollbar thumb   height  40px  background color   eee  border radius  16px    hover   background color   ddd             Step2    layouts partials toc html              class     toc wrapper     Step2                       html    partial  toc html              H1 H2 H3 H4 H5             H1                              H2                    H1    H2    H2    H2    H2    H2    H2    H2    H2    H2    H2                                              Hugo   Variable  WordCount   toc html                 html     gt  WordCount 80     Params toc   default true         Title           WordCount         toc     TableOfContents          toc    replaceRE  n n     toc         safeHTML  toc        end            1     gitalk     disqus              https   github com liuzc LeaveIt pull 11 commits d5aa80b08057bbdf5ac7f7c319ce68e5646226b9  2  Hugo    TOC https   gohugo io content management toc   3  Hugo TOC issue https   github com gohugoio hugo issues 1778",
+        "objectID": "posts/博客侧边导航栏",
+        "date": "2019-08-22T06:20:08.000Z",
+        "categories": [
+            "博客"
+        ],
+        "tags": [
+            "博客搭建"
+        ]
+    },
+    {
+        "title": "Hugo博客代码高亮",
+        "uri": "posts/博客代码高亮",
+        "content": "LaTeX                                                   Hugo                  LeaveIt      issue                 Hugo extented   Sass SCSS     Step 1    hugo extended    https   github com gohugoio hugo releases            extended              hugoextended0 56 3_Windows 64bit zip  Step 2           LeaveIt              scss     themes LeaveIt assets css common page post scss                                https   blog hgtweb com 2019 code csdn      Step 3            https   liuzhichao com 2018 hugo theme leaveit             themes LeaveIt assets css common prettyprint default scss                                                    Highlight                                                             LeaveIt                             html hljs initHighlightingOnLoad            c  include int main void    printf  Hello world     return 0       tex  documentclass article            begin document  Hello  world   end document     python import os print  Process   s  start       os getpid    works Unix Linux Mac  pid   os fork   pid    0  print  I child process   s  parent  s      os getpid    os getppid     else  print  I   s  just created child process   s       os getpid    pid                          no class  documentclass article            begin document  Hello  world   end document                 Hugo     LeaveIt https   liuzhichao com 2018 hugo theme leaveit    Hugo          https   note qidong name 2017 06 24 hugo highlight      LeaveIt    code   https   blog hgtweb com 2019 code csdn",
+        "objectID": "posts/博客代码高亮",
+        "date": "2019-08-01T06:56:47.000Z",
+        "categories": [
+            "博客"
+        ],
+        "tags": [
+            "博客搭建"
+        ]
+    },
+    {
+        "title": "博客添加在线通讯",
+        "uri": "posts/博客添加在线通讯",
+        "content": "Wyane                              Hexo                                                      Tidio Hugo         Step 1           Tidio       https   www tidiochat com panel login                                                               Step 2        html                                                 footer html                        Tidio          SETTINGS    Developer    Project data       public key         theme tidio key     Step 3         Channel    Live chat   Appearance                                       Hexo                http   yearito cn posts hexo advanced settings html",
+        "objectID": "posts/博客添加在线通讯",
+        "date": "2019-09-15T06:17:57.000Z",
+        "categories": [
+            "博客"
+        ],
+        "tags": [
+            "博客搭建"
+        ]
+    },
+    {
+        "title": "部署博客到阿里云服务器",
+        "uri": "posts/部署博客到阿里云服务器",
+        "content": "100RMB                github pages                                       Hugo      Hugo                     Ubuntu                 Step 1    nginx                                 root       nginxsudo apt get install nginx       nginx 1 14 0  Ubuntu     nginxservice nginx start p s       service nginx stop      nginx  s reload             HTTP 80   ref               8080      HTTP                ip    Welcome nginx                   home user www blog          index html                           HI     index html                          drwx                      drwxr xr x         nginx        nginx  t   nginx       config location     root   index html                            nginx       location    root        index html                     nginx  etc nginx nginx conf               etc nginx sites enabled default       root  var www html     root   index html                       nginx conf      include sites enabled   conf      include sites available    nginx    nginx  s reload                IP      index html                  403 Forbidden      index html                            Step 2       git              Git                             adduser git  unix root xxx  xxx xxx  adduser git Adding user  git      Adding new group  git   1000      Adding new user git   1000  group git      Creating home directory   home git      Copying files   etc skel      Enter new UNIX password  Retype new UNIX password                            passwd git              git   su git                           ssh   mkdir  ssh    chmod 700  ssh         authorizedkeys       touch  ssh authorizedkeys    chmod 600  ssh authorized_keys       authorized_keys                     https   gitee com help articles 4181 article header0       Windows           C  Users xxx  ssh               ssh   cat  xxx id_rsa john pub ssh rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCB007n ww ouN4gSLKssMxXnBOvf9LGt4L     git     mkdir               home git repo cd       git init   bare blog git      git init                               git            git   index             git hooks   git hooks                       git         cd        blog git hooks  vim post receive                       bash    bin sh set  e DIR_ONE  home user www blog                 cd  DIR_ONE git   work tree      git dir       blog git checkout  f   chmod 771 post receive             Step 3                    Step 4     remote  error  not lock config file  home user www blog  git config  Permission denied                  chown git           chgrp git           Step 4      git              Hugo        public     git remote set url   add origin xxx git   xxx git usrname    ip          blog git     git remote  v                          git remote set url   delete origin xxx git   git push                     push                              linux      r       x               HEXO             HEXO                     Hexo                    Git                 Git Hooks                 Hexo       GitHub Page       Leeyuxun s blog        Git Hooks   post update hook  post receive       post update  hook tell heads pushed  does not know original updated values are  so poor place log old  new     hook does original updated values refs  consider instead need them     https   stackoverflow com questions 9653165 whats the difference between post receive and post update git init       Running git init existing repository safe  will not overwrite things already there  primary reason rerunning git init pick newly added templates    http   www voidcn com article p cvrvucje bsk html",
+        "objectID": "posts/部署博客到阿里云服务器",
+        "date": "2020-02-29T11:18:30.000Z",
+        "categories": [
+            "博客"
+        ],
+        "tags": [
+            "博客搭建",
+            "linux"
+        ]
+    },
+    {
+        "title": "测试博客新主题",
+        "uri": "posts/测试新主题loveit",
+        "content": "LeaveIt                Hugo   top1   academic                              LoveIt                LoveIt                          C    include int main    main        printf  Hello World      printf      return 1           C      include   std  cout          include             int main     printf  Hello World   Way 1 n      printf      puts  Hello World   Way 2      puts    puts  Hello        World   Way 3            std  cout    Hello World   Way 4    std  endl    C          return 1                 print                                  n         wow                          n                                      n                                      n                                      n                   difference    n                                      n                                      n                                      n                                      n                                      n                        electrons     n                                      n                                      n                                      n           amaze                      n                                      n                                      n                                      n           begin aligned  x   a b c      d e      f g  end aligned         begin aligned  x   a b c      d e      f g  end aligned",
+        "objectID": "posts/测试新主题loveit",
+        "date": "2020-05-11T09:45:40.000Z",
+        "categories": [
+            "博客"
+        ],
+        "tags": [
+            "博客搭建"
+        ]
+    },
+    {
+        "title": "打字练习",
+        "uri": "posts/打字",
+        "content": "1 https   www keybr com                                                                      2 https   www typingclub com",
+        "objectID": "posts/打字",
+        "date": "2019-07-23T06:45:49.000Z",
+        "categories": [
+            "教程-ღ-点评"
+        ]
+    },
+    {
+        "title": "第一篇随笔",
+        "uri": "posts/第一篇随笔",
+        "content": "",
+        "objectID": "posts/第一篇随笔",
+        "date": "2019-06-14T10:30:14.000Z",
+        "categories": [
+            "随笔-ღ-心得"
+        ],
+        "tags": [
+            "随笔"
+        ]
+    },
+    {
+        "title": "東方半岛",
+        "uri": "posts/東方半岛",
+        "content": "5                                                                                                            r photo store qq com psb  V12bCXFg4C0EV7 YGGsoB9I7PMWIKz3QbaiqGY1U2WQdb 8K8Ni5EWAILM  r dDcBAAAAAAAAnull bo oAU4BEAOsAoRCVM  rf photolist t 5yakeqzoneimgout png                                                       r photo store qq com psb  V12bCXFg4C0EV7 a5wWVhgMwNM w01TtnFJs9ytfyGgAsBRV86lGw3SDAw  r dL8AAAAAAAAAnull bo oAU4BEAOsAoRCVM  rf photolist t 5yakeqzoneimgout png                                Important",
+        "objectID": "posts/東方半岛",
+        "date": "2019-08-12T06:35:36.000Z",
+        "categories": [
+            "随笔-ღ-心得"
+        ],
+        "tags": [
+            "过去的事",
+            "照片"
+        ]
+    },
+    {
+        "title": "动态规划",
+        "uri": "posts/动态规划",
+        "content": "dynamic programming  DP                                                                                 DP                  DP          Overlapping Subproblems                       Optimal Substructure                             DP  DP                                                                                                          f n  f n 1  f n 2                                                                                                                                   DP             1             Memoization  Top Down                                                                                        2             Tabulation  Bottom Up                          p s                       leetcode300                Recursion Memoization       Dynamic Programming       DP                                 leetcode70                                            leetcode300            leetcode44                                              leetcode712        ASCII",
+        "objectID": "posts/动态规划",
+        "date": "2019-07-01T17:27:53.000Z",
+        "categories": [
+            "算法"
+        ],
+        "tags": [
+            "算法"
+        ]
+    },
+    {
+        "title": "二零二零年纪实录",
+        "uri": "posts/二零二零纪实录",
+        "content": "2020 1 29                2020 1 1       2020 1 2 19 45                                                           python                      2020 1 3 23 59 b     364      2w                 2020 1 4  1 8           2020 1 9  1 10                   2020 1 11 23 59           2020 1 12           3 1  2020 1 13  1 15        2020 1 16  ipad2019      2020 1 17          5            50                                                       2019 12 30                     2020 1 23   2        10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 buff                   2020 4 4                                      1 29",
+        "objectID": "posts/二零二零纪实录",
+        "date": "2020-01-29T10:02:45.000Z",
+        "categories": [
+            "随笔-ღ-心得"
+        ],
+        "tags": [
+            "抗击新冠肺炎"
+        ],
+        "author": "草祭"
+    },
+    {
+        "title": "好天气",
+        "uri": "posts/好天气",
+        "content": "https   www nbfox com wp content uploads 2020 03 11 20200311190119 5e69357f0ef97 jpg",
+        "objectID": "posts/好天气",
+        "date": "2020-02-17T08:28:57.000Z",
+        "categories": [
+            "随笔-ღ-心得"
+        ],
+        "tags": [
+            "随笔"
+        ]
+    },
+    {
+        "title": "回溯算法",
+        "uri": "posts/回溯算法",
+        "content": "1                                                            2                3                                                                                     C void backtrack state s    if s end               sols append path             else if s no ways                   return    else               for i possible ways   next_s   s           backtrack next_s                s   redo s                       39  Combination Sum                Backtracking https   github com selfboot LeetCode tree master Backtracking                             https   www cnblogs com steven_oyj archive 2010 05 22 1741376 html",
+        "objectID": "posts/回溯算法",
+        "date": "2019-08-26T12:31:48.000Z",
+        "categories": [
+            "算法"
+        ],
+        "tags": [
+            "算法"
+        ]
+    },
+    {
+        "title": "计算机科学中的逻辑学题记",
+        "uri": "posts/计算机科学中的逻辑学",
+        "content": "logic  formal language              computability        complexity                   T Theory   STOC   F Foundation   FOCS                                                                                                               1    1    2              1    1    2                 1 1 2                                                                     1    1    2                                                                                                                                                                                             1  works         2  works                3  correct                                        programming verification                                                                                                    Try think higher abstraction level                 Learn argue formally                                  Open perspective programming",
+        "objectID": "posts/计算机科学中的逻辑学",
+        "date": "2019-09-21T06:23:03.000Z",
+        "categories": [
+            "编程-ღ-技术"
+        ],
+        "tags": [
+            "计算机科学中的逻辑学",
+            "数学"
+        ]
+    },
+    {
+        "title": "内存层次设计",
+        "uri": "posts/计算机体系结构1",
+        "content": "Point   cpu                               disk                                   c a b          add  1  2  3  Hit rate                        cache  cache memory  5 Hit time RAM access time Time determine hit miss  Miss penalty  time replace block lower level  including time replace CPU   CPU       Average memory access time Hit time   Miss rate   Miss penalty                    Miss penalty                                    page     page table                 virtual page numbes   physical frames          Cache                 https   blog csdn net dongyanxia1000 article details 53392315",
+        "objectID": "posts/计算机体系结构1",
+        "date": "2019-09-18T01:52:42.000Z",
+        "categories": [
+            "编程-ღ-技术"
+        ],
+        "tags": [
+            "计算机体系结构"
+        ]
+    },
+    {
+        "title": "建站历史001",
+        "uri": "posts/建站历史001",
+        "content": "hugo theme learn                 LeaveIt                 tag                                               LeaveIt     Valine                       Hugo     Hugo             Hugo   Hugo      LeaveIt   LeaveIt    Valine   Valine            Hugo   Valine",
+        "objectID": "posts/建站历史001",
+        "date": "2019-06-30T05:23:35.000Z",
+        "categories": [
+            "博客"
+        ],
+        "tags": [
+            "博客搭建",
+            "建站历史"
+        ]
+    },
+    {
+        "title": "建站历史002",
+        "uri": "posts/建站历史002",
+        "content": "199RMB   yyqx online                        HTML5                                                         Favicon Generator         GitHub Pages                         b up CodeSheep",
+        "objectID": "posts/建站历史002",
+        "date": "2019-07-01T09:58:52.000Z",
+        "categories": [
+            "博客"
+        ],
+        "tags": [
+            "博客搭建",
+            "建站历史"
+        ],
+        "featured_image": null
+    },
+    {
+        "title": "建站历史003",
+        "uri": "posts/建站历史003",
+        "content": "Hugo                                    LeaveIt",
+        "objectID": "posts/建站历史003",
+        "date": "2019-08-23T04:43:09.000Z",
+        "categories": [
+            "博客"
+        ],
+        "tags": [
+            "博客搭建",
+            "建站历史"
+        ]
+    },
+    {
+        "title": "建站历史004",
+        "uri": "posts/建站历史004",
+        "content": "Tool                                  LeaveIt     LeaveIt Hugo Theme   github",
+        "objectID": "posts/建站历史004",
+        "date": "2019-09-20T13:46:59.000Z",
+        "categories": [
+            "博客"
+        ],
+        "tags": [
+            "博客搭建",
+            "建站历史"
+        ]
+    },
+    {
+        "title": "建站历史005",
+        "uri": "posts/建站历史005",
+        "content": "Tool                   Hugo       Netlify   Github Pages seacj netlify com       4   DNS                                          LeaveIt     LeaveIt Hugo Theme   github                           LeaveIt           Coding         Coding              Hugo       Netlify   Github Pages      Hugo       Netlify   Github Pages",
+        "objectID": "posts/建站历史005",
+        "date": "2020-02-26T12:30:05.000Z",
+        "categories": [
+            "博客"
+        ],
+        "tags": [
+            "博客搭建",
+            "建站历史"
+        ]
+    },
+    {
+        "title": "建站历史006",
+        "uri": "posts/建站历史006",
+        "content": "LeaveIt assets css common page post scss  font size                CSS JS",
+        "objectID": "posts/建站历史006",
+        "date": "2020-04-08T08:22:17.000Z",
+        "categories": [
+            "博客"
+        ],
+        "tags": [
+            "博客搭建",
+            "建站历史"
+        ]
+    },
+    {
+        "title": "建站历史007",
+        "uri": "posts/建站历史007",
+        "content": "Hugo   LoveIt                                    hugo algolia  s           typora plugins win img                               LoveIt                       Hugo    Algolia               Hugo    Algolia                typora plugins win img typora plugins win img                           bug",
+        "objectID": "posts/建站历史007",
+        "date": "2020-05-12T05:00:23.000Z",
+        "categories": [
+            "博客"
+        ],
+        "tags": [
+            "博客搭建",
+            "建站历史"
+        ]
+    },
+    {
+        "title": "立个flag",
+        "uri": "posts/立个flag",
+        "content": "100                                            100                                                                                                                                                                                                                                                                                       flag               pygame           sv                                      MIT 6 046J",
+        "objectID": "posts/立个flag",
+        "date": "2020-02-23T09:34:30.000Z",
+        "categories": [
+            "随笔-ღ-心得"
+        ],
+        "tags": [
+            "随笔"
+        ]
+    },
+    {
+        "title": "罗技K480蓝牙键盘の体验",
+        "uri": "posts/罗技K480蓝牙键盘体验",
+        "content": "2    K480                                                             windows               K480                      K480       3                  2              K480 TOP1                                                                                                                               K480  128                          K480     https   www logitech com cn zh cn manuals k480 immersion guide                                                                                                           home          home         end            home  fn      end  fn                     K480   HOME END                          pad                              chrome    f1        f4                         K480    K480                                                         K480        1 2                                    K480                                                                                                     iPad            PC                          K380      K380                                         106                       K480                       K480",
+        "objectID": "posts/罗技K480蓝牙键盘体验",
+        "date": "2020-01-08T05:44:08.000Z",
+        "categories": [
+            "教程-ღ-点评"
+        ],
+        "tags": [
+            "产品体验"
+        ],
+        "featured_image": "https://pic.superbed.cn/item/5e15717976085c328964216b.jpg"
+    },
+    {
+        "title": "命题逻辑的语义",
+        "uri": "posts/命题逻辑的语义",
+        "content": "Propositional logic formal language                                 alphabet   p q r       p1 p2 p3         neg   wedge   vee   rightarrow              string                 neg     vee p q  rightarrow                                           well formed    well formed formula         formula     p s  well formed                well formed                  well formed               parse tree            neg p  vee q  rightarrow  neg p      wedge r   parse tree             parse tree  Semantics propositional logic    premise    phi_ 1         conclusion    psi                          phi1   phi2   cdots   phi_n  vdash  psi        phi1   phi2   cdots   phi_n  vDash  psi                                                                                                    phi1   phi2   cdots   phi_n  T    psi   T                                 soundness                      completeness                                                                                    Normal form     vDash                                                  Normal form                                                          CNF                          Soundness Completeness  https   zhuanlan zhihu com p 49956452        logic computer science    http   dcn icc spbstu ru  karpov  D0 9A D1 83 D1 80 D1 81 20 D0 9B D0 9E D0 93 D0 98 D0 9A D0 90  D0 94 D0 9E D0 9F D0 9E D0 9B D0 9D D0 98 D0 A2 D0 95 D0 9B D0 AC D0 9D D0 9E D0 95 20 D0 A7 D1 82 D0 B5 D0 BD D0 B8 D0 B5 LogicInCS pdf   p s",
+        "objectID": "posts/命题逻辑的语义",
+        "date": "2019-12-13T12:55:38.000Z",
+        "categories": [
+            "编程-ღ-技术"
+        ],
+        "tags": [
+            "计算机科学中的逻辑学",
+            "数学"
+        ]
+    },
+    {
+        "title": "命题逻辑和自然推演",
+        "uri": "posts/命题逻辑和自然推演",
+        "content": "propositional logic         Declarative sentences             declarative                  It based propositions  declarative sentences one can  principle  argue true false              sum numbers 3 5 equals 8       non declarative        please pass salt  Ready  steady  go                                                                     specification            Formalize declarative sentences    Formalize       3                     defined rigorously             formalize          symbol   Example                       John      John                           Jane       Jane     Jane              Jane    Structures   Example1   Example2                                                        Jane        John      Jane      Formal argument                               p not q  r     Not r p  Therefore  q       Natural deduction             a set rules          premise         conclusion                                        negation         conjunction         disjunction       implication   sequent                  intension                                                                                                               p    p                                                            p    p                                             John                                                                                                                                                                           frac premise    premise  conclusion  rule          rule                     wedge i           introduction         elimination                   Rules conjunction And introduction rule    frac  phi  qquad  psi   phi  wedge  psi   wedge i   And elimination rules     frac  phi  wedge  psi   phi   wedge e_ 1         frac  phi  wedge  psi   psi   wedge e_ 2     Rules double negation Introduction rule     frac  phi   neg  neg  phi   neg  neg    Elimination rules     frac  neg  neg  phi   phi   neg  neg e                                neg  neg   1             neg  neg i       p        Rules implication Introduction                                                       Implies elimination rule     frac  phi  quad  phi  rightarrow  psi   psi   rightarrow e    Modus Tollens  MT short  rule                 primitive rule           derived rule      frac  phi  rightarrow  psi quad  neg  psi   neg  phi   mathrm MT     Rules disjunction Rules negation                  double negation      contradiction                   contradiction  Contradictions expressions form   neg  phi  wedge  phi    phi  wedge  neg  phi     phi  arbitrary formula   Note  p  wedge  neg p  vdash q  valid                                                               Bottom elimination       frac  perp   phi   perp  mathrm e     Not elimination     frac  phi  quad  neg  phi   perp   neg e",
+        "objectID": "posts/命题逻辑和自然推演",
+        "date": "2019-09-22T04:19:26.000Z",
+        "categories": [
+            "编程-ღ-技术"
+        ],
+        "tags": [
+            "计算机科学中的逻辑学",
+            "数学"
+        ]
+    },
+    {
+        "title": "记一次配置Ubuntu服务器图形化界面",
+        "uri": "posts/配置阿里云服务器图形化界面",
+        "content": "xshell              Ubuntu desktop apt get install ubuntu desktop reboot    https   blog csdn net zwq912318834 article details 80528374                                                                              2 G apt get install ubuntu desktop         xrdp          sudo apt get install xrdp apt get install vnc4server apt get install xubuntu desktop           sudo apt get install xrdp   xrdp     windows                               xrdp          root                                                              Authenticate                                                         apt get install vnc4server     xubuntu desktop      ubuntu desktop 1 3  apt get install xubuntu desktop               gdm3                                                      etc polkit 1 localauthority conf d              02 allow colord conf                polkit addRule function action  subject          action id     org freedesktop color manager create device         action id     org freedesktop color manager create profile         action id     org freedesktop color manager delete device         action id     org freedesktop color manager delete profile         action id     org freedesktop color manager modify device         action id     org freedesktop color manager modify profile          subject isInGroup   users           return polkit Result YES                            ubuntu                                  CSDN   samtaoys          CC 4 0 BY SA                              https   blog csdn net samtaoys article details 91042262                                         cpu                             https   www ivpser com windows smooth                              xrdp vnc     xrdp    Windows    Ubuntu 16 04 https   www linuxidc com Linux 2017 09 147112 htm",
+        "objectID": "posts/配置阿里云服务器图形化界面",
+        "date": "2020-03-01T07:29:17.000Z",
+        "categories": [
+            "编程-ღ-技术"
+        ],
+        "tags": [
+            "博客搭建",
+            "linux"
+        ]
+    },
+    {
+        "title": "奇奇怪怪的梦",
+        "uri": "posts/奇奇怪怪的梦",
+        "content": "A      wsh                                                          A                                                                                                                                                                                                                                                                                                                                                                                              LED",
+        "objectID": "posts/奇奇怪怪的梦",
+        "date": "2020-03-15T04:29:24.000Z",
+        "categories": [
+            "随笔-ღ-心得"
+        ]
+    },
+    {
+        "title": "双拼打字",
+        "uri": "posts/双拼打字",
+        "content": "Step 1                                                     Step 2                              windows          windows                                         ipad                                               https   www v2ex com t 592527    win10              https   jingyan baidu com article fd8044fad5e1ca5030137a6b html    windows10             https   www jianshu com p cc4cc916f5fc",
+        "objectID": "posts/双拼打字",
+        "date": "2020-02-21T14:46:57.000Z",
+        "categories": [
+            "教程-ღ-点评"
+        ]
+    },
+    {
+        "title": "网站配色",
+        "uri": "posts/网站配色方案",
+        "content": "1      http   tool c7sky com webcolor  2       http   nipponcolors com                   http   zhongguose com",
+        "objectID": "posts/网站配色方案",
+        "date": "2019-06-24T10:41:54.000Z",
+        "tags": [
+            "博客搭建"
+        ],
+        "categories": [
+            "博客"
+        ],
+        "author": "草祭"
+    },
+    {
+        "title": "博客迁移至码云",
+        "uri": "posts/网站迁移至gitee",
+        "content": "github           github         VPN               185 199 xxx xxx         32    175ms TTL 52                                        gitee              gitee   hugo                                                            github pages                              Pages   github   git page         Pages      Pages            Pages                       Pages                      Github Pages              Pages        Pages    Jekyll Hugo Hexo          Pages                                                                                                                                                                  pages          HTTPS                               Pages   Step 1                                      your_name gitee io                         https   yourname gitee io reponame              Gitlab Github Gitee                    push            git gitee com  Permission denied  publickey   fatal  not read remote repository            https   gitee com profile sshkeys                         https   gitee com help articles 4181 article header0       Windows           C  Users xxx  ssh          git mkdir pages cd pages git init touch README md git add README md git commit  m  first commit  git remote add origin https   gitee com yourname yourname git git push  u origin master       README md     OK   Step 2      Pages                   pages        p s                           hugo   public    push      Pages                     index html                 Pages    Step 3          Hugo                 public           hugo  D   baseUrl  www      com     cd public     public   push           Step1                                    http   username gitee io                      212 64 62 174         32    36ms TTL 51                      github          CNAME                                     Gitee com      V1 2 http   git mydoc io  t 154714        Gitlab Github Gitee             https   www jianshu com p 68578d52470c   Pages               1    https   jingyan baidu com article 6181c3e0cb0fae152ef153f1 html      push github    https   blog csdn net u014532775 article details 89684206",
+        "objectID": "posts/网站迁移至gitee",
+        "date": "2020-02-25T14:01:23.000Z",
+        "categories": [
+            "博客"
+        ],
+        "tags": [
+            "博客搭建"
+        ]
+    },
+    {
+        "title": "随笔",
+        "uri": "posts/为什么要写随笔",
+        "content": "",
+        "objectID": "posts/为什么要写随笔",
+        "date": "2019-06-14T12:37:23.000Z",
+        "categories": [
+            "随笔-ღ-心得"
+        ],
+        "tags": [
+            "随笔"
+        ]
+    },
+    {
+        "title": "谓词逻辑",
+        "uri": "posts/谓词逻辑",
+        "content": "first order logic      predicate                                     S x               x       Y x y             x y                               C java                                               a b      a b                 Type Theory                                formal      formal               set predicate symbols      P          D    0 1               set function symbols      F set constant symbols      C                                                                         t1 t2                                            forall x P x   wedge Q x     rightarrow  neg P x   vee Q y                                    x                     x      x             substitution           x       t       phi              phi t   x          phi            x     t      Example                                phi f x  y    x                                                                                 2                                               x    P    x   P                              logic computer science    http   dcn icc spbstu ru  karpov  D0 9A D1 83 D1 80 D1 81 20 D0 9B D0 9E D0 93 D0 98 D0 9A D0 90  D0 94 D0 9E D0 9F D0 9E D0 9B D0 9D D0 98 D0 A2 D0 95 D0 9B D0 AC D0 9D D0 9E D0 95 20 D0 A7 D1 82 D0 B5 D0 BD D0 B8 D0 B5 LogicInCS pdf   p s",
+        "objectID": "posts/谓词逻辑",
+        "date": "2019-12-15T10:07:01.000Z",
+        "categories": [
+            "编程-ღ-技术"
+        ],
+        "tags": [
+            "计算机科学中的逻辑学",
+            "数学"
+        ]
+    },
+    {
+        "title": "我的小学",
+        "uri": "posts/小学",
+        "content": "123                 123                                3                                                                                                                                                                                                                                                                                                                                                                             LF2                                     5",
+        "objectID": "posts/小学",
+        "date": "2019-07-17T11:06:24.000Z",
+        "categories": [
+            "随笔-ღ-心得"
+        ],
+        "tags": [
+            "过去的事"
+        ]
+    },
+    {
+        "title": "音频重采样简述",
+        "uri": "posts/音频重采样",
+        "content": "python librosa                 48kHz    8kHz                      sr sampling rate                             48kHz   p232_072 wav                 myp232072_8kHz wav      librosa        p2320728kHz wav           2 0     my2p232072_8kHz wav              4 4 48 8            python     times         def mydownsample data inputsr output_sr   assert inputsr outputsr    0 times   inputsr  outputsr   np empty len data   times 1  i  d enumerate data   i times    2  out i  times    data i  return                     librosa                                                2                                                                                                                                   18               2                           1 9                          1             4500Hz 5500Hz         sr10000                   5500 Hz     10000            4500 Hz              7700 Hz   2300 Hz           9900 Hz   100 Hz              aliasing                               10000         5000                 5000           5000 Hz                                      http   en wikipedia org wiki Nyquist_frequency      aliasing         0               1100 Hz        5       12100 Hz       5000 Hz          2100 Hz       0 Hz            2100 Hz       2 4              2100 Hz        4300 Hz         2                            20  t        18                             frac 18  20 t              t         sr   frac 1   t                                frac 2  20 t                                                                                                             2 0  python scipy import signal import soundfile sf data sr   sf read  p232_072 wav   Fs_highest   4000 wn 2 Fshighest sr     Fshighest hz       b    signal butter 8  wn   lowpass          8          filtedData   signal filtfilt b  a  data   data        new   my_downsample filtedData 48000 8000  sf write  my2p232072_8kHz wav  new 8000                         3 0  times             times        python   times                def mydownsampleavg data inputsr outputsr   assert inputsr outputsr    0 times   inputsr  outputsr   np empty len data   times 1  accu   0 i  d enumerate data   accu  data i  i times    3  out i  times    accu 4 accu   0 return v3   mydownsampleavg data 48000 8000  sf write  my3p232072_8kHz wav  v3 8000       v1                                  v2                            180                               tensorflow pytorch       180                                                                      1         https   zhuanlan zhihu com p 23923059  2      ThinkDSP     http   timag shield blogspot com 2017 04 thinkdsp_27 html  3             https   blog csdn net juhou article details 81194566  4                         https   www zhihu com question 20500497  5       180  https   www jianshu com p 8dfe02b61686  7  Resampling sound sample  filter use  https   stackoverflow com questions 4393545 resampling a sound sample what filter do i use  8  filtfilt    https   github com scipy scipy blob v1 4 1 scipy signal signaltools py L3687 L3885  9  lfilter   https   github com scipy scipy blob adc4f4f7bab120ccfab9383aba272954a0a12fb0 scipy signal signaltools py L1695  10  Applying filter scipy signal  Use lfilter filtfilt  https   dsp stackexchange com questions 19084 applying filter in scipy signal use lfilter or filtfilt  11              https   www bilibili com video av26706434  p 51 t 91  12  scipy signal resample https   docs scipy org doc scipy reference generated scipy signal resample html",
+        "objectID": "posts/音频重采样",
+        "date": "2020-03-20T13:28:16.000Z",
+        "categories": [
+            "编程-ღ-技术"
+        ],
+        "tags": [
+            "信号处理",
+            "python"
+        ]
+    },
+    {
+        "title": "Ubuntu搭建minecraft服务器",
+        "uri": "posts/在ubuntu服务器上搭建minecraft",
+        "content": "b         up    Minecraft                             Minecraft                           5        512MB                       Minecraft                                                              Ubuntu   2G   1 CPU   1M     1 15 2                  2M        2                            mkdir minecraft       minecraft     cd minecraft   minecraft      25565                              wget https   s3 amazonaws com Minecraft Download versions 1 12 2 minecraft_server 1 12 2 jar   minecraft         1 12 2  sudo apt install default jdk   JDK          javac  version        javac           sudo apt get install screen   screen    minecraft          free  m             986M  o      total used free shared buff cache available Mem  1993 215 986 3 790 1601 Swap  947 160 786 java  Xms1024M  Xmx2048M  jar minecraft_server 1 12 2 jar nogui  Xms           Xmx                                     eula txt   linux  03 53 30   Server thread INFO   Starting minecraft server version 1 12 2  03 53 30   Server thread INFO   Loading properties  03 53 30   Server thread WARN   server properties does not exist  03 53 30   Server thread INFO   Generating new properties file  03 53 30   Server thread WARN   Failed load eula txt  03 53 30   Server thread INFO   need agree EULA order run server  Go eula txt info   03 53 30   Server thread INFO   Stopping server  03 53 30   Server Shutdown Thread INFO   Stopping server   sed  i orig  s eula false eula true g  eula txt                                    java  Xms1024M  Xmx2048M  jar minecraft_server 1 12 2 jar nogui   minecraft                04 05 03   Server thread INFO   Done  4 439s   help  type  help                                windows10      HMCL       minecraft                Direct Connect Add Server    ip                     ip                             xxxxxxxxx xxxxxxx id  name xxxxx properties    legacy false    xxxxxxxx 50786  lost connection  Disconnected                              minecraft    server properties    online mode true   online mode false                                minecraft              mincraft                                         screen  S mc     mc session  java  Xms1024M  Xmx2048M  jar minecraft_server 1 12 2 jar nogui       Screen     screen  ls     session             screen  r mc       mc session      ctrl a    d         session                exit       Screen      Linux   shell      screen                  shell                   session     mod Note         1 15 2            1 12 2                 Forge         http   files minecraftforge net        Forge        forge 1 15 2 31 1 0 installer jar   Forge java  jar   forge 1 15 2 31 1 0 installer jar nogui   installServer      jar   minecraft_server 1 15 2 jar                                                                                                forge 1 15 2 31 1 0 jar          java  jar forge 1 15 2 31 1 0 jar                        mod     HMCL                        mod   mod                                      Xaero         jar    minecraft mods        jar   mods                mod          ECS          https   yq aliyun com articles 675070 Ubuntu           https   blog csdn net CSDNzyq article details 52735097 Linux    mod Minecraft    https   www jianshu com p 89f14756d16c Minecraft Forge    https   blog csdn net oschina_41734362 article details 79319399 linux      mod minecraft    https   blog csdn net github_39068149 article details 72910409 243  E5 8A A0 E8 BD BDliteloader         MCBBS https   www mcbbs net portal php",
+        "objectID": "posts/在ubuntu服务器上搭建minecraft",
+        "date": "2020-03-12T17:53:35.000Z",
+        "categories": [
+            "编程-ღ-技术"
+        ],
+        "tags": [
+            "minecraft",
+            "linux"
+        ]
+    },
+    {
+        "title": "Android Studio上使用JNI",
+        "uri": "posts/android_jni",
+        "content": "C                       JNI Java Native Interface       Android Studio AS    JNI                   AS                          Step 1    NDK NDK Native Developer Kit                             JNI                                G  android ndk r21        ndk build             Step 2                   Include C   support         Project    Step 3  AS     Ctrl Alt Shift S       NDK      app     build gradle    defaultConfig          moduleName       so          lib moduleName  so  Java    loadLibrary         moduleName    abiFilters  CPU                                    ndk  moduleName  SEnhanceNDK     abiFilters  arm64 v8a    armeabi v7a    x86    x86_64         build gradle     buildTypes         sourceSets   main        jniLibs srcDirs     src main libs   jniLibs srcDirs      jni srcDirs              jni           ref  Error  project contains C   files not using supported native build system  Step 4    JNI       so   1    JAVA       native                       main java         javah  d    jni com xxx xxx JNI   com xxx xxx JNI                            h                  c                      h           include  comwhusenhance_JNI h  char  gettext    return  Hi         jstring      Java       JNIEnv  env          jobject jobj             JNI this    jstring JavacomwhusenhanceJNI_sayHello JNIEnv  env  jobject jobj     jstring  NewStringUTF  JNIEnv  const char    char  text    I C   text   gettext    return   env   NewStringUTF env text     2     so         jni      ndk build            libs obj         so           jniLibs        libs                      so         Build Rebuild Project Rebuild                         build gradle  jniLibs srcDirs  jni srcDirs       Step 5    MainActivity      package com whu senhance  import android support v7 app AppCompatActivity  import android os Bundle  public class MainActivity extends AppCompatActivity    Override protected void onCreate Bundle savedInstanceState    super onCreate savedInstanceState   setContentView R layout activity_main   String result   new JNI   sayHello    System out println  result     result            JNI         Mac Android Studio 3 1        https   juejin im post 5b90a7c1e51d450e697311de    Android     JNI    AS      https   www bilibili com video BV1qW411L7oY p 35 Android      https   www cnblogs com xqz0618 p 12725515 html Android JNI     LOG      LOCALLDLIBS     L  SYSROOT  usr lib  llog   include    CLEARVARS     https   blog csdn net jjunjoe article details 7020236",
+        "objectID": "posts/android_jni",
+        "date": "2020-06-04T05:43:41.000Z",
+        "categories": [
+            "编程-ღ-技术"
+        ],
+        "tags": [
+            "java"
+        ]
+    },
+    {
+        "title": "图片生成器Artbreeder",
+        "uri": "posts/artbreeder",
+        "content": "avatar                                avatar                                                       b      LKs                Artbreeder                                              Artbreeder      https   artbreeder com                                            AI       1           2                3        10      10               Step  1              Anime Portraits  Step  2                                                                                      crossbreed                              Edit Genes                   CVPR best paper simGAN                            random                                                     Content Style                                             artbreeder com",
+        "objectID": "posts/artbreeder",
+        "date": "2020-05-18T06:03:39.000Z",
+        "categories": [
+            "教程-ღ-点评"
+        ],
+        "tags": [
+            "产品体验",
+            "网站推荐"
+        ]
+    },
+    {
+        "title": "Awk学习",
+        "uri": "posts/awk学习",
+        "content": "awk unix                            b up       awk               awk                   txt gold 1 1986 USA American Eagle gold 1 1908 Austria Hungary Franz josef 100 Korona silver 10 1981 USA ingot gold 1 1984 Switzerland ingot gold 1 1979 RSA Krugerrand gold 0 5 1981 RSA Krugerrand gold 0 1 1986 PRC Panda silver 1 1986 USA Liberty dollar gold 0 25 1986 USA Liberty 5 dollar piece silver 1 1986 USA Liberty 50 cent piece silver 1 1987 USA Constitution dollar gold 0 25 1987 USA Constitution 5 dollar piece gold 1 1988 Canada Maple leaf      coins txt                                       awk   print NR   t   0   t   5   coins txt         record   field      NR  1       0                               American Eagle    2             awk 1 gold 1 1986 USA American Eagle American 2 gold 1 1908 Austria Hungary Franz josef 100 Korona Franz 3 silver 10 1981 USA ingot ingot 4 gold 1 1984 Switzerland ingot ingot 5 gold 1 1979 RSA Krugerrand Krugerrand 6 gold 0 5 1981 RSA Krugerrand Krugerrand 7 gold 0 1 1986 PRC Panda Panda 8 silver 1 1986 USA Liberty dollar Liberty 9 gold 0 25 1986 USA Liberty 5 dollar piece Liberty 10 silver 1 1986 USA Liberty 50 cent piece Liberty 11 silver 1 1987 USA Constitution dollar Constitution 12 gold 0 25 1987 USA Constitution 5 dollar piece Constitution 13 gold 1 1988 Canada Maple leaf Maple   awk   print NR NR  NR   coins txt                          NR NR             NR  NR                                     awk 11 1 22 2 33 3 44 4 55 5 66 6 77 7 88 8 99 9 1010 10 1111 11 1212 12 1313 13      awk   3  1986 print  0   coins txt         1986       awk gold 1 1986 USA American Eagle gold 0 1 1986 PRC Panda silver 1 1986 USA Liberty dollar gold 0 25 1986 USA Liberty 5 dollar piece silver 1 1986 USA Liberty 50 cent piece   awk   3  1986   1   gold  print  0   coins txt                              awk gold 1 1986 USA American Eagle gold 0 1 1986 PRC Panda gold 0 25 1986 USA Liberty 5 dollar piece                Hello world           awk                 BEGIN       awk                BEGIN         C                 echo Hello world   awk   print  1  NF      Hello world 1 echo Hello world   awk  BEGIN FS       print  1   2  NF      Hello world 2 echo Hello world   awk  BEGIN FS      OFS       print  1   2  NF      Hello world 2    awk    3  xxx   print FILENAME  0   coins txt      FILENAME          coins txt   3  xxx                   awk coins txtgold 1 xxx USA American Eagle coins txtgold 1 xxx Austria Hungary Franz josef 100 Korona coins txtsilver 10 xxx USA ingot coins txtgold 1 xxx Switzerland ingot coins txtgold 1 xxx RSA Krugerrand coins txtgold 0 5 xxx RSA Krugerrand coins txtgold 0 1 xxx PRC Panda coins txtsilver 1 xxx USA Liberty dollar coins txtgold 0 25 xxx USA Liberty 5 dollar piece coins txtsilver 1 xxx USA Liberty 50 cent piece coins txtsilver 1 xxx USA Constitution dollar coins txtgold 0 25 xxx USA Constitution 5 dollar piece coins txtgold 1 xxx Canada Maple leaf   awk   print  NF   t    NF 1    coins txt      NF                      awk Eagle American Korona 100 ingot USA ingot Switzerland Krugerrand RSA Krugerrand RSA Panda PRC dollar Liberty piece 5 dollar piece 50 cent dollar Constitution piece 5 dollar leaf Maple         awk    g  print  0   coins txt      g              awk gold 1 1986 USA American Eagle gold 1 1908 Austria Hungary Franz josef 100 Korona gold 1 1984 Switzerland ingot gold 1 1979 RSA Krugerrand gold 0 5 1981 RSA Krugerrand gold 0 1 1986 PRC Panda gold 0 25 1986 USA Liberty 5 dollar piece gold 0 25 1987 USA Constitution 5 dollar piece gold 1 1988 Canada Maple leaf                                    a c      abc  axc                                a xy b     axb  ayb   a a zA Z b     axb  aXb               ac     aAc      aac         0          1                       a b     ab b                a 3 c    aaac   a 1 3 c    ac aac aaac   a 2  c    aac aaaaac                        ab  c    abc  ababababc",
+        "objectID": "posts/awk学习",
+        "date": "2020-03-11T16:55:02.000Z",
+        "categories": [
+            "编程-ღ-技术"
+        ],
+        "tags": [
+            "linux"
+        ]
+    },
+    {
+        "title": "English Dictation 01",
+        "uri": "posts/englishdictation01",
+        "content": "Daily English Dictation 1 370 Coach Shane       https   www bilibili com video av24173069  p 24      https   www youtube com watch v q 9NCR5MW3U Daily English Dictation 24   SAT cheating scandals uncovered   long island high school      taken   exam least 6 students    alleged SAT cheating scandal uncovered prestigious Long Island high school  college student accused taking college entrance exam least six students  alleged   supposed     uncover   discover   prestigious                Long Island                   taking the  accused Daily English Dictation 25 Snake luis world seris open cool night  49 degrees start game    St Louis takes World Series opener cool night  49 degrees start game    St Louis                          opener     takes  wins 49     9 4                opener  start Daily English Dictation 26 search missing   night generated power flood lights  tears    searched missing throughout night generator powered flood lights family members waited mounds debris  tears  throughout night   night flood lights               generator                 mounds debris",
+        "objectID": "posts/englishdictation01",
+        "date": "2019-09-13T17:22:22.000Z",
+        "categories": [
+            "教程-ღ-点评"
+        ],
+        "tags": [
+            "English"
+        ]
+    },
+    {
+        "title": "Git hooks初探",
+        "uri": "posts/git_hooks初探",
+        "content": "Git Pages               Git hooks              Git hooks    Git Hooks     Git        commit push receive                  shell python Ruby                                       Git hooks        commit       5       commit      git hooks                  Git hooks       Git            unix xxx xxx   xxx xxx git  ls  a      branches config description HEAD hooks info objects refs   hooks       hooks      unix xxx xxx   xxx xxx git hooks  ls  a applypatch msg sample fsmonitor watchman sample pre applypatch sample prepare commit msg sample pre rebase sample update sample commit msg sample post update sample pre commit sample pre push sample pre receive sample                    hooks           prepare commit msg sample     hooks     git commit                   hooks     prepare commit msg                                         hooks             pre commit       commit message                       pre receive                      post receive                        Email SMS          post receive                 hooks            git                           pre commit                    python    bin sh git hook sure user email user mail repository exists committing set  e global_email   git config   global user email    true  global_name   git config   global user name    true  repository_email   git config user email    true  repository_name   git config user name    true     z   repositoryemail          z   repositoryname          n   globalemail          n   globalname     user email empty echo  ERROR   pre commit hook  Aborting commit user email user name missing  Configure repository  sure not configure globally   exit 1 fi python_file   git hooks py    f   python_file     python  python_file pre commit fi        Git Hooks      Git Hooks                 HEXO                      Git   Git    Git community",
+        "objectID": "posts/git_hooks初探",
+        "date": "2020-02-29T09:57:41.000Z",
+        "categories": [
+            "编程-ღ-技术"
+        ],
+        "tags": [
+            "博客搭建",
+            "Git"
+        ]
+    },
+    {
+        "title": "Git学习",
+        "uri": "posts/git学习",
+        "content": "Git                                            git       https   learngitbranching js org                                                  cheat sheet                        git branch          git checkout              git checkout  b                          merge       git merge bugFix bugFix     master        1 git checkout bugFix git merge master master     bugfix       2      rebase         bugFix            master                                                       git rebase master                 C3                    C3      Rebase   master      C3               master                   git rebase bugFix      bugFix     master    Git        master                   master        git log            git checkout C1  HEAD      C1       1         master      master       master     master                       3 git branch  f master HEAD 3   master        HEAD    3            git reset git reset HEAD 1                              reset   C2                       git reset git revert                git reset                                     git revert HEAD git revert                                       C2                       C2            C2       C1       Git Cherry pick git cherry pick C2 C4  C2 C4                     side           master                rebase             cherry pick         cherry pick                                        Bug                                                                          Bug                              bugFix           master             fast forward       master           master                                          git checkout master git cherry pick bugFix      Git Learning      https   blog csdn net Edisonleeee article details 94554710",
+        "objectID": "posts/git学习",
+        "date": "2020-03-03T10:24:03.000Z",
+        "categories": [
+            "编程-ღ-技术"
+        ],
+        "tags": [
+            "博客搭建",
+            "Git"
+        ]
+    },
+    {
+        "title": "Hugo博客LaTeX渲染",
+        "uri": "posts/hugo博客latex渲染",
+        "content": "Typora          Typora  latex                latex                           Chrome                       LaTeX       KaTeX   LaTeX            KaTeX     html document addEventListener  DOMContentLoaded   function     renderMathInElement document body    delimiters     left        right        display  true    left       right       display  false                      html      single html                                    1  tex    2 2         2 2      2  tex    f x   int_   infty   infty widehat f xi  e  2 pi i xi x   d xi         f x   int_   infty   infty widehat f xi  e  2 pi i xi x   d xi      3  tex    2 2         2 2      4     frac  phi  wedge  psi   phi   wedge e_ 1       5  tex     begin aligned  x   a b c      d e      f g  end aligned           begin aligned  x   a b c      d e      f g  end aligned                        5                                            Blog    6  Hugo  LaTeX   https   orianna zzo github io sci tech 2018 03 blog E5 85 BB E6 88 90 E8 AE B06 hugo E4 B8 AD E7 9A 84latex E6 B8 B2 E6 9F 93        KaTeX  MathJax     https   www jianshu com p f2b28954d902     KaTeX   https   katex org      LaTeX    http   math ecnu edu cn  latex docs others mathsymb pdf",
+        "objectID": "posts/hugo博客latex渲染",
+        "date": "2019-09-21T06:58:31.000Z",
+        "categories": [
+            "博客"
+        ],
+        "tags": [
+            "博客搭建",
+            "LaTeX"
+        ]
+    },
+    {
+        "title": "LaTeX初体验",
+        "uri": "posts/latex初体验",
+        "content": "LaTeX           LaTeX       TeXworks          TeXworks  XeLaTeX    Liam Huang                             LaTeX          LaTeX      Liam Huang     TeX Live         https   liam page texlive          LaTeX       https   liam page 2014 09 08 latex introduction  Hello World                LaTex  documentclass article            begin document  Hello  world   end document       XeLaTeX                                 documentclass article   begin document                                                                                                          TeXworks              UTF 8         XeLaTeX      LaTex  documentclass UTF8  ctexart   begin document     world   end document                               article    ctexart           UTF8                   LaTeX  documentclass UTF8  ctexart   title    world    author clj   date  today   begin document   maketitle    world   end document                           maketitle                                        LaTeX  documentclass UTF8  ctexart   title    world    author clj   date  today   begin document   maketitle  section     section          subsection Hello Guangdong subsection             subsubsection Hello Shenzhen subsubsection   paragraph Shenzhen paragraph  city  subparagraph Welcome subparagraph  Shenzhen  subsection Hello World subsection   paragraph World  means      end document         article ctexart                             section     subsection     subsubsection     paragraph     subparagraph     report ctexrep     chapter        book ctexbook       part             maketitle           LaTeX  documentclass UTF8  ctexart   title    world    author Liam   date  today   begin document   maketitle  tableofcontents  section     section                            subsection Hello Guangdong subsection             subsubsection Hello Shenzhen subsubsection   paragraph Shenzhen paragraph  city  subparagraph Welcome subparagraph  Shenzhen  end document     LaTeX                              AMS LaTeX                    amsmath     usepackage amsmath        LaTeX                inline         display                                                                            equation       LaTeX  begin equation       end equation                                 _                              e  2 pi i     a_ 123   LaTeX  documentclass article   usepackage amsmath   begin document     z   e  2 pi i        a_ 123    Einstein  s  E mc 2      E mc 2      begin equation  E mc 2   end equation   end document               sqrt         frac                                                                                          dfrac          tfrac   LaTeX  documentclass UTF8  ctexart   usepackage amsmath   begin document    sqrt x      frac 1  2        sqrt x          frac 1  2        dfrac 1  2      d       tfrac 1  2       end document             pm    times     div    cdot    cap    cup    geq    leq    neq    approx     equiv                           sum   prod   lim   int                                 limits    nolimits                     LaTeX  documentclass UTF8  ctexart   usepackage amsmath   begin document      pm    times     div    cdot    cap    cup    geq    leq    neq    approx     equiv       sum i 1  n i quad  prod i 1  n      sum limits  i 1  n i quad  prod limits  i 1  n       lim x to0 x 2  quad  inta b x 2 dx        lim nolimits  x to0 x 2 quad  int nolimitsa b x 2 dx     end document                                  langle rangle                                                   lvert rvert  amsmath         big   Big   bigg   Bigg                           Biggl  biggl  Bigl  bigl  x  bigr  Bigr  biggr  Biggr               dots   cdots   vdots   ddots        dots    cdots                        LaTeX  documentclass UTF8  ctexart   usepackage amsmath   begin document     x1 x2  dots  x_n quad 1 2  cdots  n quad  vdots quad  ddots     end document                                                       Liam Huang            LaTeX                        graphicx        includegraphics            TeX             a jpg                           LaTeX  documentclass article   usepackage graphicx   begin document   includegraphics a jpg   end document            includegraphics width    8 textwidth  a jpg                      80       hline                                                                 l c r          Markdown      LeTeX  documentclass UTF8  ctexart   usepackage amsmath   begin document   begin tabular   l c r    hline                   hline Windows   MikTeX   TexMakerX     hline Unix Linux   teTeX   Kile     hline Mac OS   MacTeX   TeXShop     hline     TeX Live   TeXworks     hline  end tabular   end document                    LaTeX                                                        LaTeX                                   Liam Huang",
+        "objectID": "posts/latex初体验",
+        "date": "2019-07-31T08:32:27.000Z",
+        "categories": [
+            "教程-ღ-点评"
+        ],
+        "tags": [
+            "LaTeX"
+        ]
+    },
+    {
+        "title": "Leetcode300 最长上升子序列",
+        "uri": "posts/leetcode300longest-increasing-subsequence",
+        "content": "LeetCode 300 longest increasing subsequence         LeetCode                                   LIS               10 9 2 5 3 7 101 18      4                2 3 7 101        4                   1 3 9 2 4 5                          LIS                                LIS                                                        1  1 1 1 1 3  2 11 3 13 1 3 9  3 11 31 3 9 139 1 3 9 2  3 11 21 3 9 129 1 3 9 2 4  3 11 21 2 4 124 1 3 9 2 4 5 4 11 21 2 41 2 4 5 1245                  i          d i     d 1   1  d 2   1 3  d 3   1 3 9",
+        "objectID": "posts/leetcode300longest-increasing-subsequence",
+        "date": "2019-07-02T05:21:12.000Z",
+        "categories": [
+            "算法"
+        ],
+        "tags": [
+            "算法",
+            "leetcode"
+        ]
+    },
+    {
+        "title": "Leetcode44 通配符匹配",
+        "uri": "posts/leetcode44wildcard-matching",
+        "content": "LeetCode 44  leetcode   hard                                                        LeetCode      https   leetcode cn com problems wildcard matching            s           p                                                                                               s            a z         p            a z                        1        s    aa   p    a       false       a        aa             2        s    aa   p             true                          3        s    cb   p     a       false                c         a        b       4        s    adceb   p     a b       true                                         dce                                                                                                        Case 1     s     p         true     null             null 1   Case 2     s  azc p  ab      false     null    z   c                            null 1         1    b      0             Case 3     s  abc p   b       false     null      b                                         null 1         1    b      1  c        1      Case 1   base case s p               1   Case 2 3             s q                                         s i   p j    s i             i p s       Case 2     i                          i             i 1            az   ab    azc      ab            i  i                false   Case 3                Case 3         c                                                   true                   s  abab p   b      true     null       b                                 null 1  1        1  0  b     1  1  1     1  0  1 b     1  1  1    Step 1      null null  1  Step 2     p 0            1                        1           1   Step 3     p 1   b         null     1                                         1  s i   p j  s i           Step 4     p 2                1                           1           1          1                1              1                   1       a       a      null                           null 1        1 1                                1       a       ab         abb      null                           null 1        1 1  b    1 1  b    1 1      2                 1                                                       b   a           b   ab       null      b                                null 1 1       1 0  b    1 1  b    1 1 1                      1                                                   ab          abb    b                 p 1   s 2   b                null      b                                null 1        1 0  b    0 1  b    0 0 1            python3                                            table                  table                                                          python3 class Solution  def isMatch self  s  str  p  str     bool  table      n_row   len s    1 n_column   len p    1 table     None    ncolumn range n_row   table0   True j range len p    table_j   j 1 cur_p   p j   current p          leftcolumn    e tablej 1  e table  cur_p              1         p0         table   has_one   False tablei left enumerate leftcolumn   left    True              1 subi range tablei n_row   has_one   True tablesub_i   True break has_one    False        1    return False else        1           false has_one   False starti left enumerate leftcolumn   left    True start_i                      null       b   c                                                null 1         1  0    b     1  1    b     1  1  0  c         1  d           1",
+        "objectID": "posts/leetcode44wildcard-matching",
+        "date": "2019-07-01T15:33:47.000Z",
+        "categories": [
+            "算法"
+        ],
+        "tags": [
+            "算法",
+            "leetcode"
+        ]
+    },
+    {
+        "title": "Leetcode70 爬楼梯",
+        "uri": "posts/leetcode70climbing-stairs",
+        "content": "LeetCode 70 Climbing Stairs    LeetCode                     N N   0                         1   2                     N 3   3      1    1       3   1  1  1     2   1    2   1  2     3   2    1   2  1   python3           leetcode            1                           n                   1   2              2           a    n 1    b    n 2                     f N    f N 1    f N 2                          N 1         f N 1    f N 1 1    f N 1 2               f n    f n 1    f n 2    python3 class Solution  def climbStairs self  n  int     int  nn    2                         1                                                                 python3 class Solution  n2step    def climbStairs self  n  int     int  n",
+        "objectID": "posts/leetcode70climbing-stairs",
+        "date": "2019-07-01T14:07:17.000Z",
+        "categories": [
+            "算法"
+        ],
+        "tags": [
+            "算法",
+            "leetcode"
+        ]
+    },
+    {
+        "title": "Leetcode712 两个字符串的最小ASCII删除和",
+        "uri": "posts/leetcode712minimum-ascii-delete-sum-for-two-strings",
+        "content": "Leetcode 712 Minimum ASCII Delete Sum Two Strings         ASCII          LeetCode                    s1  s2                  ASCII         1      s1    sea   s2    eat      231        sea       s      s     115          eat       t     116                   115   116   231               2      s1    delete   s2    leet      403        delete       dee         let     100 d  101 e  101 e          leet       e    101 e                      let       100 101 101 101   403                  lee     eet        433   417",
+        "objectID": "posts/leetcode712minimum-ascii-delete-sum-for-two-strings",
+        "date": "2019-07-01T15:17:45.000Z",
+        "categories": [
+            "算法"
+        ],
+        "tags": [
+            "算法",
+            "leetcode"
+        ]
+    },
+    {
+        "title": "每日Leetcode01",
+        "uri": "posts/leetcodedaily1",
+        "content": "LeetCode      array  string  tree  linkedlist  math        189  Rotate Array tag  array Solution    https   leetcode com problems rotate array discuss 54426 Summary of solutions in Python 3 step array rotation  O n  time  O 1  space  python3 class Solution object   def rotate self  nums  k   k None k approach based fact when rotate array k times  k nk elements back end array front rest elements front shift backwards      approach  firstly reverse elements array  Then  reversing first k elements followed reversing rest n kn k elements gives us required result      Let n 7n 7 k 3k 3      Original List   1 2 3 4 5 6 7   reversing numbers   7 6 5 4 3 2 1   reversing first k numbers   5 6 7 4 3 2 1   revering last n k numbers   5 6 7 1 2 3 4     Result 67  Add Binary tag  math  string          Solution    https   leetcode com problems add binary discuss 359628 python3 solutioneasy to understand  python3 class Solution  def addBinary self  a  str  b  str     str                           ans      a_index   len a    1 b_index   len b    1      carry   0 aindex    0 bindex    0  p q                      0   p   int a aindex   aindex    0 else 0 q   int b bindex   bindex    0 else 0 a_index    1 b_index    1         sum   p   q   carry             ans   str sum   2    ans       carry   sum    2           1            1 return  1    ans carry    1 else ans   58  Length Last Word tag  string      word                Solution  python3 class Solution  def lengthOfLastWord self  s  str     int  last_space   True lenwithoutspace   len s  range len s  0  1       s           ab     2  last_space  s i 1          lenwithoutspace    1 continue else  last_space   False s i 1          return lenwithoutspace   return lenwithoutspace   Runtime  32 ms  faster 90 14  Python3 online submissions Length Last Word  Memory Usage  14 MB  less 5 26  Python3 online submissions Length Last Word  Discussion  python solution     split            cheat      interview            Solution   https   leetcode com problems length of last word discuss 21901 One line Python solution  python3 def lengthOfLastWord self  s   return len s rstrip      split       1     21  Merge Two Sorted Lists tag  linkedlist                                      The new list made splicing together nodes first two lists  Solution    https   leetcode com problems merge two sorted lists discuss 9735 Python solutions  iteratively recursively iteratively in place    python3 Definition singly linked list  class ListNode  def init self  x   self val   x self next   None iteratively def mergeTwoLists1 self  l1  l2   cur             list tail dummy   cur   ListNode 0  l1 l2  l1 val next  100  Tree tag  tree           Solution    https   leetcode com problems same tree discuss 32729 Shortest 2Bsimplest Python  python3 def isSameTree self  p  q   p q  return p val    q val self isSameTree p left  q left  self isSameTree p right  q right  return p q                              trick  and is     p q   True p  None q  None else False          None  True           Time complexity   O N   N number nodes tree  one visits node exactly once  Space complexity  O log N   best case completely balanced tree O N  worst case completely unbalanced tree  keep recursion stack   python3 class Solution  def isSameTree self  p  q        type p  TreeNode  type q  TreeNode  rtype  bool     p q None not p not q  return True one p q None not q not p  return False p val    q val  return False return self isSameTree p right  q right    self isSameTree p left  q left    Solution    https   leetcode com problems same tree solution  Iteration    python3 collections import deque class Solution  def isSameTree self  p  q        type p  TreeNode  type q  TreeNode  rtype  bool     def check p  q   None not p not q  return True one p q None not q not p  return False p val    q val  return False return True deq   deque   p  q     deq  p  q   deq popleft   not check p  q   return False p  deq append  p left  q left   deq append  p right  q right   return True   deque double end queue           list      deque                list      pop     insert           O n  deque    pop     append         O 1       https   zhuanlan zhihu com p 37093602",
+        "objectID": "posts/leetcodedaily1",
+        "date": "2019-08-19T08:16:22.000Z",
+        "categories": [
+            "算法"
+        ],
+        "tags": [
+            "算法",
+            "leetcode"
+        ]
+    },
+    {
+        "title": "每日Leetcode02",
+        "uri": "posts/leetcodedaily2",
+        "content": "35  Search Insert Position tags  Array               index  You may assume no duplicates array  Example 1   AppleScript Input   1 3 5 6   5 Output  2     Solution   python3 class Solution  def searchInsert self  nums  List int   target  int     int  range len nums    nums i   target  return return len nums    Runtime  64 ms  faster 22 39  Python3 online submissions Search Insert Position  Memory Usage  14 3 MB  less 5 97  Python3 online submissions Search Insert Position                 O N            Solution    https   leetcode com problems search insert position discuss 15306 6 line Python solution similar to 34 Search for a Range 44ms   binary search         O log N    python3 def searchInsert self  nums  target   left  right   0  len nums    1 left nums mid   left   mid   1 else  right   mid   1 return left   Runtime  56 ms  faster 86 79  Python3 online submissions Search Insert Position  Memory Usage  14 2 MB  less 5 97  Python3 online submissions Search Insert Position  268  Missing Number tag  math      n       0 n                 O N         O 1   Example 1   markdown Input   3 0 1  Output  2          python3 class Solution  def missingNumber self  nums  List int      int  total_sum   sum range len nums  1   return total_sum   sum nums    Solution    https   leetcode com problems missing number solution   python3 class Solution  def missingNumber self  nums   expected_sum   len nums   len nums  1   2                           sum         O 1  actual_sum   sum nums              O N  return expectedsum   actualsum        Bit Manipulation   XOR        Index   0   1   2   3                                           Value   0   1   3   4   missing 4  0 0   1 1   2 3   3 4    4 4   0 0   1 1   3 3  2  0 0 0 0 2 2  python3 class Solution  def missingNumber self  nums   missing   len nums  i  num enumerate nums   missing      num return missing     python                https   blog csdn net xtj332 article details 6639009                                           2 5      10 101 111    111         7    1 1      1 1 0       1 1 10            0     3 4        3    11111101 4    100    00000100  11111101 00000100 11111101   11111101      1000111       7  XOR           XOR     0 0     N       N  344  Reverse String tag  String           inplace         python3 class Solution  def reverseString self  s  List str      None      not return anything  modify s in place instead      range len s   2   s i  s  i 1    s  i 1  s i    p s        python    return s    1  19  Remove Nth Node End List tag  linkedlist Given linked list  remove n th node end list return its head        N    Given n will always valid   Example   markdown Given linked list  1  2  3  4  5  n   2  removing second node end  linked list becomes 1  2  3  5      Solution   python3 class Solution  def removeNthFromEnd self  head  ListNode  n  int     ListNode   if head next None  return None a b   head head _ range n   b   b next b None           head   head next return head b next not None    a next b   b next a next   a next next return head   101  Symmetric Tree tag  tree             markdown 1     2 2         3 4 4 3   Solution    https   leetcode com problems symmetric tree discuss 33050 Recursively and iteratively solution in Python Iterative    python3 class Solution  def isSymmetric self  root   not root  return True stack     root left  root right   stack  cur   stack pop   l  r   cur 0   cur 1  not l not r  continue not l r not r l l val    r val  return False stack append  l right  r left   stack append  l left  r right   return True",
+        "objectID": "posts/leetcodedaily2",
+        "date": "2019-08-21T11:34:02.000Z",
+        "categories": [
+            "算法"
+        ],
+        "tags": [
+            "算法",
+            "leetcode"
+        ]
+    },
+    {
+        "title": "每日Leetcode03",
+        "uri": "posts/leetcodedaily3",
+        "content": "39  Combination Sum tag  array Given set candidate numbers  candidates   without duplicates  target number  target   find unique combinations candidates candidate numbers sums target  repeated number may chosen candidates unlimited number times  Example 1   html Input  candidates    2 3 6 7   target   7  solution set is     7    2 2 3      Solution   https   leetcode cn com problems combination sum solution xue yi tao zou tian xia hui su suan fa by powcai   python3 class Solution  def combinationSum self  candidates  List int   target  int     List List int                                        1              2                     candidates sort   n   len candidates  res      def backtrack i  tmp_sum  tmp   tmp_sum   target    n  return tmp_sum    target  res append tmp  return j range i  n   tmp_sum   candidates j    target  break backtrack j tmp_sum   candidates j  tmp  candidates j    backtrack 0  0      return res    powcai    https   leetcode cn com problems combination sum solution xue yi tao zou tian xia hui su suan fa by powcai        LeetCode            https   leetcode cn com problems combination sum solution hui su suan fa jian zhi python dai ma java dai m 2        candidates    2  3  6  7  target   7          7    2  2  3                                                                             python3 class Solution  def combinationSum self  candidates  List int   target  int     List List int    size   len candidates  size    0  return                                        1              2                     candidates sort                         path      res            size    range    size     self __dfs candidates  0  size  path  res  target  return res def __dfs self  candidates  begin  size  path  res  target             target    0  Python                    path              path copy   res append path     index range begin  size   residue   target   candidates index                                  residue          Given collection candidate numbers  candidates  target number  target   find unique combinations candidates candidate numbers sums target  number candidates may used once combination  Note  numbers  including target  will positive integers  solution set not contain duplicate combinations  Example 1   html Input  candidates    10 1 2 7 6 1 5   target   8  solution set is     1  7    1  2  5    2  6    1  1  6              39           candidates             python3 class Solution  def combinationSum2 self  candidates  List int   target  int     List List int    size   len candidates  size    0  return    candidates sort   res      self __dfs candidates  size  0      target  res  return res def __dfs self  candidates  size  start  path  residue  res   residue    0  res append path     return index range start  size   candidates index    residue  break              index   start candidates index   1     candidates index    1  1  2  5  6  7  10  0      1      6        1       1      5         6                            continue path append candidates index         index   1                  index   1                     self __dfs candidates  size  index   1  path  residue   candidates index   res  path pop      liweiwei1419    https   leetcode cn com problems combination sum ii solution hui su suan fa jian zhi python dai ma java dai m 3    202  Happy Number tag  Math        Write algorithm determine number  happy   happy number number defined following process  Starting positive integer  replace number sum squares its digits  repeat process until number equals 1  where will stay   loops endlessly cycle does not include 1  numbers process ends 1 happy numbers  Example  Input  19 Output  true Explanation     1 2   9 2   82   8 2   2 2   68   6 2   8 2   100   1 2   0 2   0 2   1        Solution   python3 class Solution  def isHappy self  n  int     bool  cur   str n  True  tmp   0 range len cur    tmp  int cur i    2 tmp    1  return True elif tmp    4 tmp    3  return False else  cur   str tmp                        Happy number    1     Happy number          3 4                                                     Happy number        python3 class Solution  def isHappy self  n  int     bool  seen    1  n not seen  seen add n  n   sum int i     2 str n   return n    1    https   leetcode cn com problems happy number solution python 1xing by knifezhu 9",
+        "objectID": "posts/leetcodedaily3",
+        "date": "2019-08-24T10:48:25.000Z",
+        "categories": [
+            "算法"
+        ],
+        "tags": [
+            "算法",
+            "leetcode"
+        ]
+    },
+    {
+        "title": "Markdown插入图片音视频",
+        "uri": "posts/markdown插入图音视频",
+        "content": "markdown             markdown    markdown                                                                                                      text          text            LeaveIt                                  alt                 align         center   src           svg                              svg  data image png base64 iVBOR                   p s   jpg png   SVG            b    Step 1    b                                  Step 2               src  Step 3                                                                                                                          music 163 com   outchain 2 1374051000 m use        Step 1     PC                                           http   music 163 com m song id 1374051000 userid xxxxxxxxx                   http   music 163 com song 1374051000 userid xxxxxxxxx   Step 2   id            id 1374051000     userid         id                music 163 com outchain player type 2 id 1374051000 auto 1 height 66                  auto 1  auto 0                                                               CSS JS                         HTML iframe                      b  qq",
+        "objectID": "posts/markdown插入图音视频",
+        "date": "2019-07-13T08:30:13.000Z",
+        "categories": [
+            "博客"
+        ],
+        "tags": [
+            "博客搭建"
+        ],
+        "author": "草祭"
+    },
+    {
+        "title": "Python全局锁(GIL)",
+        "uri": "posts/python全局锁",
+        "content": "threading                         python      GIL  global interpreter lock                          python import threading import random import math import time def printruntime func   def wrapper args   kw   begin_time   time time   ret   func args   kw  end_time   time time   runtime   endtime   begin_time print  Run time  run_time  return ret return wrapper  printruntime def run    sample_count   10000000       inner   0           0        dataset xiaoaiKWS G code  python3         py     multi         3 140688     Run time 83 02815461158752     3 1416188     Run time 85 89040064811707     3 1412312     Run time 86 34525346755981     3 14129     Run time 88 51046800613403     3 1419212     Run time 88 64371156692505     Run time 88 65449285507202     single     3 1421216     Run time 10 199804782867432     3 1420676     Run time 10 172762870788574     3 1419712     Run time 10 3925302028656     3 1417784     Run time 10 204853534698486     3 1416324     Run time 10 210267305374146     Run time 51 180365800857544                     cpu            IO         GIL     http   cenalulu github io python gil in python  https   zhuanlan zhihu com p 20953544     GIL GIL                mutex                                       MySQL          python                         GIL                        GIL      python2 x  GIL            IO    ticks    100 ticks     python              GIL                  sys setcheckinterval             python3 x  GIL   ticks                           GIL     CPU                 GIL                                       CPU                                        GIL                      IO             CPU          IO      CPU      IO                                   IO     IO                        A           B      CPU                   python     IO              python           python multiprocessing                       GIL                                IO             https   juejin im post 5b94e2995188255c5c45d0ec          python3                https   www liaoxuefeng com wiki 1016959663602400 1017628290184064",
+        "objectID": "posts/python全局锁",
+        "date": "2019-09-20T03:40:17.000Z",
+        "categories": [
+            "编程-ღ-技术"
+        ],
+        "tags": [
+            "python"
+        ]
+    },
+    {
+        "title": "Shell学习",
+        "uri": "posts/shell学习",
+        "content": "kaldi                shell              shell      https   www runoob com linux linux shell variable html                 shell your_name  cj  echo  your_name echo  Hi   your_name            txt cj Hi cj         1              2           3                                     shell echo ls    grep sh echo   ls    grep sh  echo   pwd        txt learn sh learn sh  home              shell myUrl  http   www google com  readonly myUrl variable  cj  unset variable      1             2  unset                        shell v  variable  s    v  n Hi  echo  e  s join  hi   v echo  join       txt   v  Hi hi variable                                   shell v  variable  s    v  n Hi  echo  e  s join  hi  v  echo  join       txt variable Hi hi variable                    n    n    shell v variable s   v  nHi echo  e  s join  hi   v echo  join       txt variablenHi hi variable                  shell string  abcd  echo    string      4           shell string  runoob great site  echo   string 1 4       unoo           shell string  runoob great site  echo expr index   string  io      4            shell array_name  value0 value1 value2 value3          shell                         shell echo   array_name",
+        "objectID": "posts/shell学习",
+        "date": "2020-01-10T08:25:48.000Z",
+        "categories": [
+            "编程-ღ-技术"
+        ],
+        "tags": [
+            "linux"
+        ]
+    },
+    {
+        "title": "VSCode上安装LaTeX",
+        "uri": "posts/vscode上安装latex",
+        "content": "latex                               markdown                           ICASSP2020        word                                 word                          TeXworks  WinEdt  latex                                           latex            VSCode LaTeX                                1     texlive Liam Huang         TeX Live             Windows                    http   mirror ctan org systems texlive Images texlive2020 iso          4G texlive2020 iso                          VSCode  LaTeX                             1               python                           2    VSCode  LaTeX          tex               Texlive                       PATH G  texlive 2020 bin win32                                Build Latex project                  View LaTeX PDF    3       VSCode tab             pdf          pdf                                               3    LaTeX   Step 1  Ctrl Shift P        Step 2    Settings JSON       settings json          remote SSH                                                      a  pdf         pdf                SumatraPDF   latex workshop view pdf viewer    external    latex workshop view pdf external viewer command     G  Program Files SumatraPDF SumatraPDF exe    b              tex     pdf             tex   pdf     pdf   tex   latex workshop view pdf external synctex command     G  Program Files SumatraPDF SumatraPDF exe     latex workshop view pdf external synctex args       forward search     TEX      LINE      reuse instance     inverse search    code    C  Program Files Microsoft VS Code resources app out cli js     r  g    f  l       PDF         SyncTex cursor     pdf              pdf          tex    c               Ctrl S                  pdf           markdown                                     latex workshop latex autoBuild run    never                      Springer LNCS LaTeX                                   VSCode                        windows                                          1       be      begin                   2       begin figure           end figure   VSCode                   Spell Right   Word                                          WinEdt          VSCode  LaTeX      VSCode  LaTeX LaTeX           LaTeX",
+        "objectID": "posts/vscode上安装latex",
+        "date": "2020-05-20T09:22:34.000Z",
+        "categories": [
+            "教程-ღ-点评"
+        ],
+        "tags": [
+            "LaTeX"
+        ]
+    },
+    {
+        "title": "声纹识别X-Vector",
+        "uri": "posts/x-vector",
+        "content": "x vector        baseline     aishell2018 ASVspoof2019   x vector       1   2     1   x vector          2             Prerequisites  TDNN embedding                  Embedding                                                    x vector  Compare pairs embeddings   PLDA  x vector      24 filterbanks   1   20 MFCC    25ms    a  3            b  speech activity detection SAD                             Step 1  Time Delay Neural Networks  TDNN         Statistics Pooling       TDNN    TDNN          3              TDNN           frame5 output 1500      TDNN     15      1500          15     1500             T           T 1500      p s               T                T 2 7       T       T                         p s           dilation        Step 2  Statistics pooling   T               1500         15                                        2x1500 3000              pooling              softmax              K p s   2           N                      K                                 K         N    segment         n      k   d_ n k    1    0   n    loss                       A      B      K                                             Label   0   1   0     Pred   0 3   0 6   0 1       text  loss    0  times  log  0 3  1  times  log  0 6  0  times  log  0 1     Step 3  extract embedding                                                                      embeddings                                                       pooling                pooling           3000                    512              1   segment6     embeddings             2      embedding               embedding     Instead concatenating embeddingstogether wecomputeseparatePLDAbackendsfor embedding  average scores            1           i vector        2       5 20s  dnn     3  embedding         embedding  4  dnn out domain      i vector Step 4  PLDA backend PLDA Probabilistic Linear Discriminant Analysis                  LDA   PLDA          LDA                         embeddings  PLDA      PLDA    i vector                   i      j    xij     xij       x i j   mu F h i  G w i j   epsilon i j                    mu F h_ i                                 G w i j   epsilon i j                               mu              F                             h_i                               G                                 w_ ij                   epsilon_ i j                                                                          X i j   mu F h i   epsilon i j       epsilon  N 0      hi  N 0 1        PLDA                  phi                 EM          E step     M step                                 n1 n2        x vector  i vector                   Hs            Hd    p n1  n2   hs                   p n1   hd  p n2   hd    n1 n2                                                                PLDA             4      i vector   Gaussian PLDA GPLDA           2                                     2      x vector        ivector           out domain Cantonese               data augmentation       EER   data augmentation xvector       PLDA aug   extractor aug                                          1  Snyder D  Garcia Romero D  Povey D  et al  Deep Neural Network Embeddings Text Independent Speaker Verification C   Interspeech  2017  999 1003       2  Snyder D  Garcia Romero D  Sell G  et al  X vectors  Robust dnn embeddings speaker recognition C   2018 IEEE International Conference Acoustics  Speech Signal Processing  ICASSP   IEEE  2018  5329 5333       3  Peddinti V  Povey D  Khudanpur S  time delay neural network architecture efficient modeling long temporal contexts C   Sixteenth Annual Conference International Speech Communication Association  2015       4  Garcia Romero D  Espy Wilson C Y  Analysis i vector length normalization speaker recognition systems C   Twelfth Annual Conference International Speech Communication Association  2011      Embedding    https   towardsdatascience com deep learning 4 embedding layers f9a02d55ac12     Embedding     NLP    https   zhuanlan zhihu com p 34975871     TDNN     https   www jianshu com p 0207536ebc6c           https   blog csdn net tsyccnh article details 79163834     PLDA     1  https   blog csdn net xmujupiter article details 47281211 2  https   blog csdn net shuzfan article details 51672050 3  https   blog csdn net weixin38206214 article details 81115275",
+        "objectID": "posts/x-vector",
+        "date": "2020-01-02T12:13:20.000Z",
+        "categories": [
+            "编程-ღ-技术"
+        ],
+        "tags": [
+            "声纹识别",
+            "机器学习"
+        ]
+    }
+]

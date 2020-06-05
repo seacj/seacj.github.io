@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/seacj.github.io\/posts\/shell%E5%AD%A6%E4%B9%A0\/"
-        },"genre": "posts","keywords": "linux","wordcount":  511 ,
+        },"genre": "posts","keywords": "linux","wordcount":  504 ,
         "url": "https:\/\/seacj.github.io\/posts\/shell%E5%AD%A6%E4%B9%A0\/","datePublished": "2020-01-10T16:25:48+08:00","dateModified": "2020-01-10T16:25:48+08:00","author": {
                 "@type": "Person",
                 "name": "草祭"
@@ -106,7 +106,7 @@
                                 <i class="far fa-folder fa-fw"></i>编程-ღ-技术
                             </a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-01-10>2020-01-10</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>约 511 字&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 504 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>预计阅读 2 分钟&nbsp;<span id="/posts/shell%E5%AD%A6%E4%B9%A0/" class="leancloud_visitors" data-flag-title="Shell学习">
                         <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -135,6 +135,11 @@
             <li><a href="#字符串操作">字符串操作</a></li>
           </ul>
         </li>
+      </ul>
+    </li>
+    <li><a href="#数组">数组</a>
+      <ul>
+        <li><a href="#定义数组">定义数组</a></li>
         <li><a href="#读取数组">读取数组</a></li>
       </ul>
     </li>
@@ -354,34 +359,26 @@ hi variable
 </div></li>
 <li>
 <p>查找子字符串</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"></code></pre></td></tr></table>
-</div>
-</div></li>
+</li>
 </ul>
-<p>string=&quot;runoob is a great site&rdquo;
-echo <code>expr index &quot;$string&quot; io</code>  # 输出 4</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">
-# 数组
-
-## 定义数组
-
-```shell
-array_name=(value0 value1 value2 value3)
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">string</span><span class="o">=</span><span class="s2">&#34;runoob is a great site&#34;</span>
+<span class="nb">echo</span> <span class="sb">`</span>expr index <span class="s2">&#34;</span><span class="nv">$string</span><span class="s2">&#34;</span> io<span class="sb">`</span>  <span class="c1"># 输出 4</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="数组">数组</h1>
+<h2 id="定义数组">定义数组</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">array_name</span><span class="o">=(</span>value0 value1 value2 value3<span class="o">)</span>
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="读取数组">读取数组</h2>

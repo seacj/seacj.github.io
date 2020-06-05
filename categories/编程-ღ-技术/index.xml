@@ -4,7 +4,14 @@
         <link>https://seacj.github.io/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/</link>
         <description>编程-ღ-技术 - 分类 - 草祭の博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
-            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Fri, 20 Mar 2020 21:28:16 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Thu, 04 Jun 2020 13:43:41 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/" rel="self" type="application/rss+xml" /><item>
+    <title>Android Studio上使用JNI</title>
+    <link>https://seacj.github.io/posts/android_jni/</link>
+    <pubDate>Thu, 04 Jun 2020 13:43:41 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/android_jni/</guid>
+    <description><![CDATA[题记 做了一个C程序，需要移植到安卓上，移植到安卓上就需要使用JNI（Java Native Interface），这里做一个Android Studio(A]]></description>
+</item><item>
     <title>音频重采样简述</title>
     <link>https://seacj.github.io/posts/%E9%9F%B3%E9%A2%91%E9%87%8D%E9%87%87%E6%A0%B7/</link>
     <pubDate>Fri, 20 Mar 2020 21:28:16 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://seacj.github.io/posts/%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91/</guid>
     <description><![CDATA[题记 由于有些東西是命题逻辑没办法表示的，所以引出谓词逻辑，需要说明的是不管是命题逻辑也好，谓词逻辑也好，只是逻辑学中被广泛使用的其中的分支而]]></description>
-</item><item>
-    <title>命题逻辑的语义</title>
-    <link>https://seacj.github.io/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E7%9A%84%E8%AF%AD%E4%B9%89/</link>
-    <pubDate>Fri, 13 Dec 2019 20:55:38 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E7%9A%84%E8%AF%AD%E4%B9%89/</guid>
-    <description><![CDATA[题记 本来这个系列的博客是打算上一两节课就更新一次，结果一转眼《计算机科学中的逻辑学》这门课已经结课了，打算花两天时间整理一遍，作为记录，也作]]></description>
 </item></channel>
 </rss>

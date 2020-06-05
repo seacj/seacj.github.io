@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>java - 标签 - 草祭の博客</title>
+        <link>https://seacj.github.io/tags/java/</link>
+        <description>java - 标签 - 草祭の博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
+            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Thu, 04 Jun 2020 13:43:41 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/java/" rel="self" type="application/rss+xml" /><item>
+    <title>Android Studio上使用JNI</title>
+    <link>https://seacj.github.io/posts/android_jni/</link>
+    <pubDate>Thu, 04 Jun 2020 13:43:41 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/android_jni/</guid>
+    <description><![CDATA[题记 做了一个C程序，需要移植到安卓上，移植到安卓上就需要使用JNI（Java Native Interface），这里做一个Android Studio(A]]></description>
+</item></channel>
+</rss>
