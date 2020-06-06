@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/seacj.github.io\/posts\/android_jni\/"
-        },"genre": "posts","keywords": "java","wordcount":  1385 ,
+        },"genre": "posts","keywords": "java","wordcount":  1524 ,
         "url": "https:\/\/seacj.github.io\/posts\/android_jni\/","datePublished": "2020-06-04T13:43:41+08:00","dateModified": "2020-06-04T13:43:41+08:00","author": {
                 "@type": "Person",
                 "name": "草祭"
@@ -106,8 +106,8 @@
                                 <i class="far fa-folder fa-fw"></i>编程-ღ-技术
                             </a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-06-04>2020-06-04</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>约 1385 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>预计阅读 3 分钟&nbsp;<span id="/posts/android_jni/" class="leancloud_visitors" data-flag-title="Android Studio上使用JNI">
+                <i class="fas fa-pencil-alt fa-fw"></i>约 1524 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 4 分钟&nbsp;<span id="/posts/android_jni/" class="leancloud_visitors" data-flag-title="Android Studio上使用JNI">
                         <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static">
@@ -126,7 +126,12 @@
       <ul>
         <li><a href="#step-1-下载ndk">Step 1. 下载NDK</a></li>
         <li><a href="#step-2-新建项目">Step 2. 新建项目</a></li>
-        <li><a href="#step-3-as环境配置">Step 3. AS环境配置</a></li>
+        <li><a href="#step-3-as环境配置">Step 3. AS环境配置</a>
+          <ul>
+            <li><a href="#配置ndk路径">配置NDK路径</a></li>
+            <li><a href="#配置buildgradle文件">配置build.gradle文件</a></li>
+          </ul>
+        </li>
         <li><a href="#step-4-编写jni文件并生成so文件">Step 4. 编写JNI文件，并生成.so文件</a>
           <ul>
             <li><a href="#1-创建java源文件编写-native-方法">1. 创建JAVA源文件，编写 native 方法</a></li>
@@ -181,8 +186,7 @@
         alt="image-20200604135729797"
         title="image-20200604135729797" /></p>
 <h2 id="step-3-as环境配置">Step 3. AS环境配置</h2>
-<ol>
-<li>
+<h3 id="配置ndk路径">配置NDK路径</h3>
 <p><code>Ctrl+Alt+Shift+S</code>打开配置，设定NDK路径：</p>
 <p><img
         class="lazyload"
@@ -192,11 +196,8 @@
         data-sizes="auto"
         alt="设定NDK路径"
         title="设定NDK路径" /></p>
-</li>
-<li>
+<h3 id="配置buildgradle文件">配置build.gradle文件</h3>
 <p>打开app文件夹中的build.gradle文件，在defaultConfig中输入以下代码，其中<code>moduleName</code>与最后生成的.so文件的文件名有关，即<code>lib[moduleName].so</code>，且Java源文件中loadLibrary方法的参数就是这个moduleName的名字。<code>abiFilters</code>表示CPU的型号，不过好像可以删掉，不删的话反而在调试的时候可能手机型号不支持。</p>
-</li>
-</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -211,9 +212,7 @@
 </span><span class="c1"></span><span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><ol start="3">
-<li>同样在这个build.gradle文件中，在buildTypes下输入以下代码。</li>
-</ol>
+</div><p>同样在这个build.gradle文件中，在buildTypes下输入以下代码。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -253,8 +252,9 @@
         data-sizes="auto"
         alt="创建JAVA源文件"
         title="创建JAVA源文件" /></p>
-<p>如图示复制这个文件的路径,命令行切换到main/java目录中.</p>
+<p>如图示创建一个java文件，写入代码（注意修改代码中package的名称），然后复制这个文件的路径,命令行切换到main/java目录中.</p>
 <p>输入命令<code>javah -d ../jni com.xxx.xxx.JNI</code>，其中<code>com.xxx.xxx.JNI</code>需要替换成你复制的路径。</p>
+<p>p.s. 新版本的jdk没有javah的命令，有资料说可以用javac -h这种命令，但是我尝试之后并没有解决，所以我的建议是直接换成<a href="https://repo.huaweicloud.com/java/jdk/8u202-b08/" target="_blank" rel="noopener noreffer">jdk8</a>，而且安装也很简单</p>
 <p><img
         class="lazyload"
         src="/svg/loading/small.min.svg"
@@ -307,7 +307,7 @@
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="2-生成so文件">2. 生成.so文件</h3>
-<p>方法一. 在jni目录中，执行<code>ndk-build</code>命令。</p>
+<p><strong>方法一</strong>. 在jni目录中，执行<code>ndk-build</code>命令。</p>
 <p><img
         class="lazyload"
         src="/svg/loading/small.min.svg"
@@ -325,7 +325,7 @@
         data-sizes="auto"
         alt="libs"
         title="libs" /></p>
-<p>方法二. <code>Build》Rebuild Project</code></p>
+<p><strong>方法二</strong>. AS菜单栏<code>Build》Rebuild Project</code></p>
 <p>Rebuild这个方法好像有时候不太行，不确定问题在哪里，可能与build.gradle文件jniLibs.srcDirs或者jni.srcDirs的配置有关。</p>
 <h2 id="step-5-修改mainactivity并执行程序">Step 5. 修改MainActivity并执行程序</h2>
 <div class="highlight"><div class="chroma">
@@ -345,7 +345,6 @@
 </span><span class="lnt">13
 </span><span class="lnt">14
 </span><span class="lnt">15
-</span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.whu.senhance</span><span class="o">;</span>
@@ -363,7 +362,6 @@
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;result = &#34;</span><span class="o">+</span><span class="n">result</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span>
-
 </code></pre></td></tr></table>
 </div>
 </div><p><img
