@@ -4,7 +4,14 @@
         <link>https://seacj.github.io/tags/</link>
         <description>Tags - 标签 - 草祭の博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
-            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Mon, 08 Jun 2020 15:50:01 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Tue, 09 Jun 2020 14:41:26 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>linux</title>
+    <link>https://seacj.github.io/tags/linux/</link>
+    <pubDate>Tue, 09 Jun 2020 14:41:26 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/tags/linux/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>leetcode</title>
     <link>https://seacj.github.io/tags/leetcode/</link>
     <pubDate>Mon, 08 Jun 2020 15:50:01 &#43;0800</pubDate>
@@ -66,13 +73,6 @@
     <pubDate>Fri, 20 Mar 2020 21:28:16 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://seacj.github.io/tags/python/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>信号处理</title>
-    <link>https://seacj.github.io/tags/%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/</link>
-    <pubDate>Fri, 20 Mar 2020 21:28:16 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/tags/%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

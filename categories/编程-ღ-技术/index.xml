@@ -4,7 +4,21 @@
         <link>https://seacj.github.io/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/</link>
         <description>编程-ღ-技术 - 分类 - 草祭の博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
-            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Thu, 04 Jun 2020 13:43:41 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Tue, 09 Jun 2020 14:41:26 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/" rel="self" type="application/rss+xml" /><item>
+    <title>记一次服务器被黑</title>
+    <link>https://seacj.github.io/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/</link>
+    <pubDate>Tue, 09 Jun 2020 14:41:26 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/</guid>
+    <description><![CDATA[题记 早上起来室友在群里发消息说服务器被人黑了，还被用来挖矿了，多了一个dota3.tar.gz的文件，又让我开始警觉。我赶紧看了一下自己的阿]]></description>
+</item><item>
+    <title>IDE插件刷LeetCode</title>
+    <link>https://seacj.github.io/posts/ide%E6%8F%92%E4%BB%B6%E5%88%B7leetcode/</link>
+    <pubDate>Mon, 08 Jun 2020 15:50:01 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/ide%E6%8F%92%E4%BB%B6%E5%88%B7leetcode/</guid>
+    <description><![CDATA[题记 偶然刷到一个视频如何使用 IDEA 插件刷 LeetCode 的题目介绍了一个插件，能够在IDE中刷题，感觉非常适合摸鱼，所以来安装体验一下，环境使用的是Pycha]]></description>
+</item><item>
     <title>Android Studio上使用JNI</title>
     <link>https://seacj.github.io/posts/android_jni/</link>
     <pubDate>Thu, 04 Jun 2020 13:43:41 &#43;0800</pubDate>
@@ -20,10 +34,10 @@
     <description><![CDATA[题记 需要实现一个音频重采样的功能，发现没有我想象的那么简单，这里通过学习python中librosa的代码，来学习一下重采样，这里将以48k]]></description>
 </item><item>
     <title>Ubuntu搭建minecraft服务器</title>
-    <link>https://seacj.github.io/posts/%E5%9C%A8ubuntu%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E6%90%AD%E5%BB%BAminecraft/</link>
+    <link>https://seacj.github.io/posts/ubuntu%E6%90%AD%E5%BB%BAminecraft%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
     <pubDate>Fri, 13 Mar 2020 01:53:35 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%9C%A8ubuntu%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E6%90%AD%E5%BB%BAminecraft/</guid>
+    <guid>https://seacj.github.io/posts/ubuntu%E6%90%AD%E5%BB%BAminecraft%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
     <description><![CDATA[题记 最近在b站刷了好几个游戏区up主更新了Minecraft(我的世界)的视频，心血来潮我也想开始玩一玩，依稀记得好像Minecraft可以]]></description>
 </item><item>
     <title>Awk学习</title>
@@ -40,7 +54,7 @@
     <guid>https://seacj.github.io/posts/git%E5%AD%A6%E4%B9%A0/</guid>
     <description><![CDATA[题记 Git是一个非常优秀的开源的分布式版本控制系统，非常值得好好学习一下。 这里分享一个可能是学习git的最好的网站：https://lear]]></description>
 </item><item>
-    <title>记一次配置Ubuntu服务器图形化界面</title>
+    <title>记一次Ubuntu图形化界面配置</title>
     <link>https://seacj.github.io/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/</link>
     <pubDate>Sun, 01 Mar 2020 15:29:17 &#43;0800</pubDate>
     <author>作者</author>
@@ -60,19 +74,5 @@
     <author>作者</author>
     <guid>https://seacj.github.io/posts/shell%E5%AD%A6%E4%B9%A0/</guid>
     <description><![CDATA[题记 由于要跑kaldi(一个语音识别工具)，里面有很多shell脚本要运行，所以快速学习一遍shell，主要是参考https://www.r]]></description>
-</item><item>
-    <title>声纹识别X-Vector</title>
-    <link>https://seacj.github.io/posts/x-vector/</link>
-    <pubDate>Thu, 02 Jan 2020 20:13:20 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/x-vector/</guid>
-    <description><![CDATA[背景 声纹识别上x-vector被作为很多赛事的baseline使用，包括aishell2018、ASVspoof2019。介绍x-vecto]]></description>
-</item><item>
-    <title>谓词逻辑</title>
-    <link>https://seacj.github.io/posts/%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91/</link>
-    <pubDate>Sun, 15 Dec 2019 18:07:01 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91/</guid>
-    <description><![CDATA[题记 由于有些東西是命题逻辑没办法表示的，所以引出谓词逻辑，需要说明的是不管是命题逻辑也好，谓词逻辑也好，只是逻辑学中被广泛使用的其中的分支而]]></description>
 </item></channel>
 </rss>

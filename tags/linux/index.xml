@@ -4,12 +4,19 @@
         <link>https://seacj.github.io/tags/linux/</link>
         <description>linux - 标签 - 草祭の博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
-            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Fri, 13 Mar 2020 01:53:35 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/linux/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Tue, 09 Jun 2020 14:41:26 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/linux/" rel="self" type="application/rss+xml" /><item>
+    <title>记一次服务器被黑</title>
+    <link>https://seacj.github.io/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/</link>
+    <pubDate>Tue, 09 Jun 2020 14:41:26 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/</guid>
+    <description><![CDATA[题记 早上起来室友在群里发消息说服务器被人黑了，还被用来挖矿了，多了一个dota3.tar.gz的文件，又让我开始警觉。我赶紧看了一下自己的阿]]></description>
+</item><item>
     <title>Ubuntu搭建minecraft服务器</title>
-    <link>https://seacj.github.io/posts/%E5%9C%A8ubuntu%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E6%90%AD%E5%BB%BAminecraft/</link>
+    <link>https://seacj.github.io/posts/ubuntu%E6%90%AD%E5%BB%BAminecraft%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
     <pubDate>Fri, 13 Mar 2020 01:53:35 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%9C%A8ubuntu%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E6%90%AD%E5%BB%BAminecraft/</guid>
+    <guid>https://seacj.github.io/posts/ubuntu%E6%90%AD%E5%BB%BAminecraft%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
     <description><![CDATA[题记 最近在b站刷了好几个游戏区up主更新了Minecraft(我的世界)的视频，心血来潮我也想开始玩一玩，依稀记得好像Minecraft可以]]></description>
 </item><item>
     <title>Awk学习</title>
@@ -19,7 +26,7 @@
     <guid>https://seacj.github.io/posts/awk%E5%AD%A6%E4%B9%A0/</guid>
     <description><![CDATA[题记 awk是unix下很实用的文本编辑语言。可以快速处理很多操作。参考资料是b站up主正月点灯笼的awk入门教程。这篇博客用来记录一下awk]]></description>
 </item><item>
-    <title>记一次配置Ubuntu服务器图形化界面</title>
+    <title>记一次Ubuntu图形化界面配置</title>
     <link>https://seacj.github.io/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/</link>
     <pubDate>Sun, 01 Mar 2020 15:29:17 &#43;0800</pubDate>
     <author>作者</author>
