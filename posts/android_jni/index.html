@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/seacj.github.io\/posts\/android_jni\/"
-        },"genre": "posts","keywords": "java","wordcount":  1524 ,
+        },"genre": "posts","keywords": "java","wordcount":  2620 ,
         "url": "https:\/\/seacj.github.io\/posts\/android_jni\/","datePublished": "2020-06-04T13:43:41+08:00","dateModified": "2020-06-04T13:43:41+08:00","author": {
                 "@type": "Person",
                 "name": "草祭"
@@ -106,8 +106,8 @@
                                 <i class="far fa-folder fa-fw"></i>编程-ღ-技术
                             </a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-06-04>2020-06-04</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>约 1524 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>预计阅读 4 分钟&nbsp;<span id="/posts/android_jni/" class="leancloud_visitors" data-flag-title="Android Studio上使用JNI">
+                <i class="fas fa-pencil-alt fa-fw"></i>约 2620 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 6 分钟&nbsp;<span id="/posts/android_jni/" class="leancloud_visitors" data-flag-title="Android Studio上使用JNI">
                         <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static">
@@ -130,6 +130,7 @@
           <ul>
             <li><a href="#配置ndk路径">配置NDK路径</a></li>
             <li><a href="#配置buildgradle文件">配置build.gradle文件</a></li>
+            <li><a href="#新建androidmk和applicationmk">新建Android.mk和Application.mk</a></li>
           </ul>
         </li>
         <li><a href="#step-4-编写jni文件并生成so文件">Step 4. 编写JNI文件，并生成.so文件</a>
@@ -141,7 +142,13 @@
         <li><a href="#step-5-修改mainactivity并执行程序">Step 5. 修改MainActivity并执行程序</a></li>
       </ul>
     </li>
+    <li><a href="#结果">结果</a></li>
     <li><a href="#参考资料">参考资料</a></li>
+    <li><a href="#其他事项">其他事项</a>
+      <ul>
+        <li><a href="#androidmk添加目录中所有源文件">Android.mk添加目录中所有源文件</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="题记">题记</h2>
@@ -242,6 +249,55 @@
         data-sizes="auto"
         alt="build.gradle"
         title="build.gradle" /></p>
+<h3 id="新建androidmk和applicationmk">新建Android.mk和Application.mk</h3>
+<p>跳过这步在后续步骤中报的错（图示第一次输入命令<code>ndk-build</code>是没有这两个.mk文件的情况）：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://gitee.com/seacj/typora-image/raw/master/image/202006/27/144807-575140.png"
+        data-srcset="https://gitee.com/seacj/typora-image/raw/master/image/202006/27/144807-575140.png, https://gitee.com/seacj/typora-image/raw/master/image/202006/27/144807-575140.png 1.5x, https://gitee.com/seacj/typora-image/raw/master/image/202006/27/144807-575140.png 2x"
+        data-sizes="auto"
+        alt="image-20200627144804323"
+        title="image-20200627144804323" /></p>
+<p>在jni目录下新建Android.mk和Application.mk，输入内容如下：</p>
+<p>Android.mk：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mk" data-lang="mk"><span class="nv">LOCAL_PATH</span> <span class="o">:=</span> <span class="k">$(</span>call my-dir<span class="k">)</span>
+<span class="err">include</span> <span class="k">$(</span><span class="nv">CLEAR_VARS</span><span class="k">)</span>
+
+<span class="nv">LOCAL_MODULE</span> <span class="o">:=</span> myNDK <span class="c1"># moduleName</span>
+<span class="nv">LOCAL_SRC_FILES</span> <span class="o">:=</span> com_whu_jniproj_JNI.c <span class="c1"># 下一步中c文件名字</span>
+
+<span class="err">include</span> <span class="k">$(</span><span class="nv">BUILD_SHARED_LIBRARY</span><span class="k">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Application.mk：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mk" data-lang="mk"><span class="nv">APP_ABI</span> <span class="o">:=</span> all
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://gitee.com/seacj/typora-image/raw/master/image/202006/27/144513-44216.png"
+        data-srcset="https://gitee.com/seacj/typora-image/raw/master/image/202006/27/144513-44216.png, https://gitee.com/seacj/typora-image/raw/master/image/202006/27/144513-44216.png 1.5x, https://gitee.com/seacj/typora-image/raw/master/image/202006/27/144513-44216.png 2x"
+        data-sizes="auto"
+        alt="image-20200627144503239"
+        title="image-20200627144503239" /></p>
 <h2 id="step-4-编写jni文件并生成so文件">Step 4. 编写JNI文件，并生成.so文件</h2>
 <h3 id="1-创建java源文件编写-native-方法">1. 创建JAVA源文件，编写 native 方法</h3>
 <p><img
@@ -325,8 +381,41 @@
         data-sizes="auto"
         alt="libs"
         title="libs" /></p>
-<p><strong>方法二</strong>. AS菜单栏<code>Build》Rebuild Project</code></p>
-<p>Rebuild这个方法好像有时候不太行，不确定问题在哪里，可能与build.gradle文件jniLibs.srcDirs或者jni.srcDirs的配置有关。</p>
+<p><strong>方法二</strong>. AS菜单栏<code>Build-&gt;Rebuild Project</code></p>
+<p><del>Rebuild这个方法好像不太行，不确定问题在哪里，可能与build.gradle文件jniLibs.srcDirs或者jni.srcDirs的配置有关。</del></p>
+<p>对build.gradle文件进行修改：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-gradle" data-lang="gradle">        <span class="n">sourceSets</span> <span class="o">{</span>
+            <span class="n">main</span><span class="o">()</span> <span class="o">{</span>
+<span class="c1">//            jniLibs.srcDirs = [&#39;src/main/libs&#39;]
+</span><span class="c1"></span>                <span class="n">jniLibs</span><span class="o">.</span><span class="na">srcDirs</span> <span class="o">=</span> <span class="o">[]</span>
+                <span class="n">jni</span><span class="o">.</span><span class="na">srcDirs</span> <span class="o">=</span> <span class="o">[</span><span class="s1">&#39;src/main/jni&#39;</span><span class="o">]</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="n">externalNativeBuild</span><span class="o">{</span>
+            <span class="n">ndkBuild</span><span class="o">{</span>
+                <span class="n">path</span> <span class="nf">file</span><span class="o">(</span><span class="s1">&#39;src/main/jni/Android.mk&#39;</span><span class="o">)</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>然后rebuild，生成.so文件在app/build/intermediates/ndkBuild/debug/obj/local(实际上还有其他2个目录也生成了.so文件&quot;D:\AndroidStudioProjects\JNIProj\app\build\intermediates\transforms\stripDebugSymbol\debug\0\lib\x86\libmyNDK.so&quot;和&quot;D:\AndroidStudioProjects\JNIProj\app\build\intermediates\transforms\mergeJniLibs\debug\0\lib\x86\libmyNDK.so&rdquo;)路径中（看参考资料，可能有的在intermediates/ndk路径里面，我这里没有ndk文件夹生成）。</p>
+<p>与方法一不同，使用这个方式不需要复制.so的位置，可能默认的jnilib就是这个路径。</p>
 <h2 id="step-5-修改mainactivity并执行程序">Step 5. 修改MainActivity并执行程序</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -364,7 +453,8 @@
 <span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><img
+</div><h1 id="结果">结果</h1>
+<p><img
         class="lazyload"
         src="/svg/loading/small.min.svg"
         data-src="https://gitee.com/seacj/typora-image/raw/master/image/202006/04/160746-340394.png"
@@ -380,7 +470,71 @@
 <li>Android+真机调试 <a href="https://www.cnblogs.com/xqz0618/p/12725515.html">https://www.cnblogs.com/xqz0618/p/12725515.html</a></li>
 <li>Android之JNI实现函数中LOG打印 【注：LOCAL_LDLIBS += -L$(SYSROOT)/usr/lib -llog要写在include $(CLEAR_VARS)的后面】https://blog.csdn.net/jjunjoe/article/details/7020236</li>
 </ul>
-</div><div class="post-footer" id="post-footer">
+<h1 id="其他事项">其他事项</h1>
+<h2 id="androidmk添加目录中所有源文件">Android.mk添加目录中所有源文件</h2>
+<p>ref. <a href="http://www.appblog.cn/2018/06/26/Android.mk%E6%B7%BB%E5%8A%A0%E7%9B%AE%E5%BD%95%E4%B8%AD%E6%89%80%E6%9C%89%E6%BA%90%E6%96%87%E4%BB%B6/" target="_blank" rel="noopener noreffer">Android.mk添加目录中所有源文件</a></p>
+<p>使用场景：com_whu_jniproj_JNI.c中include了cljtest.h，并且使用了cljtest中的函数。</p>
+<p>报错：</p>
+<ol>
+<li>如果Android.mk为 LOCAL_SRC_FILES := com_whu_jniproj_JNI.c时，Build就会报错：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Build command failed.
+Error while executing process G:\android-ndk-r21\ndk-build.cmd with arguments {NDK_PROJECT_PATH=null APP_BUILD_SCRIPT=D:\AndroidStudioProjects\JNIProj\app\src\main\jni\Android.mk NDK_APPLICATION_MK=D:\AndroidStudioProjects\JNIProj\app\src\main\jni\Application.mk APP_ABI=x86_64 NDK_ALL_ABIS=x86_64 NDK_DEBUG=1 APP_PLATFORM=android-21 NDK_OUT=D:/AndroidStudioProjects/JNIProj/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT=D:\AndroidStudioProjects\JNIProj\app\build\intermediates\ndkBuild\debug\lib D:/AndroidStudioProjects/JNIProj/app/build/intermediates/ndkBuild/debug/obj/local/x86_64/libmyNDK.so}
+[x86_64] Compile        : myNDK &lt;= com_whu_jniproj_JNI.c
+[x86_64] SharedLibrary  : libmyNDK.so
+D:/AndroidStudioProjects/JNIProj/app/src/main/jni/com_whu_jniproj_JNI.c:17: error: undefined reference to &#39;gettesttext&#39;
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [G:/android-ndk-r21/build//../build/core/build-binary.mk:725: D:/AndroidStudioProjects/JNIProj/app/build/intermediates/ndkBuild/debug/obj/local/x86_64/libmyNDK.so] Error 1
+</code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>如果Android.mk为 LOCAL_SRC_FILES := cljtest.c时，Build通过，报错：</li>
+</ol>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://gitee.com/seacj/typora-image/raw/master/image/202006/27/155834-570184.png"
+        data-srcset="https://gitee.com/seacj/typora-image/raw/master/image/202006/27/155834-570184.png, https://gitee.com/seacj/typora-image/raw/master/image/202006/27/155834-570184.png 1.5x, https://gitee.com/seacj/typora-image/raw/master/image/202006/27/155834-570184.png 2x"
+        data-sizes="auto"
+        alt="报错"
+        title="报错" /></p>
+<ol start="3">
+<li>如果Android.mk为 LOCAL_SRC_FILES := cljtest.c com_whu_jniproj_JNI.c时，不报错。</li>
+</ol>
+<p>调试方法，在android.mk中使用下列代码，然后在终端中使用ndk-build编译：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mk" data-lang="mk"><span class="k">$(</span><span class="nv">warning</span> &#34;<span class="nv">the</span> <span class="nv">value</span> <span class="nv">of</span> <span class="nv">LOCAL_PATH</span> <span class="nv">is</span> <span class="k">$(</span><span class="nv">LOCAL_PATH</span><span class="k">)</span>&#34;<span class="k">)</span>
+<span class="k">$(</span><span class="nv">warning</span> &#34;<span class="nv">the</span> <span class="nv">value</span> <span class="nv">of</span> <span class="nv">LOCAL_SRC_FILES</span> <span class="nv">is</span> <span class="k">$(</span><span class="nv">LOCAL_SRC_FILES</span><span class="k">)</span>&#34;<span class="k">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>由于ref中的其他方案都报错，只能使用下面这种，注意这个方法不会递归找.c文件，是单目录的，不过也比一个一个加方便多了：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mk" data-lang="mk"><span class="nv">FILE_LIST</span> <span class="o">:=</span> <span class="k">$(</span>wildcard <span class="k">$(</span>LOCAL_PATH<span class="k">)</span>/*.c<span class="k">)</span>
+<span class="nv">LOCAL_SRC_FILES</span> <span class="o">:=</span> <span class="k">$(</span>FILE_LIST:<span class="k">$(</span>LOCAL_PATH<span class="k">)</span>/%<span class="o">=</span>%<span class="k">)</span>
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
