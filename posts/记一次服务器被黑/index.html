@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/seacj.github.io\/posts\/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91\/"
-        },"genre": "posts","keywords": "linux","wordcount":  1802 ,
+        },"genre": "posts","keywords": "linux","wordcount":  1946 ,
         "url": "https:\/\/seacj.github.io\/posts\/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91\/","datePublished": "2020-06-09T14:41:26+08:00","dateModified": "2020-06-09T14:41:26+08:00","author": {
                 "@type": "Person",
                 "name": "草祭"
@@ -106,7 +106,7 @@
                                 <i class="far fa-folder fa-fw"></i>编程-ღ-技术
                             </a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-06-09>2020-06-09</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>约 1802 字&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 1946 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>预计阅读 4 分钟&nbsp;<span id="/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/" class="leancloud_visitors" data-flag-title="记一次服务器被黑">
                         <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -226,6 +226,7 @@ Port 4522
 <p>首先确定之前有没有配置过ssh，在服务器的用户根目录使用命令<code>ls -al</code>，查看有没有名为<code>.ssh</code>的目录，如果没有就创建一个，并且权限设置为700.</p>
 <p>在<code>.ssh</code>目录中，创建名为<code>authorized_keys</code>的文件，权限设置为600.</p>
 <p>进入<code>authorized_keys</code>文件，将本地的<code>id_rsa.pub</code>的内容直接复制进<code>authorized_keys</code>中，并保存。</p>
+<p>p.s. 配置我的另一个服务器的时候遇到了个问题，用<code>chown g-w $HOME</code>命令解决了。其原因是不能让所有者之外的用户对authorized_keys文件有写权限，否则，sshd将不允许使用该文件，因为它可能会被其他用户篡改。ref.<a href="https://www.cnblogs.com/snowbook/p/5671406.html" target="_blank" rel="noopener noreffer">ssh配置authorized_keys后仍然需要输入密码的问题</a></p>
 <h3 id="step-3-测试无密码连接">Step 3. 测试无密码连接</h3>
 <p>用任意一个ssh软件使用密钥进行连接，这里以xshell为例。</p>
 <p>连接方式从密码改为public key（有些软件可能叫Credentials），然后导入<code>id_rsa</code>文件。</p>
