@@ -4,7 +4,14 @@
         <link>https://seacj.github.io/tags/linux/</link>
         <description>linux - 标签 - 草祭の博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
-            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Tue, 09 Jun 2020 14:41:26 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/linux/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Sat, 18 Jul 2020 16:07:38 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/linux/" rel="self" type="application/rss+xml" /><item>
+    <title>Tmux学习</title>
+    <link>https://seacj.github.io/posts/tmux%E5%AD%A6%E4%B9%A0/</link>
+    <pubDate>Sat, 18 Jul 2020 16:07:38 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/tmux%E5%AD%A6%E4%B9%A0/</guid>
+    <description><![CDATA[题记 用了快半年的screen，最近想换成tmux试一试，所以用博客记录一下简单的使用体验。这篇博客的内容主要参考了How to Use tmux on Linux (and Why It’]]></description>
+</item><item>
     <title>记一次服务器被黑</title>
     <link>https://seacj.github.io/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/</link>
     <pubDate>Tue, 09 Jun 2020 14:41:26 &#43;0800</pubDate>

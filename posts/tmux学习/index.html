@@ -5,30 +5,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>测试博客新主题 - 草祭の博客</title>
-        <meta name="Description" content=""><meta property="og:title" content="测试博客新主题" />
-<meta property="og:description" content="题记 又想折腾一下博客，用LeaveIt主题有段时间了，打算换一个主题，Hugo官网的top1的主题academic折腾了一下感觉不太适合我，" />
+        <title>Tmux学习 - 草祭の博客</title>
+        <meta name="Description" content=""><meta property="og:title" content="Tmux学习" />
+<meta property="og:description" content="题记 用了快半年的screen，最近想换成tmux试一试，所以用博客记录一下简单的使用体验。这篇博客的内容主要参考了How to Use tmux on Linux (and Why It’" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://seacj.github.io/posts/%E6%B5%8B%E8%AF%95%E6%96%B0%E4%B8%BB%E9%A2%98loveit/" />
-<meta property="article:published_time" content="2020-05-11T17:45:40+08:00" />
-<meta property="article:modified_time" content="2020-05-11T17:45:40+08:00" />
+<meta property="og:url" content="https://seacj.github.io/posts/tmux%E5%AD%A6%E4%B9%A0/" />
+<meta property="article:published_time" content="2020-07-18T16:07:38+08:00" />
+<meta property="article:modified_time" content="2020-07-18T16:07:38+08:00" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="测试博客新主题"/>
-<meta name="twitter:description" content="题记 又想折腾一下博客，用LeaveIt主题有段时间了，打算换一个主题，Hugo官网的top1的主题academic折腾了一下感觉不太适合我，"/>
+<meta name="twitter:title" content="Tmux学习"/>
+<meta name="twitter:description" content="题记 用了快半年的screen，最近想换成tmux试一试，所以用博客记录一下简单的使用体验。这篇博客的内容主要参考了How to Use tmux on Linux (and Why It’"/>
 <meta name="application-name" content="草祭の博客">
 <meta name="apple-mobile-web-app-title" content="草祭の博客"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/%E6%B5%8B%E8%AF%95%E6%96%B0%E4%B8%BB%E9%A2%98loveit/" /><link rel="prev" href="https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2006/" /><link rel="next" href="https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2007/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/tmux%E5%AD%A6%E4%B9%A0/" /><link rel="prev" href="https://seacj.github.io/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "测试博客新主题",
+        "headline": "Tmux学习",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/seacj.github.io\/posts\/%E6%B5%8B%E8%AF%95%E6%96%B0%E4%B8%BB%E9%A2%98loveit\/"
-        },"genre": "posts","keywords": "博客搭建","wordcount":  921 ,
-        "url": "https:\/\/seacj.github.io\/posts\/%E6%B5%8B%E8%AF%95%E6%96%B0%E4%B8%BB%E9%A2%98loveit\/","datePublished": "2020-05-11T17:45:40+08:00","dateModified": "2020-05-11T17:45:40+08:00","author": {
+            "@id": "https:\/\/seacj.github.io\/posts\/tmux%E5%AD%A6%E4%B9%A0\/"
+        },"genre": "posts","keywords": "linux","wordcount":  1783 ,
+        "url": "https:\/\/seacj.github.io\/posts\/tmux%E5%AD%A6%E4%B9%A0\/","datePublished": "2020-07-18T16:07:38+08:00","dateModified": "2020-07-18T16:07:38+08:00","author": {
                 "@type": "Person",
                 "name": "草祭"
             },"description": ""
@@ -100,14 +100,14 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">测试博客新主题</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Tmux学习</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>草祭</a></span>&nbsp;
-                    <span class="post-category">收录于<a href="/categories/%E5%8D%9A%E5%AE%A2/">
-                                <i class="far fa-folder fa-fw"></i>博客
+                    <span class="post-category">收录于<a href="/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/">
+                                <i class="far fa-folder fa-fw"></i>编程-ღ-技术
                             </a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-05-11>2020-05-11</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>约 921 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>预计阅读 2 分钟&nbsp;<span id="/posts/%E6%B5%8B%E8%AF%95%E6%96%B0%E4%B8%BB%E9%A2%98loveit/" class="leancloud_visitors" data-flag-title="测试博客新主题">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-07-18>2020-07-18</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 1783 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 4 分钟&nbsp;<span id="/posts/tmux%E5%AD%A6%E4%B9%A0/" class="leancloud_visitors" data-flag-title="Tmux学习">
                         <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static">
@@ -117,182 +117,182 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#题记">题记</a></li>
-    <li><a href="#代码">代码</a>
+    <li>
       <ul>
-        <li><a href="#c代码">C代码</a></li>
-        <li><a href="#c代码-1">C++代码</a></li>
-        <li><a href="#有趣的代码">有趣的代码</a></li>
+        <li><a href="#题记">题记</a></li>
       </ul>
     </li>
-    <li><a href="#公式">公式</a></li>
-    <li><a href="#表格">表格</a></li>
-    <li><a href="#最后">最后</a></li>
+    <li><a href="#为什么使用tmux">为什么使用tmux</a>
+      <ul>
+        <li><a href="#作用">作用</a></li>
+        <li><a href="#为什么从screen转向tmux">为什么从screen转向tmux</a></li>
+      </ul>
+    </li>
+    <li><a href="#tmux的使用">Tmux的使用</a>
+      <ul>
+        <li><a href="#安装">安装</a></li>
+        <li><a href="#开启一个tmux的session">开启一个tmux的session</a></li>
+        <li><a href="#tmux的命令简单尝试">Tmux的命令简单尝试</a></li>
+        <li><a href="#创建一个自命名的session并使用多个window">创建一个自命名的session并使用多个window</a></li>
+        <li><a href="#分离detach-和-接入attach-session">分离(Detach) 和 接入(Attach) Session</a></li>
+        <li><a href="#分屏操作">分屏操作</a></li>
+      </ul>
+    </li>
+    <li><a href="#常用命令总结">常用命令总结</a></li>
+    <li><a href="#相关评价">相关评价</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="题记">题记</h1>
-<p>又想折腾一下博客，用LeaveIt主题有段时间了，打算换一个主题，Hugo官网的top1的主题academic折腾了一下感觉不太适合我，因为外观太官方了正式了，所以就换成LoveIt主题。这篇博客就是简单的展示一下LoveIt主题的显示，也用来为以后主题迁移做调试使用。</p>
-<h1 id="代码">代码</h1>
-<h2 id="c代码">C代码</h2>
+            </div><div class="content" id="content"><h2 id="题记">题记</h2>
+<p>用了快半年的<strong>screen</strong>，最近想换成<strong>tmux</strong>试一试，所以用博客记录一下简单的使用体验。这篇博客的内容主要参考了<a href="https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/" target="_blank" rel="noopener noreffer">How to Use tmux on Linux (and Why It’s Better Than Screen)</a>。</p>
+<h1 id="为什么使用tmux">为什么使用tmux</h1>
+<p><strong>screen</strong>和<strong>tmux</strong>都是用来在<strong>连接远程服务器</strong>的时候<strong>管理会话</strong>的工具，这类工具的专用名词叫终端复用器（<a href="https://en.wikipedia.org/wiki/Terminal_multiplexer" target="_blank" rel="noopener noreffer">terminal multiplexers</a>），最早接触到这类工具的时候，还是搭建我的世界服务器的时候，我还写了一篇<a href="/posts/ubuntu%e6%90%ad%e5%bb%baminecraft%e6%9c%8d%e5%8a%a1%e5%99%a8/" rel="">搭建的博客</a>。</p>
+<h2 id="作用">作用</h2>
+<ul>
+<li>本地关闭远程连接程序，远程继续执行，并且能恢复到会话</li>
+<li>分屏操作</li>
+</ul>
+<h2 id="为什么从screen转向tmux">为什么从screen转向tmux</h2>
+<p>事实上2个工具功能几乎完全一样，我也非常喜欢使用screen，事实上可以看见网上很多人都是更推荐tmux的，主要原因是tmux拥有更多的功能，但是对我来说我替换成tmux的唯一理由是screen的分屏不好看，如下图分屏的大白线是什么鬼啊，而且不支持左右分屏。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://gitee.com/seacj/typora-image/raw/master/image/202007/18/163145-989267.png"
+        data-srcset="https://gitee.com/seacj/typora-image/raw/master/image/202007/18/163145-989267.png, https://gitee.com/seacj/typora-image/raw/master/image/202007/18/163145-989267.png 1.5x, https://gitee.com/seacj/typora-image/raw/master/image/202007/18/163145-989267.png 2x"
+        data-sizes="auto"
+        alt="image-20200718163129915"
+        title="image-20200718163129915" /></p>
+<h1 id="tmux的使用">Tmux的使用</h1>
+<h2 id="安装">安装</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-C" data-lang="C"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;  </span><span class="cp">
-</span><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>                <span class="cp">#main 入口函数  
-</span><span class="cp"></span><span class="p">{</span>  
-  <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Hello,World!&#34;</span><span class="p">);</span> <span class="err">#</span><span class="n">printf</span> <span class="err">函数打印</span>  
-  <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>               <span class="err">#函数返回值</span>  
-<span class="p">}</span>  
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo apt-get install tmux
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="c代码-1">C++代码</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-C++" data-lang="C++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;               //std::cout 要用到的头文件  </span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;                //标准输入输出头文件  </span><span class="cp">
-</span><span class="cp"></span>  
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>  
-<span class="p">{</span>  
-  <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Hello,World!--Way 1</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>    <span class="c1">//printf 语句打印  
-</span><span class="c1"></span>  <span class="n">puts</span><span class="p">(</span><span class="s">&#34;Hello,World!--Way 2&#34;</span><span class="p">);</span>        <span class="c1">//puts 语句  
-</span><span class="c1"></span>  <span class="n">puts</span><span class="p">(</span><span class="s">&#34;Hello,&#34;</span> <span class="s">&#34; &#34;</span> <span class="s">&#34;World!--Way 3&#34;</span><span class="p">);</span> <span class="c1">//字符串拼接  
-</span><span class="c1"></span>  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;Hello,World!--Way 4&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span> <span class="c1">//C++ 教科书上写法  
-</span><span class="c1"></span>  <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>                                        <span class="c1">//作为注释  
-</span><span class="c1"></span><span class="p">}</span> 
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="有趣的代码">有趣的代码</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">print(&#39; ─────────▄──────────────▄──── \n&#39;, \
-			 	  &#39; ─ wow ──▌▒█───────────▄▀▒▌─── \n&#39;, \
-			  	  &#39; ────────▌▒▒▀▄───────▄▀▒▒▒▐─── \n&#39;, \
-			  	  &#39; ───────▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐─── \n&#39;, \
-			  	  &#39; ─────▄▄▀▒▒▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐─── \n&#39;, \
-			  	  &#39; ───▄▀▒▒▒▒▒▒ such difference ─ \n&#39;, \
-			  	  &#39; ──▐▒▒▒▄▄▄▒▒▒▒▒▒▒▒▒▒▒▒▒▀▄▒▒▌── \n&#39;, \
-			  	  &#39; ──▌▒▒▐▄█▀▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐── \n&#39;, \
-			  	  &#39; ─▐▒▒▒▒▒▒▒▒▒▒▒▌██▀▒▒▒▒▒▒▒▒▀▄▌─ \n&#39;, \
-			  	  &#39; ─▌▒▀▄██▄▒▒▒▒▒▒▒▒▒▒▒░░░░▒▒▒▒▌─ \n&#39;, \
-			  	  &#39; ─▌▀▐▄█▄█▌▄▒▀▒▒▒▒▒▒░░░░░░▒▒▒▐─ \n&#39;, \
-			  	  &#39; ▐▒▀▐▀▐▀▒▒▄▄▒▄▒▒▒ electrons ▒▌ \n&#39;, \
-			  	  &#39; ▐▒▒▒▀▀▄▄▒▒▒▄▒▒▒▒▒▒░░░░░░▒▒▒▐─ \n&#39;, \
-			  	  &#39; ─▌▒▒▒▒▒▒▀▀▀▒▒▒▒▒▒▒▒░░░░▒▒▒▒▌─ \n&#39;, \
-			  	  &#39; ─▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▐── \n&#39;, \
-			  	  &#39; ──▀ amaze ▒▒▒▒▒▒▒▒▒▒▒▄▒▒▒▒▌── \n&#39;, \
-			  	  &#39; ────▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀─── \n&#39;, \
-			  	  &#39; ───▐▀▒▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀───── \n&#39;, \
-			  	  &#39; ──▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▀▀──────── \n&#39;
-				)
-</code></pre></td></tr></table>
-</div>
-</div><h1 id="公式">公式</h1>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-tex" data-lang="tex"><span class="sb">$$</span><span class="nb">
-</span><span class="nb"></span><span class="nv">\begin</span><span class="nb">{aligned} x &amp;</span><span class="o">=</span><span class="nb">a</span><span class="o">+</span><span class="nb">b</span><span class="o">+</span><span class="nb">c </span><span class="nv">\\</span><span class="nb"> &amp;</span><span class="o">=</span><span class="nb">d</span><span class="o">+</span><span class="nb">e </span><span class="nv">\\</span><span class="nb"> &amp;</span><span class="o">=</span><span class="nb">f</span><span class="o">+</span><span class="nb">g </span><span class="nv">\end</span><span class="nb">{aligned}
-</span><span class="nb"></span><span class="s">$$</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>$$
-\begin{aligned} x &amp;=a+b+c \ &amp;=d+e \ &amp;=f+g \end{aligned}
-$$</p>
-<h1 id="表格">表格</h1>
-<table>
-<thead>
-<tr>
-<th align="left">左对齐</th>
-<th align="right">右对齐</th>
-<th align="center">居中对齐</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">单元格</td>
-<td align="right">单元格</td>
-<td align="center">单元格</td>
-</tr>
-<tr>
-<td align="left">单元格</td>
-<td align="right">单元格</td>
-<td align="center">单元格</td>
-</tr>
-</tbody>
-</table>
-<h1 id="最后">最后</h1>
-<p>以后再去慢慢魔改</p>
+</div><h2 id="开启一个tmux的session">开启一个tmux的session</h2>
+<p>执行<code>tmux</code>命令，就会进入tmux的session，下方出现绿色的状态栏（status bar），其中<code>[0]</code>是session名，默认是按数字（后文将介绍自定义session名），<code>0:bash*</code>中的0表示这个session中的第一个window，而在window中运行的进程是bash，星号<code>*</code>的意思是这是你在操作的window。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://gitee.com/seacj/typora-image/raw/master/image/202007/18/170947-30604.png"
+        data-srcset="https://gitee.com/seacj/typora-image/raw/master/image/202007/18/170947-30604.png, https://gitee.com/seacj/typora-image/raw/master/image/202007/18/170947-30604.png 1.5x, https://gitee.com/seacj/typora-image/raw/master/image/202007/18/170947-30604.png 2x"
+        data-sizes="auto"
+        alt="image-20200718170945759"
+        title="image-20200718170945759" /></p>
+<p>p.s. screen中没有这个状态栏，这也是tmux的优势</p>
+<h2 id="tmux的命令简单尝试">Tmux的命令简单尝试</h2>
+<p>tmux的所有命令分为两部分，先按<code>Ctrl+B</code>，让tmux知道要执行命令了，然后第二步按住需要执行的命令的按键。</p>
+<p>如关闭命令，先按<code>Ctrl+B</code>，然后按 <code>X</code>，此时出现是否确认kill pane的提示，按住y，此时如果session中只有一个window，那么session也会被终止，从而退回最初执行<code>tmux</code>命令的状态。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://gitee.com/seacj/typora-image/raw/master/image/202007/18/172055-221508.png"
+        data-srcset="https://gitee.com/seacj/typora-image/raw/master/image/202007/18/172055-221508.png, https://gitee.com/seacj/typora-image/raw/master/image/202007/18/172055-221508.png 1.5x, https://gitee.com/seacj/typora-image/raw/master/image/202007/18/172055-221508.png 2x"
+        data-sizes="auto"
+        alt="image-20200718172054216"
+        title="image-20200718172054216" /></p>
+<p>p.s. tmux的 <code>Ctrl+B</code>相当于screen的<code>Ctrl+A</code></p>
+<h2 id="创建一个自命名的session并使用多个window">创建一个自命名的session并使用多个window</h2>
+<p>使用以下命令，即可创建一个名为mysession的session。</p>
+<p><code>tmux new -s mysession</code></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://gitee.com/seacj/typora-image/raw/master/image/202007/18/172534-441573.png"
+        data-srcset="https://gitee.com/seacj/typora-image/raw/master/image/202007/18/172534-441573.png, https://gitee.com/seacj/typora-image/raw/master/image/202007/18/172534-441573.png 1.5x, https://gitee.com/seacj/typora-image/raw/master/image/202007/18/172534-441573.png 2x"
+        data-sizes="auto"
+        alt="image-20200718172533556"
+        title="image-20200718172533556" /></p>
+<p>在一个session中可以有多个window, 使用<code>Ctrl+B C</code>命令，就在当前(current)会话创建一个新的window了,在新的window中执行<code>top</code>命令。</p>
+<p>接着使用<code>Ctrl+B W</code>命令，查看所有的window的列表，从而随意切换。也可以直接使用<code>Ctrl+B</code>然后按数字键0-9进行快速切换。</p>
+<h2 id="分离detach-和-接入attach-session">分离(Detach) 和 接入(Attach) Session</h2>
+<p>如果detach一个session，界面会退出，但是session中的程序会继续在后台运行，而Attach就是回到指定session的界面。</p>
+<p>detach的命令为<code>Ctrl+B D</code></p>
+<p>attach的命令为<code>tmux attach-session -t mysession</code> ,(t意为target，mysession为session名)，也可以简写成<code>tmux a -t mysession</code></p>
+<p>使用命令<code>tmux ls</code>可以查看当前所有session，从而确定要进入哪个session, 如果你已经在一个session中了使用<code>Ctrl+B S</code>能够快速查看和切换session。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://gitee.com/seacj/typora-image/raw/master/image/202007/18/175532-357014.png"
+        data-srcset="https://gitee.com/seacj/typora-image/raw/master/image/202007/18/175532-357014.png, https://gitee.com/seacj/typora-image/raw/master/image/202007/18/175532-357014.png 1.5x, https://gitee.com/seacj/typora-image/raw/master/image/202007/18/175532-357014.png 2x"
+        data-sizes="auto"
+        alt="Ctrl&#43;B S查看session"
+        title="Ctrl&#43;B S查看session" /></p>
+<p>按住右键能够展开查看window并切换，这是真的方便。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://gitee.com/seacj/typora-image/raw/master/image/202007/18/175733-166829.png"
+        data-srcset="https://gitee.com/seacj/typora-image/raw/master/image/202007/18/175733-166829.png, https://gitee.com/seacj/typora-image/raw/master/image/202007/18/175733-166829.png 1.5x, https://gitee.com/seacj/typora-image/raw/master/image/202007/18/175733-166829.png 2x"
+        data-sizes="auto"
+        alt="image-20200718175731775"
+        title="image-20200718175731775" /></p>
+<h2 id="分屏操作">分屏操作</h2>
+<p>为了不引起混乱这里说明一下，分屏在tmux里面pane的形式，你会发现退出命令<code>Ctrl+B X</code>退出的时候也是提示你是否退出pane。session和window和pane的关系即就是：一个session里面可以有很多window，一个window里面可以有很多pane。</p>
+<ul>
+<li><code>Ctrl+b %</code>：划分左右两个窗格。</li>
+<li><code>Ctrl+b &quot;</code>：划分上下两个窗格。</li>
+<li><code>Ctrl+b </code>：光标切换到其他窗格。``是指向要切换到的窗格的方向键，比如切换到下方窗格，就按方向键<code>↓</code>。</li>
+<li><code>Ctrl+b ;</code>：光标切换到上一个窗格。</li>
+<li><code>Ctrl+b o</code>：光标切换到下一个窗格。</li>
+<li><code>Ctrl+b {</code>：当前窗格左移。</li>
+<li><code>Ctrl+b }</code>：当前窗格右移。</li>
+<li><code>Ctrl+b Ctrl+o</code>：当前窗格上移。</li>
+<li><code>Ctrl+b Alt+o</code>：当前窗格下移。</li>
+<li><code>Ctrl+b x</code>：关闭当前窗格。</li>
+<li><code>Ctrl+b !</code>：将当前窗格拆分为一个独立窗口。</li>
+<li><code>Ctrl+b z</code>：当前窗格全屏显示，再使用一次会变回原来大小。</li>
+<li><code>Ctrl+b Ctrl+</code>：按箭头方向调整窗格大小。</li>
+<li><code>Ctrl+b q</code>：显示窗格编号。</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://gitee.com/seacj/typora-image/raw/master/image/202007/18/180044-785640.png"
+        data-srcset="https://gitee.com/seacj/typora-image/raw/master/image/202007/18/180044-785640.png, https://gitee.com/seacj/typora-image/raw/master/image/202007/18/180044-785640.png 1.5x, https://gitee.com/seacj/typora-image/raw/master/image/202007/18/180044-785640.png 2x"
+        data-sizes="auto"
+        alt="image-20200718180042715"
+        title="image-20200718180042715" /></p>
+<h1 id="常用命令总结">常用命令总结</h1>
+<ul>
+<li>创建会话 <code>tmux new -s &lt;session-name&gt;</code></li>
+<li>分离session <code>Ctrl+B D</code></li>
+<li>接入session <code>tmux a -t &lt;session-name&gt;</code></li>
+<li>查看所有window <code>Ctrl+B W</code></li>
+<li>查看所有session <code>tmux ls</code> 或在session中使用<code>Ctrl+B S</code></li>
+<li>重命名session <code>tmux rename-session -t &lt;old-session-name&gt; &lt;new-name&gt;</code></li>
+</ul>
+<h1 id="相关评价">相关评价</h1>
+<ul>
+<li>开发工具 screen vs tmux <a href="https://ruby-china.org/topics/4834">https://ruby-china.org/topics/4834</a></li>
+<li>How to Use tmux on Linux (and Why It’s Better Than Screen) <a href="https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/">https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/</a></li>
+</ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>本文于 2020-05-11 更新</span>
+                <span>本文于 2020-07-18 更新</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://seacj.github.io/posts/%E6%B5%8B%E8%AF%95%E6%96%B0%E4%B8%BB%E9%A2%98loveit/" data-title="测试博客新主题"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://seacj.github.io/posts/%E6%B5%8B%E8%AF%95%E6%96%B0%E4%B8%BB%E9%A2%98loveit/" data-title="测试博客新主题"><i class="fab fa-evernote fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://seacj.github.io/posts/tmux%E5%AD%A6%E4%B9%A0/" data-title="Tmux学习"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://seacj.github.io/posts/tmux%E5%AD%A6%E4%B9%A0/" data-title="Tmux学习"><i class="fab fa-evernote fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">linux</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2006/" class="prev" rel="prev" title="建站历史006"><i class="fas fa-angle-left fa-fw"></i>建站历史006</a>
-            <a href="/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2007/" class="next" rel="next" title="建站历史007">建站历史007<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/" class="prev" rel="prev" title="记一次服务器被黑"><i class="fas fa-angle-left fa-fw"></i>记一次服务器被黑</a></div>
 </div>
 <div id="comments">
 
