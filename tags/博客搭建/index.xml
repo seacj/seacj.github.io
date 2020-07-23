@@ -4,7 +4,14 @@
         <link>https://seacj.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
         <description>博客搭建 - 标签 - 草祭の博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
-            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Tue, 12 May 2020 13:00:23 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Thu, 23 Jul 2020 16:43:32 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="self" type="application/rss+xml" /><item>
+    <title>建站历史008</title>
+    <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2008/</link>
+    <pubDate>Thu, 23 Jul 2020 16:43:32 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2008/</guid>
+    <description><![CDATA[凭借本博客喜获github北极开源贡献者徽章 这两天，在 GitHub 上积极贡献代码的许多开发者都收到了「Arctic Code Vault Contributor」的荣誉勋]]></description>
+</item><item>
     <title>建站历史007</title>
     <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2007/</link>
     <pubDate>Tue, 12 May 2020 13:00:23 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://seacj.github.io/posts/%E7%BD%91%E7%AB%99%E8%BF%81%E7%A7%BB%E8%87%B3gitee/</guid>
     <description><![CDATA[题记 之前我的个人博客都是直接挂在github上，但是考虑到国内访问github的速度不是很稳定，VPN有时候都不好使，如下： 来自 185.199.xxx.xxx 的回复: 字]]></description>
-</item><item>
-    <title>Hugo博客LaTeX渲染</title>
-    <link>https://seacj.github.io/posts/hugo%E5%8D%9A%E5%AE%A2latex%E6%B8%B2%E6%9F%93/</link>
-    <pubDate>Sat, 21 Sep 2019 14:58:31 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/hugo%E5%8D%9A%E5%AE%A2latex%E6%B8%B2%E6%9F%93/</guid>
-    <description><![CDATA[题记 写博客的时候有时候会需要写公式，我自己的习惯是用Typora进行博客编写，本地上Typora自带latex支持，但是推送到网页的话只能显]]></description>
 </item></channel>
 </rss>

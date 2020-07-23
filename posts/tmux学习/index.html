@@ -18,7 +18,7 @@
 <meta name="application-name" content="草祭の博客">
 <meta name="apple-mobile-web-app-title" content="草祭の博客"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/tmux%E5%AD%A6%E4%B9%A0/" /><link rel="prev" href="https://seacj.github.io/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/tmux%E5%AD%A6%E4%B9%A0/" /><link rel="prev" href="https://seacj.github.io/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/" /><link rel="next" href="https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2008/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/seacj.github.io\/posts\/tmux%E5%AD%A6%E4%B9%A0\/"
-        },"genre": "posts","keywords": "linux","wordcount":  2593 ,
+        },"genre": "posts","keywords": "linux","wordcount":  2589 ,
         "url": "https:\/\/seacj.github.io\/posts\/tmux%E5%AD%A6%E4%B9%A0\/","datePublished": "2020-07-18T16:07:38+08:00","dateModified": "2020-07-18T16:07:38+08:00","author": {
                 "@type": "Person",
                 "name": "草祭"
@@ -106,7 +106,7 @@
                                 <i class="far fa-folder fa-fw"></i>编程-ღ-技术
                             </a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-07-18>2020-07-18</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>约 2593 字&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 2589 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>预计阅读 6 分钟&nbsp;<span id="/posts/tmux%E5%AD%A6%E4%B9%A0/" class="leancloud_visitors" data-flag-title="Tmux学习">
                         <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -248,7 +248,7 @@
         alt="image-20200718180042715"
         title="image-20200718180042715" /></p>
 <p>分屏在tmux里面叫做窗格(pane)，如上图就是3个pane，你会发现退出命令<code>Ctrl+B X</code>退出的时候也是提示你是否退出pane。session和window和pane的关系是：一个session里面可以有很多window，一个window里面可以有很多pane。</p>
-<p>具体使用方式根据需求而异，~~我自己比较喜欢2个session(一个跑python脚本、一个跑shell脚本)+多个window+单个或多个pane的工作方式，~~如果是后台长期挂着的程序，比如我的世界服务端我还是会用screen。</p>
+<p>具体使用方式根据需求而异， <del>我自己比较喜欢2个session(一个跑python脚本、一个跑shell脚本)+多个window+单个或多个pane的工作方式，</del> 如果是后台长期挂着的程序，比如我的世界服务端我还是会用screen。</p>
 <h1 id="常用命令总结">常用命令总结</h1>
 <ul>
 <li>创建会话 <code>tmux new -s &lt;session-name&gt;</code></li>
@@ -361,7 +361,8 @@ bind-key r source-file ~/.tmux.conf \; display-message &#34;tmux.conf reloaded&#
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/" class="prev" rel="prev" title="记一次服务器被黑"><i class="fas fa-angle-left fa-fw"></i>记一次服务器被黑</a></div>
+    <div class="post-nav"><a href="/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/" class="prev" rel="prev" title="记一次服务器被黑"><i class="fas fa-angle-left fa-fw"></i>记一次服务器被黑</a>
+            <a href="/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2008/" class="next" rel="next" title="建站历史008">建站历史008<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments">
 
