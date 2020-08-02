@@ -5,6 +5,13 @@
         <description>草祭の博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
             <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Mon, 17 Jun 2019 18:11:42 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/" rel="self" type="application/rss+xml" /><item>
+    <title>咲良田的思想实验</title>
+    <link>https://seacj.github.io/posts/%E5%92%B2%E8%89%AF%E7%94%B0%E7%9A%84%E6%80%9D%E6%83%B3%E5%AE%9E%E9%AA%8C/</link>
+    <pubDate>Sat, 25 Jul 2020 12:18:27 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E5%92%B2%E8%89%AF%E7%94%B0%E7%9A%84%E6%80%9D%E6%83%B3%E5%AE%9E%E9%AA%8C/</guid>
+    <description><![CDATA[题记 这几天看完了重启咲良田 ，毫无疑问的优秀作品，虽然理清里面的所有事件的逻辑可能还需要思考思考，不过里面最吸引我的地方还是这部番提出的各种思]]></description>
+</item><item>
     <title>建站历史008</title>
     <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2008/</link>
     <pubDate>Thu, 23 Jul 2020 16:43:32 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://seacj.github.io/posts/%E6%B5%8B%E8%AF%95%E6%96%B0%E4%B8%BB%E9%A2%98loveit/</guid>
     <description><![CDATA[题记 又想折腾一下博客，用LeaveIt主题有段时间了，打算换一个主题，Hugo官网的top1的主题academic折腾了一下感觉不太适合我，]]></description>
-</item><item>
-    <title>建站历史006</title>
-    <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2006/</link>
-    <pubDate>Wed, 08 Apr 2020 16:22:17 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2006/</guid>
-    <description><![CDATA[修改文章分类 修改字体大小（修改LeaveIt\assets\css_common_page\post.scss中的font-size） 新增音]]></description>
 </item></channel>
 </rss>
