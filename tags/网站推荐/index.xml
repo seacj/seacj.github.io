@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>网站推荐 - 标签 - 草祭の博客</title>
+        <title>网站推荐 - 标签 - 草祭</title>
         <link>https://seacj.github.io/tags/%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/</link>
-        <description>网站推荐 - 标签 - 草祭の博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
-            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Mon, 18 May 2020 14:03:39 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/" rel="self" type="application/rss+xml" /><item>
+        <description>网站推荐 - 标签 - 草祭</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
+            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Mon, 18 May 2020 14:03:39 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/" rel="self" type="application/rss+xml" /><item>
     <title>图片生成器Artbreeder</title>
     <link>https://seacj.github.io/posts/artbreeder/</link>
     <pubDate>Mon, 18 May 2020 14:03:39 &#43;0800</pubDate>

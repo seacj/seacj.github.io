@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>随笔 - 标签 - 草祭の博客</title>
+        <title>随笔 - 标签 - 草祭</title>
         <link>https://seacj.github.io/tags/%E9%9A%8F%E7%AC%94/</link>
-        <description>随笔 - 标签 - 草祭の博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
-            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Sat, 25 Jul 2020 12:18:27 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E9%9A%8F%E7%AC%94/" rel="self" type="application/rss+xml" /><item>
+        <description>随笔 - 标签 - 草祭</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
+            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Sat, 25 Jul 2020 12:18:27 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E9%9A%8F%E7%AC%94/" rel="self" type="application/rss+xml" /><item>
     <title>咲良田的思想实验</title>
     <link>https://seacj.github.io/posts/%E5%92%B2%E8%89%AF%E7%94%B0%E7%9A%84%E6%80%9D%E6%83%B3%E5%AE%9E%E9%AA%8C/</link>
     <pubDate>Sat, 25 Jul 2020 12:18:27 &#43;0800</pubDate>

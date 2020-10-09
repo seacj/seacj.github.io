@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>数学 - 标签 - 草祭の博客</title>
+        <title>数学 - 标签 - 草祭</title>
         <link>https://seacj.github.io/tags/%E6%95%B0%E5%AD%A6/</link>
-        <description>数学 - 标签 - 草祭の博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
-            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Sun, 15 Dec 2019 18:07:01 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E6%95%B0%E5%AD%A6/" rel="self" type="application/rss+xml" /><item>
+        <description>数学 - 标签 - 草祭</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
+            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Sun, 15 Dec 2019 18:07:01 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E6%95%B0%E5%AD%A6/" rel="self" type="application/rss+xml" /><item>
     <title>谓词逻辑</title>
     <link>https://seacj.github.io/posts/%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91/</link>
     <pubDate>Sun, 15 Dec 2019 18:07:01 &#43;0800</pubDate>

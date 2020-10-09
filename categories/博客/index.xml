@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>博客 - 分类 - 草祭の博客</title>
+        <title>博客 - 分类 - 草祭</title>
         <link>https://seacj.github.io/categories/%E5%8D%9A%E5%AE%A2/</link>
-        <description>博客 - 分类 - 草祭の博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
-            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Thu, 23 Jul 2020 16:43:32 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/categories/%E5%8D%9A%E5%AE%A2/" rel="self" type="application/rss+xml" /><item>
+        <description>博客 - 分类 - 草祭</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
+            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Thu, 23 Jul 2020 16:43:32 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/categories/%E5%8D%9A%E5%AE%A2/" rel="self" type="application/rss+xml" /><item>
     <title>建站历史008</title>
     <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2008/</link>
     <pubDate>Thu, 23 Jul 2020 16:43:32 &#43;0800</pubDate>

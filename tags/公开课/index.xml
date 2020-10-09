@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>公开课 - 标签 - 草祭の博客</title>
+        <title>公开课 - 标签 - 草祭</title>
         <link>https://seacj.github.io/tags/%E5%85%AC%E5%BC%80%E8%AF%BE/</link>
-        <description>公开课 - 标签 - 草祭の博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
-            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Sat, 14 Sep 2019 01:22:22 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E5%85%AC%E5%BC%80%E8%AF%BE/" rel="self" type="application/rss+xml" /><item>
+        <description>公开课 - 标签 - 草祭</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
+            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Sat, 14 Sep 2019 01:22:22 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E5%85%AC%E5%BC%80%E8%AF%BE/" rel="self" type="application/rss+xml" /><item>
     <title>English Dictation 01</title>
     <link>https://seacj.github.io/posts/englishdictation01/</link>
     <pubDate>Sat, 14 Sep 2019 01:22:22 &#43;0800</pubDate>

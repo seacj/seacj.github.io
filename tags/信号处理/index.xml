@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>信号处理 - 标签 - 草祭の博客</title>
+        <title>信号处理 - 标签 - 草祭</title>
         <link>https://seacj.github.io/tags/%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/</link>
-        <description>信号处理 - 标签 - 草祭の博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
-            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Mon, 24 Aug 2020 17:13:53 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/" rel="self" type="application/rss+xml" /><item>
+        <description>信号处理 - 标签 - 草祭</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
+            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Mon, 24 Aug 2020 17:13:53 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/" rel="self" type="application/rss+xml" /><item>
     <title>C语言傅里叶变换库</title>
     <link>https://seacj.github.io/posts/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/</link>
     <pubDate>Mon, 24 Aug 2020 17:13:53 &#43;0800</pubDate>

@@ -1,15 +1,36 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>所有文章 - 草祭の博客</title>
+        <title>所有文章 - 草祭</title>
         <link>https://seacj.github.io/posts/</link>
-        <description>所有文章 | 草祭の博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>lc3369@columbia.edu (草祭)</managingEditor>
-            <webMaster>lc3369@columbia.edu (草祭)</webMaster><lastBuildDate>Thu, 17 Sep 2020 14:22:15 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>Leetcode动态规划简单题目合集</title>
-    <link>https://seacj.github.io/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%80%E5%8D%95%E9%A2%98%E7%9B%AE%E5%90%88%E9%9B%86/</link>
+        <description>所有文章 | 草祭</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
+            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Tue, 06 Oct 2020 20:05:17 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Leetcode动态规划几道题</title>
+    <link>https://seacj.github.io/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%89%8D200%E9%A2%98/</link>
+    <pubDate>Tue, 06 Oct 2020 20:05:17 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%89%8D200%E9%A2%98/</guid>
+    <description><![CDATA[题记 这一篇是Leetcode动态规划简单题之后的又一个关于动态规划的博客，主要按照leetcode的tag里面写的，可能会不定期更新吧 题目 32]]></description>
+</item><item>
+    <title>Leetcode买卖股票题</title>
+    <link>https://seacj.github.io/posts/leetcode%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E9%A2%98/</link>
+    <pubDate>Wed, 30 Sep 2020 20:02:56 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/leetcode%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E9%A2%98/</guid>
+    <description><![CDATA[题记 leetcode上刷动态规划有几道股票题，索性就一起刷了。 题目 121 买卖股票的最佳时机 给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格]]></description>
+</item><item>
+    <title>卡塔兰数</title>
+    <link>https://seacj.github.io/posts/%E5%8D%A1%E5%A1%94%E5%85%B0%E6%95%B0/</link>
+    <pubDate>Wed, 23 Sep 2020 15:03:25 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E5%8D%A1%E5%A1%94%E5%85%B0%E6%95%B0/</guid>
+    <description><![CDATA[题记 卡特兰数（Catalan number）是组合数学中一个常出现在各种计数问题中的数列。 卡塔兰数算是leetcode里面的高频题目了，这里就]]></description>
+</item><item>
+    <title>Leetcode动态规划简单题</title>
+    <link>https://seacj.github.io/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%80%E5%8D%95%E9%A2%98/</link>
     <pubDate>Thu, 17 Sep 2020 14:22:15 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://seacj.github.io/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%80%E5%8D%95%E9%A2%98%E7%9B%AE%E5%90%88%E9%9B%86/</guid>
+    <guid>https://seacj.github.io/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%80%E5%8D%95%E9%A2%98/</guid>
     <description><![CDATA[题记 刷一下动态规划的简单题，一共也没几道。顺便把前100道题里面的中等难度的动态规划题刷了。 第53、121、198是简单题。 题目 53 最大子序和]]></description>
 </item><item>
     <title>错排问题</title>
@@ -53,26 +74,5 @@
     <author>作者</author>
     <guid>https://seacj.github.io/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/</guid>
     <description><![CDATA[题记 早上起来室友在群里发消息说服务器被人黑了，还被用来挖矿了，多了一个dota3.tar.gz的文件，又让我开始警觉。我赶紧看了一下自己的阿]]></description>
-</item><item>
-    <title>IDE插件刷LeetCode</title>
-    <link>https://seacj.github.io/posts/ide%E6%8F%92%E4%BB%B6%E5%88%B7leetcode/</link>
-    <pubDate>Mon, 08 Jun 2020 15:50:01 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/ide%E6%8F%92%E4%BB%B6%E5%88%B7leetcode/</guid>
-    <description><![CDATA[题记 偶然刷到一个视频如何使用 IDEA 插件刷 LeetCode 的题目介绍了一个插件，能够在IDE中刷题，感觉非常适合摸鱼，所以来安装体验一下，环境使用的是Pycha]]></description>
-</item><item>
-    <title>Android Studio上使用JNI</title>
-    <link>https://seacj.github.io/posts/android_jni/</link>
-    <pubDate>Thu, 04 Jun 2020 13:43:41 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/android_jni/</guid>
-    <description><![CDATA[题记 做了一个C程序，需要移植到安卓上，移植到安卓上就需要使用JNI（Java Native Interface），这里做一个Android Studio(A]]></description>
-</item><item>
-    <title>VSCode上安装LaTeX</title>
-    <link>https://seacj.github.io/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/</link>
-    <pubDate>Wed, 20 May 2020 17:22:34 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/</guid>
-    <description><![CDATA[题记 最近又要用到latex，虽然说我自己不喜欢用（比如我觉得几秒的编译影响体验，能做到像markdown一样几乎是即时展示的就好了），真希望]]></description>
 </item></channel>
 </rss>
