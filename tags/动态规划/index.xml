@@ -6,10 +6,10 @@
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
             <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Tue, 06 Oct 2020 20:05:17 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="self" type="application/rss+xml" /><item>
     <title>Leetcode动态规划几道题</title>
-    <link>https://seacj.github.io/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%89%8D200%E9%A2%98/</link>
+    <link>https://seacj.github.io/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%87%A0%E9%81%93%E9%A2%98/</link>
     <pubDate>Tue, 06 Oct 2020 20:05:17 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://seacj.github.io/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%89%8D200%E9%A2%98/</guid>
+    <guid>https://seacj.github.io/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%87%A0%E9%81%93%E9%A2%98/</guid>
     <description><![CDATA[题记 这一篇是Leetcode动态规划简单题之后的又一个关于动态规划的博客，主要按照leetcode的tag里面写的，可能会不定期更新吧 题目 32]]></description>
 </item><item>
     <title>Leetcode买卖股票题</title>

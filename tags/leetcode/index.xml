@@ -4,12 +4,26 @@
         <link>https://seacj.github.io/tags/leetcode/</link>
         <description>leetcode - 标签 - 草祭</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
-            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Tue, 06 Oct 2020 20:05:17 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/leetcode/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Mon, 02 Nov 2020 15:04:35 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/leetcode/" rel="self" type="application/rss+xml" /><item>
+    <title>Leetcode数组和字符串</title>
+    <link>https://seacj.github.io/posts/leetcode%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+    <pubDate>Mon, 02 Nov 2020 15:04:35 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/leetcode%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+    <description><![CDATA[题记 看到一个说法，面试考数组、字符串题的频率最高，所以来刷一下这类题。这次根据leetocde提供的教程的顺序来学习。 数组简介 寻找数组的中心]]></description>
+</item><item>
+    <title>Leetcode链表题</title>
+    <link>https://seacj.github.io/posts/leetcode%E9%93%BE%E8%A1%A8/</link>
+    <pubDate>Tue, 13 Oct 2020 20:05:17 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/leetcode%E9%93%BE%E8%A1%A8/</guid>
+    <description><![CDATA[题记 这两天刷了十道链表题，打算做个总结，刚好leetcode也提供了一个系统学习的链接，这里做一个小总结。 双指针技巧 链表题里面双指针、快慢指]]></description>
+</item><item>
     <title>Leetcode动态规划几道题</title>
-    <link>https://seacj.github.io/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%89%8D200%E9%A2%98/</link>
+    <link>https://seacj.github.io/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%87%A0%E9%81%93%E9%A2%98/</link>
     <pubDate>Tue, 06 Oct 2020 20:05:17 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://seacj.github.io/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%89%8D200%E9%A2%98/</guid>
+    <guid>https://seacj.github.io/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%87%A0%E9%81%93%E9%A2%98/</guid>
     <description><![CDATA[题记 这一篇是Leetcode动态规划简单题之后的又一个关于动态规划的博客，主要按照leetcode的tag里面写的，可能会不定期更新吧 题目 32]]></description>
 </item><item>
     <title>Leetcode买卖股票题</title>
@@ -60,19 +74,5 @@
     <author>作者</author>
     <guid>https://seacj.github.io/posts/leetcodedaily1/</guid>
     <description><![CDATA[从今天起开始做每日LeetCode这个系列，从array, string, tree, linkedlist, math标签里选题做。 189. Rotate Array tag. array Solution来源 ：https://lee]]></description>
-</item><item>
-    <title>Leetcode300 最长上升子序列</title>
-    <link>https://seacj.github.io/posts/leetcode300longest-increasing-subsequence/</link>
-    <pubDate>Tue, 02 Jul 2019 13:21:12 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/leetcode300longest-increasing-subsequence/</guid>
-    <description><![CDATA[LeetCode 300 longest-increasing-subsequence 最长上升子序列 LeetCode试题链接 问题描述： 给定一个无序的整数数组，找到其中最长上升子序列(LIS)的长度。 示例: 输入: [10,9,2,5,3,7,101,18] 输出: 4]]></description>
-</item><item>
-    <title>Leetcode44 通配符匹配</title>
-    <link>https://seacj.github.io/posts/leetcode44wildcard-matching/</link>
-    <pubDate>Mon, 01 Jul 2019 23:33:47 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/leetcode44wildcard-matching/</guid>
-    <description><![CDATA[LeetCode第44题是leetcode难度为hard的一个，解题方法是使用动态规划。题目内容可点击下面的黑色三角展开题目详情。 点击展开题]]></description>
 </item></channel>
 </rss>

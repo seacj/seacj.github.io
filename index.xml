@@ -5,11 +5,25 @@
         <description>草祭</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
             <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Mon, 17 Jun 2019 18:11:42 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/" rel="self" type="application/rss+xml" /><item>
+    <title>Leetcode数组和字符串</title>
+    <link>https://seacj.github.io/posts/leetcode%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+    <pubDate>Mon, 02 Nov 2020 15:04:35 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/leetcode%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+    <description><![CDATA[题记 看到一个说法，面试考数组、字符串题的频率最高，所以来刷一下这类题。这次根据leetocde提供的教程的顺序来学习。 数组简介 寻找数组的中心]]></description>
+</item><item>
+    <title>Leetcode链表题</title>
+    <link>https://seacj.github.io/posts/leetcode%E9%93%BE%E8%A1%A8/</link>
+    <pubDate>Tue, 13 Oct 2020 20:05:17 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/leetcode%E9%93%BE%E8%A1%A8/</guid>
+    <description><![CDATA[题记 这两天刷了十道链表题，打算做个总结，刚好leetcode也提供了一个系统学习的链接，这里做一个小总结。 双指针技巧 链表题里面双指针、快慢指]]></description>
+</item><item>
     <title>Leetcode动态规划几道题</title>
-    <link>https://seacj.github.io/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%89%8D200%E9%A2%98/</link>
+    <link>https://seacj.github.io/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%87%A0%E9%81%93%E9%A2%98/</link>
     <pubDate>Tue, 06 Oct 2020 20:05:17 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://seacj.github.io/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%89%8D200%E9%A2%98/</guid>
+    <guid>https://seacj.github.io/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%87%A0%E9%81%93%E9%A2%98/</guid>
     <description><![CDATA[题记 这一篇是Leetcode动态规划简单题之后的又一个关于动态规划的博客，主要按照leetcode的tag里面写的，可能会不定期更新吧 题目 32]]></description>
 </item><item>
     <title>Leetcode买卖股票题</title>
@@ -60,19 +74,5 @@
     <author>作者</author>
     <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2008/</guid>
     <description><![CDATA[凭借本博客喜获github北极开源贡献者徽章 这两天，在 GitHub 上积极贡献代码的许多开发者都收到了「Arctic Code Vault Contributor」的荣誉勋]]></description>
-</item><item>
-    <title>Tmux学习</title>
-    <link>https://seacj.github.io/posts/tmux%E5%AD%A6%E4%B9%A0/</link>
-    <pubDate>Sat, 18 Jul 2020 16:07:38 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/tmux%E5%AD%A6%E4%B9%A0/</guid>
-    <description><![CDATA[题记 用了快半年的screen，最近想换成tmux试一试，所以用博客记录一下简单的使用体验。这篇博客的内容主要参考了How to Use tmux on Linux (and Why It’]]></description>
-</item><item>
-    <title>记一次服务器被黑</title>
-    <link>https://seacj.github.io/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/</link>
-    <pubDate>Tue, 09 Jun 2020 14:41:26 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/</guid>
-    <description><![CDATA[题记 早上起来室友在群里发消息说服务器被人黑了，还被用来挖矿了，多了一个dota3.tar.gz的文件，又让我开始警觉。我赶紧看了一下自己的阿]]></description>
 </item></channel>
 </rss>
