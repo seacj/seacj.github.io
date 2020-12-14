@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>回溯算法题 - 草祭</title>
+        <meta name="Description" content=""><meta property="og:title" content="回溯算法题" />
+<meta property="og:description" content="题记 一年半之前写了一篇回溯算法的博客, 不过只是简单的了解了一下,真要写题还是写不出来(过了一年半,不会写的题还是不会写),所以再集中刷一下题" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seacj.github.io/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E9%A2%98/" />
+<meta property="article:published_time" content="2020-12-10T11:06:09+08:00" />
+<meta property="article:modified_time" content="2020-12-10T11:06:09+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="回溯算法题"/>
+<meta name="twitter:description" content="题记 一年半之前写了一篇回溯算法的博客, 不过只是简单的了解了一下,真要写题还是写不出来(过了一年半,不会写的题还是不会写),所以再集中刷一下题"/>
+<meta name="application-name" content="草祭">
+<meta name="apple-mobile-web-app-title" content="草祭"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E9%A2%98/" /><link rel="prev" href="https://seacj.github.io/posts/%E5%8A%9B%E6%89%A3shell%E9%A2%98/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "回溯算法题",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seacj.github.io\/posts\/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E9%A2%98\/"
+        },"genre": "posts","keywords": "算法, leetcode","wordcount":  2309 ,
+        "url": "https:\/\/seacj.github.io\/posts\/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E9%A2%98\/","datePublished": "2020-12-10T11:06:09+08:00","dateModified": "2020-12-10T11:06:09+08:00","author": {
+                "@type": "Person",
+                "name": "草祭"
+            },"description": ""
+    }
+    </script></head>
+    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="草祭">草祭</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="我只能为您最多找15篇文章" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="草祭">草祭</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="我只能为您最多找15篇文章" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">回溯算法题</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>草祭</a></span>&nbsp;
+                    <span class="post-category">收录于<a href="/categories/%E7%AE%97%E6%B3%95/">
+                                <i class="far fa-folder fa-fw"></i>算法
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-12-10>2020-12-10</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 2309 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 5 分钟&nbsp;<span id="/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E9%A2%98/" class="leancloud_visitors" data-flag-title="回溯算法题">
+                        <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#题记">题记</a></li>
+      </ul>
+    </li>
+    <li><a href="#入门题">入门题</a>
+      <ul>
+        <li><a href="#17-电话号码的字母组合httpsleetcode-cncomproblemsletter-combinations-of-a-phone-number"><a href="https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/">17. 电话号码的字母组合</a></a></li>
+      </ul>
+    </li>
+    <li><a href="#排列问题">排列问题</a>
+      <ul>
+        <li><a href="#46-全排列httpsleetcode-cncomproblemspermutations"><a href="https://leetcode-cn.com/problems/permutations/">46. 全排列</a></a></li>
+        <li><a href="#47-全排列-iihttpsleetcode-cncomproblemspermutations-ii"><a href="https://leetcode-cn.com/problems/permutations-ii/">47. 全排列 II</a></a></li>
+      </ul>
+    </li>
+    <li><a href="#组合问题">组合问题</a>
+      <ul>
+        <li><a href="#77-组合httpsleetcode-cncomproblemscombinations"><a href="https://leetcode-cn.com/problems/combinations/">77. 组合</a></a></li>
+      </ul>
+    </li>
+    <li><a href="#回溯法解决组合问题的优化剪枝">回溯法解决组合问题的优化——剪枝</a></li>
+    <li><a href="#二维平面上使用回溯法">二维平面上使用回溯法</a>
+      <ul>
+        <li><a href="#79-word-search">79. Word Search</a></li>
+      </ul>
+    </li>
+    <li><a href="#二维平面中的经典算法floodfill算法">二维平面中的经典算法——floodfill算法</a>
+      <ul>
+        <li><a href="#200-number-of-islands">200. Number of Islands</a></li>
+        <li><a href="#130-surrounded-regions">130 Surrounded Regions</a></li>
+        <li><a href="#417-pacific-atlantic-water-flow">417 Pacific Atlantic Water Flow</a></li>
+      </ul>
+    </li>
+    <li><a href="#回溯法是经典人工智能的基础">回溯法是经典人工智能的基础</a>
+      <ul>
+        <li><a href="#51-n-queens">51 N-Queens</a></li>
+      </ul>
+    </li>
+    <li><a href="#参考资料">参考资料</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="题记">题记</h2>
+<p>一年半之前写了一篇回溯算法的<a href="/posts/%e5%9b%9e%e6%ba%af%e7%ae%97%e6%b3%95" rel="">博客</a>, 不过只是简单的了解了一下,真要写题还是写不出来(过了一年半,不会写的题还是不会写),所以再集中刷一下题.</p>
+<p>回溯法通常应用在树形问题上.</p>
+<h1 id="入门题">入门题</h1>
+<p>先看一到题,用来复习回溯算法的写法,和所谓<strong>树形问题</strong>的特点.</p>
+<h2 id="17-电话号码的字母组合httpsleetcode-cncomproblemsletter-combinations-of-a-phone-number"><a href="https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/" target="_blank" rel="noopener noreffer">17. 电话号码的字母组合</a></h2>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://gitee.com/seacj/typora-image/raw/master/2020/image-20201210113227409.png"
+        data-srcset="https://gitee.com/seacj/typora-image/raw/master/2020/image-20201210113227409.png, https://gitee.com/seacj/typora-image/raw/master/2020/image-20201210113227409.png 1.5x, https://gitee.com/seacj/typora-image/raw/master/2020/image-20201210113227409.png 2x"
+        data-sizes="auto"
+        alt="image-20201210113227409"
+        title="image-20201210113227409" /></p>
+<p>s( digits[0&hellip;n-1] ) = letter(digits[0]) + s( digits[1&hellip;n-1] )</p>
+<p>= letter(digits[0]) +  letter(digits[1]) + s( digits[2&hellip;n-1] )</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">letterCombinations</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">digits</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">digits</span> <span class="o">==</span> <span class="s2">&#34;&#34;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">list</span><span class="p">()</span> <span class="c1"># 如果不做这个判断，结果会返回错误答案[&#34;&#34;]</span>
+        <span class="n">phoneMap</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&#34;2&#34;</span><span class="p">:</span> <span class="s2">&#34;abc&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;3&#34;</span><span class="p">:</span> <span class="s2">&#34;def&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;4&#34;</span><span class="p">:</span> <span class="s2">&#34;ghi&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;5&#34;</span><span class="p">:</span> <span class="s2">&#34;jkl&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;6&#34;</span><span class="p">:</span> <span class="s2">&#34;mno&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;7&#34;</span><span class="p">:</span> <span class="s2">&#34;pqrs&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;8&#34;</span><span class="p">:</span> <span class="s2">&#34;tuv&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;9&#34;</span><span class="p">:</span> <span class="s2">&#34;wxyz&#34;</span><span class="p">,</span>
+        <span class="p">}</span>
+
+        <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">def</span> <span class="nf">backtrack</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">digits</span><span class="p">):</span>
+                <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+                <span class="k">return</span>
+            
+            <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">phoneMap</span><span class="p">[</span><span class="n">digits</span><span class="p">[</span><span class="n">index</span><span class="p">]]:</span>
+                <span class="n">backtrack</span><span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">s</span> <span class="o">+</span> <span class="n">d</span><span class="p">)</span>
+                <span class="c1"># 如果s用list表示,上面一句的代码应分成下面的三行</span>
+                <span class="c1"># s.append(d)</span>
+                <span class="c1"># backtrack(index + 1, s)</span>
+                <span class="c1"># s.pop()</span>
+        
+        <span class="n">backtrack</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">res</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="排列问题">排列问题</h1>
+<h2 id="46-全排列httpsleetcode-cncomproblemspermutations"><a href="https://leetcode-cn.com/problems/permutations/" target="_blank" rel="noopener noreffer">46. 全排列</a></h2>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://gitee.com/seacj/typora-image/raw/master/2020/image-20201210113451052.png"
+        data-srcset="https://gitee.com/seacj/typora-image/raw/master/2020/image-20201210113451052.png, https://gitee.com/seacj/typora-image/raw/master/2020/image-20201210113451052.png 1.5x, https://gitee.com/seacj/typora-image/raw/master/2020/image-20201210113451052.png 2x"
+        data-sizes="auto"
+        alt="image-20201210113451052"
+        title="image-20201210113451052" /></p>
+<p>Perms(nums[0&hellip;n-1]) = {取出一个数字} + Perms(nums[{0&hellip;n-1} - 取出的数字]). 与前面的17题的区别是,这里一旦取出了一个数字,后面就不能再取.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">permute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">nums</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[]</span>
+        <span class="c1"># used = [False] * len(nums)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">def</span> <span class="nf">backtrack</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+                <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">[:])</span> <span class="c1"># 在python中需要复制一次p,否则后续p改变了,会影响res中已经压入的p</span>
+                <span class="k">return</span>
+            
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">p</span><span class="p">:</span> <span class="c1"># 判断是否这个数字已经使用，也可以通过一个bool的数组实现，从而用空间换时间</span>
+                    <span class="k">continue</span>
+                <span class="c1">#if used[i]:</span>
+                <span class="c1">#    continue</span>
+                
+                <span class="n">p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+                <span class="c1"># used[i] = True</span>
+                
+                <span class="n">backtrack</span><span class="p">(</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+   
+                <span class="n">p</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+    			<span class="c1"># used[i] = False</span>
+                
+        
+        <span class="n">backtrack</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="k">return</span> <span class="n">res</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="47-全排列-iihttpsleetcode-cncomproblemspermutations-ii"><a href="https://leetcode-cn.com/problems/permutations-ii/" target="_blank" rel="noopener noreffer">47. 全排列 II</a></h2>
+<p>与上题的区别是,数组会有相同的元素,如输入[1,1,2],输出为[1,1,2],[1,2,1],[2,1,1].</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">permuteUnique</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">nums</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[]</span>
+        
+        <span class="n">nums</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span> <span class="c1"># 先排序</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">used</span> <span class="o">=</span> <span class="p">[</span><span class="bp">False</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">backtrack</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+                <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">[:])</span>
+                <span class="k">return</span>
+            
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">used</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+                    <span class="k">continue</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">==</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">used</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span> <span class="c1"># not used[i-1]比较难想到</span>
+                    <span class="k">continue</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+                <span class="n">used</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
+                <span class="n">backtrack</span><span class="p">(</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+                <span class="n">used</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
+        
+        <span class="n">backtrack</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="k">return</span> <span class="n">res</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="组合问题">组合问题</h1>
+<h2 id="77-组合httpsleetcode-cncomproblemscombinations"><a href="https://leetcode-cn.com/problems/combinations/" target="_blank" rel="noopener noreffer">77. 组合</a></h2>
+<p>输入n=4,k=2; 输出[[1,2], [1,3], [1,4], [2,3], [2,4], [3,4]], 注意[1,2]和[2,1]是一个组合.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://gitee.com/seacj/typora-image/raw/master/2020/image-20201210150458638.png"
+        data-srcset="https://gitee.com/seacj/typora-image/raw/master/2020/image-20201210150458638.png, https://gitee.com/seacj/typora-image/raw/master/2020/image-20201210150458638.png 1.5x, https://gitee.com/seacj/typora-image/raw/master/2020/image-20201210150458638.png 2x"
+        data-sizes="auto"
+        alt="image-20201210150458638"
+        title="image-20201210150458638" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">combine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+        <span class="k">if</span> <span class="n">n</span><span class="o">&lt;=</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">k</span><span class="o">&lt;=</span><span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[]</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">def</span> <span class="nf">backtrack</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">==</span> <span class="n">k</span><span class="p">:</span>
+                <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">[:])</span>
+                <span class="k">return</span> 
+            
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                <span class="n">backtrack</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+        
+        <span class="n">backtrack</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="k">return</span> <span class="n">res</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="回溯法解决组合问题的优化剪枝">回溯法解决组合问题的优化——剪枝</h1>
+<p>还是上面的77题,如图示我们发现, 实际上只需要取1,2,3就可以了,因为取4的话剩下的数的数量不够,所以可以跳过4.也就是可以剪枝.</p>
+<p>假设我们最终要遍历到索引x的位置, 即i会便利[start,&hellip; x] (注意两边都是闭区间, 写到代码range函数时,里面的参数为x+1).</p>
+<p>当前我们已经寻找到 len(p) 个数字, 还需要再寻找 k - len(p) 个数, 所以有 x 至少要大于等于 n - (k-len(p)) + 1.</p>
+<p>比如, 之前的图示, 还要找2(k-len(p) == 2 - 0)个数, i需要遍历到取3的位置,也就是 4 - 2 + 1.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">combine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+        <span class="k">if</span> <span class="n">n</span><span class="o">&lt;=</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">k</span><span class="o">&lt;=</span><span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[]</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">def</span> <span class="nf">backtrack</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">==</span> <span class="n">k</span><span class="p">:</span>
+                <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">[:])</span>
+                <span class="k">return</span> 
+            
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="p">(</span><span class="n">k</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span> <span class="c1"># 剪枝,不需要遍历到i==n的地方</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                <span class="n">backtrack</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+                <span class="n">p</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+        
+        <span class="n">backtrack</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="k">return</span> <span class="n">res</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>组合题:</p>
+<ul>
+<li>
+<ol start="39">
+<li>Combination Sum</li>
+</ol>
+</li>
+<li>
+<ol start="40">
+<li>Combination Sum2</li>
+</ol>
+</li>
+<li>
+<ol start="216">
+<li>Combination Sum III</li>
+</ol>
+</li>
+<li>
+<ol start="78">
+<li>Subsets</li>
+</ol>
+</li>
+<li>
+<ol start="90">
+<li>Subsets II</li>
+</ol>
+</li>
+<li>
+<ol start="401">
+<li>Binary Watch</li>
+</ol>
+</li>
+</ul>
+<h1 id="二维平面上使用回溯法">二维平面上使用回溯法</h1>
+<h2 id="79-word-search">79. Word Search</h2>
+<p>board =
+[
+[&lsquo;A&rsquo;,&lsquo;B&rsquo;,&lsquo;C&rsquo;,&lsquo;E&rsquo;],
+[&lsquo;S&rsquo;,&lsquo;F&rsquo;,&lsquo;C&rsquo;,&lsquo;S&rsquo;],
+[&lsquo;A&rsquo;,&lsquo;D&rsquo;,&lsquo;E&rsquo;,&lsquo;E&rsquo;]
+]</p>
+<p>给定 word = &ldquo;ABCCED&rdquo;, 返回 true
+给定 word = &ldquo;SEE&rdquo;, 返回 true
+给定 word = &ldquo;ABCB&rdquo;, 返回 false</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://gitee.com/seacj/typora-image/raw/master/2020/image-20201211090503427.png"
+        data-srcset="https://gitee.com/seacj/typora-image/raw/master/2020/image-20201211090503427.png, https://gitee.com/seacj/typora-image/raw/master/2020/image-20201211090503427.png 1.5x, https://gitee.com/seacj/typora-image/raw/master/2020/image-20201211090503427.png 2x"
+        data-sizes="auto"
+        alt="image-20201211090503427"
+        title="image-20201211090503427" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://gitee.com/seacj/typora-image/raw/master/2020/image-20201211090557804.png"
+        data-srcset="https://gitee.com/seacj/typora-image/raw/master/2020/image-20201211090557804.png, https://gitee.com/seacj/typora-image/raw/master/2020/image-20201211090557804.png 1.5x, https://gitee.com/seacj/typora-image/raw/master/2020/image-20201211090557804.png 2x"
+        data-sizes="auto"
+        alt="image-20201211090557804"
+        title="image-20201211090557804" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">exist</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">board</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]],</span> <span class="n">word</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">board</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">True</span>
+	
+        <span class="n">used</span> <span class="o">=</span> <span class="p">[[</span><span class="bp">False</span><span class="p">]</span><span class="o">*</span><span class="n">n</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">)]</span>
+        <span class="k">def</span> <span class="nf">searchWord</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">startx</span><span class="p">,</span> <span class="n">starty</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">word</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">==</span> <span class="n">board</span><span class="p">[</span><span class="n">startx</span><span class="p">][</span><span class="n">starty</span><span class="p">]:</span>
+                <span class="k">return</span> <span class="bp">True</span>
+            <span class="k">if</span> <span class="n">word</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">==</span> <span class="n">board</span><span class="p">[</span><span class="n">startx</span><span class="p">][</span><span class="n">starty</span><span class="p">]:</span>
+                <span class="n">used</span><span class="p">[</span><span class="n">startx</span><span class="p">][</span><span class="n">starty</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
+                <span class="c1"># 四个方向可以用一个数组[[-1,0], [0,1], [1,0], [0,-1]]和一个for循环的方式替换下面的代码</span>
+                <span class="c1"># 是否超过边界,可以定义一个函数inArea(x,y)</span>
+                <span class="c1"># 上</span>
+                <span class="k">if</span> <span class="n">startx</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">used</span><span class="p">[</span><span class="n">startx</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">starty</span><span class="p">]:</span>
+                    <span class="k">if</span> <span class="n">searchWord</span><span class="p">(</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">startx</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">starty</span><span class="p">):</span>
+                        <span class="k">return</span> <span class="bp">True</span>
+                <span class="c1"># 下</span>
+                <span class="k">if</span> <span class="n">startx</span> <span class="o">&lt;</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">used</span><span class="p">[</span><span class="n">startx</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">starty</span><span class="p">]:</span>
+                    <span class="k">if</span> <span class="n">searchWord</span><span class="p">(</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">startx</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">starty</span><span class="p">):</span>
+                        <span class="k">return</span> <span class="bp">True</span>
+                <span class="c1"># 左</span>
+                <span class="k">if</span> <span class="n">starty</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">used</span><span class="p">[</span><span class="n">startx</span><span class="p">][</span><span class="n">starty</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+                    <span class="k">if</span> <span class="n">searchWord</span><span class="p">(</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">startx</span><span class="p">,</span> <span class="n">starty</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+                        <span class="k">return</span> <span class="bp">True</span>
+                <span class="c1"># 右</span>
+                <span class="k">if</span> <span class="n">starty</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">used</span><span class="p">[</span><span class="n">startx</span><span class="p">][</span><span class="n">starty</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
+                    <span class="k">if</span> <span class="n">searchWord</span><span class="p">(</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">startx</span><span class="p">,</span> <span class="n">starty</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+                        <span class="k">return</span> <span class="bp">True</span>
+                <span class="n">used</span><span class="p">[</span><span class="n">startx</span><span class="p">][</span><span class="n">starty</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
+            <span class="k">return</span> <span class="bp">False</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">searchWord</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">return</span> <span class="bp">False</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="二维平面中的经典算法floodfill算法">二维平面中的经典算法——floodfill算法</h1>
+<p>这个算法的本质就是深度优先遍历.</p>
+<h2 id="200-number-of-islands">200. Number of Islands</h2>
+<p>0代表水,1代表陆地,求陆地组成的岛屿的数量.</p>
+<p>输入：grid = [</p>
+<p>[&ldquo;1&rdquo;,&ldquo;1&rdquo;,&ldquo;0&rdquo;,&ldquo;0&rdquo;,&ldquo;0&rdquo;],</p>
+<p>[&ldquo;1&rdquo;,&ldquo;1&rdquo;,&ldquo;0&rdquo;,&ldquo;0&rdquo;,&ldquo;0&rdquo;],</p>
+<p>[&ldquo;0&rdquo;,&ldquo;0&rdquo;,&ldquo;1&rdquo;,&ldquo;0&rdquo;,&ldquo;0&rdquo;],</p>
+<p>[&ldquo;0&rdquo;,&ldquo;0&rdquo;,&ldquo;0&rdquo;,&ldquo;1&rdquo;,&ldquo;1&rdquo;]</p>
+<p>]</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">numIslands</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">grid</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">grid</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        
+        <span class="n">d</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">visited</span> <span class="o">=</span> <span class="p">[[</span><span class="bp">False</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">)]</span>
+
+        <span class="k">def</span> <span class="nf">isArea</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">&gt;=</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">m</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">n</span>
+        <span class="c1"># 从grid[x][y]的位置开始进行floodfill</span>
+        <span class="k">def</span> <span class="nf">__dfs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+            <span class="n">visited</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span> <span class="c1"># 由于我们需要把和岛屿相连接的所有岛屿标记成True,而没有反过来标记成False的过程,所以有些地方不把这个归为回溯,不过这个方法可以很明确的叫做floodfill</span>
+            <span class="c1"># 向四个方向进行搜索遍历</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+                <span class="n">new_x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">new_y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+                <span class="c1"># 由于递归保证x,y合法, 且grid[x][y]是没有访问过的陆地,所以实际上递归的终止条件隐含在这里了,终止条件就是走到一个地方四个方向都是非法的</span>
+                <span class="k">if</span> <span class="n">isArea</span><span class="p">(</span><span class="n">new_x</span><span class="p">,</span> <span class="n">new_y</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">visited</span><span class="p">[</span><span class="n">new_x</span><span class="p">][</span><span class="n">new_y</span><span class="p">]</span> <span class="ow">and</span> <span class="n">grid</span><span class="p">[</span><span class="n">new_x</span><span class="p">][</span><span class="n">new_y</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span> 
+                    <span class="n">__dfs</span><span class="p">(</span><span class="n">new_x</span><span class="p">,</span> <span class="n">new_y</span><span class="p">)</span>
+
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">visited</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="ow">and</span> <span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span>
+                    <span class="n">res</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="n">__dfs</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">res</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="130-surrounded-regions">130 Surrounded Regions</h2>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://gitee.com/seacj/typora-image/raw/master/2020/image-20201211161832138.png"
+        data-srcset="https://gitee.com/seacj/typora-image/raw/master/2020/image-20201211161832138.png, https://gitee.com/seacj/typora-image/raw/master/2020/image-20201211161832138.png 1.5x, https://gitee.com/seacj/typora-image/raw/master/2020/image-20201211161832138.png 2x"
+        data-sizes="auto"
+        alt="image-20201211161832138"
+        title="image-20201211161832138" /></p>
+<h2 id="417-pacific-atlantic-water-flow">417 Pacific Atlantic Water Flow</h2>
+<p>找到同时能够流向太平洋和大西洋的地方,如下图括号处的结果.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://gitee.com/seacj/typora-image/raw/master/2020/image-20201211162128977.png"
+        data-srcset="https://gitee.com/seacj/typora-image/raw/master/2020/image-20201211162128977.png, https://gitee.com/seacj/typora-image/raw/master/2020/image-20201211162128977.png 1.5x, https://gitee.com/seacj/typora-image/raw/master/2020/image-20201211162128977.png 2x"
+        data-sizes="auto"
+        alt="image-20201211162128977"
+        title="image-20201211162128977" /></p>
+<h1 id="回溯法是经典人工智能的基础">回溯法是经典人工智能的基础</h1>
+<p>因为经典(传统)人工智能很多是基于搜索的,所以经常使用回溯.</p>
+<h2 id="51-n-queens">51 N-Queens</h2>
+<p>n皇后问题研究的是如何将 n个皇后放置在n<em>×</em>n的棋盘上，并且使皇后彼此之间不能相互攻击, 即竖线横线2条斜线4条线不同时出现2个或以上皇后。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://gitee.com/seacj/typora-image/raw/master/2020/image-20201211163137139.png"
+        data-srcset="https://gitee.com/seacj/typora-image/raw/master/2020/image-20201211163137139.png, https://gitee.com/seacj/typora-image/raw/master/2020/image-20201211163137139.png 1.5x, https://gitee.com/seacj/typora-image/raw/master/2020/image-20201211163137139.png 2x"
+        data-sizes="auto"
+        alt="image-20201211163137139"
+        title="image-20201211163137139" /></p>
+<p>输入：4
+输出：[</p>
+<p>[&quot;.Q..&quot;,  // 解法 1</p>
+<p>&ldquo;&hellip;Q&rdquo;,</p>
+<p>&ldquo;Q&hellip;&quot;,</p>
+<p>&ldquo;..Q.&quot;],</p>
+<p>[&quot;..Q.&quot;,  // 解法 2</p>
+<p>&ldquo;Q&hellip;&quot;,</p>
+<p>&ldquo;&hellip;Q&rdquo;,</p>
+<p>&ldquo;.Q..&quot;]
+]</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">solveNQueens</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[]</span>
+        
+        <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">col</span> <span class="o">=</span> <span class="p">[</span><span class="bp">False</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span> <span class="c1"># 用于判断列是否冲突</span>
+        <span class="n">dia1</span> <span class="o">=</span> <span class="p">[</span><span class="bp">False</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">dia2</span> <span class="o">=</span> <span class="p">[</span><span class="bp">False</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">gernerateBoard</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+            <span class="c1"># [1,3,0,2] -&gt;</span>
+            <span class="c1">#  [&#34;.Q..&#34;,  // 解法 1</span>
+            <span class="c1">#     &#34;...Q&#34;,</span>
+            <span class="c1">#     &#34;Q...&#34;,</span>
+            <span class="c1">#     &#34;..Q.&#34;]</span>
+            <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="o">==</span> <span class="n">n</span>
+            <span class="n">board</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>
+                <span class="n">tmp</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;.&#34;</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
+                <span class="n">tmp</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Q&#39;</span>
+                <span class="n">board</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">tmp</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">board</span>
+
+        <span class="c1"># 尝试在n皇后问题中，摆放第index行的皇后，将摆放结果放在row中</span>
+        <span class="k">def</span> <span class="nf">putQueen</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">index</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span>
+                <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">gernerateBoard</span><span class="p">(</span><span class="n">row</span><span class="p">))</span>
+                <span class="k">return</span>
+            <span class="c1"># 能否将第index行的皇后放在第i列</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+                <span class="c1"># 如果纵方向和对角线方向都不冲突就可以放</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">col</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">dia1</span><span class="p">[</span><span class="n">index</span> <span class="o">+</span> <span class="n">i</span><span class="p">]</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">dia2</span><span class="p">[</span><span class="n">index</span><span class="o">-</span><span class="n">i</span><span class="o">+</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+                    <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                    <span class="n">col</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
+                    <span class="n">dia1</span><span class="p">[</span><span class="n">index</span> <span class="o">+</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
+                    <span class="n">dia2</span><span class="p">[</span><span class="n">index</span><span class="o">-</span><span class="n">i</span><span class="o">+</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
+                    <span class="n">putQueen</span><span class="p">(</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span>
+                    <span class="n">col</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
+                    <span class="n">dia1</span><span class="p">[</span><span class="n">index</span> <span class="o">+</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
+                    <span class="n">dia2</span><span class="p">[</span><span class="n">index</span><span class="o">-</span><span class="n">i</span><span class="o">+</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
+                    <span class="n">row</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+        
+        <span class="n">putQueen</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="k">return</span> <span class="n">res</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>52 N-Queens</p>
+</li>
+<li>
+<p>37 Sudoku Solver</p>
+</li>
+</ul>
+<h1 id="参考资料">参考资料</h1>
+<ul>
+<li>慕课的一个付费算法课程 <a href="https://coding.imooc.com/learn/list/82.html">https://coding.imooc.com/learn/list/82.html</a></li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>本文于 2020-12-10 更新</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://seacj.github.io/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E9%A2%98/" data-title="回溯算法题"><i class="fab fa-weibo fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>,&nbsp;<a href="/tags/leetcode/">leetcode</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/%E5%8A%9B%E6%89%A3shell%E9%A2%98/" class="prev" rel="prev" title="力扣shell题"><i class="fas fa-angle-left fa-fw"></i>力扣shell题</a></div>
+</div>
+<div id="comments">
+
+        <script src="//code.tidio.co/qgrdxb76tups4kgrezsz6fwxcvqjbpsh.js"></script><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> <footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.6"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><style>.lg-toolbar .lg-icon::after { color: #999; }</style><script type="text/javascript">
+    window.config = {"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{"valine":{"appId":"xsBQ6wXUkm1km876o5DMLW4R-gzGzoHsz","appKey":"5H8DU1HXMV5Xg4PRuahFsNqU","avatar":"mm","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-facebook@5.0.1/img/facebook/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":null,"highlight":true,"lang":"zh-cn","placeholder":"说点什么吧...","recordIP":null,"visitor":true}},"headerMode":{"desktop":null,"mobile":null},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"QVNQRH3FHN","algoliaIndex":"cj-blog","algoliaSearchKey":"50b1056efeb6f9195818878fca2394e0","highlightTag":"em","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};
+</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

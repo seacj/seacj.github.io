@@ -4,7 +4,14 @@
         <link>https://seacj.github.io/tags/%E7%AE%97%E6%B3%95/</link>
         <description>算法 - 标签 - 草祭</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
-            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Mon, 02 Nov 2020 15:04:35 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Thu, 10 Dec 2020 11:06:09 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+    <title>回溯算法题</title>
+    <link>https://seacj.github.io/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E9%A2%98/</link>
+    <pubDate>Thu, 10 Dec 2020 11:06:09 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E9%A2%98/</guid>
+    <description><![CDATA[题记 一年半之前写了一篇回溯算法的博客, 不过只是简单的了解了一下,真要写题还是写不出来(过了一年半,不会写的题还是不会写),所以再集中刷一下题]]></description>
+</item><item>
     <title>Leetcode数组和字符串</title>
     <link>https://seacj.github.io/posts/leetcode%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
     <pubDate>Mon, 02 Nov 2020 15:04:35 &#43;0800</pubDate>
@@ -61,18 +68,11 @@
     <guid>https://seacj.github.io/posts/%E5%B9%B6%E6%9F%A5%E9%9B%86/</guid>
     <description><![CDATA[题记 今天上了数理统计和数学模型与优化，感觉终于上到了我认为的好课。第一眼看到数学模型与优化的董文永老师感觉自带气场，带着帽子上课，不过讲课还]]></description>
 </item><item>
-    <title>回溯算法</title>
+    <title>回溯算法初探</title>
     <link>https://seacj.github.io/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/</link>
     <pubDate>Mon, 26 Aug 2019 20:31:48 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://seacj.github.io/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/</guid>
     <description><![CDATA[概念 类似穷举的方法，不断搜索可能解的路径，当发现不满足的条件时，就回溯返回，返回后再继续尝试别的路径。 (如下图示, 为了找到迷宫的出口，不断尝]]></description>
-</item><item>
-    <title>每日Leetcode03</title>
-    <link>https://seacj.github.io/posts/leetcodedaily3/</link>
-    <pubDate>Sat, 24 Aug 2019 18:48:25 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/leetcodedaily3/</guid>
-    <description><![CDATA[39. Combination Sum tag. array Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target. The same repeated number may be chosen from candidates unlimited number of times. Example 1: 1 2 3 4 5 6 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ] So]]></description>
 </item></channel>
 </rss>

@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/seacj.github.io\/posts\/awk%E5%AD%A6%E4%B9%A0\/"
-        },"genre": "posts","keywords": "linux","wordcount":  1426 ,
+        },"genre": "posts","keywords": "linux","wordcount":  1437 ,
         "url": "https:\/\/seacj.github.io\/posts\/awk%E5%AD%A6%E4%B9%A0\/","datePublished": "2020-03-12T00:55:02+08:00","dateModified": "2020-03-12T00:55:02+08:00","author": {
                 "@type": "Person",
                 "name": "草祭"
@@ -106,7 +106,7 @@
                                 <i class="far fa-folder fa-fw"></i>编程-ღ-技术
                             </a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-03-12>2020-03-12</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>约 1426 字&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 1437 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>预计阅读 3 分钟&nbsp;<span id="/posts/awk%E5%AD%A6%E4%B9%A0/" class="leancloud_visitors" data-flag-title="Awk学习">
                         <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -177,48 +177,76 @@ gold 1 1988 Canada Maple leaf
 <li>$0表示打印全部内容</li>
 <li>注意原本设想的<em>产品名称</em> 列被拆成了多列，比如American Eagle被拆成了2列。</li>
 </ol>
-<details>
-<summary>点击展开输出结果</summary>
-```awk
-1	gold 1 1986 USA American Eagle	American
-2	gold 1 1908 Austria-Hungary Franz josef 100 Korona	Franz
-3	silver 10 1981 USA ingot	ingot
-4	gold 1 1984 Switzerland ingot	ingot
-5	gold 1 1979 RSA Krugerrand	Krugerrand
-6	gold 0.5 1981 RSA Krugerrand	Krugerrand
-7	gold 0.1 1986 PRC Panda	Panda
-8	silver 1 1986 USA Liberty dollar	Liberty
-9	gold 0.25 1986 USA Liberty 5-dollar piece	Liberty
-10	silver 1 1986 USA Liberty 50-cent piece	Liberty
-11	silver 1 1987 USA Constitution dollar	Constitution
-12	gold 0.25 1987 USA Constitution 5-dollar piece	Constitution
-13	gold 1 1988 Canada Maple leaf	Maple
-```
-</details>
-<ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-awk" data-lang="awk"><span class="mi">1</span>	<span class="nx">gold</span> <span class="mi">1</span> <span class="mi">1986</span> <span class="nx">USA</span> <span class="nx">American</span> <span class="nx">Eagle</span>	<span class="nx">American</span>
+<span class="mi">2</span>	<span class="nx">gold</span> <span class="mi">1</span> <span class="mi">1908</span> <span class="nx">Austria</span><span class="o">-</span><span class="nx">Hungary</span> <span class="nx">Franz</span> <span class="nx">josef</span> <span class="mi">100</span> <span class="nx">Korona</span>	<span class="nx">Franz</span>
+<span class="mi">3</span>	<span class="nx">silver</span> <span class="mi">10</span> <span class="mi">1981</span> <span class="nx">USA</span> <span class="nx">ingot</span>	<span class="nx">ingot</span>
+<span class="mi">4</span>	<span class="nx">gold</span> <span class="mi">1</span> <span class="mi">1984</span> <span class="nx">Switzerland</span> <span class="nx">ingot</span>	<span class="nx">ingot</span>
+<span class="mi">5</span>	<span class="nx">gold</span> <span class="mi">1</span> <span class="mi">1979</span> <span class="nx">RSA</span> <span class="nx">Krugerrand</span>	<span class="nx">Krugerrand</span>
+<span class="mi">6</span>	<span class="nx">gold</span> <span class="mf">0.5</span> <span class="mi">1981</span> <span class="nx">RSA</span> <span class="nx">Krugerrand</span>	<span class="nx">Krugerrand</span>
+<span class="mi">7</span>	<span class="nx">gold</span> <span class="mf">0.1</span> <span class="mi">1986</span> <span class="nx">PRC</span> <span class="nx">Panda</span>	<span class="nx">Panda</span>
+<span class="mi">8</span>	<span class="nx">silver</span> <span class="mi">1</span> <span class="mi">1986</span> <span class="nx">USA</span> <span class="nx">Liberty</span> <span class="nx">dollar</span>	<span class="nx">Liberty</span>
+<span class="mi">9</span>	<span class="nx">gold</span> <span class="mf">0.25</span> <span class="mi">1986</span> <span class="nx">USA</span> <span class="nx">Liberty</span> <span class="mi">5</span><span class="o">-</span><span class="nx">dollar</span> <span class="nx">piece</span>	<span class="nx">Liberty</span>
+<span class="mi">10</span>	<span class="nx">silver</span> <span class="mi">1</span> <span class="mi">1986</span> <span class="nx">USA</span> <span class="nx">Liberty</span> <span class="mi">50</span><span class="o">-</span><span class="nx">cent</span> <span class="nx">piece</span>	<span class="nx">Liberty</span>
+<span class="mi">11</span>	<span class="nx">silver</span> <span class="mi">1</span> <span class="mi">1987</span> <span class="nx">USA</span> <span class="nx">Constitution</span> <span class="nx">dollar</span>	<span class="nx">Constitution</span>
+<span class="mi">12</span>	<span class="nx">gold</span> <span class="mf">0.25</span> <span class="mi">1987</span> <span class="nx">USA</span> <span class="nx">Constitution</span> <span class="mi">5</span><span class="o">-</span><span class="nx">dollar</span> <span class="nx">piece</span>	<span class="nx">Constitution</span>
+<span class="mi">13</span>	<span class="nx">gold</span> <span class="mi">1</span> <span class="mi">1988</span> <span class="nx">Canada</span> <span class="nx">Maple</span> <span class="nx">leaf</span>	<span class="nx">Maple</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
 <li><code>awk '{print NR NR, NR}' coins.txt</code></li>
 </ul>
 <p><strong>知识点</strong>：用<code>,</code>逗号来分开，只用空格会被直接忽略掉。</p>
 <p><code>NR NR</code>的打印结果中间没有空格，而<code>NR, NR</code>打印结果是有空格的(注意命令中逗号后面有一个空格)。</p>
-<details>
-<summary>点击展开输出结果</summary>
-```awk
-11 1
-22 2
-33 3
-44 4
-55 5
-66 6
-77 7
-88 8
-99 9
-1010 10
-1111 11
-1212 12
-1313 13
-```
-</details>
-<h1 id="搜索">搜索</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-awk" data-lang="awk"><span class="mi">11</span> <span class="mi">1</span>
+<span class="mi">22</span> <span class="mi">2</span>
+<span class="mi">33</span> <span class="mi">3</span>
+<span class="mi">44</span> <span class="mi">4</span>
+<span class="mi">55</span> <span class="mi">5</span>
+<span class="mi">66</span> <span class="mi">6</span>
+<span class="mi">77</span> <span class="mi">7</span>
+<span class="mi">88</span> <span class="mi">8</span>
+<span class="mi">99</span> <span class="mi">9</span>
+<span class="mi">1010</span> <span class="mi">10</span>
+<span class="mi">1111</span> <span class="mi">11</span>
+<span class="mi">1212</span> <span class="mi">12</span>
+<span class="mi">1313</span> <span class="mi">13</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="搜索">搜索</h1>
 <ul>
 <li><code>awk '$3==1986{print $0}' coins.txt</code></li>
 </ul>
@@ -286,66 +314,104 @@ gold 1 1988 Canada Maple leaf
 <li><code>FILENAME</code>可以输出文件名，比如coins.txt.</li>
 <li><code>$3=&quot;xxx&quot;</code>把第三列替换了</li>
 </ol>
-<details>
-<summary>点击展开输出结果</summary>
-```awk
-coins.txtgold 1 xxx USA American Eagle
-coins.txtgold 1 xxx Austria-Hungary Franz josef 100 Korona
-coins.txtsilver 10 xxx USA ingot
-coins.txtgold 1 xxx Switzerland ingot
-coins.txtgold 1 xxx RSA Krugerrand
-coins.txtgold 0.5 xxx RSA Krugerrand
-coins.txtgold 0.1 xxx PRC Panda
-coins.txtsilver 1 xxx USA Liberty dollar
-coins.txtgold 0.25 xxx USA Liberty 5-dollar piece
-coins.txtsilver 1 xxx USA Liberty 50-cent piece
-coins.txtsilver 1 xxx USA Constitution dollar
-coins.txtgold 0.25 xxx USA Constitution 5-dollar piece
-coins.txtgold 1 xxx Canada Maple leaf
-```
-</details>
-<ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-awk" data-lang="awk"><span class="nx">coins</span><span class="p">.</span><span class="nx">txtgold</span> <span class="mi">1</span> <span class="nx">xxx</span> <span class="nx">USA</span> <span class="nx">American</span> <span class="nx">Eagle</span>
+<span class="nx">coins</span><span class="p">.</span><span class="nx">txtgold</span> <span class="mi">1</span> <span class="nx">xxx</span> <span class="nx">Austria</span><span class="o">-</span><span class="nx">Hungary</span> <span class="nx">Franz</span> <span class="nx">josef</span> <span class="mi">100</span> <span class="nx">Korona</span>
+<span class="nx">coins</span><span class="p">.</span><span class="nx">txtsilver</span> <span class="mi">10</span> <span class="nx">xxx</span> <span class="nx">USA</span> <span class="nx">ingot</span>
+<span class="nx">coins</span><span class="p">.</span><span class="nx">txtgold</span> <span class="mi">1</span> <span class="nx">xxx</span> <span class="nx">Switzerland</span> <span class="nx">ingot</span>
+<span class="nx">coins</span><span class="p">.</span><span class="nx">txtgold</span> <span class="mi">1</span> <span class="nx">xxx</span> <span class="nx">RSA</span> <span class="nx">Krugerrand</span>
+<span class="nx">coins</span><span class="p">.</span><span class="nx">txtgold</span> <span class="mf">0.5</span> <span class="nx">xxx</span> <span class="nx">RSA</span> <span class="nx">Krugerrand</span>
+<span class="nx">coins</span><span class="p">.</span><span class="nx">txtgold</span> <span class="mf">0.1</span> <span class="nx">xxx</span> <span class="nx">PRC</span> <span class="nx">Panda</span>
+<span class="nx">coins</span><span class="p">.</span><span class="nx">txtsilver</span> <span class="mi">1</span> <span class="nx">xxx</span> <span class="nx">USA</span> <span class="nx">Liberty</span> <span class="nx">dollar</span>
+<span class="nx">coins</span><span class="p">.</span><span class="nx">txtgold</span> <span class="mf">0.25</span> <span class="nx">xxx</span> <span class="nx">USA</span> <span class="nx">Liberty</span> <span class="mi">5</span><span class="o">-</span><span class="nx">dollar</span> <span class="nx">piece</span>
+<span class="nx">coins</span><span class="p">.</span><span class="nx">txtsilver</span> <span class="mi">1</span> <span class="nx">xxx</span> <span class="nx">USA</span> <span class="nx">Liberty</span> <span class="mi">50</span><span class="o">-</span><span class="nx">cent</span> <span class="nx">piece</span>
+<span class="nx">coins</span><span class="p">.</span><span class="nx">txtsilver</span> <span class="mi">1</span> <span class="nx">xxx</span> <span class="nx">USA</span> <span class="nx">Constitution</span> <span class="nx">dollar</span>
+<span class="nx">coins</span><span class="p">.</span><span class="nx">txtgold</span> <span class="mf">0.25</span> <span class="nx">xxx</span> <span class="nx">USA</span> <span class="nx">Constitution</span> <span class="mi">5</span><span class="o">-</span><span class="nx">dollar</span> <span class="nx">piece</span>
+<span class="nx">coins</span><span class="p">.</span><span class="nx">txtgold</span> <span class="mi">1</span> <span class="nx">xxx</span> <span class="nx">Canada</span> <span class="nx">Maple</span> <span class="nx">leaf</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
 <li><code>awk '{print $NF &quot;\t&quot; $(NF-1)}' coins.txt</code></li>
 </ul>
 <p><strong>知识点</strong>：<code>$NF</code>可以用来打印倒数第某列</p>
-<details>
-<summary>点击展开输出结果</summary>
-```awk
-Eagle	American
-Korona	100
-ingot	USA
-ingot	Switzerland
-Krugerrand	RSA
-Krugerrand	RSA
-Panda	PRC
-dollar	Liberty
-piece	5-dollar
-piece	50-cent
-dollar	Constitution
-piece	5-dollar
-leaf	Maple
-```
-</details>
-<h1 id="正则表达式">正则表达式</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-awk" data-lang="awk"><span class="nx">Eagle</span>	<span class="nx">American</span>
+<span class="nx">Korona</span>	<span class="mi">100</span>
+<span class="nx">ingot</span>	<span class="nx">USA</span>
+<span class="nx">ingot</span>	<span class="nx">Switzerland</span>
+<span class="nx">Krugerrand</span>	<span class="nx">RSA</span>
+<span class="nx">Krugerrand</span>	<span class="nx">RSA</span>
+<span class="nx">Panda</span>	<span class="nx">PRC</span>
+<span class="nx">dollar</span>	<span class="nx">Liberty</span>
+<span class="nx">piece</span>	<span class="mi">5</span><span class="o">-</span><span class="nx">dollar</span>
+<span class="nx">piece</span>	<span class="mi">50</span><span class="o">-</span><span class="nx">cent</span>
+<span class="nx">dollar</span>	<span class="nx">Constitution</span>
+<span class="nx">piece</span>	<span class="mi">5</span><span class="o">-</span><span class="nx">dollar</span>
+<span class="nx">leaf</span>	<span class="nx">Maple</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="正则表达式">正则表达式</h1>
 <ul>
 <li><code>awk '/^g/{print $0}' coins.txt</code></li>
 </ul>
 <p>匹配开头是g的行。</p>
-<details>
-<summary>点击展开输出结果</summary>
-```awk
-gold 1 1986 USA American Eagle
-gold 1 1908 Austria-Hungary Franz josef 100 Korona
-gold 1 1984 Switzerland ingot
-gold 1 1979 RSA Krugerrand
-gold 0.5 1981 RSA Krugerrand
-gold 0.1 1986 PRC Panda
-gold 0.25 1986 USA Liberty 5-dollar piece
-gold 0.25 1987 USA Constitution 5-dollar piece
-gold 1 1988 Canada Maple leaf
-```
-</details>
-<p>正则表达式语法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-awk" data-lang="awk"><span class="nx">gold</span> <span class="mi">1</span> <span class="mi">1986</span> <span class="nx">USA</span> <span class="nx">American</span> <span class="nx">Eagle</span>
+<span class="nx">gold</span> <span class="mi">1</span> <span class="mi">1908</span> <span class="nx">Austria</span><span class="o">-</span><span class="nx">Hungary</span> <span class="nx">Franz</span> <span class="nx">josef</span> <span class="mi">100</span> <span class="nx">Korona</span>
+<span class="nx">gold</span> <span class="mi">1</span> <span class="mi">1984</span> <span class="nx">Switzerland</span> <span class="nx">ingot</span>
+<span class="nx">gold</span> <span class="mi">1</span> <span class="mi">1979</span> <span class="nx">RSA</span> <span class="nx">Krugerrand</span>
+<span class="nx">gold</span> <span class="mf">0.5</span> <span class="mi">1981</span> <span class="nx">RSA</span> <span class="nx">Krugerrand</span>
+<span class="nx">gold</span> <span class="mf">0.1</span> <span class="mi">1986</span> <span class="nx">PRC</span> <span class="nx">Panda</span>
+<span class="nx">gold</span> <span class="mf">0.25</span> <span class="mi">1986</span> <span class="nx">USA</span> <span class="nx">Liberty</span> <span class="mi">5</span><span class="o">-</span><span class="nx">dollar</span> <span class="nx">piece</span>
+<span class="nx">gold</span> <span class="mf">0.25</span> <span class="mi">1987</span> <span class="nx">USA</span> <span class="nx">Constitution</span> <span class="mi">5</span><span class="o">-</span><span class="nx">dollar</span> <span class="nx">piece</span>
+<span class="nx">gold</span> <span class="mi">1</span> <span class="mi">1988</span> <span class="nx">Canada</span> <span class="nx">Maple</span> <span class="nx">leaf</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>正则表达式语法：</p>
 <ul>
 <li>
 <p><code>.</code>匹配任何单字符，要匹配 . ，需使用 <code>\.</code></p>

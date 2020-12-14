@@ -4,7 +4,21 @@
         <link>https://seacj.github.io/posts/</link>
         <description>所有文章 | 草祭</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
-            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Mon, 02 Nov 2020 15:04:35 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Thu, 10 Dec 2020 11:06:09 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>回溯算法题</title>
+    <link>https://seacj.github.io/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E9%A2%98/</link>
+    <pubDate>Thu, 10 Dec 2020 11:06:09 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E9%A2%98/</guid>
+    <description><![CDATA[题记 一年半之前写了一篇回溯算法的博客, 不过只是简单的了解了一下,真要写题还是写不出来(过了一年半,不会写的题还是不会写),所以再集中刷一下题]]></description>
+</item><item>
+    <title>力扣shell题</title>
+    <link>https://seacj.github.io/posts/%E5%8A%9B%E6%89%A3shell%E9%A2%98/</link>
+    <pubDate>Fri, 27 Nov 2020 15:23:31 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E5%8A%9B%E6%89%A3shell%E9%A2%98/</guid>
+    <description><![CDATA[192. 统计词频 写一个 bash 脚本以统计一个文本文件 words.txt 中每个单词出现的频率。 1 cat words.txt | xargs -n 1 | sort | uniq -c | sort -nr | awk &#39;{print $2, $1}&#39; xargs 分割字符串 -n 1表示每行输出一个 可以]]></description>
+</item><item>
     <title>Leetcode数组和字符串</title>
     <link>https://seacj.github.io/posts/leetcode%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
     <pubDate>Mon, 02 Nov 2020 15:04:35 &#43;0800</pubDate>
@@ -60,19 +74,5 @@
     <author>作者</author>
     <guid>https://seacj.github.io/posts/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/</guid>
     <description><![CDATA[C语言里面可以用2个库FFTW和kissfft做傅里叶变换，第一次装的时候因为不懂dll、lib怎么用所以配置了很久。 代码的例子如下，由于我]]></description>
-</item><item>
-    <title>咲良田的思想实验</title>
-    <link>https://seacj.github.io/posts/%E5%92%B2%E8%89%AF%E7%94%B0%E7%9A%84%E6%80%9D%E6%83%B3%E5%AE%9E%E9%AA%8C/</link>
-    <pubDate>Sat, 25 Jul 2020 12:18:27 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%92%B2%E8%89%AF%E7%94%B0%E7%9A%84%E6%80%9D%E6%83%B3%E5%AE%9E%E9%AA%8C/</guid>
-    <description><![CDATA[题记 这几天看完了重启咲良田 ，毫无疑问的优秀作品，虽然理清里面的所有事件的逻辑可能还需要思考思考，不过里面最吸引我的地方还是这部番提出的各种思]]></description>
-</item><item>
-    <title>建站历史008</title>
-    <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2008/</link>
-    <pubDate>Thu, 23 Jul 2020 16:43:32 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2008/</guid>
-    <description><![CDATA[凭借本博客喜获github北极开源贡献者徽章 这两天，在 GitHub 上积极贡献代码的许多开发者都收到了「Arctic Code Vault Contributor」的荣誉勋]]></description>
 </item></channel>
 </rss>

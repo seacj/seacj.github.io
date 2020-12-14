@@ -18,7 +18,7 @@
 <meta name="application-name" content="草祭">
 <meta name="apple-mobile-web-app-title" content="草祭"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/leetcode%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/" /><link rel="prev" href="https://seacj.github.io/posts/leetcode%E9%93%BE%E8%A1%A8/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/leetcode%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/" /><link rel="prev" href="https://seacj.github.io/posts/leetcode%E9%93%BE%E8%A1%A8/" /><link rel="next" href="https://seacj.github.io/posts/%E5%8A%9B%E6%89%A3shell%E9%A2%98/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/seacj.github.io\/posts\/leetcode%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2\/"
-        },"genre": "posts","keywords": "算法, leetcode","wordcount":  4040 ,
+        },"genre": "posts","keywords": "算法, leetcode","wordcount":  4128 ,
         "url": "https:\/\/seacj.github.io\/posts\/leetcode%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2\/","datePublished": "2020-11-02T15:04:35+08:00","dateModified": "2020-11-02T15:04:35+08:00","author": {
                 "@type": "Person",
                 "name": "草祭"
@@ -106,7 +106,7 @@
                                 <i class="far fa-folder fa-fw"></i>算法
                             </a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-11-02>2020-11-02</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>约 4040 字&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 4128 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>预计阅读 9 分钟&nbsp;<span id="/posts/leetcode%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="leancloud_visitors" data-flag-title="Leetcode数组和字符串">
                         <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -215,6 +215,32 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="n">last</span> <span class="o">=</span> <span class="n">mid</span>
     <span class="k">return</span> <span class="n">first</span> <span class="c1"># last也行，因为此时重合</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">searchInsert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">target</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">first</span><span class="p">,</span> <span class="n">last</span> <span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+        <span class="k">while</span> <span class="n">first</span> <span class="o">&lt;</span> <span class="n">last</span><span class="p">:</span> <span class="c1"># 搜索区间[first, last)不为空</span>
+            <span class="n">mid</span> <span class="o">=</span> <span class="n">first</span> <span class="o">+</span> <span class="p">(</span><span class="n">last</span> <span class="o">-</span> <span class="n">first</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span> <span class="c1"># 防溢出</span>
+            <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">target</span><span class="p">:</span>
+                <span class="n">first</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">last</span> <span class="o">=</span> <span class="n">mid</span>
+        <span class="k">return</span> <span class="n">first</span> <span class="c1"># last也行，因为此时重合</span>
 </code></pre></td></tr></table>
 </div>
 </div><h1 id="二维数组">二维数组</h1>
@@ -909,7 +935,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/leetcode%E9%93%BE%E8%A1%A8/" class="prev" rel="prev" title="Leetcode链表题"><i class="fas fa-angle-left fa-fw"></i>Leetcode链表题</a></div>
+    <div class="post-nav"><a href="/posts/leetcode%E9%93%BE%E8%A1%A8/" class="prev" rel="prev" title="Leetcode链表题"><i class="fas fa-angle-left fa-fw"></i>Leetcode链表题</a>
+            <a href="/posts/%E5%8A%9B%E6%89%A3shell%E9%A2%98/" class="next" rel="next" title="力扣shell题">力扣shell题<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments">
 

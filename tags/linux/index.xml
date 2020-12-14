@@ -4,7 +4,14 @@
         <link>https://seacj.github.io/tags/linux/</link>
         <description>linux - 标签 - 草祭</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
-            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Sat, 18 Jul 2020 16:07:38 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/linux/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Fri, 27 Nov 2020 15:23:31 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/linux/" rel="self" type="application/rss+xml" /><item>
+    <title>力扣shell题</title>
+    <link>https://seacj.github.io/posts/%E5%8A%9B%E6%89%A3shell%E9%A2%98/</link>
+    <pubDate>Fri, 27 Nov 2020 15:23:31 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E5%8A%9B%E6%89%A3shell%E9%A2%98/</guid>
+    <description><![CDATA[192. 统计词频 写一个 bash 脚本以统计一个文本文件 words.txt 中每个单词出现的频率。 1 cat words.txt | xargs -n 1 | sort | uniq -c | sort -nr | awk &#39;{print $2, $1}&#39; xargs 分割字符串 -n 1表示每行输出一个 可以]]></description>
+</item><item>
     <title>Tmux学习</title>
     <link>https://seacj.github.io/posts/tmux%E5%AD%A6%E4%B9%A0/</link>
     <pubDate>Sat, 18 Jul 2020 16:07:38 &#43;0800</pubDate>

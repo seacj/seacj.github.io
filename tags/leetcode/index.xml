@@ -4,7 +4,21 @@
         <link>https://seacj.github.io/tags/leetcode/</link>
         <description>leetcode - 标签 - 草祭</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
-            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Mon, 02 Nov 2020 15:04:35 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/leetcode/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Thu, 10 Dec 2020 11:06:09 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/leetcode/" rel="self" type="application/rss+xml" /><item>
+    <title>回溯算法题</title>
+    <link>https://seacj.github.io/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E9%A2%98/</link>
+    <pubDate>Thu, 10 Dec 2020 11:06:09 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E9%A2%98/</guid>
+    <description><![CDATA[题记 一年半之前写了一篇回溯算法的博客, 不过只是简单的了解了一下,真要写题还是写不出来(过了一年半,不会写的题还是不会写),所以再集中刷一下题]]></description>
+</item><item>
+    <title>力扣shell题</title>
+    <link>https://seacj.github.io/posts/%E5%8A%9B%E6%89%A3shell%E9%A2%98/</link>
+    <pubDate>Fri, 27 Nov 2020 15:23:31 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E5%8A%9B%E6%89%A3shell%E9%A2%98/</guid>
+    <description><![CDATA[192. 统计词频 写一个 bash 脚本以统计一个文本文件 words.txt 中每个单词出现的频率。 1 cat words.txt | xargs -n 1 | sort | uniq -c | sort -nr | awk &#39;{print $2, $1}&#39; xargs 分割字符串 -n 1表示每行输出一个 可以]]></description>
+</item><item>
     <title>Leetcode数组和字符串</title>
     <link>https://seacj.github.io/posts/leetcode%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
     <pubDate>Mon, 02 Nov 2020 15:04:35 &#43;0800</pubDate>
@@ -60,19 +74,5 @@
     <author>作者</author>
     <guid>https://seacj.github.io/posts/leetcodedaily3/</guid>
     <description><![CDATA[39. Combination Sum tag. array Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target. The same repeated number may be chosen from candidates unlimited number of times. Example 1: 1 2 3 4 5 6 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ] So]]></description>
-</item><item>
-    <title>每日Leetcode02</title>
-    <link>https://seacj.github.io/posts/leetcodedaily2/</link>
-    <pubDate>Wed, 21 Aug 2019 19:34:02 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/leetcodedaily2/</guid>
-    <description><![CDATA[35. Search Insert Position tags. Array 向有序列表里找到需要插入值的index，且You may assume no duplicates in the array. Example 1: 1 2 Input: [1,3,5,6], 5 Output: 2 我的Solution： 1 2 3 4 5 6 class Solution: def searchInsert(self, nums: List[int], target:]]></description>
-</item><item>
-    <title>每日Leetcode01</title>
-    <link>https://seacj.github.io/posts/leetcodedaily1/</link>
-    <pubDate>Mon, 19 Aug 2019 16:16:22 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/leetcodedaily1/</guid>
-    <description><![CDATA[从今天起开始做每日LeetCode这个系列，从array, string, tree, linkedlist, math标签里选题做。 189. Rotate Array tag. array Solution来源 ：https://lee]]></description>
 </item></channel>
 </rss>
