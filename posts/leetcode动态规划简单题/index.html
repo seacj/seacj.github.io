@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/seacj.github.io\/posts\/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%80%E5%8D%95%E9%A2%98\/"
-        },"genre": "posts","keywords": "算法, leetcode, 动态规划","wordcount":  3498 ,
+        },"genre": "posts","keywords": "算法, leetcode, 动态规划","wordcount":  3568 ,
         "url": "https:\/\/seacj.github.io\/posts\/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%80%E5%8D%95%E9%A2%98\/","datePublished": "2020-09-17T14:22:15+08:00","dateModified": "2020-09-17T14:22:15+08:00","author": {
                 "@type": "Person",
                 "name": "草祭"
@@ -106,8 +106,8 @@
                                 <i class="far fa-folder fa-fw"></i>算法
                             </a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-09-17>2020-09-17</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>约 3498 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>预计阅读 7 分钟&nbsp;<span id="/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%80%E5%8D%95%E9%A2%98/" class="leancloud_visitors" data-flag-title="Leetcode动态规划简单题">
+                <i class="fas fa-pencil-alt fa-fw"></i>约 3568 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 8 分钟&nbsp;<span id="/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%80%E5%8D%95%E9%A2%98/" class="leancloud_visitors" data-flag-title="Leetcode动态规划简单题">
                         <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static">
@@ -311,7 +311,7 @@ dp[i] 分3种情况 1. i-1偷了，i只能不偷，那么dp[i]=dp[i-1]，并且�
 <p>机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为“Finish”）。</p>
 <p>问总共有多少条不同的路径？</p>
 <h3 id="题解-3">题解</h3>
-<p>dp方程为：<code>dp[i][j] = dp[i-1][j] + dp[i][j-1] </code></p>
+<p>dp方程为：<code>dp[i][j] = dp[i-1][j] + dp[i][j-1] </code>, 表示走到第i,j个格子有多少种走法，分别是从上面一格和从左边一格走过来。</p>
 <h3 id="代码-3">代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -354,7 +354,8 @@ dp[i] 分3种情况 1. i-1偷了，i只能不偷，那么dp[i]=dp[i-1]，并且�
         <span class="k">return</span> <span class="n">dp</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="63-不同路径-ii">63. 不同路径 II</h2>
+</div><p>另外这道题还有数学解法，即计算$C_{m+n-2}^{m-1}$.</p>
+<h2 id="63-不同路径-ii">63. 不同路径 II</h2>
 <p>一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为“Start” ）。</p>
 <p>机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为“Finish”）。</p>
 <p>现在考虑网格中有<u>障碍物</u>。那么从左上角到右下角将会有多少条不同的路径？</p>

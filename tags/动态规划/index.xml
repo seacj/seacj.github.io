@@ -4,7 +4,14 @@
         <link>https://seacj.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
         <description>动态规划 - 标签 - 草祭</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
-            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Tue, 06 Oct 2020 20:05:17 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Thu, 04 Mar 2021 11:39:44 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="self" type="application/rss+xml" /><item>
+    <title>Leetcode354俄罗斯套娃</title>
+    <link>https://seacj.github.io/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/</link>
+    <pubDate>Thu, 04 Mar 2021 11:39:44 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/</guid>
+    <description><![CDATA[俄罗斯套娃题题目 给定一些标记了宽度和高度的信封，宽度和高度以整数对形式 (w, h) 出现。当另一个信封的宽度和高度都比这个信封大的时候，这个信封就可以]]></description>
+</item><item>
     <title>Leetcode动态规划几道题</title>
     <link>https://seacj.github.io/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%87%A0%E9%81%93%E9%A2%98/</link>
     <pubDate>Tue, 06 Oct 2020 20:05:17 &#43;0800</pubDate>

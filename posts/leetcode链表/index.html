@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/seacj.github.io\/posts\/leetcode%E9%93%BE%E8%A1%A8\/"
-        },"genre": "posts","keywords": "算法, leetcode, 链表","wordcount":  1284 ,
+        },"genre": "posts","keywords": "算法, leetcode, 链表","wordcount":  1537 ,
         "url": "https:\/\/seacj.github.io\/posts\/leetcode%E9%93%BE%E8%A1%A8\/","datePublished": "2020-10-13T20:05:17+08:00","dateModified": "2020-10-13T20:05:17+08:00","author": {
                 "@type": "Person",
                 "name": "草祭"
@@ -106,8 +106,8 @@
                                 <i class="far fa-folder fa-fw"></i>算法
                             </a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-10-13>2020-10-13</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>约 1284 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>预计阅读 3 分钟&nbsp;<span id="/posts/leetcode%E9%93%BE%E8%A1%A8/" class="leancloud_visitors" data-flag-title="Leetcode链表题">
+                <i class="fas fa-pencil-alt fa-fw"></i>约 1537 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 4 分钟&nbsp;<span id="/posts/leetcode%E9%93%BE%E8%A1%A8/" class="leancloud_visitors" data-flag-title="Leetcode链表题">
                         <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static">
@@ -122,6 +122,7 @@
       <ul>
         <li><a href="#141-环形链表">141 环形链表</a></li>
         <li><a href="#142-环形链表-ii">142 环形链表 II</a></li>
+        <li><a href="#160-相交链表">160 相交链表</a></li>
       </ul>
     </li>
     <li><a href="#经典问题">经典问题</a>
@@ -278,7 +279,79 @@
         <span class="k">return</span> <span class="n">p</span>
 </code></pre></td></tr></table>
 </div>
-</div><h1 id="经典问题">经典问题</h1>
+</div><h2 id="160-相交链表">160 相交链表</h2>
+<p>这题是个简单题，因为用set集合很容易就写出来了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">getIntersectionNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">headA</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">,</span> <span class="n">headB</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ListNode</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">headA</span>
+        <span class="k">while</span> <span class="n">p</span><span class="p">:</span>
+            <span class="n">s</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">next</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">headB</span>
+        <span class="k">while</span> <span class="n">p</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">p</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">next</span>
+        <span class="k">return</span> <span class="bp">None</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>不过有一个空间复杂度O(1)的双指针方法，而且看到有一个评论非常妙——<code>这个算法也浪漫了吧，错的人迟早会走散，而对的人迟早会相逢！</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">getIntersectionNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">headA</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">,</span> <span class="n">headB</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ListNode</span><span class="p">:</span>
+        <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="n">headA</span><span class="p">,</span> <span class="n">headB</span>
+        <span class="k">while</span> <span class="n">p</span><span class="o">!=</span><span class="n">q</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">p</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">p</span> <span class="o">=</span> <span class="n">headB</span> <span class="c1">#注意不是回到原本A的起点，而是B的起点</span>
+                <span class="n">q</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">next</span>
+            <span class="k">elif</span> <span class="n">q</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">q</span> <span class="o">=</span> <span class="n">headA</span>
+                <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">next</span>
+            <span class="k">else</span><span class="p">:</span>
+            	<span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">next</span>
+            	<span class="n">q</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">next</span>
+        <span class="k">return</span> <span class="n">p</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>找到遇见的地方的方式，是各自都完整走过两个list。</p>
+<h1 id="经典问题">经典问题</h1>
 <h2 id="206-反转链表">206 反转链表</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
