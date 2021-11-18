@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Leetcode滑动窗口 - 草祭</title>
+        <meta name="Description" content=""><meta property="og:title" content="Leetcode滑动窗口" />
+<meta property="og:description" content="题记 滑动窗口每次做完，过一段时间又忘了，所以还是需要在一起总结一下。 模板 参考资料：https://leetcode-cn.com/probl" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seacj.github.io/posts/leetcode%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" />
+<meta property="article:published_time" content="2021-08-21T20:22:03+08:00" />
+<meta property="article:modified_time" content="2021-08-21T20:22:03+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Leetcode滑动窗口"/>
+<meta name="twitter:description" content="题记 滑动窗口每次做完，过一段时间又忘了，所以还是需要在一起总结一下。 模板 参考资料：https://leetcode-cn.com/probl"/>
+<meta name="application-name" content="草祭">
+<meta name="apple-mobile-web-app-title" content="草祭"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/leetcode%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" /><link rel="prev" href="https://seacj.github.io/posts/%E6%8E%92%E5%BA%8F/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Leetcode滑动窗口",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seacj.github.io\/posts\/leetcode%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3\/"
+        },"genre": "posts","keywords": "算法, leetcode, 滑动窗口","wordcount":  1578 ,
+        "url": "https:\/\/seacj.github.io\/posts\/leetcode%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3\/","datePublished": "2021-08-21T20:22:03+08:00","dateModified": "2021-08-21T20:22:03+08:00","author": {
+                "@type": "Person",
+                "name": "草祭"
+            },"description": ""
+    }
+    </script></head>
+    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="草祭">草祭</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="我只能为您最多找15篇文章" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="草祭">草祭</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="我只能为您最多找15篇文章" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Leetcode滑动窗口</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>草祭</a></span>&nbsp;
+                    <span class="post-category">收录于<a href="/categories/%E7%AE%97%E6%B3%95/">
+                                <i class="far fa-folder fa-fw"></i>算法
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2021-08-21>2021-08-21</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 1578 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 4 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#题记">题记</a></li>
+    <li><a href="#模板">模板</a></li>
+    <li><a href="#滑动窗变长">滑动窗变长</a>
+      <ul>
+        <li><a href="#159-至多包含两个不同字符的最长字串">159. 至多包含两个不同字符的最长字串</a>
+          <ul>
+            <li><a href="#感想">感想</a></li>
+          </ul>
+        </li>
+        <li><a href="#209--长度最小的子数组target">209.  长度最小的子数组（≥target）</a></li>
+        <li><a href="#感想-1">感想</a></li>
+        <li><a href="#487-最大连续1的个数-iihttpsleetcode-cncomproblemsmax-consecutive-ones-ii滑动窗口内最多可以有1个0"><a href="https://leetcode-cn.com/problems/max-consecutive-ones-ii/">487. 最大连续1的个数 II</a>(滑动窗口内最多可以有1个0)</a></li>
+        <li><a href="#感想-2">感想</a></li>
+        <li><a href="#3-无重复字符的最长子串httpsleetcode-cncomproblemslongest-substring-without-repeating-characters"><a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/">3. 无重复字符的最长子串</a></a></li>
+        <li><a href="#感想-3">感想</a></li>
+      </ul>
+    </li>
+    <li><a href="#滑动窗固定">滑动窗固定</a>
+      <ul>
+        <li><a href="#643-子数组最大平均数-ihttpsleetcode-cncomproblemsmaximum-average-subarray-i"><a href="https://leetcode-cn.com/problems/maximum-average-subarray-i/">643. 子数组最大平均数 I</a></a></li>
+        <li><a href="#感想-4">感想</a></li>
+        <li><a href="#1208-尽可能使字符串相等httpsleetcode-cncomproblemsget-equal-substrings-within-budget"><a href="https://leetcode-cn.com/problems/get-equal-substrings-within-budget/">1208. 尽可能使字符串相等</a></a></li>
+        <li><a href="#感想-5">感想</a></li>
+        <li><a href="#剑指-offer-59---i-滑动窗口的最大值httpsleetcode-cncomproblemshua-dong-chuang-kou-de-zui-da-zhi-lcof"><a href="https://leetcode-cn.com/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/">剑指 Offer 59 - I. 滑动窗口的最大值</a></a></li>
+        <li><a href="#感想-6">感想</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="题记">题记</h1>
+<p>滑动窗口每次做完，过一段时间又忘了，所以还是需要在一起总结一下。</p>
+<h1 id="模板">模板</h1>
+<p>参考资料：https://leetcode-cn.com/problems/longest-substring-with-at-most-two-distinct-characters/solution/hua-dong-chuang-kou-zhen-di-jian-dan-yi-73bii/</p>
+<p>上面链接中的内容很多，感觉有点冗余，这里我认为只需要记住写法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">problemName</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="c1"># Step 1. 初始化</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">window</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)):</span>
+            <span class="c1"># Step 2: 更新需要维护的变量, 有的变量需要一个if语句来维护 (比如最大最小长度)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">new_x</span>
+            <span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
+                <span class="n">y</span> <span class="o">=</span> <span class="n">new_y</span>
+
+            <span class="s1">&#39;&#39;&#39;
+</span><span class="s1">            ------------- 下面是两种情况，读者请根据题意二选1 -------------
+</span><span class="s1">            &#39;&#39;&#39;</span>
+            <span class="c1"># Step 3 - 情况1 题目要求滑动框固定</span>
+            <span class="k">if</span> <span class="err">窗口长度大于限定值</span><span class="p">:</span>
+                <span class="c1"># 更新 (部分或所有) 维护变量 </span>
+                <span class="c1"># 窗口左指针前移一个单位保证窗口长度固定</span>
+
+            <span class="c1"># Step 3 - 情况2 维护一个可变长的合法的滑动窗</span>
+            <span class="k">while</span> <span class="err">不合法</span><span class="p">:</span>
+                <span class="n">window</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># 更新 (部分或所有) 维护变量 </span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="k">return</span> <span class="n">res</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="滑动窗变长">滑动窗变长</h1>
+<h2 id="159-至多包含两个不同字符的最长字串">159. 至多包含两个不同字符的最长字串</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">lengthOfLongestSubstringTwoDistinct</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+        <span class="n">window</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1"># 元素和它最后一个的位置</span>
+        <span class="n">kind</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">window</span> <span class="ow">or</span> <span class="n">window</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">window</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="n">kind</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">window</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">while</span> <span class="n">kind</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="n">window</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">-=</span> <span class="mi">1</span>
+                <span class="k">if</span> <span class="n">window</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">kind</span> <span class="o">-=</span> <span class="mi">1</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">res</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="感想">感想</h3>
+<ol>
+<li>这种有元素种类限制的题目，用一个变量<code>kind</code>存，比用len(window)要好，因为滑动窗口左边弹出元素的临界值是<code>window[x]==0</code>，这个时候还要弹出这个元素，容易出错</li>
+<li>注意不要忽略条件<code>window[s[j]] == 0</code>，这种情况虽然元素还在window里，但是相当于没有。</li>
+</ol>
+<h2 id="209--长度最小的子数组target">209.  长度最小的子数组（≥target）</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">minSubArrayLen</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
+        <span class="n">cur_sum</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+            <span class="n">cur_sum</span> <span class="o">+=</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+            <span class="k">while</span> <span class="n">cur_sum</span> <span class="o">&gt;=</span> <span class="n">s</span><span class="p">:</span>
+                <span class="n">cur_sum</span> <span class="o">-=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="n">res</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">res</span> <span class="o">==</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">return</span> <span class="n">res</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="感想-1">感想</h2>
+<p>和模板不太一样，因为要求的是最短的长度，所以<code>res</code>的更新在<code>while</code>循环中。</p>
+<h2 id="487-最大连续1的个数-iihttpsleetcode-cncomproblemsmax-consecutive-ones-ii滑动窗口内最多可以有1个0"><a href="https://leetcode-cn.com/problems/max-consecutive-ones-ii/" target="_blank" rel="noopener noreffer">487. 最大连续1的个数 II</a>(滑动窗口内最多可以有1个0)</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">findMaxConsecutiveOnes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">zero_count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">zero_count</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">while</span> <span class="n">zero_count</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">zero_count</span> <span class="o">-=</span> <span class="mi">1</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">res</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>这题的变形是<a href="https://leetcode-cn.com/problems/max-consecutive-ones-iii/" target="_blank" rel="noopener noreffer">1004. 最大连续1的个数 III</a>，基本上一摸一样的写法，就是最多1个0，变成最多k个0.</p>
+<h2 id="感想-2">感想</h2>
+<p>和159类似，但是这里想到了其他更新<code>i</code>的方法，结果并不对，变长滑动窗口还是要老老实实用<code>while</code>循环一步步更新<code>i</code>的值直到条件满足，这样不容易出错。</p>
+<h2 id="3-无重复字符的最长子串httpsleetcode-cncomproblemslongest-substring-without-repeating-characters"><a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="noopener noreffer">3. 无重复字符的最长子串</a></h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">lengthOfLongestSubstring</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">window</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)):</span>
+            <span class="k">while</span> <span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="ow">in</span> <span class="n">window</span><span class="p">:</span>
+                <span class="n">window</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">window</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">res</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="感想-3">感想</h2>
+<p>这道题在滑动窗口中出现的频率最高，不过代码其实不太套路化，可以看到前面的所有题目，都是对<code>window</code> 操作之后，再做<code>while</code>。代码上这道题是相反的，但是逻辑上，同样也是先把<code>num[j]</code>放进去，但是因为这里用的是<code>set</code>，所以要在后面放入<code>num[j]</code>。</p>
+<h1 id="滑动窗固定">滑动窗固定</h1>
+<h2 id="643-子数组最大平均数-ihttpsleetcode-cncomproblemsmaximum-average-subarray-i"><a href="https://leetcode-cn.com/problems/maximum-average-subarray-i/" target="_blank" rel="noopener noreffer">643. 子数组最大平均数 I</a></h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">findMaxAverage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">cur_sum</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">nums</span><span class="p">[:</span><span class="n">k</span><span class="p">])</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">cur_sum</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+            <span class="n">cur_sum</span> <span class="o">-=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">cur_sum</span> <span class="o">+=</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">cur_sum</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">res</span> <span class="o">/</span> <span class="n">k</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="感想-4">感想</h2>
+<p>一道简单题，但是要注意这里滑动窗口一开始就初始化了前k个。</p>
+<h2 id="1208-尽可能使字符串相等httpsleetcode-cncomproblemsget-equal-substrings-within-budget"><a href="https://leetcode-cn.com/problems/get-equal-substrings-within-budget/" target="_blank" rel="noopener noreffer">1208. 尽可能使字符串相等</a></h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">equalSubstring</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">maxCost</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">cur_sum</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)):</span>
+            <span class="n">cur_sum</span> <span class="o">+=</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="o">-</span> <span class="nb">ord</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="p">]))</span>
+            <span class="k">while</span> <span class="n">cur_sum</span> <span class="o">&gt;</span> <span class="n">maxCost</span><span class="p">:</span>
+                <span class="n">cur_sum</span> <span class="o">-=</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">-</span> <span class="nb">ord</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">res</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="感想-5">感想</h2>
+<p>看到子字符串，要想到可能可以用到滑动窗。如果不知道能用滑动窗，感觉还是挺难写出来的。</p>
+<h2 id="剑指-offer-59---i-滑动窗口的最大值httpsleetcode-cncomproblemshua-dong-chuang-kou-de-zui-da-zhi-lcof"><a href="https://leetcode-cn.com/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/" target="_blank" rel="noopener noreffer">剑指 Offer 59 - I. 滑动窗口的最大值</a></h2>
+<p>典型的固定长度的滑动窗，并且是出题频率最高的。与其说是滑动窗口，其实是单调队列。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">maxSlidingWindow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">window</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">deque</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">window</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">-</span> <span class="n">window</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">k</span><span class="p">:</span>
+                <span class="n">window</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>
+            <span class="k">while</span> <span class="n">window</span> <span class="ow">and</span> <span class="n">nums</span><span class="p">[</span><span class="n">window</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">&lt;=</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+                <span class="n">window</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="n">window</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">window</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+        <span class="k">return</span> <span class="n">res</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="感想-6">感想</h2>
+<p>记得构建的是一个左大右小的队列，答案是队列的最大值。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>本文于 2021-08-21 更新</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://seacj.github.io/posts/leetcode%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" data-title="Leetcode滑动窗口"><i class="fab fa-weibo fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>,&nbsp;<a href="/tags/leetcode/">leetcode</a>,&nbsp;<a href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">滑动窗口</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/%E6%8E%92%E5%BA%8F/" class="prev" rel="prev" title="排序"><i class="fas fa-angle-left fa-fw"></i>排序</a></div>
+</div>
+<div id="comments">
+
+        <script src="//code.tidio.co/qgrdxb76tups4kgrezsz6fwxcvqjbpsh.js"></script></div></article></div>
+            </main><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> <footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.6"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><style>.lg-toolbar .lg-icon::after { color: #999; }</style><script type="text/javascript">
+    window.config = {"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{},"headerMode":{"desktop":null,"mobile":null},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"QVNQRH3FHN","algoliaIndex":"cj-blog","algoliaSearchKey":"50b1056efeb6f9195818878fca2394e0","highlightTag":"em","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};
+</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -10,7 +10,7 @@
     <pubDate>Wed, 28 Apr 2021 10:35:19 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://seacj.github.io/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%94%A8lmdb%E7%BB%99%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96%E5%8A%A0%E9%80%9F/</guid>
-    <description><![CDATA[读写LMDB数据库 感觉最近训练模型的时候，GPU利用率经常是间断出现0%，试了很多方法比如dataloader的多个worker，prefe]]></description>
+    <description><![CDATA[LMDB数据库 感觉最近训练模型的时候，GPU利用率经常是间断出现0%，试了很多方法比如dataloader的多个worker，prefetc]]></description>
 </item><item>
     <title>声纹识别X-Vector</title>
     <link>https://seacj.github.io/posts/x-vector/</link>

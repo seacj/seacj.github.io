@@ -4,7 +4,21 @@
         <link>https://seacj.github.io/tags/%E7%AE%97%E6%B3%95/</link>
         <description>算法 - 标签 - 草祭</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
-            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Thu, 04 Mar 2021 11:39:44 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Sat, 21 Aug 2021 20:22:03 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+    <title>Leetcode滑动窗口</title>
+    <link>https://seacj.github.io/posts/leetcode%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</link>
+    <pubDate>Sat, 21 Aug 2021 20:22:03 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/leetcode%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</guid>
+    <description><![CDATA[题记 滑动窗口每次做完，过一段时间又忘了，所以还是需要在一起总结一下。 模板 参考资料：https://leetcode-cn.com/probl]]></description>
+</item><item>
+    <title>排序</title>
+    <link>https://seacj.github.io/posts/%E6%8E%92%E5%BA%8F/</link>
+    <pubDate>Thu, 27 May 2021 11:13:18 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/%E6%8E%92%E5%BA%8F/</guid>
+    <description><![CDATA[python中排序的函数 先不从算法层面讨论，而看看python实现上怎么写。 现有字典 d= {&lsquo;a&rsquo;:24,&lsquo;]]></description>
+</item><item>
     <title>Leetcode354俄罗斯套娃</title>
     <link>https://seacj.github.io/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/</link>
     <pubDate>Thu, 04 Mar 2021 11:39:44 &#43;0800</pubDate>
@@ -60,19 +74,5 @@
     <author>作者</author>
     <guid>https://seacj.github.io/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%80%E5%8D%95%E9%A2%98/</guid>
     <description><![CDATA[题记 刷一下动态规划的简单题，一共也没几道。顺便把前100道题里面的中等难度的动态规划题刷了。 第53、121、198是简单题。 题目 53 最大子序和]]></description>
-</item><item>
-    <title>错排问题</title>
-    <link>https://seacj.github.io/posts/%E9%94%99%E6%8E%92%E9%97%AE%E9%A2%98/</link>
-    <pubDate>Wed, 16 Sep 2020 13:21:57 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E9%94%99%E6%8E%92%E9%97%AE%E9%A2%98/</guid>
-    <description><![CDATA[题目 题目一. N个人去旅行，在旅店开了N个房间，钥匙挂在大厅的墙上，钥匙上没有标号，每人随手拿一把钥匙，请用程序实现算出所有人都拿错钥匙的可能]]></description>
-</item><item>
-    <title>并查集</title>
-    <link>https://seacj.github.io/posts/%E5%B9%B6%E6%9F%A5%E9%9B%86/</link>
-    <pubDate>Thu, 05 Sep 2019 21:12:31 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%B9%B6%E6%9F%A5%E9%9B%86/</guid>
-    <description><![CDATA[题记 今天上了数理统计和数学模型与优化，感觉终于上到了我认为的好课。第一眼看到数学模型与优化的董文永老师感觉自带气场，带着帽子上课，不过讲课还]]></description>
 </item></channel>
 </rss>

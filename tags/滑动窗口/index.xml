@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>滑动窗口 - 标签 - 草祭</title>
+        <link>https://seacj.github.io/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</link>
+        <description>滑动窗口 - 标签 - 草祭</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
+            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Sat, 21 Aug 2021 20:22:03 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" rel="self" type="application/rss+xml" /><item>
+    <title>Leetcode滑动窗口</title>
+    <link>https://seacj.github.io/posts/leetcode%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</link>
+    <pubDate>Sat, 21 Aug 2021 20:22:03 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/leetcode%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</guid>
+    <description><![CDATA[题记 滑动窗口每次做完，过一段时间又忘了，所以还是需要在一起总结一下。 模板 参考资料：https://leetcode-cn.com/probl]]></description>
+</item></channel>
+</rss>
