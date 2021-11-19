@@ -12,12 +12,12 @@
     <guid>https://seacj.github.io/posts/leetcode%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</guid>
     <description><![CDATA[题记 滑动窗口每次做完，过一段时间又忘了，所以还是需要在一起总结一下。 模板 参考资料：https://leetcode-cn.com/probl]]></description>
 </item><item>
-    <title>排序</title>
+    <title>python中自定义排序函数</title>
     <link>https://seacj.github.io/posts/%E6%8E%92%E5%BA%8F/</link>
     <pubDate>Thu, 27 May 2021 11:13:18 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://seacj.github.io/posts/%E6%8E%92%E5%BA%8F/</guid>
-    <description><![CDATA[python中排序的函数 先不从算法层面讨论，而看看python实现上怎么写。 现有字典 d= {&lsquo;a&rsquo;:24,&lsquo;]]></description>
+    <description><![CDATA[不从算法层面讨论，而看看python实现上怎么写。 现有字典 d= {&lsquo;a&rsquo;:24,&lsquo;g&rsquo;:52,&]]></description>
 </item><item>
     <title>Leetcode354俄罗斯套娃</title>
     <link>https://seacj.github.io/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/</link>
