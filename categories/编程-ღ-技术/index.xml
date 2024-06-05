@@ -4,7 +4,14 @@
         <link>https://seacj.github.io/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/</link>
         <description>编程-ღ-技术 - 分类 - 草祭</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
-            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Wed, 28 Apr 2021 10:35:19 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Tue, 10 May 2022 09:24:46 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/" rel="self" type="application/rss+xml" /><item>
+    <title>C&#43;&#43;面向对象高级编程（上）</title>
+    <link>https://seacj.github.io/posts/houjiecpp1/</link>
+    <pubDate>Tue, 10 May 2022 09:24:46 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://seacj.github.io/posts/houjiecpp1/</guid>
+    <description><![CDATA[复习Complex类的实现过程 构建复数Complex类的思考路程： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37]]></description>
+</item><item>
     <title>机器学习用lmdb给数据读取加速</title>
     <link>https://seacj.github.io/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%94%A8lmdb%E7%BB%99%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96%E5%8A%A0%E9%80%9F/</link>
     <pubDate>Wed, 28 Apr 2021 10:35:19 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://seacj.github.io/posts/awk%E5%AD%A6%E4%B9%A0/</guid>
     <description><![CDATA[题记 awk是unix下很实用的文本编辑语言。可以快速处理很多操作。参考资料是b站up主正月点灯笼的awk入门教程。这篇博客用来记录一下awk]]></description>
-</item><item>
-    <title>Git学习</title>
-    <link>https://seacj.github.io/posts/git%E5%AD%A6%E4%B9%A0/</link>
-    <pubDate>Tue, 03 Mar 2020 18:24:03 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/git%E5%AD%A6%E4%B9%A0/</guid>
-    <description><![CDATA[题记 Git是一个非常优秀的开源的分布式版本控制系统，非常值得好好学习一下。 这里分享一个可能是学习git的最好的网站：https://lear]]></description>
 </item></channel>
 </rss>

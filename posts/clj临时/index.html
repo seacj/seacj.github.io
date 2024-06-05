@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Clj临时 - 草祭</title>
+        <meta name="Description" content=""><meta property="og:title" content="Clj临时" />
+<meta property="og:description" content="参考资料： https://techdiylife.github.io/blog/topic.html?category2=t07&amp;blogid=0039 https://blog.csdn.net/qq_46106285/article/details/137430941 LangChain｜Ollama结合LangChain使用的速通版（包含代码以及切换各种模型的方式） https://cloud.tencent.com/developer/article/2324375 示例选择器 1. 安装anac" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seacj.github.io/posts/clj%E4%B8%B4%E6%97%B6/" />
+<meta property="article:published_time" content="2024-06-05T22:40:14+08:00" />
+<meta property="article:modified_time" content="2024-06-05T22:40:14+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Clj临时"/>
+<meta name="twitter:description" content="参考资料： https://techdiylife.github.io/blog/topic.html?category2=t07&amp;blogid=0039 https://blog.csdn.net/qq_46106285/article/details/137430941 LangChain｜Ollama结合LangChain使用的速通版（包含代码以及切换各种模型的方式） https://cloud.tencent.com/developer/article/2324375 示例选择器 1. 安装anac"/>
+<meta name="application-name" content="草祭">
+<meta name="apple-mobile-web-app-title" content="草祭"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/clj%E4%B8%B4%E6%97%B6/" /><link rel="prev" href="https://seacj.github.io/posts/houjiecpp1/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Clj临时",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seacj.github.io\/posts\/clj%E4%B8%B4%E6%97%B6\/"
+        },"genre": "posts","wordcount":  2970 ,
+        "url": "https:\/\/seacj.github.io\/posts\/clj%E4%B8%B4%E6%97%B6\/","datePublished": "2024-06-05T22:40:14+08:00","dateModified": "2024-06-05T22:40:14+08:00","author": {
+                "@type": "Person",
+                "name": "草祭"
+            },"description": ""
+    }
+    </script></head>
+    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="草祭">草祭</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="我只能为您最多找15篇文章" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="草祭">草祭</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="我只能为您最多找15篇文章" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Clj临时</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>草祭</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2024-06-05>2024-06-05</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 2970 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 6 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>参考资料：</p>
+<p><a href="https://techdiylife.github.io/blog/topic.html?category2=t07&amp;blogid=0039">https://techdiylife.github.io/blog/topic.html?category2=t07&amp;blogid=0039</a></p>
+<p><a href="https://blog.csdn.net/qq_46106285/article/details/137430941">https://blog.csdn.net/qq_46106285/article/details/137430941</a> LangChain｜Ollama结合LangChain使用的速通版（包含代码以及切换各种模型的方式）</p>
+<p><a href="https://cloud.tencent.com/developer/article/2324375">https://cloud.tencent.com/developer/article/2324375</a> 示例选择器</p>
+<p><strong>1. 安装anaconda</strong></p>
+<p><a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/</a></p>
+<p>下载<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-4.1.1-Windows-x86_64.exe" target="_blank" rel="noopener noreffer">Anaconda3-4.1.1-Windows-x86_64.exe</a>。</p>
+<p>安装完成后，创建虚拟环境</p>
+<p>conda create -n clj python==3.10</p>
+<p>conda activate clj</p>
+<p><strong>2.安装langChain</strong></p>
+<p><a href="https://python.langchain.com/v0.1/docs/get_started/installation/#langchain-cli">https://python.langchain.com/v0.1/docs/get_started/installation/#langchain-cli</a></p>
+<p>在虚拟环境中执行</p>
+<p>conda install langchain -c conda-forge</p>
+<p>langchain还有一些依赖可以安装，暂时不安装跳过这步</p>
+<p><strong>LangServe助力开发者以REST API的形式部署LangChain可运行文件和链条。通过LangChain CLI安装时，LangServe会自动安装。如果您不通过LangChain CLI安装，可以使用以下命令分别安装客户端和服务器所需的依赖：</strong></p>
+<ul>
+<li>安装所有依赖项：</li>
+</ul>
+<p>pip install &ldquo;langserve[all]&rdquo;</p>
+<ul>
+<li>仅安装客户端依赖项：</li>
+</ul>
+<p>pip install &ldquo;langserve[client]&rdquo;</p>
+<ul>
+<li>仅安装服务器依赖项：</li>
+</ul>
+<p>pip install &ldquo;langserve[server]&rdquo;</p>
+<p><strong>LangChain CLI</strong></p>
+<p>LangChain CLI是一个非常实用的工具，它可以帮助您管理LangChain模板和其他LangServe项目。安装命令如下：</p>
+<p>pip install langchain-cli</p>
+<p><strong>3. 安装jupyternotebook</strong></p>
+<p>安装命令：conda install -y jupyter</p>
+<p>并不必须，但是便于学习，建议使用。</p>
+<p>安装完后，执行jupyter notebook，可指定端口号，默认端口8888，在浏览器中打开http://localhost:8888/，即可进入交互界面。</p>
+<p><strong>4. 安装ollama</strong></p>
+<p><a href="https://ollama.com/download/windows">https://ollama.com/download/windows</a></p>
+<p>安装完成后，执行ollama run codellama，将模型（3.8G）pull到本地。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052250372.png"
+        data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052250372.png, https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052250372.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052250372.png 2x"
+        data-sizes="auto"
+        alt="image-20240605224207110"
+        title="image-20240605224207110" />用langchain调用ollama的模型（官方教程使用的是llama2)</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052250300.png"
+        data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052250300.png, https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052250300.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052250300.png 2x"
+        data-sizes="auto"
+        alt="image-20240605225039103"
+        title="image-20240605225039103" /></p>
+<p><strong>5. LLM Chain链条</strong></p>
+<p>为什么用LangChain</p>
+<p>LangChain 包的主要价值主张是：</p>
+<ol>
+<li>组件：用于处理语言模型的可组合工具和集成。无论你是否使用 LangChain 框架的其余部分，组件都是模块化的，易于使用</li>
+<li>现成的<strong>链</strong>：用于完成高级任务的组件的内置组合</li>
+</ol>
+<p>LLM Chain的一个例子，下面链条中包括了模型、提示、输出解析。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052250003.png"
+        data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052250003.png, https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052250003.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052250003.png 2x"
+        data-sizes="auto"
+        alt="image-20240605225050951"
+        title="image-20240605225050951" /></p>
+<p><strong>6. 提示工程</strong></p>
+<p>p.s. 内容参考LangChain（https://cookbook.langchain.com.cn/docs/langchain-prompt-templates/）。</p>
+<p>提示工程领域，一个典型的提示结构包括以下组件（并非所有的提示都使用这些组件，但是一个好的提示通常会使用两个或更多组件）</p>
+<p><strong>指令</strong>（instruction） ：告诉模型该怎么做，如何使用外部信息（如果提供），如何处理查询并构建 Out。</p>
+<p><strong>外部信息</strong> 或 <strong>上下文</strong> （contexts）：充当模型的附加知识来源。这些可以手动插入到提示中，通过向量数据库 （Vector Database） 检索（检索增强）获得，或通过其他方式（API、计算等）引入。</p>
+<p><strong>用户</strong>输入或 <strong>查询</strong> ：通常（但不总是）是由人类用户（即提示者）输入到系统中的查询。</p>
+<p><strong>输出指示器（output indicator）</strong> ：标记要生成的文本的 <strong>开头</strong>。（如果生成 Python 代码，我们可以使用import来指示模型必须开始编写 Python 代码（因为大多数 Python 脚本以import开头）。</p>
+<p>）</p>
+<p>下面的例子中包括了指令、上下文、用户输入。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052251387.png"
+        data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052251387.png, https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052251387.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052251387.png 2x"
+        data-sizes="auto"
+        alt="image-20240605225102384"
+        title="image-20240605225102384" /></p>
+<p>实际上，不太可能硬编码上下文和用户问题。我们会通过一个 <strong>模板 PromptTemplate</strong> 将它们输入。</p>
+<p>在LangChain里，像介绍<strong>LLM Chain链条</strong>的例子里，提示（prompt）用到了ChatPromptTemplate，是一种模板。那么什么是模板：</p>
+<p>我们在使用AI时，AI回复的效果通常取决于我们的提问方式，例如：</p>
+<p>1．你期望AI回答物理问题时，会先和AI约定说”你现在是一个物理学教授“；</p>
+<p>2．你不希望AI自由发挥无中生有，你会在问题最后补上一句“如果你不知道，就说不知道，不要创造答案”（If you don＇t know the</p>
+<p>answer, just say that you don&rsquo;t know, don&rsquo;t try to make up an answer)</p>
+<p>而这些<strong>成规律的对话内容</strong>就形成了所谓对话的“模板”。Langchain 中的提示模板类旨在<strong>简化</strong>使用动态输入构建提示的过程。</p>
+<p>构建一个模板prompt_template：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052251700.png"
+        data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052251700.png, https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052251700.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052251700.png 2x"
+        data-sizes="auto"
+        alt="image-20240605225154718"
+        title="image-20240605225154718" /></p>
+<p>使用这个模板的时候，print(openai(    prompt_template.format(        query = &ldquo;Which libraries and model providers offer LLMs?&rdquo;    )))</p>
+<p>看上去只是将原本的输入query替换掉了，python可以用f-string轻松实现这个过程，但是 Langchain 的 PromptTemplate 对象，可以规范化这个过程，添加多个参数，并以面向对象的方式构建提示。</p>
+<p>除了可以自己创造模板并调试外，LangChain也内置了很多种的模板。langchain官网对ChatPromptTemplate的封装：https://api.python.langchain.com/en/latest/prompts/langchain_core.prompts.chat.ChatPromptTemplate.html，下面是一个使用ChatPromptTemplate模板的例子。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052252476.png"
+        data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052252476.png, https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052252476.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052252476.png 2x"
+        data-sizes="auto"
+        alt="image-20240605225238497"
+        title="image-20240605225238497" /></p>
+<p><strong>7. 少样本提示</strong></p>
+<p>少样本提示（ref. <a href="https://www.promptingguide.ai/zh/techniques/fewshot">https://www.promptingguide.ai/zh/techniques/fewshot</a> . <a href="https://arxiv.org/pdf/2001.08361">https://arxiv.org/pdf/2001.08361</a>），当模型足够大时，仅需要给出少量提示，模型就能从少量样本中学习到如何执行认为。</p>
+<p>在LangChain中，少样本提示适合使用FewShotPromptTemplate。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">langchain</span> <span class="kn">import</span> <span class="n">FewShotPromptTemplate</span>
+<span class="n">llm</span> <span class="o">=</span> <span class="n">Ollama</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&#34;llama2&#34;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">langchain</span> <span class="kn">import</span> <span class="n">FewShotPromptTemplate</span>
+
+<span class="c1"># create our examples</span>
+<span class="n">examples</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&#34;query&#34;</span><span class="p">:</span> <span class="s2">&#34;How are you?&#34;</span><span class="p">,</span>
+        <span class="s2">&#34;answer&#34;</span><span class="p">:</span> <span class="s2">&#34;I can&#39;t complain but sometimes I still do.&#34;</span>
+    <span class="p">},</span> <span class="p">{</span>
+        <span class="s2">&#34;query&#34;</span><span class="p">:</span> <span class="s2">&#34;What time is it?&#34;</span><span class="p">,</span>
+        <span class="s2">&#34;answer&#34;</span><span class="p">:</span> <span class="s2">&#34;It&#39;s time to get a watch.&#34;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+
+<span class="c1"># create a example template</span>
+<span class="n">example_template</span> <span class="o">=</span> <span class="s2">&#34;&#34;&#34;
+</span><span class="s2">User: {query}
+</span><span class="s2">AI: {answer}
+</span><span class="s2">&#34;&#34;&#34;</span>
+
+<span class="c1"># create a prompt example from above template</span>
+<span class="n">example_prompt</span> <span class="o">=</span> <span class="n">PromptTemplate</span><span class="p">(</span>
+    <span class="n">input_variables</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;query&#34;</span><span class="p">,</span> <span class="s2">&#34;answer&#34;</span><span class="p">],</span>
+    <span class="n">template</span> <span class="o">=</span> <span class="n">example_template</span>
+<span class="p">)</span>
+<span class="c1"># now break our previous prompt into a prefix and suffix</span>
+<span class="c1"># the prefix is our instructions</span>
+<span class="n">prefix</span> <span class="o">=</span> <span class="s2">&#34;&#34;&#34; The following are exerpts from conversations with an AI
+</span><span class="s2">assistant. The assistant is typically sarcastic and witty, producing
+</span><span class="s2">creative and funny responses to the users questions. Here are some
+</span><span class="s2">examples: input
+</span><span class="s2">&#34;&#34;&#34;</span>
+<span class="c1"># and the suffix our user input and output indicator</span>
+<span class="n">suffix</span> <span class="o">=</span> <span class="s2">&#34;&#34;&#34;
+</span><span class="s2">User: {query}
+</span><span class="s2">AI: &#34;&#34;&#34;</span>
+<span class="c1"># now create the few shot prompt template</span>
+<span class="n">few_shot_prompt_template</span> <span class="o">=</span> <span class="n">FewShotPromptTemplate</span><span class="p">(</span>
+    <span class="n">examples</span> <span class="o">=</span> <span class="n">examples</span><span class="p">,</span>
+    <span class="n">example_prompt</span> <span class="o">=</span> <span class="n">example_prompt</span><span class="p">,</span>
+    <span class="n">prefix</span> <span class="o">=</span> <span class="n">prefix</span><span class="p">,</span>
+    <span class="n">suffix</span> <span class="o">=</span> <span class="n">suffix</span><span class="p">,</span>
+    <span class="n">input_variables</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;query&#34;</span><span class="p">],</span>
+    <span class="n">example_separator</span> <span class="o">=</span> <span class="s2">&#34;</span><span class="se">\n\n</span><span class="s2">&#34;</span>
+<span class="p">)</span>
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&#34;What is the meaning of life?&#34;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">few_shot_prompt_template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">query</span> <span class="o">=</span> <span class="n">query</span><span class="p">))</span>
+<span class="n">chain</span> <span class="o">=</span> <span class="n">few_shot_prompt_template</span> <span class="o">|</span> <span class="n">llm</span>
+<span class="n">chain</span><span class="o">.</span><span class="n">invoke</span><span class="p">({</span><span class="s2">&#34;query&#34;</span><span class="p">:</span> <span class="s2">&#34;What is the meaning of life?&#34;</span><span class="p">})</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052253847.png"
+        data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052253847.png, https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052253847.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/2024/202406052253847.png 2x"
+        data-sizes="auto"
+        alt="image-20240605225324806"
+        title="image-20240605225324806" /></p>
+<p><strong>8. 示例选择器（Example Selector）</strong></p>
+<p>在上面少样本提示的例子中，有很多参数设置，看上去好像把例子一口气丢给模型就行了，使用少样本模板看上去复杂化了使用大模型的方法，实际上规范化使用模板更重要的是为了使用LangChain的示例选择器。</p>
+<p>我们的提示和补全 (completion)的最大长度是有限的。这个限制通过 <strong>最大上下文窗口 maximum context window</strong> 进行衡量。</p>
+<p>上下文窗口 (ontext window) = input_tokens + output tokens。模型的输入内容数量是有上限的，上下文窗口的大小设定应该考虑硬件限制，合适的窗口大小才能带来更快的LLM补全。</p>
+<p>有多种示例选择器，最简单的是LengthBasedExampleSelector ，他会根据示例的长度来选择，以适应特定的提示长度限制。如果询问的内容较长，那么他选择的示例就会更少；如果询问的内容较少，那么他选择的示例就会更多。这个选择器使用起来很简单，指定长度就行了，这里的长度就是token的个数，通常一个单词就是一个token。下面是一个示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">langchain.prompts.example_selector</span> <span class="kn">import</span> <span class="n">LengthBasedExampleSelector</span>
+<span class="n">example_selector</span> <span class="o">=</span> <span class="n">LengthBasedExampleSelector</span><span class="p">(</span>
+    <span class="n">examples</span> <span class="o">=</span> <span class="n">examples</span><span class="p">,</span>
+    <span class="n">example_prompt</span> <span class="o">=</span> <span class="n">example_prompt</span><span class="p">,</span>
+    <span class="n">max_length</span> <span class="o">=</span> <span class="mi">50</span>  <span class="c1"># this sets the max length that examples should be</span>
+<span class="p">)</span>
+<span class="c1"># now create the few shot prompt template</span>
+<span class="n">dynamic_prompt_template</span> <span class="o">=</span> <span class="n">FewShotPromptTemplate</span><span class="p">(</span>
+    <span class="n">example_selector</span> <span class="o">=</span> <span class="n">example_selector</span><span class="p">,</span>  <span class="c1"># use example_selector instead of examples</span>
+    <span class="n">example_prompt</span> <span class="o">=</span> <span class="n">example_prompt</span><span class="p">,</span>
+    <span class="n">prefix</span> <span class="o">=</span> <span class="n">prefix</span><span class="p">,</span>
+    <span class="n">suffix</span> <span class="o">=</span> <span class="n">suffix</span><span class="p">,</span>
+    <span class="n">input_variables</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;query&#34;</span><span class="p">],</span>
+    <span class="n">example_separator</span> <span class="o">=</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span>
+<span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>SemanticSimilarityExampleSelector和MaxMarginalRelevanceExampleSelector.这两个selector是根据相似度来进行example的查找的。MaxMarginalRelevanceExampleSelector是SemanticSimilarityExampleSelector的字类，他是对SemanticSimilarityExampleSelector进行了一些算法上的优化.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>本文于 2024-06-05 更新</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://seacj.github.io/posts/clj%E4%B8%B4%E6%97%B6/" data-title="Clj临时"><i class="fab fa-weibo fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/houjiecpp1/" class="prev" rel="prev" title="C&#43;&#43;面向对象高级编程（上）"><i class="fas fa-angle-left fa-fw"></i>C&#43;&#43;面向对象高级编程（上）</a></div>
+</div>
+<div id="comments">
+
+        <script src="//code.tidio.co/qgrdxb76tups4kgrezsz6fwxcvqjbpsh.js"></script></div></article></div>
+            </main><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> <footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.6"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><style>.lg-toolbar .lg-icon::after { color: #999; }</style><script type="text/javascript">
+    window.config = {"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{},"headerMode":{"desktop":null,"mobile":null},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"QVNQRH3FHN","algoliaIndex":"cj-blog","algoliaSearchKey":"50b1056efeb6f9195818878fca2394e0","highlightTag":"em","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};
+</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

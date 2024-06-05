@@ -148,12 +148,12 @@
 <p>针对系统漏洞攻击的黑客我也防不住，但是SSH弱密码攻击的倒是可以防一手，腾讯安全服务中心的<a href="https://www.freebuf.com/articles/system/205384.html" target="_blank" rel="noopener noreffer">一篇文章</a>写道说有个组织每天攻击十万个IP，所以说受到攻击的概率还是很大的。</p>
 <p>使用<code>lastb</code>命令列出登入系统失败的用户相关信息。</p>
 <p>我的服务器从六月一日到六月九日，9天时间有<strong>157</strong>条登入系统失败的记录！</p>
-<p><figure><a class="lightgallery" href="https://gitee.com/seacj/typora-image/raw/master/image/202006/09/150633-914927.png" title="image-20200609150631079" data-thumbnail="https://gitee.com/seacj/typora-image/raw/master/image/202006/09/150633-914927.png" data-sub-html="<h2>lastb</h2><p>image-20200609150631079</p>">
+<p><figure><a class="lightgallery" href="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/150633-914927.png" title="image-20200609150631079" data-thumbnail="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/150633-914927.png" data-sub-html="<h2>lastb</h2><p>image-20200609150631079</p>">
         <img
             class="lazyload"
             src="/svg/loading/normal.min.svg"
-            data-src="https://gitee.com/seacj/typora-image/raw/master/image/202006/09/150633-914927.png"
-            data-srcset="https://gitee.com/seacj/typora-image/raw/master/image/202006/09/150633-914927.png, https://gitee.com/seacj/typora-image/raw/master/image/202006/09/150633-914927.png 1.5x, https://gitee.com/seacj/typora-image/raw/master/image/202006/09/150633-914927.png 2x"
+            data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/150633-914927.png"
+            data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/150633-914927.png, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/150633-914927.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/150633-914927.png 2x"
             data-sizes="auto"
             alt="image-20200609150631079" />
     </a><figcaption class="image-caption">lastb</figcaption>
@@ -201,12 +201,12 @@ Port 4522
 </div><p>保存退出之后，用<code>systemctl restart sshd</code>（CentOS6系统用<code>/etc/init.d/sshd restart</code>）重启SSH服务，此时你就不能再用默认的22端口访问服务器了。</p>
 <h3 id="step-2">Step 2</h3>
 <p>a. 如果是云服务器ECS的话，在服务器面板的安全组添加你设定的端口之后，就能用那个端口SSH访问服务器了</p>
-<p><figure><a class="lightgallery" href="https://gitee.com/seacj/typora-image/raw/master/image/202006/09/152659-127738.png" title="image-20200609152649355" data-thumbnail="https://gitee.com/seacj/typora-image/raw/master/image/202006/09/152659-127738.png" data-sub-html="<h2>添加安全组</h2><p>image-20200609152649355</p>">
+<p><figure><a class="lightgallery" href="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/152659-127738.png" title="image-20200609152649355" data-thumbnail="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/152659-127738.png" data-sub-html="<h2>添加安全组</h2><p>image-20200609152649355</p>">
         <img
             class="lazyload"
             src="/svg/loading/normal.min.svg"
-            data-src="https://gitee.com/seacj/typora-image/raw/master/image/202006/09/152659-127738.png"
-            data-srcset="https://gitee.com/seacj/typora-image/raw/master/image/202006/09/152659-127738.png, https://gitee.com/seacj/typora-image/raw/master/image/202006/09/152659-127738.png 1.5x, https://gitee.com/seacj/typora-image/raw/master/image/202006/09/152659-127738.png 2x"
+            data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/152659-127738.png"
+            data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/152659-127738.png, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/152659-127738.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/152659-127738.png 2x"
             data-sizes="auto"
             alt="image-20200609152649355" />
     </a><figcaption class="image-caption">添加安全组</figcaption>
@@ -228,12 +228,12 @@ Port 4522
 <h3 id="step-3-测试无密码连接">Step 3. 测试无密码连接</h3>
 <p>用任意一个ssh软件使用密钥进行连接，这里以xshell为例。</p>
 <p>连接方式从密码改为public key（有些软件可能叫Credentials），然后导入<code>id_rsa</code>文件。</p>
-<p><figure><a class="lightgallery" href="https://gitee.com/seacj/typora-image/raw/master/image/202006/09/164346-509595.png" title="image-20200609164346003" data-thumbnail="https://gitee.com/seacj/typora-image/raw/master/image/202006/09/164346-509595.png" data-sub-html="<h2>测试无密码连接</h2><p>image-20200609164346003</p>">
+<p><figure><a class="lightgallery" href="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/164346-509595.png" title="image-20200609164346003" data-thumbnail="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/164346-509595.png" data-sub-html="<h2>测试无密码连接</h2><p>image-20200609164346003</p>">
         <img
             class="lazyload"
             src="/svg/loading/normal.min.svg"
-            data-src="https://gitee.com/seacj/typora-image/raw/master/image/202006/09/164346-509595.png"
-            data-srcset="https://gitee.com/seacj/typora-image/raw/master/image/202006/09/164346-509595.png, https://gitee.com/seacj/typora-image/raw/master/image/202006/09/164346-509595.png 1.5x, https://gitee.com/seacj/typora-image/raw/master/image/202006/09/164346-509595.png 2x"
+            data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/164346-509595.png"
+            data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/164346-509595.png, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/164346-509595.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/164346-509595.png 2x"
             data-sizes="auto"
             alt="image-20200609164346003" />
     </a><figcaption class="image-caption">测试无密码连接</figcaption>
@@ -299,7 +299,7 @@ PasswordAuthentication no
         <script src="//code.tidio.co/qgrdxb76tups4kgrezsz6fwxcvqjbpsh.js"></script></div></article></div>
             </main><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> <footer class="footer">
         <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.6"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
