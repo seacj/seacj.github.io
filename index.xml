@@ -4,9 +4,17 @@
         <link>https://yyqx.online/</link>
         <description>草祭の博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
-            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Tue, 10 May 2022 09:24:46 &#43;0800</lastBuildDate>
+            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Tue, 18 Aug 2026 02:30:56 &#43;0800</lastBuildDate>
             <atom:link href="https://yyqx.online/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>2026年第一篇博客</title>
+    <link>https://yyqx.online/posts/2026%E5%B9%B4%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
+    <pubDate>Tue, 18 Aug 2026 02:30:56 &#43;0800</pubDate>
+    <author>swampman@foxmail.com (草祭)</author>
+    <guid>https://yyqx.online/posts/2026%E5%B9%B4%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
+    <description><![CDATA[<p>时隔4年，可以把这个博客网站复活了。</p>]]></description>
+</item>
+<item>
     <title>C&#43;&#43;面向对象高级编程</title>
     <link>https://yyqx.online/posts/cpp%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B/</link>
     <pubDate>Tue, 10 May 2022 09:24:46 &#43;0800</pubDate>
@@ -171,17 +179,6 @@
 <h1 id="数组简介">数组简介</h1>
 <h2 id="寻找数组的中心索引">寻找数组的中心索引</h2>
 <p>定义数组 <strong>中心索引</strong> 的：数组中心索引的左侧所有元素相加的和等于右侧所有元素相加的和，若没有中心索引返回-1。</p>]]></description>
-</item>
-<item>
-    <title>Leetcode链表题</title>
-    <link>https://yyqx.online/posts/leetcode%E9%93%BE%E8%A1%A8/</link>
-    <pubDate>Tue, 13 Oct 2020 20:05:17 &#43;0800</pubDate>
-    <author>swampman@foxmail.com (草祭)</author>
-    <guid>https://yyqx.online/posts/leetcode%E9%93%BE%E8%A1%A8/</guid>
-    <description><![CDATA[<h1 id="题记">题记</h1>
-<p>这两天刷了十道链表题，打算做个总结，刚好leetcode也提供了一个系统学习的<a href="https://leetcode-cn.com/leetbook/read/linked-list/jbex5/" target="_blank" rel="noopener noreffer ">链接</a>，这里做一个小总结。</p>
-<h1 id="双指针技巧">双指针技巧</h1>
-<p>链表题里面双指针、快慢指针还是经常会用的。</p>]]></description>
 </item>
 </channel>
 </rss>
