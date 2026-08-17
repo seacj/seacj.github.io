@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Python全局锁(GIL) - 草祭</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://yyqx.online/posts/python%E5%85%A8%E5%B1%80%E9%94%81/">
+        <title>Python全局锁(GIL) - 草祭</title><meta name="Description" content="草祭の博客"><meta property="og:url" content="https://yyqx.online/posts/python%E5%85%A8%E5%B1%80%E9%94%81/">
   <meta property="og:site_name" content="草祭">
   <meta property="og:title" content="Python全局锁(GIL)">
   <meta property="og:description" content="题记 使用threading进行多线程处理的时候，运算速度并没有提高。原因在于python中的全局锁(GIL, global interpreter lock).
@@ -22,8 +22,8 @@
   <meta name="twitter:description" content="题记 使用threading进行多线程处理的时候，运算速度并没有提高。原因在于python中的全局锁(GIL, global interpreter lock).
 样例 计算圆周率的程序
 代码 点击展开代码import threading import random import math import time def print_run_time(func): def wrapper(*args, **kw): begin_time = time.time() ret = func(*args, **kw) end_time = time.time() run_time = end_time - begin_time print(&#39;Run time&#39;,run_time) return ret return wrapper @print_run_time def run(): sample_count = 10000000 #采样次数 inner = 0 #落在圆内的点 i = 0 while i &lt;sample_count: x_i = random.uniform(-1,1) y_i = random.uniform(-1,1) if (math.pow(x_i,2) &#43; math.pow(y_i,2)) &lt; 1: inner&#43;=1 i&#43;=1 pi = 4*(inner * 1.0)/sample_count print(pi) @print_run_time def single_run(): print(&#39;single&#39;,&#39;=&#39;*20) for _ in range(5): run() @print_run_time def multi_run(): print(&#39;multi&#39;,&#39;=&#39;*20) ts = [] for i in range(5): ts.append(threading.Thread(target=run)) ts[i].start() for i in range(5): ts[i].join() if __name__ == &#39;__main__&#39;: multi_run() single_run()结果 ~/dataset/xiaoaiKWS/G/code$ python3 测试多线程速度.py">
-<meta name="application-name" content="My cool site">
-<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="application-name" content="草祭">
+<meta name="apple-mobile-web-app-title" content="草祭">
 <meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://yyqx.online/posts/python%E5%85%A8%E5%B1%80%E9%94%81/" /><link rel="prev" href="https://yyqx.online/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%841/" /><link rel="next" href="https://yyqx.online/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2004/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -42,7 +42,7 @@
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
-                "name": "xxxx"
+                "name": "草祭"
             },"description": ""
     }
     </script></head>
@@ -62,7 +62,7 @@
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="草祭">My cool site</a>
+            <a href="/" title="草祭">草祭</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
@@ -85,7 +85,7 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="草祭">My cool site</a>
+                <a href="/" title="草祭">草祭</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -121,7 +121,7 @@
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Python全局锁(GIL)</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>xxxx</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/"><i class="far fa-folder" aria-hidden="true"></i>编程-ღ-技术</a></span></div>
+            <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>草祭</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/"><i class="far fa-folder" aria-hidden="true"></i>编程-ღ-技术</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2019-09-20">2019-09-20</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;约 1049 字&nbsp;
                 <i class="far fa-clock" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -329,7 +329,7 @@
 <div id="comments"></div></article></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

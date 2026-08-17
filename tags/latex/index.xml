@@ -3,11 +3,12 @@
         <title>LaTeX - 标签 - 草祭</title>
         <link>https://yyqx.online/tags/latex/</link>
         <description>LaTeX - 标签 - 草祭</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 20 May 2020 17:22:34 &#43;0800</lastBuildDate><atom:link href="https://yyqx.online/tags/latex/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
+            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Wed, 20 May 2020 17:22:34 &#43;0800</lastBuildDate><atom:link href="https://yyqx.online/tags/latex/" rel="self" type="application/rss+xml" /><item>
     <title>VSCode上安装LaTeX</title>
     <link>https://yyqx.online/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/</link>
     <pubDate>Wed, 20 May 2020 17:22:34 &#43;0800</pubDate>
-    <author>xxxx</author>
+    <author>swampman@foxmail.com (草祭)</author>
     <guid>https://yyqx.online/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/</guid>
     <description><![CDATA[<h2 id="题记">题记</h2>
 <p>最近又要用到latex，虽然说我自己不喜欢用（比如我觉得几秒的编译影响体验，能做到像markdown一样几乎是即时展示的就好了），真希望所有期刊和会议都像ICASSP2020一样有那么好用的word模板（好用指各种格式直接有母板，一键格式化，序号全都自动生成。不过word写公式依然是个问题，有一些兼容性的问题）。</p>]]></description>
@@ -16,7 +17,7 @@
     <title>Hugo博客LaTeX渲染</title>
     <link>https://yyqx.online/posts/hugo%E5%8D%9A%E5%AE%A2latex%E6%B8%B2%E6%9F%93/</link>
     <pubDate>Sat, 21 Sep 2019 14:58:31 &#43;0800</pubDate>
-    <author>xxxx</author>
+    <author>swampman@foxmail.com (草祭)</author>
     <guid>https://yyqx.online/posts/hugo%E5%8D%9A%E5%AE%A2latex%E6%B8%B2%E6%9F%93/</guid>
     <description><![CDATA[<h2 id="题记">题记</h2>
 <p>写博客的时候有时候会需要写公式，我自己的习惯是用Typora进行博客编写，本地上Typora自带latex支持，但是推送到网页的话只能显示latex语法而不会转化成公式，之前本来想要么把公式截图，要么用Chrome插件，但是这样感觉不太友好，所以找了个用来渲染LaTeX的方法.</p>]]></description>
@@ -25,7 +26,7 @@
     <title>LaTeX初体验</title>
     <link>https://yyqx.online/posts/latex%E5%88%9D%E4%BD%93%E9%AA%8C/</link>
     <pubDate>Wed, 31 Jul 2019 16:32:27 &#43;0800</pubDate>
-    <author>xxxx</author>
+    <author>swampman@foxmail.com (草祭)</author>
     <guid>https://yyqx.online/posts/latex%E5%88%9D%E4%BD%93%E9%AA%8C/</guid>
     <description><![CDATA[<p>感觉做科研的话很多人都在用LaTeX，这里记录一下初次使用LaTeX的心得。<br>
 使用TeXworks编辑器，排版工具使用TeXworks上的XeLaTeX。<br>

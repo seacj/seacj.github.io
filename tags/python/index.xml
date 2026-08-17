@@ -3,11 +3,12 @@
         <title>Python - 标签 - 草祭</title>
         <link>https://yyqx.online/tags/python/</link>
         <description>Python - 标签 - 草祭</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 27 May 2021 11:13:18 &#43;0800</lastBuildDate><atom:link href="https://yyqx.online/tags/python/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
+            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Thu, 27 May 2021 11:13:18 &#43;0800</lastBuildDate><atom:link href="https://yyqx.online/tags/python/" rel="self" type="application/rss+xml" /><item>
     <title>python中自定义排序函数</title>
     <link>https://yyqx.online/posts/%E6%8E%92%E5%BA%8F/</link>
     <pubDate>Thu, 27 May 2021 11:13:18 &#43;0800</pubDate>
-    <author>xxxx</author>
+    <author>swampman@foxmail.com (草祭)</author>
     <guid>https://yyqx.online/posts/%E6%8E%92%E5%BA%8F/</guid>
     <description><![CDATA[<p>不从算法层面讨论，而看看python实现上怎么写。</p>
 <h2 id="现有字典-d-a24g52i12k33请按value值进行排序">现有字典 d= {&lsquo;a&rsquo;:24,&lsquo;g&rsquo;:52,&lsquo;i&rsquo;:12,&lsquo;k&rsquo;:33}请按value值进行排序?</h2>
@@ -24,7 +25,7 @@
     <title>音频重采样简述</title>
     <link>https://yyqx.online/posts/%E9%9F%B3%E9%A2%91%E9%87%8D%E9%87%87%E6%A0%B7/</link>
     <pubDate>Fri, 20 Mar 2020 21:28:16 &#43;0800</pubDate>
-    <author>xxxx</author>
+    <author>swampman@foxmail.com (草祭)</author>
     <guid>https://yyqx.online/posts/%E9%9F%B3%E9%A2%91%E9%87%8D%E9%87%87%E6%A0%B7/</guid>
     <description><![CDATA[<h2 id="题记">题记</h2>
 <p>需要实现一个音频重采样的功能，发现没有我想象的那么简单，这里通过学习python中librosa的代码，来学习一下重采样，这里将以48kHz下采样到8kHz为例进行讲解。为方便阅读，本文将采样频率写成<code>sr</code>（sampling rate）。注意本文<strong>并没有最终实现</strong>一个性能很好的重采样程序。</p>]]></description>
@@ -33,7 +34,7 @@
     <title>Python全局锁(GIL)</title>
     <link>https://yyqx.online/posts/python%E5%85%A8%E5%B1%80%E9%94%81/</link>
     <pubDate>Fri, 20 Sep 2019 11:40:17 &#43;0800</pubDate>
-    <author>xxxx</author>
+    <author>swampman@foxmail.com (草祭)</author>
     <guid>https://yyqx.online/posts/python%E5%85%A8%E5%B1%80%E9%94%81/</guid>
     <description><![CDATA[<h2 id="题记">题记</h2>
 <p>使用threading进行<strong>多线程</strong>处理的时候，运算速度并没有提高。原因在于python中的全局锁(GIL, global interpreter lock).</p>

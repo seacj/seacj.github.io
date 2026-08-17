@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Leetcode滑动窗口 - 草祭</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://yyqx.online/posts/leetcode%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">
+        <title>Leetcode滑动窗口 - 草祭</title><meta name="Description" content="草祭の博客"><meta property="og:url" content="https://yyqx.online/posts/leetcode%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">
   <meta property="og:site_name" content="草祭">
   <meta property="og:title" content="Leetcode滑动窗口">
   <meta property="og:description" content="题记 滑动窗口每次做完，过一段时间又忘了，所以还是需要在一起总结一下。
@@ -22,8 +22,8 @@
   <meta name="twitter:title" content="Leetcode滑动窗口">
   <meta name="twitter:description" content="题记 滑动窗口每次做完，过一段时间又忘了，所以还是需要在一起总结一下。
 模板 参考资料：https://leetcode-cn.com/problems/longest-substring-with-at-most-two-distinct-characters/solution/hua-dong-chuang-kou-zhen-di-jian-dan-yi-73bii/">
-<meta name="application-name" content="My cool site">
-<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="application-name" content="草祭">
+<meta name="apple-mobile-web-app-title" content="草祭">
 <meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://yyqx.online/posts/leetcode%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" /><link rel="prev" href="https://yyqx.online/posts/%E6%8E%92%E5%BA%8F/" /><link rel="next" href="https://yyqx.online/posts/cpp%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -42,7 +42,7 @@
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
-                "name": "xxxx"
+                "name": "草祭"
             },"description": ""
     }
     </script></head>
@@ -62,7 +62,7 @@
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="草祭">My cool site</a>
+            <a href="/" title="草祭">草祭</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
@@ -85,7 +85,7 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="草祭">My cool site</a>
+                <a href="/" title="草祭">草祭</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -121,7 +121,7 @@
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Leetcode滑动窗口</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>xxxx</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%AE%97%E6%B3%95/"><i class="far fa-folder" aria-hidden="true"></i>算法</a></span></div>
+            <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>草祭</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%AE%97%E6%B3%95/"><i class="far fa-folder" aria-hidden="true"></i>算法</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2021-08-21">2021-08-21</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;约 1456 字&nbsp;
                 <i class="far fa-clock" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -294,7 +294,7 @@
 <p>这道题在滑动窗口中出现的频率最高，不过代码其实不太套路化，可以看到前面的所有题目，都是对<code>window</code> 操作之后，再做<code>while</code>。代码上这道题是相反的，但是逻辑上，同样也是先把<code>num[j]</code>放进去，但是因为这里用的是<code>set</code>，所以要在后面放入<code>num[j]</code>。</p>
 <h1 id="滑动窗固定">滑动窗固定</h1>
 <h2 id="643-子数组最大平均数-i"><a href="https://leetcode-cn.com/problems/maximum-average-subarray-i/" target="_blank" rel="noopener noreffer ">643. 子数组最大平均数 I</a></h2>
-<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
     <div class="code-header language-python">
         <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
         <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
@@ -313,7 +313,7 @@
 <h2 id="感想-4">感想</h2>
 <p>一道简单题，但是要注意这里滑动窗口一开始就初始化了前k个。</p>
 <h2 id="1208-尽可能使字符串相等"><a href="https://leetcode-cn.com/problems/get-equal-substrings-within-budget/" target="_blank" rel="noopener noreffer ">1208. 尽可能使字符串相等</a></h2>
-<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
     <div class="code-header language-python">
         <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
         <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
@@ -334,7 +334,7 @@
 <p>看到子字符串，要想到可能可以用到滑动窗。如果不知道能用滑动窗，感觉还是挺难写出来的。</p>
 <h2 id="剑指-offer-59---i-滑动窗口的最大值"><a href="https://leetcode-cn.com/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/" target="_blank" rel="noopener noreffer ">剑指 Offer 59 - I. 滑动窗口的最大值</a></h2>
 <p>典型的固定长度的滑动窗，并且是出题频率最高的。与其说是滑动窗口，其实是单调队列。</p>
-<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
     <div class="code-header language-python">
         <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
         <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
@@ -382,7 +382,7 @@
 <div id="comments"></div></article></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

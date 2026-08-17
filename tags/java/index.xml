@@ -3,11 +3,12 @@
         <title>Java - 标签 - 草祭</title>
         <link>https://yyqx.online/tags/java/</link>
         <description>Java - 标签 - 草祭</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 04 Jun 2020 13:43:41 &#43;0800</lastBuildDate><atom:link href="https://yyqx.online/tags/java/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
+            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Thu, 04 Jun 2020 13:43:41 &#43;0800</lastBuildDate><atom:link href="https://yyqx.online/tags/java/" rel="self" type="application/rss+xml" /><item>
     <title>Android Studio上使用JNI</title>
     <link>https://yyqx.online/posts/android_jni/</link>
     <pubDate>Thu, 04 Jun 2020 13:43:41 &#43;0800</pubDate>
-    <author>xxxx</author>
+    <author>swampman@foxmail.com (草祭)</author>
     <guid>https://yyqx.online/posts/android_jni/</guid>
     <description><![CDATA[<h2 id="题记">题记</h2>
 <p>做了一个C程序，需要移植到安卓上，移植到安卓上就需要使用JNI（Java Native Interface），这里做一个Android Studio(AS)上使用JNI的记录。版本和环境信息如下，不同版本的AS操作有较大区别，也只能踩坑试试才知道行不行：</p>]]></description>
