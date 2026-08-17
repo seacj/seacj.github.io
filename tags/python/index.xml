@@ -1,29 +1,104 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>python - 标签 - 草祭</title>
-        <link>https://seacj.github.io/tags/python/</link>
-        <description>python - 标签 - 草祭</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
-            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Thu, 27 May 2021 11:13:18 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
+        <title>Python - 标签 - 草祭</title>
+        <link>http://localhost:1313/tags/python/</link>
+        <description>Python - 标签 - 草祭</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 27 May 2021 11:13:18 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/python/" rel="self" type="application/rss+xml" /><item>
     <title>python中自定义排序函数</title>
-    <link>https://seacj.github.io/posts/%E6%8E%92%E5%BA%8F/</link>
+    <link>http://localhost:1313/posts/%E6%8E%92%E5%BA%8F/</link>
     <pubDate>Thu, 27 May 2021 11:13:18 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E6%8E%92%E5%BA%8F/</guid>
-    <description><![CDATA[不从算法层面讨论，而看看python实现上怎么写。 现有字典 d= {&lsquo;a&rsquo;:24,&lsquo;g&rsquo;:52,&]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E6%8E%92%E5%BA%8F/</guid>
+    <description><![CDATA[<p>不从算法层面讨论，而看看python实现上怎么写。</p>
+<h2 id="现有字典-d-a24g52i12k33请按value值进行排序">现有字典 d= {&lsquo;a&rsquo;:24,&lsquo;g&rsquo;:52,&lsquo;i&rsquo;:12,&lsquo;k&rsquo;:33}请按value值进行排序?</h2>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-python">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span></span></span></code></pre></div></div>
+<h2 id="前k个高频单词-规则1下比较相同时按照规则2排序"><a href="https://leetcode-cn.com/problems/top-k-frequent-words/" target="_blank" rel="noopener noreffer ">前K个高频单词</a> (规则1下比较相同时，按照规则2排序)</h2>
+<p>给一非空的单词列表，返回前 <em>k</em> 个出现次数最多的单词。</p>]]></description>
+</item>
+<item>
     <title>音频重采样简述</title>
-    <link>https://seacj.github.io/posts/%E9%9F%B3%E9%A2%91%E9%87%8D%E9%87%87%E6%A0%B7/</link>
+    <link>http://localhost:1313/posts/%E9%9F%B3%E9%A2%91%E9%87%8D%E9%87%87%E6%A0%B7/</link>
     <pubDate>Fri, 20 Mar 2020 21:28:16 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E9%9F%B3%E9%A2%91%E9%87%8D%E9%87%87%E6%A0%B7/</guid>
-    <description><![CDATA[题记 需要实现一个音频重采样的功能，发现没有我想象的那么简单，这里通过学习python中librosa的代码，来学习一下重采样，这里将以48k]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E9%9F%B3%E9%A2%91%E9%87%8D%E9%87%87%E6%A0%B7/</guid>
+    <description><![CDATA[<h2 id="题记">题记</h2>
+<p>需要实现一个音频重采样的功能，发现没有我想象的那么简单，这里通过学习python中librosa的代码，来学习一下重采样，这里将以48kHz下采样到8kHz为例进行讲解。为方便阅读，本文将采样频率写成<code>sr</code>（sampling rate）。注意本文<strong>并没有最终实现</strong>一个性能很好的重采样程序。</p>]]></description>
+</item>
+<item>
     <title>Python全局锁(GIL)</title>
-    <link>https://seacj.github.io/posts/python%E5%85%A8%E5%B1%80%E9%94%81/</link>
+    <link>http://localhost:1313/posts/python%E5%85%A8%E5%B1%80%E9%94%81/</link>
     <pubDate>Fri, 20 Sep 2019 11:40:17 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/python%E5%85%A8%E5%B1%80%E9%94%81/</guid>
-    <description><![CDATA[题记 使用threading进行多线程处理的时候，运算速度并没有提高。原因在于python中的全局锁(GIL, global interpreter lock). 样例 计算圆周率的程序 代码 点]]></description>
-</item></channel>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/python%E5%85%A8%E5%B1%80%E9%94%81/</guid>
+    <description><![CDATA[<h2 id="题记">题记</h2>
+<p>使用threading进行<strong>多线程</strong>处理的时候，运算速度并没有提高。原因在于python中的全局锁(GIL, global interpreter lock).</p>
+<h1 id="样例">样例</h1>
+<p>计算圆周率的程序</p>
+<h2 id="代码">代码</h2>
+<details>
+<summary>点击展开代码</summary>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-python">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">threading</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">random</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">math</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">print_run_time</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">begin_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ret</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">run_time</span> <span class="o">=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">begin_time</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Run time&#39;</span><span class="p">,</span><span class="n">run_time</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">ret</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">wrapper</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@print_run_time</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">run</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sample_count</span> <span class="o">=</span> <span class="mi">10000000</span> <span class="c1">#采样次数</span>
+</span></span><span class="line"><span class="cl">    <span class="n">inner</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">#落在圆内的点</span>
+</span></span><span class="line"><span class="cl">    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span><span class="n">sample_count</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x_i</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">y_i</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="n">y_i</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">inner</span><span class="o">+=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pi</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="p">(</span><span class="n">inner</span> <span class="o">*</span> <span class="mf">1.0</span><span class="p">)</span><span class="o">/</span><span class="n">sample_count</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="nd">@print_run_time</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">single_run</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;single&#39;</span><span class="p">,</span><span class="s1">&#39;=&#39;</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">run</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl"><span class="nd">@print_run_time</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">multi_run</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;multi&#39;</span><span class="p">,</span><span class="s1">&#39;=&#39;</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ts</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">run</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">multi_run</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">single_run</span><span class="p">()</span></span></span></code></pre></div></div>
+</details>
+<h2 id="结果">结果</h2>
+<blockquote>
+<p>~/dataset/xiaoaiKWS/G/code$ python3 测试多线程速度.py</p>]]></description>
+</item>
+</channel>
 </rss>

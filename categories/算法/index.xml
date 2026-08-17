@@ -1,78 +1,132 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>算法 - 分类 - 草祭</title>
-        <link>https://seacj.github.io/categories/%E7%AE%97%E6%B3%95/</link>
+        <link>http://localhost:1313/categories/%E7%AE%97%E6%B3%95/</link>
         <description>算法 - 分类 - 草祭</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
-            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Sat, 21 Aug 2021 20:22:03 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/categories/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 21 Aug 2021 20:22:03 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
     <title>Leetcode滑动窗口</title>
-    <link>https://seacj.github.io/posts/leetcode%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</link>
+    <link>http://localhost:1313/posts/leetcode%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</link>
     <pubDate>Sat, 21 Aug 2021 20:22:03 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/leetcode%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</guid>
-    <description><![CDATA[题记 滑动窗口每次做完，过一段时间又忘了，所以还是需要在一起总结一下。 模板 参考资料：https://leetcode-cn.com/probl]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/leetcode%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</guid>
+    <description><![CDATA[<h1 id="题记">题记</h1>
+<p>滑动窗口每次做完，过一段时间又忘了，所以还是需要在一起总结一下。</p>
+<h1 id="模板">模板</h1>
+<p>参考资料：https://leetcode-cn.com/problems/longest-substring-with-at-most-two-distinct-characters/solution/hua-dong-chuang-kou-zhen-di-jian-dan-yi-73bii/</p>]]></description>
+</item>
+<item>
     <title>python中自定义排序函数</title>
-    <link>https://seacj.github.io/posts/%E6%8E%92%E5%BA%8F/</link>
+    <link>http://localhost:1313/posts/%E6%8E%92%E5%BA%8F/</link>
     <pubDate>Thu, 27 May 2021 11:13:18 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E6%8E%92%E5%BA%8F/</guid>
-    <description><![CDATA[不从算法层面讨论，而看看python实现上怎么写。 现有字典 d= {&lsquo;a&rsquo;:24,&lsquo;g&rsquo;:52,&]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E6%8E%92%E5%BA%8F/</guid>
+    <description><![CDATA[<p>不从算法层面讨论，而看看python实现上怎么写。</p>
+<h2 id="现有字典-d-a24g52i12k33请按value值进行排序">现有字典 d= {&lsquo;a&rsquo;:24,&lsquo;g&rsquo;:52,&lsquo;i&rsquo;:12,&lsquo;k&rsquo;:33}请按value值进行排序?</h2>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-python">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span></span></span></code></pre></div></div>
+<h2 id="前k个高频单词-规则1下比较相同时按照规则2排序"><a href="https://leetcode-cn.com/problems/top-k-frequent-words/" target="_blank" rel="noopener noreffer ">前K个高频单词</a> (规则1下比较相同时，按照规则2排序)</h2>
+<p>给一非空的单词列表，返回前 <em>k</em> 个出现次数最多的单词。</p>]]></description>
+</item>
+<item>
     <title>Leetcode354俄罗斯套娃</title>
-    <link>https://seacj.github.io/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/</link>
+    <link>http://localhost:1313/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/</link>
     <pubDate>Thu, 04 Mar 2021 11:39:44 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/</guid>
-    <description><![CDATA[俄罗斯套娃题题目 给定一些标记了宽度和高度的信封，宽度和高度以整数对形式 (w, h) 出现。当另一个信封的宽度和高度都比这个信封大的时候，这个信封就可以]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/</guid>
+    <description><![CDATA[<h2 id="俄罗斯套娃题题目">俄罗斯套娃题题目</h2>
+<p>给定一些标记了宽度和高度的信封，宽度和高度以整数对形式 (w, h) 出现。当另一个信封的宽度和高度都比这个信封大的时候，这个信封就可以放进另一个信封里，如同俄罗斯套娃一样。</p>]]></description>
+</item>
+<item>
     <title>回溯算法题</title>
-    <link>https://seacj.github.io/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E9%A2%98/</link>
+    <link>http://localhost:1313/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E9%A2%98/</link>
     <pubDate>Thu, 10 Dec 2020 11:06:09 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E9%A2%98/</guid>
-    <description><![CDATA[题记 一年半之前写了一篇回溯算法的博客, 不过只是简单的了解了一下,真要写题还是写不出来(过了一年半,不会写的题还是不会写),所以再集中刷一下题]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E9%A2%98/</guid>
+    <description><![CDATA[<h2 id="题记">题记</h2>
+<p>一年半之前写了一篇回溯算法的<a href="/posts/%e5%9b%9e%e6%ba%af%e7%ae%97%e6%b3%95" rel="">博客</a>, 不过只是简单的了解了一下,真要写题还是写不出来(过了一年半,不会写的题还是不会写),所以再集中刷一下题.</p>
+<p>回溯法通常应用在树形问题上.</p>]]></description>
+</item>
+<item>
     <title>力扣shell题</title>
-    <link>https://seacj.github.io/posts/%E5%8A%9B%E6%89%A3shell%E9%A2%98/</link>
+    <link>http://localhost:1313/posts/%E5%8A%9B%E6%89%A3shell%E9%A2%98/</link>
     <pubDate>Fri, 27 Nov 2020 15:23:31 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%8A%9B%E6%89%A3shell%E9%A2%98/</guid>
-    <description><![CDATA[192. 统计词频 写一个 bash 脚本以统计一个文本文件 words.txt 中每个单词出现的频率。 1 cat words.txt | xargs -n 1 | sort | uniq -c | sort -nr | awk &#39;{print $2, $1}&#39; xargs 分割字符串 -n 1表示每行输出一个 可以]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E5%8A%9B%E6%89%A3shell%E9%A2%98/</guid>
+    <description><![CDATA[<h1 id="192-统计词频"><a href="https://leetcode-cn.com/problems/word-frequency/" target="_blank" rel="noopener noreffer ">192. 统计词频</a></h1>
+<p>写一个 bash 脚本以统计一个文本文件 <code>words.txt</code> 中每个单词出现的频率。</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-shell">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">cat words.txt <span class="p">|</span> xargs -n <span class="m">1</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> sort -nr <span class="p">|</span> awk <span class="s1">&#39;{print $2, $1}&#39;</span></span></span></code></pre></div></div>
+<p>xargs 分割字符串 -n 1表示每行输出一个 可以加-d指定分割符</p>]]></description>
+</item>
+<item>
     <title>Leetcode数组和字符串</title>
-    <link>https://seacj.github.io/posts/leetcode%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+    <link>http://localhost:1313/posts/leetcode%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
     <pubDate>Mon, 02 Nov 2020 15:04:35 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/leetcode%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
-    <description><![CDATA[题记 看到一个说法，面试考数组、字符串题的频率最高，所以来刷一下这类题。这次根据leetocde提供的教程的顺序来学习。 数组简介 寻找数组的中心]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/leetcode%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+    <description><![CDATA[<h1 id="题记">题记</h1>
+<p>看到一个说法，面试考数组、字符串题的频率最高，所以来刷一下这类题。这次根据leetocde提供的<a href="https://leetcode-cn.com/leetbook/read/array-and-string/yf47s/" target="_blank" rel="noopener noreffer ">教程</a>的顺序来学习。</p>
+<h1 id="数组简介">数组简介</h1>
+<h2 id="寻找数组的中心索引">寻找数组的中心索引</h2>
+<p>定义数组 <strong>中心索引</strong> 的：数组中心索引的左侧所有元素相加的和等于右侧所有元素相加的和，若没有中心索引返回-1。</p>]]></description>
+</item>
+<item>
     <title>Leetcode链表题</title>
-    <link>https://seacj.github.io/posts/leetcode%E9%93%BE%E8%A1%A8/</link>
+    <link>http://localhost:1313/posts/leetcode%E9%93%BE%E8%A1%A8/</link>
     <pubDate>Tue, 13 Oct 2020 20:05:17 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/leetcode%E9%93%BE%E8%A1%A8/</guid>
-    <description><![CDATA[题记 这两天刷了十道链表题，打算做个总结，刚好leetcode也提供了一个系统学习的链接，这里做一个小总结。 双指针技巧 链表题里面双指针、快慢指]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/leetcode%E9%93%BE%E8%A1%A8/</guid>
+    <description><![CDATA[<h1 id="题记">题记</h1>
+<p>这两天刷了十道链表题，打算做个总结，刚好leetcode也提供了一个系统学习的<a href="https://leetcode-cn.com/leetbook/read/linked-list/jbex5/" target="_blank" rel="noopener noreffer ">链接</a>，这里做一个小总结。</p>
+<h1 id="双指针技巧">双指针技巧</h1>
+<p>链表题里面双指针、快慢指针还是经常会用的。</p>]]></description>
+</item>
+<item>
     <title>Leetcode动态规划几道题</title>
-    <link>https://seacj.github.io/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%87%A0%E9%81%93%E9%A2%98/</link>
+    <link>http://localhost:1313/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%87%A0%E9%81%93%E9%A2%98/</link>
     <pubDate>Tue, 06 Oct 2020 20:05:17 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%87%A0%E9%81%93%E9%A2%98/</guid>
-    <description><![CDATA[题记 这一篇是Leetcode动态规划简单题之后的又一个关于动态规划的博客，主要按照leetcode的tag里面写的，可能会不定期更新吧 题目 32]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/leetcode%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%87%A0%E9%81%93%E9%A2%98/</guid>
+    <description><![CDATA[<h1 id="题记">题记</h1>
+<p>这一篇是<a href="/posts/leetcode%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92%e7%ae%80%e5%8d%95%e9%a2%98/" rel="">Leetcode动态规划简单题</a>之后的又一个关于动态规划的博客，主要按照leetcode的tag里面写的，可能会不定期更新吧</p>
+<h1 id="题目">题目</h1>
+<h2 id="32-最长有效括号">32 最长有效括号</h2>
+<p>给定一个只包含 &lsquo;(&rsquo; 和 &lsquo;)&rsquo; 的字符串，找出最长的包含有效括号的子串的长度。</p>
+<p>输入: &ldquo;(()&rdquo;</p>
+<p>输出: 2</p>
+<p>解释: 最长有效括号子串为 &ldquo;()&rdquo;</p>
+<p>注意. &ldquo;()(())&ldquo;有效长度是6。</p>]]></description>
+</item>
+<item>
     <title>Leetcode买卖股票题</title>
-    <link>https://seacj.github.io/posts/leetcode%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E9%A2%98/</link>
+    <link>http://localhost:1313/posts/leetcode%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E9%A2%98/</link>
     <pubDate>Wed, 30 Sep 2020 20:02:56 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/leetcode%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E9%A2%98/</guid>
-    <description><![CDATA[题记 leetcode上刷动态规划有几道股票题，索性就一起刷了。 题目 121 买卖股票的最佳时机 给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/leetcode%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E9%A2%98/</guid>
+    <description><![CDATA[<h1 id="题记">题记</h1>
+<p>leetcode上刷动态规划有几道股票题，索性就一起刷了。</p>
+<h1 id="题目">题目</h1>
+<h2 id="121-买卖股票的最佳时机">121 买卖股票的最佳时机</h2>
+<p>给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。</p>
+<p>如果你最多只允许完成一笔交易（即买入和卖出一支股票一次），设计一个算法来计算你所能获取的最大利润。</p>]]></description>
+</item>
+<item>
     <title>卡塔兰数</title>
-    <link>https://seacj.github.io/posts/%E5%8D%A1%E5%A1%94%E5%85%B0%E6%95%B0/</link>
+    <link>http://localhost:1313/posts/%E5%8D%A1%E5%A1%94%E5%85%B0%E6%95%B0/</link>
     <pubDate>Wed, 23 Sep 2020 15:03:25 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%8D%A1%E5%A1%94%E5%85%B0%E6%95%B0/</guid>
-    <description><![CDATA[题记 卡特兰数（Catalan number）是组合数学中一个常出现在各种计数问题中的数列。 卡塔兰数算是leetcode里面的高频题目了，这里就]]></description>
-</item></channel>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E5%8D%A1%E5%A1%94%E5%85%B0%E6%95%B0/</guid>
+    <description><![CDATA[<h2 id="题记">题记</h2>
+<p>卡特兰数（Catalan number）是<strong>组合数学</strong>中一个常出现在各种<strong>计数问题</strong>中的<strong>数列</strong>。</p>
+<p>卡塔兰数算是leetcode里面的高频题目了，这里就来解决一下卡塔兰数问题。</p>]]></description>
+</item>
+</channel>
 </rss>

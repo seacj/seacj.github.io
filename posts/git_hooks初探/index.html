@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Git hooks初探 - 草祭</title>
-        <meta name="Description" content=""><meta property="og:title" content="Git hooks初探" />
-<meta property="og:description" content="题记 由于打算把博客从Git Pages同步到自己的服务器上，需要借助Git hooks技术，所以来简单学习一下。 Git hooks是什么 Git Hooks就" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://seacj.github.io/posts/git_hooks%E5%88%9D%E6%8E%A2/" />
-<meta property="article:published_time" content="2020-02-29T17:57:41+08:00" />
-<meta property="article:modified_time" content="2020-02-29T17:57:41+08:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Git hooks初探"/>
-<meta name="twitter:description" content="题记 由于打算把博客从Git Pages同步到自己的服务器上，需要借助Git hooks技术，所以来简单学习一下。 Git hooks是什么 Git Hooks就"/>
-<meta name="application-name" content="草祭">
-<meta name="apple-mobile-web-app-title" content="草祭"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <title>Git hooks初探 - 草祭</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/posts/git_hooks%E5%88%9D%E6%8E%A2/">
+  <meta property="og:site_name" content="草祭">
+  <meta property="og:title" content="Git hooks初探">
+  <meta property="og:description" content="题记 由于打算把博客从Git Pages同步到自己的服务器上，需要借助Git hooks技术，所以来简单学习一下。
+Git hooks是什么 Git Hooks就是那些在Git执行特定事件（如commit、push、receive等）后触发运行的脚本（这个脚本可以是shell、python、Ruby等等）。可以类比成一个触发器，当监听到某种事件时，就会自动触发，并执行脚本。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-02-29T17:57:41+08:00">
+    <meta property="article:modified_time" content="2020-02-29T17:57:41+08:00">
+    <meta property="article:tag" content="博客搭建">
+    <meta property="article:tag" content="Git">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Git hooks初探">
+  <meta name="twitter:description" content="题记 由于打算把博客从Git Pages同步到自己的服务器上，需要借助Git hooks技术，所以来简单学习一下。
+Git hooks是什么 Git Hooks就是那些在Git执行特定事件（如commit、push、receive等）后触发运行的脚本（这个脚本可以是shell、python、Ruby等等）。可以类比成一个触发器，当监听到某种事件时，就会自动触发，并执行脚本。">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/git_hooks%E5%88%9D%E6%8E%A2/" /><link rel="prev" href="https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2005/" /><link rel="next" href="https://seacj.github.io/posts/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/git_hooks%E5%88%9D%E6%8E%A2/" /><link rel="prev" href="http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2005/" /><link rel="next" href="http://localhost:1313/posts/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -26,44 +35,56 @@
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/seacj.github.io\/posts\/git_hooks%E5%88%9D%E6%8E%A2\/"
-        },"genre": "posts","keywords": "博客搭建, Git","wordcount":  864 ,
-        "url": "https:\/\/seacj.github.io\/posts\/git_hooks%E5%88%9D%E6%8E%A2\/","datePublished": "2020-02-29T17:57:41+08:00","dateModified": "2020-02-29T17:57:41+08:00","author": {
+            "@id": "http:\/\/localhost:1313\/posts\/git_hooks%E5%88%9D%E6%8E%A2\/"
+        },"genre": "posts","keywords": "博客搭建, Git","wordcount":  837 ,
+        "url": "http:\/\/localhost:1313\/posts\/git_hooks%E5%88%9D%E6%8E%A2\/","datePublished": "2020-02-29T17:57:41+08:00","dateModified": "2020-02-29T17:57:41+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
                 "@type": "Person",
-                "name": "草祭"
+                "name": "xxxx"
             },"description": ""
     }
     </script></head>
-    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="草祭">草祭</a>
+            <a href="/" title="草祭">My cool site</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="我只能为您最多找15篇文章" id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
                         </span>
                     </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                    <i class="fas fa-adjust fa-fw"></i>
-                </a>
-            </div>
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </a></div>
         </div>
     </div>
 </header><header class="mobile" id="header-mobile">
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="草祭">草祭</a>
+                <a href="/" title="草祭">My cool site</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -73,45 +94,39 @@
                     <div class="search mobile" id="search-mobile">
                         <input type="text" placeholder="我只能为您最多找15篇文章" id="search-input-mobile">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
                         </span>
                     </div>
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
                 </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                <i class="fas fa-adjust fa-fw"></i>
+                <i class="fas fa-adjust" aria-hidden="true"></i>
             </a></div>
     </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Git hooks初探</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>草祭</a></span>&nbsp;
-                    <span class="post-category">收录于<a href="/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/">
-                                <i class="far fa-folder fa-fw"></i>编程-ღ-技术
-                            </a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-02-29>2020-02-29</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>约 864 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>预计阅读 2 分钟&nbsp;</div>
-        </div><div class="details toc" id="toc-static">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Git hooks初探</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>xxxx</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/"><i class="far fa-folder" aria-hidden="true"></i>编程-ღ-技术</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2020-02-29">2020-02-29</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;约 837 字&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
@@ -133,7 +148,7 @@
 <h1 id="git-hooks能做什么">Git hooks能做什么</h1>
 <ul>
 <li>
-<p>自定义commit消息：看一下《<a href="https://www.bilibili.com/video/av78681363" target="_blank" rel="noopener noreffer">5分钟实现自定义commit信息～ 秒懂git hooks~</a>》这个视频就懂了。</p>
+<p>自定义commit消息：看一下《<a href="https://www.bilibili.com/video/av78681363" target="_blank" rel="noopener noreffer ">5分钟实现自定义commit信息～ 秒懂git hooks~</a>》这个视频就懂了。</p>
 </li>
 <li>
 <p>自动部署代码</p>
@@ -141,145 +156,111 @@
 </ul>
 <h1 id="git-hooks基本操作">Git hooks基本操作</h1>
 <p>查看Git目录里面的文件结构：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">xxx@xxx:~/xxx/xxx.git$ ls -a
-.  ..  branches  config  description  HEAD  hooks  info  objects  refs
-</code></pre></td></tr></table>
-</div>
-</div><p><code>hooks</code>子目录就是存放hooks的地方。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">xxx@xxx:~/xxx/xxx.git/hooks$ ls -a
-applypatch-msg.sample  fsmonitor-watchman.sample  pre-applypatch.sample  prepare-commit-msg.sample  pre-rebase.sample   update.sample
-commit-msg.sample      post-update.sample         pre-commit.sample      pre-push.sample            pre-receive.sample
-</code></pre></td></tr></table>
-</div>
-</div><p>看这些样例的文件名我们就能知道这些hooks是在什么时候触发的，以<code>prepare-commit-msg.sample</code>为例，这个hooks就是当执行<code>git commit</code>命令时被触发。实际使用的时候，只需要在hooks目录新建``prepare-commit-msg<code>文件，然后在里面编写你的脚本，记得写上</code>!# 你的解释器的位置`</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-unix">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">xxx@xxx:~/xxx/xxx.git$ ls -a
+</span></span><span class="line"><span class="cl">.  ..  branches  config  description  HEAD  hooks  info  objects  refs</span></span></code></pre></div></div>
+<p><code>hooks</code>子目录就是存放hooks的地方。</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-unix">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">xxx@xxx:~/xxx/xxx.git/hooks$ ls -a
+</span></span><span class="line"><span class="cl">applypatch-msg.sample  fsmonitor-watchman.sample  pre-applypatch.sample  prepare-commit-msg.sample  pre-rebase.sample   update.sample
+</span></span><span class="line"><span class="cl">commit-msg.sample      post-update.sample         pre-commit.sample      pre-push.sample            pre-receive.sample</span></span></code></pre></div></div>
+<p>看这些样例的文件名我们就能知道这些hooks是在什么时候触发的，以<code>prepare-commit-msg.sample</code>为例，这个hooks就是当执行<code>git commit</code>命令时被触发。实际使用的时候，只需要在hooks目录新建``prepare-commit-msg<code>文件，然后在里面编写你的脚本，记得写上</code>!# 你的解释器的位置`</p>
 <blockquote>
 <p>以下列举几个不同hooks所能实现的功能：</p>
 <p>pre-commit: 检查每次的commit message是否有拼写错误，或是否符合某种规范。</p>
 <p>pre-receive: 统一上传到远程库的代码的编码。</p>
 <p>post-receive: 每当有新的提交的时候就通知项目成员（可以使用Email或SMS等方式）。</p>
-<p>post-receive: 把代码推送到生产环境。</p>
-</blockquote>
-<p>举一个hooks脚本的例子，例子来源：<a href="https://www.liaohuqiu.net/cn/posts/using-diffrent-user-config-for-different-repository/" target="_blank" rel="noopener noreffer">《git: 提交前强制检查各个项目用户名邮箱设置》</a></p>
+<p>post-receive: 把代码推送到生产环境。</p></blockquote>
+<p>举一个hooks脚本的例子，例子来源：<a href="https://www.liaohuqiu.net/cn/posts/using-diffrent-user-config-for-different-repository/" target="_blank" rel="noopener noreffer ">《git: 提交前强制检查各个项目用户名邮箱设置》</a></p>
 <p>该脚本写在<code>pre-commit</code>文件中, 用途是检查用户名邮箱设置：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="ch">#!/bin/sh</span>
-<span class="c1">#</span>
-<span class="c1"># A git hook to make sure user.email and user.mail in repository  exists before committing</span>
-
-<span class="nb">set</span> <span class="o">-</span><span class="n">e</span>
-
-<span class="n">global_email</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="o">||</span> <span class="n">true</span><span class="p">)</span>
-<span class="n">global_name</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="o">||</span> <span class="n">true</span><span class="p">)</span>
-
-<span class="n">repository_email</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="n">git</span> <span class="n">config</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="o">||</span> <span class="n">true</span><span class="p">)</span>
-<span class="n">repository_name</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="n">git</span> <span class="n">config</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="o">||</span> <span class="n">true</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="p">[</span> <span class="o">-</span><span class="n">z</span> <span class="s2">&#34;$repository_email&#34;</span> <span class="p">]</span> <span class="o">||</span> <span class="p">[</span> <span class="o">-</span><span class="n">z</span> <span class="s2">&#34;$repository_name&#34;</span> <span class="p">]</span> <span class="o">||</span> <span class="p">[</span> <span class="o">-</span><span class="n">n</span> <span class="s2">&#34;$global_email&#34;</span> <span class="p">]</span> <span class="o">||</span> <span class="p">[</span> <span class="o">-</span><span class="n">n</span> <span class="s2">&#34;$global_name&#34;</span> <span class="p">];</span> <span class="n">then</span>
-    <span class="c1"># user.email is empty</span>
-    <span class="n">echo</span> <span class="s2">&#34;ERROR: [pre-commit hook] Aborting commit because user.email or user.name is missing. Configure them for this repository. Make sure not to configure globally.&#34;</span>
-    <span class="nb">exit</span> <span class="mi">1</span>
-<span class="n">fi</span> 
-
-<span class="n">python_file</span><span class="o">=./</span><span class="n">git</span><span class="o">-</span><span class="n">hooks</span><span class="o">.</span><span class="n">py</span>
-<span class="k">if</span> <span class="p">[</span> <span class="o">-</span><span class="n">f</span> <span class="s2">&#34;$python_file&#34;</span> <span class="p">];</span> <span class="n">then</span>
-    <span class="n">python</span> <span class="err">$</span><span class="n">python_file</span> <span class="n">pre</span><span class="o">-</span><span class="n">commit</span>
-<span class="n">fi</span>
-</code></pre></td></tr></table>
-</div>
-</div><h1 id="参考资料">参考资料</h1>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-python">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="ch">#!/bin/sh</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># A git hook to make sure user.email and user.mail in repository  exists before committing</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> <span class="o">-</span><span class="n">e</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">global_email</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="o">||</span> <span class="n">true</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">global_name</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="o">||</span> <span class="n">true</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">repository_email</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="n">git</span> <span class="n">config</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="o">||</span> <span class="n">true</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">repository_name</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="n">git</span> <span class="n">config</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="o">||</span> <span class="n">true</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">[</span> <span class="o">-</span><span class="n">z</span> <span class="s2">&#34;$repository_email&#34;</span> <span class="p">]</span> <span class="o">||</span> <span class="p">[</span> <span class="o">-</span><span class="n">z</span> <span class="s2">&#34;$repository_name&#34;</span> <span class="p">]</span> <span class="o">||</span> <span class="p">[</span> <span class="o">-</span><span class="n">n</span> <span class="s2">&#34;$global_email&#34;</span> <span class="p">]</span> <span class="o">||</span> <span class="p">[</span> <span class="o">-</span><span class="n">n</span> <span class="s2">&#34;$global_name&#34;</span> <span class="p">];</span> <span class="n">then</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># user.email is empty</span>
+</span></span><span class="line"><span class="cl">    <span class="n">echo</span> <span class="s2">&#34;ERROR: [pre-commit hook] Aborting commit because user.email or user.name is missing. Configure them for this repository. Make sure not to configure globally.&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">exit</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">fi</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">python_file</span><span class="o">=./</span><span class="n">git</span><span class="o">-</span><span class="n">hooks</span><span class="o">.</span><span class="n">py</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">[</span> <span class="o">-</span><span class="n">f</span> <span class="s2">&#34;$python_file&#34;</span> <span class="p">];</span> <span class="n">then</span>
+</span></span><span class="line"><span class="cl">    <span class="n">python</span> <span class="err">$</span><span class="n">python_file</span> <span class="n">pre</span><span class="o">-</span><span class="n">commit</span>
+</span></span><span class="line"><span class="cl"><span class="n">fi</span></span></span></code></pre></div></div>
+<h1 id="参考资料">参考资料</h1>
 <ul>
 <li>
-<p>Git Hooks <a href="https://www.jianshu.com/p/79c05c103bdd" target="_blank" rel="noopener noreffer">简书文章</a></p>
+<p>Git Hooks <a href="https://www.jianshu.com/p/79c05c103bdd" target="_blank" rel="noopener noreffer ">简书文章</a></p>
 </li>
 <li>
-<p>Git Hooks实现代码自动部署 <a href="https://blog.hgtweb.com/2019/git-hooks%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/" target="_blank" rel="noopener noreffer">姑苏流白的文章</a></p>
+<p>Git Hooks实现代码自动部署 <a href="https://blog.hgtweb.com/2019/git-hooks%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/" target="_blank" rel="noopener noreffer ">姑苏流白的文章</a></p>
 </li>
 <li>
-<p>HEXO 部署到云服务器详细指南 <a href="https://www.jianshu.com/p/70bf58c48010" target="_blank" rel="noopener noreffer">简书文章</a></p>
+<p>HEXO 部署到云服务器详细指南 <a href="https://www.jianshu.com/p/70bf58c48010" target="_blank" rel="noopener noreffer ">简书文章</a></p>
 </li>
 <li>
-<p>自定义 Git - Git 钩子 <a href="https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90" target="_blank" rel="noopener noreffer">Git community</a></p>
+<p>自定义 Git - Git 钩子 <a href="https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90" target="_blank" rel="noopener noreffer ">Git community</a></p>
 </li>
 </ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>本文于 2020-02-29 更新</span>
-            </div>
-            <div class="post-info-license"></div>
-        </div>
+                <span>更新于 2020-02-29</span>
+            </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://seacj.github.io/posts/git_hooks%E5%88%9D%E6%8E%A2/" data-title="Git hooks初探"><i class="fab fa-weibo fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="http://localhost:1313/posts/git_hooks%E5%88%9D%E6%8E%A2/" data-title="Git hooks初探" data-hashtags="博客搭建,Git"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="http://localhost:1313/posts/git_hooks%E5%88%9D%E6%8E%A2/" data-title="Git hooks初探"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/git_hooks%E5%88%9D%E6%8E%A2/" data-hashtag="博客搭建"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/git_hooks%E5%88%9D%E6%8E%A2/" data-title="Git hooks初探"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://localhost:1313/posts/git_hooks%E5%88%9D%E6%8E%A2/" data-title="Git hooks初探"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/git_hooks%E5%88%9D%E6%8E%A2/" data-title="Git hooks初探"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/posts/git_hooks%E5%88%9D%E6%8E%A2/" data-title="Git hooks初探" data-description=""><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fgit_hooks%25E5%2588%259D%25E6%258E%25A2%2f&amp;text=Git%20hooks%e5%88%9d%e6%8e%a2" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a>,&nbsp;<a href="/tags/git/">Git</a></section>
+        <section class="post-tags"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a>,&nbsp;<a href="/tags/git/">Git</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2005/" class="prev" rel="prev" title="建站历史005"><i class="fas fa-angle-left fa-fw"></i>建站历史005</a>
-            <a href="/posts/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="next" rel="next" title="部署博客到阿里云服务器">部署博客到阿里云服务器<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2005/" class="prev" rel="prev" title="建站历史005"><i class="fas fa-angle-left" aria-hidden="true"></i>建站历史005</a>
+            <a href="/posts/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="next" rel="next" title="部署博客到阿里云服务器">部署博客到阿里云服务器<i class="fas fa-angle-right" aria-hidden="true"></i></a></div>
 </div>
-<div id="comments">
-
-        <script src="//code.tidio.co/qgrdxb76tups4kgrezsz6fwxcvqjbpsh.js"></script></div></article></div>
-            </main><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> <footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.6"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
-                <i class="fas fa-arrow-up fa-fw"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
-                <i class="fas fa-comment fa-fw"></i>
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><style>.lg-toolbar .lg-icon::after { color: #999; }</style><script type="text/javascript">
-    window.config = {"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{},"headerMode":{"desktop":null,"mobile":null},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"QVNQRH3FHN","algoliaIndex":"cj-blog","algoliaSearchKey":"50b1056efeb6f9195818878fca2394e0","highlightTag":"em","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};
-</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/algoliasearch/lite/browser.umd.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script src="/lib/katex/katex.min.js"></script><script src="/lib/katex/contrib/auto-render.min.js"></script><script src="/lib/katex/contrib/copy-tex.min.js"></script><script src="/lib/katex/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"QVNQRH3FHN","algoliaIndex":"cj-blog","algoliaSearchKey":"50b1056efeb6f9195818878fca2394e0","highlightTag":"em","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script src="/js/theme.min.js"></script></body>
 </html>

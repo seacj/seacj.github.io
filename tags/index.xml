@@ -1,78 +1,87 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Tags - 标签 - 草祭</title>
-        <link>https://seacj.github.io/tags/</link>
+        <link>http://localhost:1313/tags/</link>
         <description>Tags - 标签 - 草祭</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
-            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Wed, 05 Jun 2024 22:40:14 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 10 May 2022 09:24:46 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/" rel="self" type="application/rss+xml" /><item>
     <title>C&#43;&#43;</title>
-    <link>https://seacj.github.io/tags/c&#43;&#43;/</link>
-    <pubDate>Wed, 05 Jun 2024 22:40:14 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/tags/c&#43;&#43;/</guid>
+    <link>http://localhost:1313/tags/c&#43;&#43;/</link>
+    <pubDate>Tue, 10 May 2022 09:24:46 &#43;0800</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/tags/c&#43;&#43;/</guid>
     <description><![CDATA[]]></description>
-</item><item>
-    <title>leetcode</title>
-    <link>https://seacj.github.io/tags/leetcode/</link>
+</item>
+<item>
+    <title>Leetcode</title>
+    <link>http://localhost:1313/tags/leetcode/</link>
     <pubDate>Sat, 21 Aug 2021 20:22:03 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/tags/leetcode/</guid>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/tags/leetcode/</guid>
     <description><![CDATA[]]></description>
-</item><item>
+</item>
+<item>
     <title>滑动窗口</title>
-    <link>https://seacj.github.io/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</link>
+    <link>http://localhost:1313/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</link>
     <pubDate>Sat, 21 Aug 2021 20:22:03 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</guid>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</guid>
     <description><![CDATA[]]></description>
-</item><item>
+</item>
+<item>
     <title>算法</title>
-    <link>https://seacj.github.io/tags/%E7%AE%97%E6%B3%95/</link>
+    <link>http://localhost:1313/tags/%E7%AE%97%E6%B3%95/</link>
     <pubDate>Sat, 21 Aug 2021 20:22:03 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/tags/%E7%AE%97%E6%B3%95/</guid>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/tags/%E7%AE%97%E6%B3%95/</guid>
     <description><![CDATA[]]></description>
-</item><item>
-    <title>python</title>
-    <link>https://seacj.github.io/tags/python/</link>
+</item>
+<item>
+    <title>Python</title>
+    <link>http://localhost:1313/tags/python/</link>
     <pubDate>Thu, 27 May 2021 11:13:18 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/tags/python/</guid>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/tags/python/</guid>
     <description><![CDATA[]]></description>
-</item><item>
+</item>
+<item>
     <title>机器学习</title>
-    <link>https://seacj.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+    <link>http://localhost:1313/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
     <pubDate>Wed, 28 Apr 2021 10:35:19 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
     <description><![CDATA[]]></description>
-</item><item>
+</item>
+<item>
     <title>动态规划</title>
-    <link>https://seacj.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+    <link>http://localhost:1313/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
     <pubDate>Thu, 04 Mar 2021 11:39:44 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
     <description><![CDATA[]]></description>
-</item><item>
+</item>
+<item>
     <title>随笔</title>
-    <link>https://seacj.github.io/tags/%E9%9A%8F%E7%AC%94/</link>
+    <link>http://localhost:1313/tags/%E9%9A%8F%E7%AC%94/</link>
     <pubDate>Wed, 03 Feb 2021 17:14:46 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/tags/%E9%9A%8F%E7%AC%94/</guid>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/tags/%E9%9A%8F%E7%AC%94/</guid>
     <description><![CDATA[]]></description>
-</item><item>
-    <title>linux</title>
-    <link>https://seacj.github.io/tags/linux/</link>
+</item>
+<item>
+    <title>“Leetcode&#34;</title>
+    <link>http://localhost:1313/tags/leetcode/</link>
     <pubDate>Fri, 27 Nov 2020 15:23:31 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/tags/linux/</guid>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/tags/leetcode/</guid>
     <description><![CDATA[]]></description>
-</item><item>
-    <title>链表</title>
-    <link>https://seacj.github.io/tags/%E9%93%BE%E8%A1%A8/</link>
-    <pubDate>Tue, 13 Oct 2020 20:05:17 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/tags/%E9%93%BE%E8%A1%A8/</guid>
+</item>
+<item>
+    <title>Linux</title>
+    <link>http://localhost:1313/tags/linux/</link>
+    <pubDate>Fri, 27 Nov 2020 15:23:31 &#43;0800</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/tags/linux/</guid>
     <description><![CDATA[]]></description>
-</item></channel>
+</item>
+</channel>
 </rss>

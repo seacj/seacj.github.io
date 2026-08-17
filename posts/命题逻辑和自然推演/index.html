@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>命题逻辑和自然推演 - 草祭</title>
-        <meta name="Description" content=""><meta property="og:title" content="命题逻辑和自然推演" />
-<meta property="og:description" content="题记 为了严谨地描述一些问题，我们需要一些语言去表达问题中的逻辑结构，这篇博客将讲述其中一种语言——命题逻辑(propositional logic), 声明" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://seacj.github.io/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94/" />
-<meta property="article:published_time" content="2019-09-22T12:19:26+08:00" />
-<meta property="article:modified_time" content="2019-09-22T12:19:26+08:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="命题逻辑和自然推演"/>
-<meta name="twitter:description" content="题记 为了严谨地描述一些问题，我们需要一些语言去表达问题中的逻辑结构，这篇博客将讲述其中一种语言——命题逻辑(propositional logic), 声明"/>
-<meta name="application-name" content="草祭">
-<meta name="apple-mobile-web-app-title" content="草祭"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <title>命题逻辑和自然推演 - 草祭</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94/">
+  <meta property="og:site_name" content="草祭">
+  <meta property="og:title" content="命题逻辑和自然推演">
+  <meta property="og:description" content="题记 为了严谨地描述一些问题，我们需要一些语言去表达问题中的逻辑结构，这篇博客将讲述其中一种语言——命题逻辑(propositional logic),
+声明式语言(Declarative sentences) 命题逻辑是基于声明式(declarative)语句的,即能够判别真假的语句.">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2019-09-22T12:19:26+08:00">
+    <meta property="article:modified_time" content="2019-09-22T12:19:26+08:00">
+    <meta property="article:tag" content="计算机科学中的逻辑学">
+    <meta property="article:tag" content="数学">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="命题逻辑和自然推演">
+  <meta name="twitter:description" content="题记 为了严谨地描述一些问题，我们需要一些语言去表达问题中的逻辑结构，这篇博客将讲述其中一种语言——命题逻辑(propositional logic),
+声明式语言(Declarative sentences) 命题逻辑是基于声明式(declarative)语句的,即能够判别真假的语句.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94/" /><link rel="prev" href="https://seacj.github.io/posts/hugo%E5%8D%9A%E5%AE%A2latex%E6%B8%B2%E6%9F%93/" /><link rel="next" href="https://seacj.github.io/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E7%9A%84%E8%AF%AD%E4%B9%89/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94/" /><link rel="prev" href="http://localhost:1313/posts/hugo%E5%8D%9A%E5%AE%A2latex%E6%B8%B2%E6%9F%93/" /><link rel="next" href="http://localhost:1313/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E7%9A%84%E8%AF%AD%E4%B9%89/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -26,44 +35,56 @@
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/seacj.github.io\/posts\/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94\/"
-        },"genre": "posts","keywords": "计算机科学中的逻辑学, 数学","wordcount":  1699 ,
-        "url": "https:\/\/seacj.github.io\/posts\/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94\/","datePublished": "2019-09-22T12:19:26+08:00","dateModified": "2019-09-22T12:19:26+08:00","author": {
+            "@id": "http:\/\/localhost:1313\/posts\/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94\/"
+        },"genre": "posts","keywords": "计算机科学中的逻辑学, 数学","wordcount":  1702 ,
+        "url": "http:\/\/localhost:1313\/posts\/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94\/","datePublished": "2019-09-22T12:19:26+08:00","dateModified": "2019-09-22T12:19:26+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
                 "@type": "Person",
-                "name": "草祭"
+                "name": "xxxx"
             },"description": ""
     }
     </script></head>
-    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="草祭">草祭</a>
+            <a href="/" title="草祭">My cool site</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="我只能为您最多找15篇文章" id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
                         </span>
                     </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                    <i class="fas fa-adjust fa-fw"></i>
-                </a>
-            </div>
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </a></div>
         </div>
     </div>
 </header><header class="mobile" id="header-mobile">
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="草祭">草祭</a>
+                <a href="/" title="草祭">My cool site</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -73,45 +94,39 @@
                     <div class="search mobile" id="search-mobile">
                         <input type="text" placeholder="我只能为您最多找15篇文章" id="search-input-mobile">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
                         </span>
                     </div>
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
                 </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                <i class="fas fa-adjust fa-fw"></i>
+                <i class="fas fa-adjust" aria-hidden="true"></i>
             </a></div>
     </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">命题逻辑和自然推演</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>草祭</a></span>&nbsp;
-                    <span class="post-category">收录于<a href="/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/">
-                                <i class="far fa-folder fa-fw"></i>编程-ღ-技术
-                            </a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-09-22>2019-09-22</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>约 1699 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>预计阅读 4 分钟&nbsp;</div>
-        </div><div class="details toc" id="toc-static">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">命题逻辑和自然推演</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>xxxx</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/"><i class="far fa-folder" aria-hidden="true"></i>编程-ღ-技术</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2019-09-22">2019-09-22</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;约 1702 字&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
@@ -196,26 +211,26 @@
 </ol>
 <h3 id="structures">Structures</h3>
 <table>
-<thead>
-<tr>
-<th>Example1</th>
-<th>Example2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>公交车晚点</td>
-<td>下雨了</td>
-</tr>
-<tr>
-<td>有出租车</td>
-<td>Jane带伞了</td>
-</tr>
-<tr>
-<td>John迟到了</td>
-<td>Jane淋湿了</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Example1</th>
+          <th>Example2</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>公交车晚点</td>
+          <td>下雨了</td>
+      </tr>
+      <tr>
+          <td>有出租车</td>
+          <td>Jane带伞了</td>
+      </tr>
+      <tr>
+          <td>John迟到了</td>
+          <td>Jane淋湿了</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="formal-argument">Formal argument</h3>
 <p>其实上面的两个问题属于同一个问题，可以用下面的符号来表示.</p>
@@ -239,11 +254,11 @@
 <li>
 <p>sequent : 一种通过前提证明出结果的意图(intension), 相当于一个证明题的提问部分(区别于证明完成之后的结论)<img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://www.zhihu.com/equation?tex=%5CGamma%5Cvdash%5CDelta"
         data-srcset="https://www.zhihu.com/equation?tex=%5CGamma%5Cvdash%5CDelta, https://www.zhihu.com/equation?tex=%5CGamma%5Cvdash%5CDelta 1.5x, https://www.zhihu.com/equation?tex=%5CGamma%5Cvdash%5CDelta 2x"
         data-sizes="auto"
-        alt="sequent"
+        alt="https://www.zhihu.com/equation?tex=%5CGamma%5Cvdash%5CDelta"
         title="sequent" />.</p>
 </li>
 </ul>
@@ -252,7 +267,7 @@
 <p>$$
 \frac{premise \ premise}{conclusion} rule
 $$
-其中上面的&quot;rule&quot;只是指规则的名字，比如某个规则名为&quot;$\wedge i$&rdquo;. 推演规则分类为introduction(用于定义符号)和elimination（用于消去符号，以达到推演的目的）.</p>
+其中上面的&quot;rule&quot;只是指规则的名字，比如某个规则名为&quot;$\wedge i$&quot;. 推演规则分类为introduction(用于定义符号)和elimination（用于消去符号，以达到推演的目的）.</p>
 <h3 id="rules-for-conjunction">Rules for conjunction</h3>
 <ul>
 <li>And-introduction rule</li>
@@ -278,14 +293,14 @@ $$
 \frac{\neg \neg \phi}{\phi} \neg \neg e
 $$</li>
 </ul>
-<p>现在我们用上面的规则就可以解下面这道题目了(第三行&quot;$\neg \neg i \ 1$&quot;的意思是根据规则&quot;$\neg \neg i$&quot;和第一行的p，后面同理).
+<p>现在我们用上面的规则就可以解下面这道题目了(第三行&quot;$\neg \neg i \ 1$&ldquo;的意思是根据规则&rdquo;$\neg \neg i$&ldquo;和第一行的p，后面同理).
 <img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://ae01.alicdn.com/kf/H911fe87c6cbe44b58144128d1ff323bcg.jpg"
         data-srcset="https://ae01.alicdn.com/kf/H911fe87c6cbe44b58144128d1ff323bcg.jpg, https://ae01.alicdn.com/kf/H911fe87c6cbe44b58144128d1ff323bcg.jpg 1.5x, https://ae01.alicdn.com/kf/H911fe87c6cbe44b58144128d1ff323bcg.jpg 2x"
         data-sizes="auto"
-        alt="例题1"
+        alt="https://ae01.alicdn.com/kf/H911fe87c6cbe44b58144128d1ff323bcg.jpg"
         title="例题1" /></p>
 <h3 id="rules-of-implication">Rules of implication</h3>
 <ul>
@@ -293,11 +308,11 @@ $$</li>
 这里使用到<strong>假设</strong>的方法，用方框框住的区域为假设区域，假设的内容只在方框内有效, 方框内可以使用方框外的信息.
 <img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://ae01.alicdn.com/kf/Haa71aeef733f4351b552e32b75941c24H.jpg"
         data-srcset="https://ae01.alicdn.com/kf/Haa71aeef733f4351b552e32b75941c24H.jpg, https://ae01.alicdn.com/kf/Haa71aeef733f4351b552e32b75941c24H.jpg 1.5x, https://ae01.alicdn.com/kf/Haa71aeef733f4351b552e32b75941c24H.jpg 2x"
         data-sizes="auto"
-        alt="implies introduction"
+        alt="https://ae01.alicdn.com/kf/Haa71aeef733f4351b552e32b75941c24H.jpg"
         title="implies introduction" /></li>
 <li>Implies-elimination rule
 $$
@@ -311,11 +326,11 @@ $$</li>
 <h3 id="rules-of-disjunction">Rules of disjunction</h3>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://ae01.alicdn.com/kf/Hfb7cd4844c4345799f21cb8e4b58ba35a.jpg"
         data-srcset="https://ae01.alicdn.com/kf/Hfb7cd4844c4345799f21cb8e4b58ba35a.jpg, https://ae01.alicdn.com/kf/Hfb7cd4844c4345799f21cb8e4b58ba35a.jpg 1.5x, https://ae01.alicdn.com/kf/Hfb7cd4844c4345799f21cb8e4b58ba35a.jpg 2x"
         data-sizes="auto"
-        alt="Rules of disjunction"
+        alt="https://ae01.alicdn.com/kf/Hfb7cd4844c4345799f21cb8e4b58ba35a.jpg"
         title="Rules of disjunction" /></p>
 <h3 id="rules-of-negation">Rules of negation</h3>
 <p>为了定义否命题(注意前面只是定义了double negation)，需要引入<strong>contradiction</strong>（矛盾）来完备自然推演这套规则.
@@ -324,11 +339,11 @@ Contradictions are expressions of the form $\neg \phi \wedge \phi$ or $\phi \wed
 <p>(Note that $p \wedge \neg p \vdash q$ is valid. 可以理解成如果你连矛盾的事情都能推出来, 还有什么推不出来呢,。但是注意这样只是便于理解，要记住符号本身没有任何意义.)</p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://ae01.alicdn.com/kf/H1e62389be32342fbb03fc825c8fcecb9L.jpg"
         data-srcset="https://ae01.alicdn.com/kf/H1e62389be32342fbb03fc825c8fcecb9L.jpg, https://ae01.alicdn.com/kf/H1e62389be32342fbb03fc825c8fcecb9L.jpg 1.5x, https://ae01.alicdn.com/kf/H1e62389be32342fbb03fc825c8fcecb9L.jpg 2x"
         data-sizes="auto"
-        alt="Negation-introduction"
+        alt="https://ae01.alicdn.com/kf/H1e62389be32342fbb03fc825c8fcecb9L.jpg"
         title="Negation-introduction" /></p>
 <ul>
 <li>Bottom-elimination 即
@@ -343,62 +358,59 @@ $$</li>
 <h1 id="例题">例题</h1>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://ae01.alicdn.com/kf/He5ba13c74b584491af639e8c48da4723m.jpg"
         data-srcset="https://ae01.alicdn.com/kf/He5ba13c74b584491af639e8c48da4723m.jpg, https://ae01.alicdn.com/kf/He5ba13c74b584491af639e8c48da4723m.jpg 1.5x, https://ae01.alicdn.com/kf/He5ba13c74b584491af639e8c48da4723m.jpg 2x"
         data-sizes="auto"
-        alt="例题2"
+        alt="https://ae01.alicdn.com/kf/He5ba13c74b584491af639e8c48da4723m.jpg"
         title="例题2" /></p>
 <h1 id="总结">总结</h1>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://ae01.alicdn.com/kf/H6fd629422cb84578a76578ce98e7cdc01.jpg"
         data-srcset="https://ae01.alicdn.com/kf/H6fd629422cb84578a76578ce98e7cdc01.jpg, https://ae01.alicdn.com/kf/H6fd629422cb84578a76578ce98e7cdc01.jpg 1.5x, https://ae01.alicdn.com/kf/H6fd629422cb84578a76578ce98e7cdc01.jpg 2x"
         data-sizes="auto"
-        alt="自然推演规则"
+        alt="https://ae01.alicdn.com/kf/H6fd629422cb84578a76578ce98e7cdc01.jpg"
         title="自然推演规则" /></p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>本文于 2019-09-22 更新</span>
-            </div>
-            <div class="post-info-license"></div>
-        </div>
+                <span>更新于 2019-09-22</span>
+            </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://seacj.github.io/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94/" data-title="命题逻辑和自然推演"><i class="fab fa-weibo fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="http://localhost:1313/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94/" data-title="命题逻辑和自然推演" data-hashtags="计算机科学中的逻辑学,数学"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="http://localhost:1313/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94/" data-title="命题逻辑和自然推演"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94/" data-hashtag="计算机科学中的逻辑学"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94/" data-title="命题逻辑和自然推演"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://localhost:1313/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94/" data-title="命题逻辑和自然推演"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94/" data-title="命题逻辑和自然推演"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94/" data-title="命题逻辑和自然推演" data-description=""><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f%25E5%2591%25BD%25E9%25A2%2598%25E9%2580%25BB%25E8%25BE%2591%25E5%2592%258C%25E8%2587%25AA%25E7%2584%25B6%25E6%258E%25A8%25E6%25BC%2594%2f&amp;text=%e5%91%bd%e9%a2%98%e9%80%bb%e8%be%91%e5%92%8c%e8%87%aa%e7%84%b6%e6%8e%a8%e6%bc%94" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%80%BB%E8%BE%91%E5%AD%A6/">计算机科学中的逻辑学</a>,&nbsp;<a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a></section>
+        <section class="post-tags"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%80%BB%E8%BE%91%E5%AD%A6/">计算机科学中的逻辑学</a>,&nbsp;<a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/hugo%E5%8D%9A%E5%AE%A2latex%E6%B8%B2%E6%9F%93/" class="prev" rel="prev" title="Hugo博客LaTeX渲染"><i class="fas fa-angle-left fa-fw"></i>Hugo博客LaTeX渲染</a>
-            <a href="/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E7%9A%84%E8%AF%AD%E4%B9%89/" class="next" rel="next" title="命题逻辑的语义">命题逻辑的语义<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/hugo%E5%8D%9A%E5%AE%A2latex%E6%B8%B2%E6%9F%93/" class="prev" rel="prev" title="Hugo博客LaTeX渲染"><i class="fas fa-angle-left" aria-hidden="true"></i>Hugo博客LaTeX渲染</a>
+            <a href="/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E7%9A%84%E8%AF%AD%E4%B9%89/" class="next" rel="next" title="命题逻辑的语义">命题逻辑的语义<i class="fas fa-angle-right" aria-hidden="true"></i></a></div>
 </div>
-<div id="comments">
-
-        <script src="//code.tidio.co/qgrdxb76tups4kgrezsz6fwxcvqjbpsh.js"></script></div></article></div>
-            </main><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> <footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.6"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
-                <i class="fas fa-arrow-up fa-fw"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
-                <i class="fas fa-comment fa-fw"></i>
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><style>.lg-toolbar .lg-icon::after { color: #999; }</style><script type="text/javascript">
-    window.config = {"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{},"headerMode":{"desktop":null,"mobile":null},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"QVNQRH3FHN","algoliaIndex":"cj-blog","algoliaSearchKey":"50b1056efeb6f9195818878fca2394e0","highlightTag":"em","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};
-</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/algoliasearch/lite/browser.umd.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script src="/lib/katex/katex.min.js"></script><script src="/lib/katex/contrib/auto-render.min.js"></script><script src="/lib/katex/contrib/copy-tex.min.js"></script><script src="/lib/katex/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"QVNQRH3FHN","algoliaIndex":"cj-blog","algoliaSearchKey":"50b1056efeb6f9195818878fca2394e0","highlightTag":"em","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script src="/js/theme.min.js"></script></body>
 </html>

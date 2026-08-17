@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>记一次Ubuntu图形化界面配置 - 草祭</title>
-        <meta name="Description" content=""><meta property="og:title" content="记一次Ubuntu图形化界面配置" />
-<meta property="og:description" content="题记 以前配实验室的服务器的时候经常出现各种问题，但是因为又不是自己的服务器，所以不敢乱整，很多问题只要影响不大就将就着用了。不过现在买了个服" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://seacj.github.io/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/" />
-<meta property="article:published_time" content="2020-03-01T15:29:17+08:00" />
-<meta property="article:modified_time" content="2020-03-01T15:29:17+08:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="记一次Ubuntu图形化界面配置"/>
-<meta name="twitter:description" content="题记 以前配实验室的服务器的时候经常出现各种问题，但是因为又不是自己的服务器，所以不敢乱整，很多问题只要影响不大就将就着用了。不过现在买了个服"/>
-<meta name="application-name" content="草祭">
-<meta name="apple-mobile-web-app-title" content="草祭"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <title>记一次Ubuntu图形化界面配置 - 草祭</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/">
+  <meta property="og:site_name" content="草祭">
+  <meta property="og:title" content="记一次Ubuntu图形化界面配置">
+  <meta property="og:description" content="题记 以前配实验室的服务器的时候经常出现各种问题，但是因为又不是自己的服务器，所以不敢乱整，很多问题只要影响不大就将就着用了。不过现在买了个服务器，当然要折腾一下。所以先从远程搭建图形化界面开始吧。这不是教程，只是记录一下我的实验而已，不过应该还是有借鉴价值的，至少先踩一些坑。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-03-01T15:29:17+08:00">
+    <meta property="article:modified_time" content="2020-03-01T15:29:17+08:00">
+    <meta property="article:tag" content="博客搭建">
+    <meta property="article:tag" content="Linux">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="记一次Ubuntu图形化界面配置">
+  <meta name="twitter:description" content="题记 以前配实验室的服务器的时候经常出现各种问题，但是因为又不是自己的服务器，所以不敢乱整，很多问题只要影响不大就将就着用了。不过现在买了个服务器，当然要折腾一下。所以先从远程搭建图形化界面开始吧。这不是教程，只是记录一下我的实验而已，不过应该还是有借鉴价值的，至少先踩一些坑。">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/" /><link rel="prev" href="https://seacj.github.io/posts/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" /><link rel="next" href="https://seacj.github.io/posts/git%E5%AD%A6%E4%B9%A0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/" /><link rel="prev" href="http://localhost:1313/posts/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" /><link rel="next" href="http://localhost:1313/posts/git%E5%AD%A6%E4%B9%A0/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -26,44 +33,56 @@
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/seacj.github.io\/posts\/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2\/"
+            "@id": "http:\/\/localhost:1313\/posts\/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2\/"
         },"genre": "posts","keywords": "博客搭建, linux","wordcount":  1097 ,
-        "url": "https:\/\/seacj.github.io\/posts\/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2\/","datePublished": "2020-03-01T15:29:17+08:00","dateModified": "2020-03-01T15:29:17+08:00","author": {
+        "url": "http:\/\/localhost:1313\/posts\/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2\/","datePublished": "2020-03-01T15:29:17+08:00","dateModified": "2020-03-01T15:29:17+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
                 "@type": "Person",
-                "name": "草祭"
+                "name": "xxxx"
             },"description": ""
     }
     </script></head>
-    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="草祭">草祭</a>
+            <a href="/" title="草祭">My cool site</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="我只能为您最多找15篇文章" id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
                         </span>
                     </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                    <i class="fas fa-adjust fa-fw"></i>
-                </a>
-            </div>
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </a></div>
         </div>
     </div>
 </header><header class="mobile" id="header-mobile">
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="草祭">草祭</a>
+                <a href="/" title="草祭">My cool site</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -73,45 +92,39 @@
                     <div class="search mobile" id="search-mobile">
                         <input type="text" placeholder="我只能为您最多找15篇文章" id="search-input-mobile">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
                         </span>
                     </div>
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
                 </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                <i class="fas fa-adjust fa-fw"></i>
+                <i class="fas fa-adjust" aria-hidden="true"></i>
             </a></div>
     </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">记一次Ubuntu图形化界面配置</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>草祭</a></span>&nbsp;
-                    <span class="post-category">收录于<a href="/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/">
-                                <i class="far fa-folder fa-fw"></i>编程-ღ-技术
-                            </a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-03-01>2020-03-01</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>约 1097 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>预计阅读 3 分钟&nbsp;</div>
-        </div><div class="details toc" id="toc-static">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">记一次Ubuntu图形化界面配置</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>xxxx</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/"><i class="far fa-folder" aria-hidden="true"></i>编程-ღ-技术</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2020-03-01">2020-03-01</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;约 1097 字&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
@@ -130,11 +143,11 @@
 <p>目标是直到下面这个错能消失，后文中<code>连接不上</code>都是指会出现下面这个错误，所有命令都是通过命令行工具(如xshell)进行操作。</p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://pic.downk.cc/item/5e5b68f46127cc0713709c62.jpg"
         data-srcset="https://pic.downk.cc/item/5e5b68f46127cc0713709c62.jpg, https://pic.downk.cc/item/5e5b68f46127cc0713709c62.jpg 1.5x, https://pic.downk.cc/item/5e5b68f46127cc0713709c62.jpg 2x"
         data-sizes="auto"
-        alt="远程连接"
+        alt="https://pic.downk.cc/item/5e5b68f46127cc0713709c62.jpg"
         title="远程连接" /></p>
 <h1 id="实验一-使用ubuntu-desktop">实验一. 使用Ubuntu desktop</h1>
 <p><code>apt-get install ubuntu-desktop</code></p>
@@ -143,11 +156,11 @@
 <p>上面两个命令操作完了之后，在阿里云服务器管理平台，查看<code>获取实例屏幕截图</code>就能看见桌面登陆界面了。</p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://pic.downk.cc/item/5e5b66be6127cc0713705d22.jpg"
         data-srcset="https://pic.downk.cc/item/5e5b66be6127cc0713705d22.jpg, https://pic.downk.cc/item/5e5b66be6127cc0713705d22.jpg 1.5x, https://pic.downk.cc/item/5e5b66be6127cc0713705d22.jpg 2x"
         data-sizes="auto"
-        alt="桌面登陆界面，git是我自己创建的用户"
+        alt="https://pic.downk.cc/item/5e5b66be6127cc0713705d22.jpg"
         title="桌面登陆界面，git是我自己创建的用户" /></p>
 <p>到这一步，直接连连接不上，我直接放弃，因为这玩意挺大的，有2个G。<code>apt-get install ubuntu-desktop</code>删除。</p>
 <h1 id="实验二-xrdp">实验二. xrdp</h1>
@@ -160,21 +173,21 @@
 <p>安装xrdp工具后，用windows自带的远程连接居然直接就连过去了。以前自己实验室装的时候，装完xrdp也不能连上。</p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://pic.downk.cc/item/5e5b74596127cc0713724635.jpg"
         data-srcset="https://pic.downk.cc/item/5e5b74596127cc0713724635.jpg, https://pic.downk.cc/item/5e5b74596127cc0713724635.jpg 1.5x, https://pic.downk.cc/item/5e5b74596127cc0713724635.jpg 2x"
         data-sizes="auto"
-        alt="连上了"
+        alt="https://pic.downk.cc/item/5e5b74596127cc0713724635.jpg"
         title="连上了" /></p>
 <p>不过用root账户在输入完账号密码之后，就卡在蓝屏界面了。</p>
 <p>要用自己新建的用户就可以进去，进去之后出现下图的输入密码界面，输入密码之后，点Authenticate，马上这弹窗又弹出来，叫你输入密码，无限循环。</p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://pic.downk.cc/item/5e5b6b9c6127cc071370f4d9.jpg"
         data-srcset="https://pic.downk.cc/item/5e5b6b9c6127cc071370f4d9.jpg, https://pic.downk.cc/item/5e5b6b9c6127cc071370f4d9.jpg 1.5x, https://pic.downk.cc/item/5e5b6b9c6127cc071370f4d9.jpg 2x"
         data-sizes="auto"
-        alt="输入密码无限循环"
+        alt="https://pic.downk.cc/item/5e5b6b9c6127cc071370f4d9.jpg"
         title="输入密码无限循环" /></p>
 <p>感觉可能是因为没有安装图形化界面的原因，所以我先装个图形化界面。</p>
 <p><code>apt-get install vnc4server</code></p>
@@ -182,21 +195,21 @@
 <p><code>apt-get install xubuntu-desktop</code></p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://pic.downk.cc/item/5e5b70dc6127cc071371d52e.jpg"
         data-srcset="https://pic.downk.cc/item/5e5b70dc6127cc071371d52e.jpg, https://pic.downk.cc/item/5e5b70dc6127cc071371d52e.jpg 1.5x, https://pic.downk.cc/item/5e5b70dc6127cc071371d52e.jpg 2x"
         data-sizes="auto"
-        alt="安装xubuntu-desktop"
+        alt="https://pic.downk.cc/item/5e5b70dc6127cc071371d52e.jpg"
         title="安装xubuntu-desktop" /></p>
-<p>查阅了一下<a href="https://www.linuxprobe.com/ubuntu-gdm-lightdm.html" target="_blank" rel="noopener noreffer">相关资料</a>，就直接选gdm3就好了。</p>
+<p>查阅了一下<a href="https://www.linuxprobe.com/ubuntu-gdm-lightdm.html" target="_blank" rel="noopener noreffer ">相关资料</a>，就直接选gdm3就好了。</p>
 <p>重启服务器之后，再连接，外观变了，但是依然还是无限循环登陆。</p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://pic.downk.cc/item/5e5b72dc6127cc0713721850.jpg"
         data-srcset="https://pic.downk.cc/item/5e5b72dc6127cc0713721850.jpg, https://pic.downk.cc/item/5e5b72dc6127cc0713721850.jpg 1.5x, https://pic.downk.cc/item/5e5b72dc6127cc0713721850.jpg 2x"
         data-sizes="auto"
-        alt="依然无限循环"
+        alt="https://pic.downk.cc/item/5e5b72dc6127cc0713721850.jpg"
         title="依然无限循环" /></p>
 <p>然后我搜到了解决方案：</p>
 <blockquote>
@@ -216,57 +229,53 @@
 <p>保存重启ubuntu</p>
 <p>————————————————</p>
 <p>版权声明：本文为CSDN博主「samtaoys」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/samtaoys/article/details/91042262</p>
-</blockquote>
+原文链接：https://blog.csdn.net/samtaoys/article/details/91042262</p></blockquote>
 <p>设置好就可以登陆进去了。</p>
 <p>用起来很卡顿，虽然我知道服务器配置很低但也不至于这样，cpu和内存占用都不高，应该是远程配置的问题。找到解决方法了：</p>
-<p><a href="https://www.ivpser.com/windows-smooth/">https://www.ivpser.com/windows-smooth/</a></p>
+<p><a href="https://www.ivpser.com/windows-smooth/" target="_blank" rel="noopener noreffer ">https://www.ivpser.com/windows-smooth/</a></p>
 <p>调整分辨率和色彩之类的参数之后，就变柔顺了。</p>
 <h1 id="参考资料">参考资料</h1>
 <ul>
-<li>xrdp和vnc之间区别+xrdp完美实现Windows远程访问Ubuntu 16.04 <a href="https://www.linuxidc.com/Linux/2017-09/147112.htm">https://www.linuxidc.com/Linux/2017-09/147112.htm</a></li>
+<li>xrdp和vnc之间区别+xrdp完美实现Windows远程访问Ubuntu 16.04 <a href="https://www.linuxidc.com/Linux/2017-09/147112.htm" target="_blank" rel="noopener noreffer ">https://www.linuxidc.com/Linux/2017-09/147112.htm</a></li>
 </ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>本文于 2020-03-01 更新</span>
-            </div>
-            <div class="post-info-license"></div>
-        </div>
+                <span>更新于 2020-03-01</span>
+            </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://seacj.github.io/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/" data-title="记一次Ubuntu图形化界面配置"><i class="fab fa-weibo fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="http://localhost:1313/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/" data-title="记一次Ubuntu图形化界面配置" data-hashtags="博客搭建,linux"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="http://localhost:1313/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/" data-title="记一次Ubuntu图形化界面配置"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/" data-hashtag="博客搭建"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/" data-title="记一次Ubuntu图形化界面配置"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://localhost:1313/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/" data-title="记一次Ubuntu图形化界面配置"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/" data-title="记一次Ubuntu图形化界面配置"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/" data-title="记一次Ubuntu图形化界面配置" data-description=""><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f%25E9%2585%258D%25E7%25BD%25AE%25E9%2598%25BF%25E9%2587%258C%25E4%25BA%2591%25E6%259C%258D%25E5%258A%25A1%25E5%2599%25A8%25E5%259B%25BE%25E5%25BD%25A2%25E5%258C%2596%25E7%2595%258C%25E9%259D%25A2%2f&amp;text=%e8%ae%b0%e4%b8%80%e6%ac%a1Ubuntu%e5%9b%be%e5%bd%a2%e5%8c%96%e7%95%8c%e9%9d%a2%e9%85%8d%e7%bd%ae" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a>,&nbsp;<a href="/tags/linux/">linux</a></section>
+        <section class="post-tags"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a>,&nbsp;<a href="/tags/linux/">Linux</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="prev" rel="prev" title="部署博客到阿里云服务器"><i class="fas fa-angle-left fa-fw"></i>部署博客到阿里云服务器</a>
-            <a href="/posts/git%E5%AD%A6%E4%B9%A0/" class="next" rel="next" title="Git学习">Git学习<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="prev" rel="prev" title="部署博客到阿里云服务器"><i class="fas fa-angle-left" aria-hidden="true"></i>部署博客到阿里云服务器</a>
+            <a href="/posts/git%E5%AD%A6%E4%B9%A0/" class="next" rel="next" title="Git学习">Git学习<i class="fas fa-angle-right" aria-hidden="true"></i></a></div>
 </div>
-<div id="comments">
-
-        <script src="//code.tidio.co/qgrdxb76tups4kgrezsz6fwxcvqjbpsh.js"></script></div></article></div>
-            </main><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> <footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.6"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
-                <i class="fas fa-arrow-up fa-fw"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
-                <i class="fas fa-comment fa-fw"></i>
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><style>.lg-toolbar .lg-icon::after { color: #999; }</style><script type="text/javascript">
-    window.config = {"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{},"headerMode":{"desktop":null,"mobile":null},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"QVNQRH3FHN","algoliaIndex":"cj-blog","algoliaSearchKey":"50b1056efeb6f9195818878fca2394e0","highlightTag":"em","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};
-</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/algoliasearch/lite/browser.umd.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script src="/lib/katex/katex.min.js"></script><script src="/lib/katex/contrib/auto-render.min.js"></script><script src="/lib/katex/contrib/copy-tex.min.js"></script><script src="/lib/katex/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"QVNQRH3FHN","algoliaIndex":"cj-blog","algoliaSearchKey":"50b1056efeb6f9195818878fca2394e0","highlightTag":"em","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script src="/js/theme.min.js"></script></body>
 </html>

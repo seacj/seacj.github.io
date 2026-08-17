@@ -1,78 +1,179 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>随笔-ღ-心得 - 分类 - 草祭</title>
-        <link>https://seacj.github.io/categories/%E9%9A%8F%E7%AC%94-%E1%83%A6-%E5%BF%83%E5%BE%97/</link>
+        <link>http://localhost:1313/categories/%E9%9A%8F%E7%AC%94-%E1%83%A6-%E5%BF%83%E5%BE%97/</link>
         <description>随笔-ღ-心得 - 分类 - 草祭</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
-            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Wed, 03 Feb 2021 17:14:46 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/categories/%E9%9A%8F%E7%AC%94-%E1%83%A6-%E5%BF%83%E5%BE%97/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 03 Feb 2021 17:14:46 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E9%9A%8F%E7%AC%94-%E1%83%A6-%E5%BF%83%E5%BE%97/" rel="self" type="application/rss+xml" /><item>
     <title>随笔20210203</title>
-    <link>https://seacj.github.io/posts/%E9%9A%8F%E7%AC%9420210203/</link>
+    <link>http://localhost:1313/posts/%E9%9A%8F%E7%AC%9420210203/</link>
     <pubDate>Wed, 03 Feb 2021 17:14:46 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E9%9A%8F%E7%AC%9420210203/</guid>
-    <description><![CDATA[归根结底，之所以熬夜，只是不再期待明天而已 但是现在，我想明天早上，去买一份肠粉当作早餐，如果有豆浆或者绿豆沙，我要买一杯 现在天气很好，我要出]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E9%9A%8F%E7%AC%9420210203/</guid>
+    <description><![CDATA[<p>归根结底，之所以熬夜，只是不再期待明天而已</p>
+<p>但是现在，我想明天早上，去买一份肠粉当作早餐，如果有豆浆或者绿豆沙，我要买一杯</p>
+<p>现在天气很好，我要出门，买两斤15块一斤的油炸鸡锁骨了</p>]]></description>
+</item>
+<item>
     <title>咲良田的思想实验</title>
-    <link>https://seacj.github.io/posts/%E5%92%B2%E8%89%AF%E7%94%B0%E7%9A%84%E6%80%9D%E6%83%B3%E5%AE%9E%E9%AA%8C/</link>
+    <link>http://localhost:1313/posts/%E5%92%B2%E8%89%AF%E7%94%B0%E7%9A%84%E6%80%9D%E6%83%B3%E5%AE%9E%E9%AA%8C/</link>
     <pubDate>Sat, 25 Jul 2020 12:18:27 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%92%B2%E8%89%AF%E7%94%B0%E7%9A%84%E6%80%9D%E6%83%B3%E5%AE%9E%E9%AA%8C/</guid>
-    <description><![CDATA[题记 这几天看完了重启咲良田 ，毫无疑问的优秀作品，虽然理清里面的所有事件的逻辑可能还需要思考思考，不过里面最吸引我的地方还是这部番提出的各种思]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E5%92%B2%E8%89%AF%E7%94%B0%E7%9A%84%E6%80%9D%E6%83%B3%E5%AE%9E%E9%AA%8C/</guid>
+    <description><![CDATA[<h2 id="题记">题记</h2>
+<p>这几天看完了<a href="https://www.bilibili.com/bangumi/media/md28226651/" target="_blank" rel="noopener noreffer "><strong>重启咲良田</strong></a> ，毫无疑问的优秀作品，虽然理清里面的所有事件的逻辑可能还需要思考思考，不过里面最吸引我的地方还是这部番提出的各种思想实验，更难能可贵的是剧情与这些思想实验完美的契合，而不是故弄玄虚或者故作深沉的处理，于是想记录一下这部作品里面我印象深刻思想实验。</p>]]></description>
+</item>
+<item>
     <title>2020年4月4日举国哀悼</title>
-    <link>https://seacj.github.io/posts/2020%E5%B9%B44%E6%9C%884%E6%97%A5%E4%B8%BE%E5%9B%BD%E5%93%80%E6%82%BC/</link>
+    <link>http://localhost:1313/posts/2020%E5%B9%B44%E6%9C%884%E6%97%A5%E4%B8%BE%E5%9B%BD%E5%93%80%E6%82%BC/</link>
     <pubDate>Sat, 04 Apr 2020 17:31:28 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/2020%E5%B9%B44%E6%9C%884%E6%97%A5%E4%B8%BE%E5%9B%BD%E5%93%80%E6%82%BC/</guid>
-    <description><![CDATA[“人死了，就变成一个星星。” “干嘛变成星星呀？” “给走夜道儿的人照个亮儿……” ——史铁生 我们从古以来，就有埋头苦干的人，又拼命硬干的人，有为]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/2020%E5%B9%B44%E6%9C%884%E6%97%A5%E4%B8%BE%E5%9B%BD%E5%93%80%E6%82%BC/</guid>
+    <description><![CDATA[<div id="html5-musicplayer" song-avatar="https://ae01.alicdn.com/kf/H39a514bf0d4f4519a1f7a1c64fec4aaed.jpg" song-title="Farewell" song-author=" Zachary Bruno" song-src="https://link.hhtjim.com/163/32320832.mp3" song-lrc="[00:00.00] " ></div>
+<script src="/html5-musicplayer/index.js"></script>
+<p></p>
+<ul>
+<li>
+<p>“人死了，就变成一个星星。” “干嘛变成星星呀？” “给走夜道儿的人照个亮儿……” ——史铁生</p>
+</li>
+<li>
+<p>我们从古以来，就有埋头苦干的人，又拼命硬干的人，有为民请命的人，有舍身求法的人，&hellip;&hellip;虽是等于为帝王将相作家谱的所谓“正史”，也往往掩不住他们的光耀，这就是中国的脊梁。 ——鲁迅《且介亭杂文》</p>]]></description>
+</item>
+<item>
     <title>奇奇怪怪的梦</title>
-    <link>https://seacj.github.io/posts/%E5%A5%87%E5%A5%87%E6%80%AA%E6%80%AA%E7%9A%84%E6%A2%A6/</link>
+    <link>http://localhost:1313/posts/%E5%A5%87%E5%A5%87%E6%80%AA%E6%80%AA%E7%9A%84%E6%A2%A6/</link>
     <pubDate>Sun, 15 Mar 2020 12:29:24 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%A5%87%E5%A5%87%E6%80%AA%E6%80%AA%E7%9A%84%E6%A2%A6/</guid>
-    <description><![CDATA[题记 做了一个梦，这个梦非常神奇所以赶紧趁没忘记记下来。 今天的梦 我坐地铁和朋友A（感觉好像是wsh，但是他家不住那附近呀）回家，从哪里回去的就]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E5%A5%87%E5%A5%87%E6%80%AA%E6%80%AA%E7%9A%84%E6%A2%A6/</guid>
+    <description><![CDATA[<h2 id="题记">题记</h2>
+<p>做了一个梦，这个梦非常神奇所以赶紧趁没忘记记下来。</p>
+<h1 id="今天的梦">今天的梦</h1>
+<p>我坐地铁和朋友A（感觉好像是wsh，但是他家不住那附近呀）回家，从哪里回去的就不知道了，结果出地铁的时候居然一出去就是东方半岛门口的那座天桥，然后朋友A就出地铁走了，然后我这时候要转地铁，结果坐扶手电梯的时候做错了方向，不过很快又坐回来了，不过在梦里折腾了一下。然后我这时候想看地铁线路图，看怎么转车，这个时候，一个朋友（醒来之后，意识到这个朋友是我在<strong>以前的一个梦</strong>里交的朋友）过来，说好巧啊，居然碰见了，他家住<strong>赤湾</strong>（我明明对赤湾这地方一点印象都没有，只知道赤湾应该是个地铁站的名字，不知道为啥会会有这种梦的设定），然后我这时候说我眼镜坏了（又好像是没戴眼镜）帮我看一下地铁线路图，然后我就一直说帮我看地铁线路图，也一边看我现在在哪的位置，但是找半天都没找到，他就一直在捣乱，一下说我们在这边，一下说我们在那边。</p>]]></description>
+</item>
+<item>
     <title>立个flag</title>
-    <link>https://seacj.github.io/posts/%E7%AB%8B%E4%B8%AAflag/</link>
+    <link>http://localhost:1313/posts/%E7%AB%8B%E4%B8%AAflag/</link>
     <pubDate>Sun, 23 Feb 2020 17:34:30 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E7%AB%8B%E4%B8%AAflag/</guid>
-    <description><![CDATA[看到朋友圈有个什么一生必须完成的100件事情的小程序，有位同学发了个文字，大致意思就是自己的人生更加精彩，虽然所谓的一生必做的100件事情没]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E7%AB%8B%E4%B8%AAflag/</guid>
+    <description><![CDATA[<p>看到朋友圈有个什么一生必须完成的100件事情的小程序，有位同学发了个文字，大致意思就是<code>自己的人生更加精彩，虽然所谓的一生必做的100件事情没做多少</code>，不过他勾选的比我多多了喂。</p>]]></description>
+</item>
+<item>
     <title>好天气</title>
-    <link>https://seacj.github.io/posts/%E5%A5%BD%E5%A4%A9%E6%B0%94/</link>
+    <link>http://localhost:1313/posts/%E5%A5%BD%E5%A4%A9%E6%B0%94/</link>
     <pubDate>Mon, 17 Feb 2020 16:28:57 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%A5%BD%E5%A4%A9%E6%B0%94/</guid>
-    <description><![CDATA[​ 今天天气终于好了，阳光明媚，舒服 https://www.nbfox.com/wp-content/uploads/2020/03/11/20200311190119-5e69357f0ef97.jpg]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E5%A5%BD%E5%A4%A9%E6%B0%94/</guid>
+    <description><![CDATA[<p>​	今天天气终于好了，阳光明媚，舒服</p>
+<p><a href="https://www.nbfox.com/wp-content/uploads/2020/03/11/20200311190119-5e69357f0ef97.jpg" target="_blank" rel="noopener noreffer ">https://www.nbfox.com/wp-content/uploads/2020/03/11/20200311190119-5e69357f0ef97.jpg</a></p>]]></description>
+</item>
+<item>
     <title>二零二零年纪实录</title>
-    <link>https://seacj.github.io/posts/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E9%9B%B6%E7%BA%AA%E5%AE%9E%E5%BD%95/</link>
+    <link>http://localhost:1313/posts/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E9%9B%B6%E7%BA%AA%E5%AE%9E%E5%BD%95/</link>
     <pubDate>Wed, 29 Jan 2020 18:02:45 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E9%9B%B6%E7%BA%AA%E5%AE%9E%E5%BD%95/</guid>
-    <description><![CDATA[## 背景 武汉肺炎 时序记录 现在是2020年1月29日，现按时序记录. 地点：武汉 2020年1月1日 无事发生 2020年1月2日19:45 昨晚梦见有个]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E4%BA%8C%E9%9B%B6%E4%BA%8C%E9%9B%B6%E7%BA%AA%E5%AE%9E%E5%BD%95/</guid>
+    <description><![CDATA[<div id="html5-musicplayer" song-avatar="https://ae01.alicdn.com/kf/H39a514bf0d4f4519a1f7a1c64fec4aaed.jpg" song-title="Farewell" song-author=" Zachary Bruno" song-src="https://link.hhtjim.com/163/32320832.mp3" song-lrc="[00:00.00] "></div>
+<script src="/html5-musicplayer/index.js"></script>
+## 背景
+<p><strong>武汉肺炎</strong></p>
+<p></p>
+<p></p>
+<h1 id="时序记录">时序记录</h1>
+<p>现在是2020年1月29日，现按时序记录.</p>
+<p>地点：武汉</p>
+<ul>
+<li>2020年1月1日</li>
+</ul>
+<p>无事发生</p>]]></description>
+</item>
+<item>
     <title>東方半岛</title>
-    <link>https://seacj.github.io/posts/%E6%9D%B1%E6%96%B9%E5%8D%8A%E5%B2%9B/</link>
+    <link>http://localhost:1313/posts/%E6%9D%B1%E6%96%B9%E5%8D%8A%E5%B2%9B/</link>
     <pubDate>Mon, 12 Aug 2019 14:35:36 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E6%9D%B1%E6%96%B9%E5%8D%8A%E5%B2%9B/</guid>
-    <description><![CDATA[上个月写了随便写了一些小学的東西(小学)，这次放假刚好去看了一下。 所以这篇就按照时间顺序记录一下我昨天去逛了一圈拍的照片。 下地铁到木棉湾地铁]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E6%9D%B1%E6%96%B9%E5%8D%8A%E5%B2%9B/</guid>
+    <description><![CDATA[<p>上个月写了随便写了一些小学的東西(<a href="/posts/%e5%b0%8f%e5%ad%a6" rel="">小学</a>)，这次放假刚好去看了一下。<br>
+所以这篇就按照时间顺序记录一下我昨天去逛了一圈拍的照片。<br>
+下地铁到木棉湾地铁站，旁边就是布吉镇政府的楼。</p>
+<p><figure><a class="lightgallery" href="https://ae01.alicdn.com/kf/H0a6be7b50779432799227c3aefdcf7d5a.jpg" title="布吉镇政府大楼" data-thumbnail="https://ae01.alicdn.com/kf/H0a6be7b50779432799227c3aefdcf7d5a.jpg" data-sub-html="<h2>布吉镇政府大楼</h2><p>布吉镇政府大楼</p>]]></description>
+</item>
+<item>
     <title>我的小学</title>
-    <link>https://seacj.github.io/posts/%E5%B0%8F%E5%AD%A6/</link>
+    <link>http://localhost:1313/posts/%E5%B0%8F%E5%AD%A6/</link>
     <pubDate>Wed, 17 Jul 2019 19:06:24 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%B0%8F%E5%AD%A6/</guid>
-    <description><![CDATA[这几天总是想到东方半岛小学 像是外教课的时候会坐在校门口的铁椅上围成一圈， 直线的跑道，跑道旁边的雕刻 小学的楼梯，每一级有一道防滑的突起的横线 只]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E5%B0%8F%E5%AD%A6/</guid>
+    <description><![CDATA[
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="//music.163.com/outchain/player?type=2&id=395479&auto=0&height=66"></iframe>
+这几天总是想到东方半岛小学  
+像是外教课的时候会坐在校门口的铁椅上围成一圈，  
+直线的跑道，跑道旁边的雕刻  
+小学的楼梯，每一级有一道防滑的突起的横线  
+只去过一次的医务室，还是因为额头眉骨那里撞破，
+那次也挺有意思的，出教室被人撞了一下，很痛但是以为没什么问题，用手捂着伤口，完全没有注意到已经在流血了，
+还是老师发现把我带到医务室的，然后又被带去小区的诊所缝了几针  
+铁通装的饮用水  
+小学每层楼是一个圆形的走廊，中间是空心的，从走廊往下看，可以看到一楼的大大的中国地图的贴纸  
+因为小学就在小区里面，所以中午都会回家，中午上学都要排队，等到时间才能进去，排队的时候都会看贴满一整个墙的小小的各国国旗贴纸  
+每周升国旗的时候，站在操场，如果有直升飞机飞过，都会有小小的“骚动”，有一次还看见了滑翔翼  
+小学有两个门，连着两个小区  
+放学了，会玩抓人，我们也叫“123”，因为被抓的人，跑的时候可以说“123”,这样被抓的人就不能动，但是也不能被抓，直到有人来救  
+小区里有3个地方可以玩，我们称它为大滑滑梯，小滑滑梯和健身区  
+偶尔还会去会所，会所就在小学的对面，会所里面还有游泳馆，不知道为什么会所里面总是很凉快，会所有两层但是很多房间都没有使用  
+小区的楼外面贴的主要是红色偏粉色的瓷砖，还有白色的瓷砖  
+我们会在大滑滑梯旁边的草坪玩“猫抓老鼠”，就是在猫不能走进草坪，老鼠可以随便跑，中间还有一个小灌木丛被我们穿行无数次，
+当然践踏草坪是不好的  
+小区的小灌木丛很有特点，绿叶很嫩  
+去朋友家的路上有紫荆花，很漂亮  
+有一个地方有一条小的水沟，旁边有停车位，大概是因为汽油，所以经常可以看到水面有彩虹一样的花纹  
+那时候的天空很蓝  
+晚上会早早的睡觉，  
+十点钟是最晚的睡觉时间，  
+七点还是八点有动漫世界节目，那个时候觉得憨八龟很好看，现在看觉得怎么颜色那么恐怖  
+回家的第一件事情是写作业，有的时候边看作业边写作业  
+LF2和口袋妖怪很好玩  
+流行的悠悠球、四驱车我都买过  
+早餐的包子和放学后的辣条是5毛钱的，早餐的肠粉是两块五的  
+菜市场里面有玩台球的，但是我没有碰过  
+早上能听见清洁员沙沙的扫地声  
+大滑滑梯旁边有课树，很高大，到了某个季节会掉很多小拇指甲大小的黄色叶子  
+健身区有一棵树，好像是槐树，垂着长长的但是非常结实的枝条  
+小区门口往里走有一个很大很粗壮的树，有的时候掉下来的叶子上会有白色的毛一样的東西，不知道是什么  
+小学旁边的单车停车间，从窄窄的通道穿过去，有一个草地的斜坡，跟朋友们抓蟋蟀玩，但是现在变得很怕虫子了  
+小区清洁蟑螂的时候，会往井盖充白色的气，就会有很多蟑螂跑出来，然后过不久就会死掉  
+会跑到屋顶玩，有一栋楼的屋顶跟小的花园一样，种了很多植物  
+我家的屋顶可以看到石芽岭，  
+石芽岭那边以前是没有路的，硬生生把山劈开了，经常有很多人去那里接山泉水，我也去接过  
+六年级毕业的时候摩尔庄园火了，现在密码忘了账号申诉无数次都不给我通过  
+我从四楼搬家搬到十一楼的过程中电梯停电了，被困电梯  
+手指被那个电梯夹过，超疼  
+叠赛车，叠东南西北  
+画画，那时候我真的很喜欢画画  
+小学还有围棋课和葫芦丝课，但是我现在谱不会认，只会我有一只小羊羔  
+喜欢玩积木，乐高积木很好玩，一个人可以玩一天  
+天空真的很蓝  
+晚上大人小孩围在一起打牌  
+很喜欢看郑渊洁的皮皮鲁、雨魔的兽王  
+临近的小区，茂业城、帝景峰、半岛苑、爱琴居  
+最重要的是有非常要好的朋友  
+这次放暑假，回去要多拍几张照片  
+上了大学以后就觉得越来越多的東西不见了  
+像是很难找到一颗很甜的糖果  
+在东方半岛的时候真的很快乐呀  
+<video id="video" controls="" preload="none">
+    <source id="mp4" src="/media/东方半岛校歌.mp4" type="video/mp4">
+</video>]]></description>
+</item>
+<item>
     <title>随笔</title>
-    <link>https://seacj.github.io/posts/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%86%99%E9%9A%8F%E7%AC%94/</link>
+    <link>http://localhost:1313/posts/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%86%99%E9%9A%8F%E7%AC%94/</link>
     <pubDate>Fri, 14 Jun 2019 20:37:23 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%86%99%E9%9A%8F%E7%AC%94/</guid>
-    <description><![CDATA[在分校上初中的时候，我们的语文老师杜双全每周都会要求做一篇随笔，就是类似于作文的東西。 每周随笔题目不限，想些啥都行，就这样写了三年，写满了一]]></description>
-</item></channel>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%86%99%E9%9A%8F%E7%AC%94/</guid>
+    <description><![CDATA[<p>在分校上初中的时候，我们的语文老师杜双全每周都会要求做一篇随笔，就是类似于作文的東西。
+每周随笔题目不限，想些啥都行，就这样写了三年，写满了一个小本子，很有纪念意义。
+在随笔里看过去的自己的所思所想是件很有意思的事情。
+所以现在就在博客里想写了就随便写一些東西，反正也没什么人会看吧。</p>]]></description>
+</item>
+</channel>
 </rss>

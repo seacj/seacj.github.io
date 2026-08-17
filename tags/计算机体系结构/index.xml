@@ -1,15 +1,32 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>计算机体系结构 - 标签 - 草祭</title>
-        <link>https://seacj.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</link>
+        <link>http://localhost:1313/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</link>
         <description>计算机体系结构 - 标签 - 草祭</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
-            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Wed, 18 Sep 2019 09:52:42 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 18 Sep 2019 09:52:42 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" rel="self" type="application/rss+xml" /><item>
     <title>内存层次设计</title>
-    <link>https://seacj.github.io/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%841/</link>
+    <link>http://localhost:1313/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%841/</link>
     <pubDate>Wed, 18 Sep 2019 09:52:42 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%841/</guid>
-    <description><![CDATA[题记 个人觉得计算机体系结构的内容很散，这里就随便记录一些上课内容. Point 现在cpu处理器的速度已经超过内存。多核处理器也加剧了内存的压力. 因为d]]></description>
-</item></channel>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%841/</guid>
+    <description><![CDATA[<h2 id="题记">题记</h2>
+<p>个人觉得计算机体系结构的内容很散，这里就随便记录一些上课内容.</p>
+<h2 id="point">Point</h2>
+<ol>
+<li>现在cpu处理器的速度已经超过内存。多核处理器也加剧了内存的压力.</li>
+<li></li>
+<li>因为disk读取速度慢，所以页的大小要比块的大小大很多.</li>
+<li>寄存器由编译器来管理。如c=a+b，编译器来分配地址，add $1,$2,$3.</li>
+<li></li>
+<li>Hit rate(在内存中找数据，能够在上层存储中找到的比率；即cache/(cache+memory))5和Hit time(RAM access time+Time to determine hit/miss)</li>
+<li>Miss penalty: time to replace a block from lower level, including time to replace in CPU</li>
+<li>在单CPU串行的情况下，Average memory access time=Hit time + Miss rate * Miss penalty. 在多线程等情况下由多种优化策略，降低Miss penalty对速度的影响，而不简单是这个公式.</li>
+<li></li>
+<li></li>
+<li>虚拟地址空间被分块，每一块称之为<code>页(page)</code>，页表(page table)可以通过虚拟地址索引，页表用于从virtual page numbes映射到physical frames.</li>
+</ol>
+<h1 id="参考资料">参考资料</h1>
+<p>主存到Cache直接映射、全相联映射和组相联映射 <a href="https://blog.csdn.net/dongyanxia1000/article/details/53392315" target="_blank" rel="noopener noreffer ">https://blog.csdn.net/dongyanxia1000/article/details/53392315</a></p>]]></description>
+</item>
+</channel>
 </rss>

@@ -1,36 +1,45 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>计算机科学中的逻辑学 - 标签 - 草祭</title>
-        <link>https://seacj.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%80%BB%E8%BE%91%E5%AD%A6/</link>
+        <link>http://localhost:1313/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%80%BB%E8%BE%91%E5%AD%A6/</link>
         <description>计算机科学中的逻辑学 - 标签 - 草祭</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
-            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Sun, 15 Dec 2019 18:07:01 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%80%BB%E8%BE%91%E5%AD%A6/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 15 Dec 2019 18:07:01 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%80%BB%E8%BE%91%E5%AD%A6/" rel="self" type="application/rss+xml" /><item>
     <title>谓词逻辑</title>
-    <link>https://seacj.github.io/posts/%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91/</link>
+    <link>http://localhost:1313/posts/%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91/</link>
     <pubDate>Sun, 15 Dec 2019 18:07:01 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91/</guid>
-    <description><![CDATA[题记 由于有些東西是命题逻辑没办法表示的，所以引出谓词逻辑，需要说明的是不管是命题逻辑也好，谓词逻辑也好，只是逻辑学中被广泛使用的其中的分支而]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91/</guid>
+    <description><![CDATA[<h2 id="题记">题记</h2>
+<p>由于有些東西是命题逻辑没办法表示的，所以引出谓词逻辑，需要说明的是不管是命题逻辑也好，谓词逻辑也好，只是逻辑学中被广泛使用的其中的分支而已，根据实际应用需要可以使用其中的方法，自己创造一种新的逻辑(虽然不容易)也是完全没问题的。</p>]]></description>
+</item>
+<item>
     <title>命题逻辑的语义</title>
-    <link>https://seacj.github.io/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E7%9A%84%E8%AF%AD%E4%B9%89/</link>
+    <link>http://localhost:1313/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E7%9A%84%E8%AF%AD%E4%B9%89/</link>
     <pubDate>Fri, 13 Dec 2019 20:55:38 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E7%9A%84%E8%AF%AD%E4%B9%89/</guid>
-    <description><![CDATA[题记 本来这个系列的博客是打算上一两节课就更新一次，结果一转眼《计算机科学中的逻辑学》这门课已经结课了，打算花两天时间整理一遍，作为记录，也作]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E7%9A%84%E8%AF%AD%E4%B9%89/</guid>
+    <description><![CDATA[<h2 id="题记">题记</h2>
+<p>本来这个系列的博客是打算上一两节课就更新一次，结果一转眼《计算机科学中的逻辑学》这门课已经结课了，打算花两天时间整理一遍，作为记录，也作为复习吧。</p>]]></description>
+</item>
+<item>
     <title>命题逻辑和自然推演</title>
-    <link>https://seacj.github.io/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94/</link>
+    <link>http://localhost:1313/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94/</link>
     <pubDate>Sun, 22 Sep 2019 12:19:26 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94/</guid>
-    <description><![CDATA[题记 为了严谨地描述一些问题，我们需要一些语言去表达问题中的逻辑结构，这篇博客将讲述其中一种语言——命题逻辑(propositional logic), 声明]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91%E5%92%8C%E8%87%AA%E7%84%B6%E6%8E%A8%E6%BC%94/</guid>
+    <description><![CDATA[<h2 id="题记">题记</h2>
+<p>为了严谨地描述一些问题，我们需要一些语言去表达问题中的逻辑结构，这篇博客将讲述其中一种语言——命题逻辑(propositional logic),</p>
+<h1 id="声明式语言declarative-sentences">声明式语言(Declarative sentences)</h1>
+<p>命题逻辑是基于声明式(declarative)语句的,即<strong>能够判别真假</strong>的语句.</p>]]></description>
+</item>
+<item>
     <title>计算机科学中的逻辑学题记</title>
-    <link>https://seacj.github.io/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%80%BB%E8%BE%91%E5%AD%A6/</link>
+    <link>http://localhost:1313/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%80%BB%E8%BE%91%E5%AD%A6/</link>
     <pubDate>Sat, 21 Sep 2019 14:23:03 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%80%BB%E8%BE%91%E5%AD%A6/</guid>
-    <description><![CDATA[题记 上了三周袁梦霆老师的计算机科学中的逻辑学课程，不得不说是一节开拓视野的课程，从逻辑学的角度看待计算机非常有意思。第一节课的时候老师开玩笑]]></description>
-</item></channel>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%AD%E7%9A%84%E9%80%BB%E8%BE%91%E5%AD%A6/</guid>
+    <description><![CDATA[<h2 id="题记">题记</h2>
+<p>上了三周袁梦霆老师的计算机科学中的逻辑学课程，不得不说是一节开拓视野的课程，从逻辑学的角度看待计算机非常有意思。第一节课的时候老师开玩笑的提到了计算机学界里面的鄙视链和编程的三个境界，给我感触很深。</p>]]></description>
+</item>
+</channel>
 </rss>

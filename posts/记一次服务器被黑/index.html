@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>记一次服务器被黑 - 草祭</title>
-        <meta name="Description" content=""><meta property="og:title" content="记一次服务器被黑" />
-<meta property="og:description" content="题记 早上起来室友在群里发消息说服务器被人黑了，还被用来挖矿了，多了一个dota3.tar.gz的文件，又让我开始警觉。我赶紧看了一下自己的阿" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://seacj.github.io/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/" />
-<meta property="article:published_time" content="2020-06-09T14:41:26+08:00" />
-<meta property="article:modified_time" content="2020-06-09T14:41:26+08:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="记一次服务器被黑"/>
-<meta name="twitter:description" content="题记 早上起来室友在群里发消息说服务器被人黑了，还被用来挖矿了，多了一个dota3.tar.gz的文件，又让我开始警觉。我赶紧看了一下自己的阿"/>
-<meta name="application-name" content="草祭">
-<meta name="apple-mobile-web-app-title" content="草祭"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <title>记一次服务器被黑 - 草祭</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/">
+  <meta property="og:site_name" content="草祭">
+  <meta property="og:title" content="记一次服务器被黑">
+  <meta property="og:description" content="题记 早上起来室友在群里发消息说服务器被人黑了，还被用来挖矿了，多了一个dota3.tar.gz的文件，又让我开始警觉。我赶紧看了一下自己的阿里云服务器，发现每天都有ip在访问ssh，心态有点爆炸，不知道是本来就很普遍，还是我被盯上了。其实挖矿已经算好的了，前不久b站的党妹服务器被植入勒索软件，服务器里面所有文件包括他的视频素材都不能打开。这篇博客记录一下我看的一些数据资料，还有提升一下服务器安全等级的过程。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-06-09T14:41:26+08:00">
+    <meta property="article:modified_time" content="2020-06-09T14:41:26+08:00">
+    <meta property="article:tag" content="Linux">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="记一次服务器被黑">
+  <meta name="twitter:description" content="题记 早上起来室友在群里发消息说服务器被人黑了，还被用来挖矿了，多了一个dota3.tar.gz的文件，又让我开始警觉。我赶紧看了一下自己的阿里云服务器，发现每天都有ip在访问ssh，心态有点爆炸，不知道是本来就很普遍，还是我被盯上了。其实挖矿已经算好的了，前不久b站的党妹服务器被植入勒索软件，服务器里面所有文件包括他的视频素材都不能打开。这篇博客记录一下我看的一些数据资料，还有提升一下服务器安全等级的过程。">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/" /><link rel="prev" href="https://seacj.github.io/posts/ide%E6%8F%92%E4%BB%B6%E5%88%B7leetcode/" /><link rel="next" href="https://seacj.github.io/posts/tmux%E5%AD%A6%E4%B9%A0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/" /><link rel="prev" href="http://localhost:1313/posts/ide%E6%8F%92%E4%BB%B6%E5%88%B7leetcode/" /><link rel="next" href="http://localhost:1313/posts/tmux%E5%AD%A6%E4%B9%A0/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -26,44 +32,56 @@
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/seacj.github.io\/posts\/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91\/"
-        },"genre": "posts","keywords": "linux","wordcount":  1946 ,
-        "url": "https:\/\/seacj.github.io\/posts\/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91\/","datePublished": "2020-06-09T14:41:26+08:00","dateModified": "2020-06-09T14:41:26+08:00","author": {
+            "@id": "http:\/\/localhost:1313\/posts\/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91\/"
+        },"genre": "posts","keywords": "linux","wordcount":  1869 ,
+        "url": "http:\/\/localhost:1313\/posts\/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91\/","datePublished": "2020-06-09T14:41:26+08:00","dateModified": "2020-06-09T14:41:26+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
                 "@type": "Person",
-                "name": "草祭"
+                "name": "xxxx"
             },"description": ""
     }
     </script></head>
-    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="草祭">草祭</a>
+            <a href="/" title="草祭">My cool site</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="我只能为您最多找15篇文章" id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
                         </span>
                     </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                    <i class="fas fa-adjust fa-fw"></i>
-                </a>
-            </div>
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </a></div>
         </div>
     </div>
 </header><header class="mobile" id="header-mobile">
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="草祭">草祭</a>
+                <a href="/" title="草祭">My cool site</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -73,45 +91,39 @@
                     <div class="search mobile" id="search-mobile">
                         <input type="text" placeholder="我只能为您最多找15篇文章" id="search-input-mobile">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
                         </span>
                     </div>
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
                 </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                <i class="fas fa-adjust fa-fw"></i>
+                <i class="fas fa-adjust" aria-hidden="true"></i>
             </a></div>
     </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">记一次服务器被黑</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>草祭</a></span>&nbsp;
-                    <span class="post-category">收录于<a href="/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/">
-                                <i class="far fa-folder fa-fw"></i>编程-ღ-技术
-                            </a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-06-09>2020-06-09</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>约 1946 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>预计阅读 4 分钟&nbsp;</div>
-        </div><div class="details toc" id="toc-static">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">记一次服务器被黑</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>xxxx</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/"><i class="far fa-folder" aria-hidden="true"></i>编程-ღ-技术</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2020-06-09">2020-06-09</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;约 1869 字&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
@@ -143,19 +155,19 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="题记">题记</h2>
-<p>早上起来室友在群里发消息说服务器被人黑了，还被用来挖矿了，多了一个<code>dota3.tar.gz</code>的文件，又让我开始警觉。我赶紧看了一下自己的阿里云服务器，发现每天都有ip在访问ssh，心态有点爆炸，不知道是本来就很普遍，还是我被盯上了。其实挖矿已经算好的了，前不久b站的<a href="https://www.bilibili.com/video/BV1ii4y1t7i1" target="_blank" rel="noopener noreffer">党妹</a>服务器被植入勒索软件，服务器里面所有文件包括他的视频素材都不能打开。这篇博客记录一下我看的一些数据资料，还有提升一下服务器安全等级的过程。</p>
+<p>早上起来室友在群里发消息说服务器被人黑了，还被用来挖矿了，多了一个<code>dota3.tar.gz</code>的文件，又让我开始警觉。我赶紧看了一下自己的阿里云服务器，发现每天都有ip在访问ssh，心态有点爆炸，不知道是本来就很普遍，还是我被盯上了。其实挖矿已经算好的了，前不久b站的<a href="https://www.bilibili.com/video/BV1ii4y1t7i1" target="_blank" rel="noopener noreffer ">党妹</a>服务器被植入勒索软件，服务器里面所有文件包括他的视频素材都不能打开。这篇博客记录一下我看的一些数据资料，还有提升一下服务器安全等级的过程。</p>
 <h1 id="如何判断服务器被爆破">如何判断服务器被爆破</h1>
-<p>针对系统漏洞攻击的黑客我也防不住，但是SSH弱密码攻击的倒是可以防一手，腾讯安全服务中心的<a href="https://www.freebuf.com/articles/system/205384.html" target="_blank" rel="noopener noreffer">一篇文章</a>写道说有个组织每天攻击十万个IP，所以说受到攻击的概率还是很大的。</p>
+<p>针对系统漏洞攻击的黑客我也防不住，但是SSH弱密码攻击的倒是可以防一手，腾讯安全服务中心的<a href="https://www.freebuf.com/articles/system/205384.html" target="_blank" rel="noopener noreffer ">一篇文章</a>写道说有个组织每天攻击十万个IP，所以说受到攻击的概率还是很大的。</p>
 <p>使用<code>lastb</code>命令列出登入系统失败的用户相关信息。</p>
 <p>我的服务器从六月一日到六月九日，9天时间有<strong>157</strong>条登入系统失败的记录！</p>
 <p><figure><a class="lightgallery" href="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/150633-914927.png" title="image-20200609150631079" data-thumbnail="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/150633-914927.png" data-sub-html="<h2>lastb</h2><p>image-20200609150631079</p>">
         <img
             class="lazyload"
-            src="/svg/loading/normal.min.svg"
+            src="/svg/loading.min.svg"
             data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/150633-914927.png"
             data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/150633-914927.png, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/150633-914927.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/150633-914927.png 2x"
             data-sizes="auto"
-            alt="image-20200609150631079" />
+            alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/150633-914927.png" />
     </a><figcaption class="image-caption">lastb</figcaption>
     </figure></p>
 <h1 id="提升服务器安全">提升服务器安全</h1>
@@ -165,50 +177,38 @@
 <p>2.使用安全的密码策略，使用高强度密码，切勿使用弱口令，防止黑客暴力破解</p>
 <p>3.开SSH只监听本地内网IP</p>
 <p>4.尽量不给服务器外网IP</p>
-<p><del>5.推荐部署腾讯御界高级威胁检测系统。</del></p>
-</blockquote>
+<p><del>5.推荐部署腾讯御界高级威胁检测系统。</del></p></blockquote>
 <p>我这里使用<strong>修改ssh端口+密钥对登陆+禁止密码登陆</strong>的方式提升安全等级。</p>
 <h2 id="修改ssh端口">修改ssh端口</h2>
 <h3 id="step-1">Step 1</h3>
 <p>注：一般需要root权限。</p>
 <p><code>vim /etc/ssh/sshd_config</code>打开配置文件, 在<code>#Port 22</code>下面添加一行<code>Port [xxxx]</code>,<code>[xxxx]</code>为你要修改的端口号。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># The strategy used for options in the default sshd_config shipped with
-# OpenSSH is to specify options with their default value where
-# possible, but leave them commented.  Uncommented options override the
-# default value.
-
-#Port 22
-Port 4522
-#AddressFamily any
-#ListenAddress 0.0.0.0
-#ListenAddress ::
-</code></pre></td></tr></table>
-</div>
-</div><p>保存退出之后，用<code>systemctl restart sshd</code>（CentOS6系统用<code>/etc/init.d/sshd restart</code>）重启SSH服务，此时你就不能再用默认的22端口访问服务器了。</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-sshd_config">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># The strategy used for options in the default sshd_config shipped with
+</span></span><span class="line"><span class="cl"># OpenSSH is to specify options with their default value where
+</span></span><span class="line"><span class="cl"># possible, but leave them commented.  Uncommented options override the
+</span></span><span class="line"><span class="cl"># default value.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#Port 22
+</span></span><span class="line"><span class="cl">Port 4522
+</span></span><span class="line"><span class="cl">#AddressFamily any
+</span></span><span class="line"><span class="cl">#ListenAddress 0.0.0.0
+</span></span><span class="line"><span class="cl">#ListenAddress ::</span></span></code></pre></div></div>
+<p>保存退出之后，用<code>systemctl restart sshd</code>（CentOS6系统用<code>/etc/init.d/sshd restart</code>）重启SSH服务，此时你就不能再用默认的22端口访问服务器了。</p>
 <h3 id="step-2">Step 2</h3>
 <p>a. 如果是云服务器ECS的话，在服务器面板的安全组添加你设定的端口之后，就能用那个端口SSH访问服务器了</p>
 <p><figure><a class="lightgallery" href="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/152659-127738.png" title="image-20200609152649355" data-thumbnail="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/152659-127738.png" data-sub-html="<h2>添加安全组</h2><p>image-20200609152649355</p>">
         <img
             class="lazyload"
-            src="/svg/loading/normal.min.svg"
+            src="/svg/loading.min.svg"
             data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/152659-127738.png"
             data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/152659-127738.png, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/152659-127738.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/152659-127738.png 2x"
             data-sizes="auto"
-            alt="image-20200609152649355" />
+            alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/152659-127738.png" />
     </a><figcaption class="image-caption">添加安全组</figcaption>
     </figure></p>
 <p>b. 如果是自己的服务器的话使用下面的2条命令之后，即可访问了。</p>
@@ -218,24 +218,24 @@ Port 4522
 <h2 id="密钥对登陆">密钥对登陆</h2>
 <p>整个过程就是在本地主机生成公钥和私钥（两个合称密钥对），然后把公钥内容给服务器，这样只有带有私钥的主机才能访问服务器。</p>
 <h3 id="step-1-本地生成密钥对">Step 1. 本地生成密钥对</h3>
-<p>在命令行使用<code>ssh-keygen</code>命令，如果是windows用户，默认是在存放在<code>C:\Users\[用户名]\.ssh</code>文件夹中的，详情可参考<a href="https://gitee.com/help/articles/4181#article-header0" target="_blank" rel="noopener noreffer">生成/添加SSH公钥</a>。</p>
+<p>在命令行使用<code>ssh-keygen</code>命令，如果是windows用户，默认是在存放在<code>C:\Users\[用户名]\.ssh</code>文件夹中的，详情可参考<a href="https://gitee.com/help/articles/4181#article-header0" target="_blank" rel="noopener noreffer ">生成/添加SSH公钥</a>。</p>
 <p>现在我们有<code>id_rsa</code>（私钥）和<code>id_rsa.pub</code>（公钥）两个文件（这是默认的文件名，如果指定了文件名，就是xxx和xxx.pub文件）。</p>
 <h3 id="step-2-配置服务器">Step 2. 配置服务器</h3>
 <p>首先确定之前有没有配置过ssh，在服务器的用户根目录使用命令<code>ls -al</code>，查看有没有名为<code>.ssh</code>的目录，如果没有就创建一个，并且权限设置为700.</p>
 <p>在<code>.ssh</code>目录中，创建名为<code>authorized_keys</code>的文件，权限设置为600.</p>
 <p>进入<code>authorized_keys</code>文件，将本地的<code>id_rsa.pub</code>的内容直接复制进<code>authorized_keys</code>中，并保存。</p>
-<p>p.s. 配置我的另一个服务器的时候遇到了个问题，用<code>chown g-w $HOME</code>命令解决了。其原因是不能让所有者之外的用户对authorized_keys文件有写权限，否则，sshd将不允许使用该文件，因为它可能会被其他用户篡改。ref.<a href="https://www.cnblogs.com/snowbook/p/5671406.html" target="_blank" rel="noopener noreffer">ssh配置authorized_keys后仍然需要输入密码的问题</a></p>
+<p>p.s. 配置我的另一个服务器的时候遇到了个问题，用<code>chown g-w $HOME</code>命令解决了。其原因是不能让所有者之外的用户对authorized_keys文件有写权限，否则，sshd将不允许使用该文件，因为它可能会被其他用户篡改。ref.<a href="https://www.cnblogs.com/snowbook/p/5671406.html" target="_blank" rel="noopener noreffer ">ssh配置authorized_keys后仍然需要输入密码的问题</a></p>
 <h3 id="step-3-测试无密码连接">Step 3. 测试无密码连接</h3>
 <p>用任意一个ssh软件使用密钥进行连接，这里以xshell为例。</p>
 <p>连接方式从密码改为public key（有些软件可能叫Credentials），然后导入<code>id_rsa</code>文件。</p>
 <p><figure><a class="lightgallery" href="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/164346-509595.png" title="image-20200609164346003" data-thumbnail="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/164346-509595.png" data-sub-html="<h2>测试无密码连接</h2><p>image-20200609164346003</p>">
         <img
             class="lazyload"
-            src="/svg/loading/normal.min.svg"
+            src="/svg/loading.min.svg"
             data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/164346-509595.png"
             data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/164346-509595.png, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/164346-509595.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/164346-509595.png 2x"
             data-sizes="auto"
-            alt="image-20200609164346003" />
+            alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/09/164346-509595.png" />
     </a><figcaption class="image-caption">测试无密码连接</figcaption>
     </figure></p>
 <p>然后就可以无密码连接了。</p>
@@ -243,72 +243,63 @@ Port 4522
 <p>注意：这个对所有用户都生效，而上面的密钥登陆只对某个用户生效。不过仍然可以用设置了密钥的用户登陆之后，再用<code>su</code>命令，切换到其他用户上。</p>
 <p>和修改端口一样，修改文件<code>vim /etc/ssh/sshd_config</code>.</p>
 <p>vim中<code>:$</code>跳到最后一行，将PasswordAuthentication那一行改成no，保存后，同样<code>systemctl restart sshd</code>更新ssh。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">UseDNS no
-AddressFamily inet
-SyslogFacility AUTHPRIV
-PermitRootLogin yes
-PasswordAuthentication no
-</code></pre></td></tr></table>
-</div>
-</div><p>如果觉得不能密码登陆可能会不方便的话，也可以设置<strong>禁止root登陆</strong>的方式提高安全性，即将PermitRootLogin那一行换成no或者without-password（即仅密钥登陆root）.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-sshd_config">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">UseDNS no
+</span></span><span class="line"><span class="cl">AddressFamily inet
+</span></span><span class="line"><span class="cl">SyslogFacility AUTHPRIV
+</span></span><span class="line"><span class="cl">PermitRootLogin yes
+</span></span><span class="line"><span class="cl">PasswordAuthentication no</span></span></code></pre></div></div>
+<p>如果觉得不能密码登陆可能会不方便的话，也可以设置<strong>禁止root登陆</strong>的方式提高安全性，即将PermitRootLogin那一行换成no或者without-password（即仅密钥登陆root）.</p>
 <p>至此，施工完成~</p>
 <h1 id="参考资料">参考资料</h1>
 <ul>
-<li>黑客利用SSH弱密码攻击控制Linux服务器，潜在目标约十万IP天 <a href="https://www.freebuf.com/articles/system/205384.html">https://www.freebuf.com/articles/system/205384.html</a></li>
-<li>修改ssh远程默认端口 <a href="https://www.cnblogs.com/wzstudy/p/10711104.html">https://www.cnblogs.com/wzstudy/p/10711104.html</a></li>
-<li>设置禁止密码登陆 <a href="https://blog.csdn.net/superljn/article/details/81532073">https://blog.csdn.net/superljn/article/details/81532073</a></li>
-<li>sshd_config 中 PermitRootLogin 的探讨 <a href="https://yq.aliyun.com/articles/62501">https://yq.aliyun.com/articles/62501</a></li>
+<li>黑客利用SSH弱密码攻击控制Linux服务器，潜在目标约十万IP天 <a href="https://www.freebuf.com/articles/system/205384.html" target="_blank" rel="noopener noreffer ">https://www.freebuf.com/articles/system/205384.html</a></li>
+<li>修改ssh远程默认端口 <a href="https://www.cnblogs.com/wzstudy/p/10711104.html" target="_blank" rel="noopener noreffer ">https://www.cnblogs.com/wzstudy/p/10711104.html</a></li>
+<li>设置禁止密码登陆 <a href="https://blog.csdn.net/superljn/article/details/81532073" target="_blank" rel="noopener noreffer ">https://blog.csdn.net/superljn/article/details/81532073</a></li>
+<li>sshd_config 中 PermitRootLogin 的探讨 <a href="https://yq.aliyun.com/articles/62501" target="_blank" rel="noopener noreffer ">https://yq.aliyun.com/articles/62501</a></li>
 </ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>本文于 2020-06-09 更新</span>
-            </div>
-            <div class="post-info-license"></div>
-        </div>
+                <span>更新于 2020-06-09</span>
+            </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://seacj.github.io/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/" data-title="记一次服务器被黑"><i class="fab fa-weibo fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="http://localhost:1313/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/" data-title="记一次服务器被黑" data-hashtags="linux"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="http://localhost:1313/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/" data-title="记一次服务器被黑"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/" data-hashtag="linux"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/" data-title="记一次服务器被黑"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://localhost:1313/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/" data-title="记一次服务器被黑"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/" data-title="记一次服务器被黑"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/" data-title="记一次服务器被黑" data-description=""><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f%25E8%25AE%25B0%25E4%25B8%2580%25E6%25AC%25A1%25E6%259C%258D%25E5%258A%25A1%25E5%2599%25A8%25E8%25A2%25AB%25E9%25BB%2591%2f&amp;text=%e8%ae%b0%e4%b8%80%e6%ac%a1%e6%9c%8d%e5%8a%a1%e5%99%a8%e8%a2%ab%e9%bb%91" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">linux</a></section>
+        <section class="post-tags"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/tags/linux/">Linux</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/ide%E6%8F%92%E4%BB%B6%E5%88%B7leetcode/" class="prev" rel="prev" title="IDE插件刷LeetCode"><i class="fas fa-angle-left fa-fw"></i>IDE插件刷LeetCode</a>
-            <a href="/posts/tmux%E5%AD%A6%E4%B9%A0/" class="next" rel="next" title="Tmux学习">Tmux学习<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/ide%E6%8F%92%E4%BB%B6%E5%88%B7leetcode/" class="prev" rel="prev" title="IDE插件刷LeetCode"><i class="fas fa-angle-left" aria-hidden="true"></i>IDE插件刷LeetCode</a>
+            <a href="/posts/tmux%E5%AD%A6%E4%B9%A0/" class="next" rel="next" title="Tmux学习">Tmux学习<i class="fas fa-angle-right" aria-hidden="true"></i></a></div>
 </div>
-<div id="comments">
-
-        <script src="//code.tidio.co/qgrdxb76tups4kgrezsz6fwxcvqjbpsh.js"></script></div></article></div>
-            </main><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> <footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.6"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
-                <i class="fas fa-arrow-up fa-fw"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
-                <i class="fas fa-comment fa-fw"></i>
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><style>.lg-toolbar .lg-icon::after { color: #999; }</style><script type="text/javascript">
-    window.config = {"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{},"headerMode":{"desktop":null,"mobile":null},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"QVNQRH3FHN","algoliaIndex":"cj-blog","algoliaSearchKey":"50b1056efeb6f9195818878fca2394e0","highlightTag":"em","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};
-</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/algoliasearch/lite/browser.umd.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script src="/lib/katex/katex.min.js"></script><script src="/lib/katex/contrib/auto-render.min.js"></script><script src="/lib/katex/contrib/copy-tex.min.js"></script><script src="/lib/katex/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"QVNQRH3FHN","algoliaIndex":"cj-blog","algoliaSearchKey":"50b1056efeb6f9195818878fca2394e0","highlightTag":"em","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script src="/js/theme.min.js"></script></body>
 </html>

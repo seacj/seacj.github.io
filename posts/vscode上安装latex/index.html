@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>VSCode上安装LaTeX - 草祭</title>
-        <meta name="Description" content=""><meta property="og:title" content="VSCode上安装LaTeX" />
-<meta property="og:description" content="题记 最近又要用到latex，虽然说我自己不喜欢用（比如我觉得几秒的编译影响体验，能做到像markdown一样几乎是即时展示的就好了），真希望" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://seacj.github.io/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/" />
-<meta property="article:published_time" content="2020-05-20T17:22:34+08:00" />
-<meta property="article:modified_time" content="2020-05-20T17:22:34+08:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="VSCode上安装LaTeX"/>
-<meta name="twitter:description" content="题记 最近又要用到latex，虽然说我自己不喜欢用（比如我觉得几秒的编译影响体验，能做到像markdown一样几乎是即时展示的就好了），真希望"/>
-<meta name="application-name" content="草祭">
-<meta name="apple-mobile-web-app-title" content="草祭"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <title>VSCode上安装LaTeX - 草祭</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/">
+  <meta property="og:site_name" content="草祭">
+  <meta property="og:title" content="VSCode上安装LaTeX">
+  <meta property="og:description" content="题记 最近又要用到latex，虽然说我自己不喜欢用（比如我觉得几秒的编译影响体验，能做到像markdown一样几乎是即时展示的就好了），真希望所有期刊和会议都像ICASSP2020一样有那么好用的word模板（好用指各种格式直接有母板，一键格式化，序号全都自动生成。不过word写公式依然是个问题，有一些兼容性的问题）。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-05-20T17:22:34+08:00">
+    <meta property="article:modified_time" content="2020-05-20T17:22:34+08:00">
+    <meta property="article:tag" content="LaTeX">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="VSCode上安装LaTeX">
+  <meta name="twitter:description" content="题记 最近又要用到latex，虽然说我自己不喜欢用（比如我觉得几秒的编译影响体验，能做到像markdown一样几乎是即时展示的就好了），真希望所有期刊和会议都像ICASSP2020一样有那么好用的word模板（好用指各种格式直接有母板，一键格式化，序号全都自动生成。不过word写公式依然是个问题，有一些兼容性的问题）。">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/" /><link rel="prev" href="https://seacj.github.io/posts/artbreeder/" /><link rel="next" href="https://seacj.github.io/posts/android_jni/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/" /><link rel="prev" href="http://localhost:1313/posts/artbreeder/" /><link rel="next" href="http://localhost:1313/posts/android_jni/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -26,44 +32,56 @@
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/seacj.github.io\/posts\/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex\/"
-        },"genre": "posts","keywords": "LaTeX","wordcount":  2024 ,
-        "url": "https:\/\/seacj.github.io\/posts\/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex\/","datePublished": "2020-05-20T17:22:34+08:00","dateModified": "2020-05-20T17:22:34+08:00","author": {
+            "@id": "http:\/\/localhost:1313\/posts\/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex\/"
+        },"genre": "posts","keywords": "LaTeX","wordcount":  1862 ,
+        "url": "http:\/\/localhost:1313\/posts\/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex\/","datePublished": "2020-05-20T17:22:34+08:00","dateModified": "2020-05-20T17:22:34+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
                 "@type": "Person",
-                "name": "草祭"
+                "name": "xxxx"
             },"description": ""
     }
     </script></head>
-    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="草祭">草祭</a>
+            <a href="/" title="草祭">My cool site</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="我只能为您最多找15篇文章" id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
                         </span>
                     </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                    <i class="fas fa-adjust fa-fw"></i>
-                </a>
-            </div>
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </a></div>
         </div>
     </div>
 </header><header class="mobile" id="header-mobile">
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="草祭">草祭</a>
+                <a href="/" title="草祭">My cool site</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -73,45 +91,39 @@
                     <div class="search mobile" id="search-mobile">
                         <input type="text" placeholder="我只能为您最多找15篇文章" id="search-input-mobile">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
                         </span>
                     </div>
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
                 </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                <i class="fas fa-adjust fa-fw"></i>
+                <i class="fas fa-adjust" aria-hidden="true"></i>
             </a></div>
     </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">VSCode上安装LaTeX</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>草祭</a></span>&nbsp;
-                    <span class="post-category">收录于<a href="/categories/%E6%95%99%E7%A8%8B-%E1%83%A6-%E7%82%B9%E8%AF%84/">
-                                <i class="far fa-folder fa-fw"></i>教程-ღ-点评
-                            </a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-05-20>2020-05-20</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>约 2024 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>预计阅读 5 分钟&nbsp;</div>
-        </div><div class="details toc" id="toc-static">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">VSCode上安装LaTeX</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>xxxx</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%95%99%E7%A8%8B-%E1%83%A6-%E7%82%B9%E8%AF%84/"><i class="far fa-folder" aria-hidden="true"></i>教程-ღ-点评</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2020-05-20">2020-05-20</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;约 1862 字&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
@@ -147,62 +159,62 @@
 <p>之前是用TeXworks或者WinEdt去写latex，总觉得界面丑（主要原因），而且不会自动重新编译（也可能只是我不会用）觉得不方便。搜索latex教程的时候偶然发现可以用VSCode写LaTeX。所以决定用一下，这篇博客记录一下<strong>安装过程</strong>和简单的<strong>使用</strong>。</p>
 <h1 id="安装">安装</h1>
 <h2 id="1-安装-texlive">1. 安装 texlive</h2>
-<p>Liam Huang的博客写的很详细：<a href="https://liam.page/texlive/" target="_blank" rel="noopener noreffer">TeX Live 下载及安装说明</a></p>
+<p>Liam Huang的博客写的很详细：<a href="https://liam.page/texlive/" target="_blank" rel="noopener noreffer ">TeX Live 下载及安装说明</a></p>
 <p>由于我是Windows系统，就直接选择下面链接的镜像下载了。</p>
-<p><a href="http://mirror.ctan.org/systems/texlive/Images/texlive2020.iso">http://mirror.ctan.org/systems/texlive/Images/texlive2020.iso</a></p>
+<p><a href="http://mirror.ctan.org/systems/texlive/Images/texlive2020.iso" target="_blank" rel="noopener noreffer ">http://mirror.ctan.org/systems/texlive/Images/texlive2020.iso</a></p>
 <p>下载得到的是一个近4G的texlive2020.iso，双击进入之后，用管理员身份运行。</p>
 <p><figure><a class="lightgallery" href="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/173459-226380.jpeg" title="安装 texlive" data-thumbnail="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/173459-226380.jpeg" data-sub-html="<h2>安装 texlive</h2><p>安装 texlive</p>">
         <img
             class="lazyload"
-            src="/svg/loading/normal.min.svg"
+            src="/svg/loading.min.svg"
             data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/173459-226380.jpeg"
             data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/173459-226380.jpeg, https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/173459-226380.jpeg 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/173459-226380.jpeg 2x"
             data-sizes="auto"
-            alt="安装 texlive" />
+            alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/173459-226380.jpeg" />
     </a><figcaption class="image-caption">安装 texlive</figcaption>
     </figure></p>
-<p>然后我参照<a href="https://zhuanlan.zhihu.com/p/38178015" target="_blank" rel="noopener noreffer">《使用VSCode编写LaTeX》</a>进行安装，把安装目录改了一下。</p>
+<p>然后我参照<a href="https://zhuanlan.zhihu.com/p/38178015" target="_blank" rel="noopener noreffer ">《使用VSCode编写LaTeX》</a>进行安装，把安装目录改了一下。</p>
 <p><figure><a class="lightgallery" href="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/173901-337555.jpeg" title="把不需要的语言和宏包去掉" data-thumbnail="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/173901-337555.jpeg" data-sub-html="<h2>把不需要的语言和宏包去掉</h2><p>把不需要的语言和宏包去掉</p>">
         <img
             class="lazyload"
-            src="/svg/loading/normal.min.svg"
+            src="/svg/loading.min.svg"
             data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/173901-337555.jpeg"
             data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/173901-337555.jpeg, https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/173901-337555.jpeg 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/173901-337555.jpeg 2x"
             data-sizes="auto"
-            alt="把不需要的语言和宏包去掉" />
+            alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/173901-337555.jpeg" />
     </a><figcaption class="image-caption">把不需要的语言和宏包去掉</figcaption>
     </figure></p>
 <p>安装过程非常久，我安装了<strong>1个小时</strong>，这一点非常不友好，能像python那样需要什么包再装就好了。可以先<strong>同时开始</strong>进行下一步。</p>
 <p><figure><a class="lightgallery" href="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/184111-247471.jpeg" title="安装完成" data-thumbnail="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/184111-247471.jpeg" data-sub-html="<h2>安装完成</h2><p>安装完成</p>">
         <img
             class="lazyload"
-            src="/svg/loading/normal.min.svg"
+            src="/svg/loading.min.svg"
             data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/184111-247471.jpeg"
             data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/184111-247471.jpeg, https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/184111-247471.jpeg 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/184111-247471.jpeg 2x"
             data-sizes="auto"
-            alt="安装完成" />
+            alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/184111-247471.jpeg" />
     </a><figcaption class="image-caption">安装完成</figcaption>
     </figure></p>
 <h2 id="2-安装vscode中的latex插件">2. 安装VSCode中的LaTeX插件</h2>
 <p><figure><a class="lightgallery" href="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/174330-316738.jpeg" title="安装VSCode中的LaTeX插件" data-thumbnail="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/174330-316738.jpeg" data-sub-html="<h2>安装VSCode中的LaTeX插件</h2><p>安装VSCode中的LaTeX插件</p>">
         <img
             class="lazyload"
-            src="/svg/loading/normal.min.svg"
+            src="/svg/loading.min.svg"
             data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/174330-316738.jpeg"
             data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/174330-316738.jpeg, https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/174330-316738.jpeg 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/174330-316738.jpeg 2x"
             data-sizes="auto"
-            alt="安装VSCode中的LaTeX插件" />
+            alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/174330-316738.jpeg" />
     </a><figcaption class="image-caption">安装VSCode中的LaTeX插件</figcaption>
     </figure></p>
 <p>随便打开一个.tex文件，可以看到有高亮了。</p>
 <p><figure><a class="lightgallery" href="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/180647-687298.jpeg" title="高亮LaTeX" data-thumbnail="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/180647-687298.jpeg" data-sub-html="<h2>高亮LaTeX</h2><p>高亮LaTeX</p>">
         <img
             class="lazyload"
-            src="/svg/loading/normal.min.svg"
+            src="/svg/loading.min.svg"
             data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/180647-687298.jpeg"
             data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/180647-687298.jpeg, https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/180647-687298.jpeg 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/180647-687298.jpeg 2x"
             data-sizes="auto"
-            alt="高亮LaTeX" />
+            alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/180647-687298.jpeg" />
     </a><figcaption class="image-caption">高亮LaTeX</figcaption>
     </figure></p>
 <p>由于Texlive安装完成之后有加进环境变量，比如我的环境变量的PATH有<code>G:\texlive\2020\bin\win32</code>,所以这个时候不需要其他的配置，就已经可以直接编译使用了。</p>
@@ -210,22 +222,22 @@
 <p><figure><a class="lightgallery" href="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/191254-985873.jpeg" title="Build Latex project" data-thumbnail="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/191254-985873.jpeg" data-sub-html="<h2>Build Latex project</h2><p>Build Latex project</p>">
         <img
             class="lazyload"
-            src="/svg/loading/normal.min.svg"
+            src="/svg/loading.min.svg"
             data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/191254-985873.jpeg"
             data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/191254-985873.jpeg, https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/191254-985873.jpeg 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/191254-985873.jpeg 2x"
             data-sizes="auto"
-            alt="Build Latex project" />
+            alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/191254-985873.jpeg" />
     </a><figcaption class="image-caption">Build Latex project</figcaption>
     </figure></p>
 <p>再点击<code>View LaTeX PDF</code>，此时有3个选项，默认是VSCode tab，效果如下图所示在右侧有个pdf展示。如果要用外部的pdf浏览器需要设置配置文件。</p>
 <p><figure><a class="lightgallery" href="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/191406-997870.jpeg" title="View LaTeX PDF" data-thumbnail="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/191406-997870.jpeg" data-sub-html="<h2>View LaTeX PDF</h2><p>View LaTeX PDF</p>">
         <img
             class="lazyload"
-            src="/svg/loading/normal.min.svg"
+            src="/svg/loading.min.svg"
             data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/191406-997870.jpeg"
             data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/191406-997870.jpeg, https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/191406-997870.jpeg 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/191406-997870.jpeg 2x"
             data-sizes="auto"
-            alt="View LaTeX PDF" />
+            alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/191406-997870.jpeg" />
     </a><figcaption class="image-caption">View LaTeX PDF</figcaption>
     </figure></p>
 <p>现在其实已经可以简单使用了，但是想要充分利用，就要对插件进行配置。</p>
@@ -235,108 +247,92 @@
 <p><figure><a class="lightgallery" href="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/185746-755556.jpeg" title="Settings JSON" data-thumbnail="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/185746-755556.jpeg" data-sub-html="<h2>Settings JSON</h2><p>Settings JSON</p>">
         <img
             class="lazyload"
-            src="/svg/loading/normal.min.svg"
+            src="/svg/loading.min.svg"
             data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/185746-755556.jpeg"
             data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/185746-755556.jpeg, https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/185746-755556.jpeg 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/185746-755556.jpeg 2x"
             data-sizes="auto"
-            alt="Settings JSON" />
+            alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/185746-755556.jpeg" />
     </a><figcaption class="image-caption">Settings JSON</figcaption>
     </figure></p>
 <p>settings.json如下图所示，里面有个remote.SSH&hellip;那个是我自己安装的另一个插件的配置，不需要管它。</p>
 <p><figure><a class="lightgallery" href="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/192020-400927.jpeg" title="setting JSON" data-thumbnail="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/192020-400927.jpeg" data-sub-html="<h2>setting.json</h2><p>setting JSON</p>">
         <img
             class="lazyload"
-            src="/svg/loading/normal.min.svg"
+            src="/svg/loading.min.svg"
             data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/192020-400927.jpeg"
             data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/192020-400927.jpeg, https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/192020-400927.jpeg 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/192020-400927.jpeg 2x"
             data-sizes="auto"
-            alt="setting JSON" />
+            alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/192020-400927.jpeg" />
     </a><figcaption class="image-caption">setting.json</figcaption>
     </figure></p>
 <p>配置中的一些路径（用方括号<code>[]</code>标出）需要自己修改。</p>
 <h3 id="a-pdf设置">a. pdf设置</h3>
 <p>让编译生成的pdf，用指定阅读器打开，我这里用的是SumatraPDF。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-json" data-lang="json"><span class="s2">&#34;latex-workshop.view.pdf.viewer&#34;</span><span class="err">:</span> <span class="s2">&#34;external&#34;</span><span class="err">,</span>
-<span class="s2">&#34;latex-workshop.view.pdf.external.viewer.command&#34;</span><span class="err">:</span> <span class="s2">&#34;【G:/Program Files/SumatraPDF/SumatraPDF.exe】&#34;</span><span class="err">,</span>
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="b-配置正向和反向">b. 配置正向和反向</h3>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-json">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;latex-workshop.view.pdf.viewer&#34;</span><span class="err">:</span> <span class="s2">&#34;external&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;latex-workshop.view.pdf.external.viewer.command&#34;</span><span class="err">:</span> <span class="s2">&#34;【G:/Program Files/SumatraPDF/SumatraPDF.exe】&#34;</span><span class="err">,</span></span></span></code></pre></div></div>
+<h3 id="b-配置正向和反向">b. 配置正向和反向</h3>
 <p>让你能从tex文件定位到pdf文件所在的位置，正向就是从tex定位到pdf，反向是从pdf定位到tex。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-json" data-lang="json"><span class="s2">&#34;latex-workshop.view.pdf.external.synctex.command&#34;</span><span class="err">:</span> <span class="s2">&#34;【G:/Program Files/SumatraPDF/SumatraPDF.exe】&#34;</span><span class="err">,</span>
- <span class="s2">&#34;latex-workshop.view.pdf.external.synctex.args&#34;</span><span class="err">:</span> <span class="p">[</span>
- <span class="s2">&#34;-forward-search&#34;</span><span class="p">,</span>
- <span class="s2">&#34;%TEX%&#34;</span><span class="p">,</span>
- <span class="s2">&#34;%LINE%&#34;</span><span class="p">,</span>
- <span class="s2">&#34;-reuse-instance&#34;</span><span class="p">,</span>
- <span class="s2">&#34;-inverse-search&#34;</span><span class="p">,</span>
- <span class="s2">&#34;code \&#34;【C:/Program Files/Microsoft VS Code/resources/app/out/cli.js】\&#34; -r -g \&#34;%f:%l\&#34;&#34;</span><span class="p">,</span>
- <span class="s2">&#34;%PDF%&#34;</span><span class="p">,</span>
-    <span class="p">]</span><span class="err">,</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>点击SyncTex from cursor，就会跳到pdf中的对应位置，效果如下。</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-json">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;latex-workshop.view.pdf.external.synctex.command&#34;</span><span class="err">:</span> <span class="s2">&#34;【G:/Program Files/SumatraPDF/SumatraPDF.exe】&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s2">&#34;latex-workshop.view.pdf.external.synctex.args&#34;</span><span class="err">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl"> <span class="s2">&#34;-forward-search&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s2">&#34;%TEX%&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s2">&#34;%LINE%&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s2">&#34;-reuse-instance&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s2">&#34;-inverse-search&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s2">&#34;code \&#34;【C:/Program Files/Microsoft VS Code/resources/app/out/cli.js】\&#34; -r -g \&#34;%f:%l\&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s2">&#34;%PDF%&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span><span class="err">,</span></span></span></code></pre></div></div>
+<p>点击SyncTex from cursor，就会跳到pdf中的对应位置，效果如下。</p>
 <p><figure><a class="lightgallery" href="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/200431-930883.jpeg" title="正向搜索" data-thumbnail="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/200431-930883.jpeg" data-sub-html="<h2>正向搜索</h2><p>正向搜索</p>">
         <img
             class="lazyload"
-            src="/svg/loading/normal.min.svg"
+            src="/svg/loading.min.svg"
             data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/200431-930883.jpeg"
             data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/200431-930883.jpeg, https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/200431-930883.jpeg 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/200431-930883.jpeg 2x"
             data-sizes="auto"
-            alt="正向搜索" />
+            alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/20/200431-930883.jpeg" />
     </a><figcaption class="image-caption">正向搜索</figcaption>
     </figure></p>
 <p>在pdf中直接双击就可以跳到tex中了。</p>
 <h3 id="c-取消保存自动编译">c. 取消保存自动编译</h3>
 <p>默认是会<code>Ctrl S</code>保存就自动编译，这就意味着每次保存，pdf也会随之改变。我习惯用markdown，所以我自己是<strong>不设置</strong>这个的。</p>
 <p>如果想取消保存自动编译可以加上下面这条。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-json" data-lang="json"><span class="s2">&#34;latex-workshop.latex.autoBuild.run&#34;</span><span class="err">:</span> <span class="s2">&#34;never&#34;</span><span class="err">,</span>
-</code></pre></td></tr></table>
-</div>
-</div><p><figure><a class="lightgallery" href="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/21/012423-173132.jpeg" title="我的配置文件" data-thumbnail="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/21/012423-173132.jpeg" data-sub-html="<h2>我的配置文件</h2><p>我的配置文件</p>">
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-json">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;latex-workshop.latex.autoBuild.run&#34;</span><span class="err">:</span> <span class="s2">&#34;never&#34;</span><span class="err">,</span></span></span></code></pre></div></div>
+<p><figure><a class="lightgallery" href="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/21/012423-173132.jpeg" title="我的配置文件" data-thumbnail="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/21/012423-173132.jpeg" data-sub-html="<h2>我的配置文件</h2><p>我的配置文件</p>">
         <img
             class="lazyload"
-            src="/svg/loading/normal.min.svg"
+            src="/svg/loading.min.svg"
             data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/21/012423-173132.jpeg"
             data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/21/012423-173132.jpeg, https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/21/012423-173132.jpeg 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/21/012423-173132.jpeg 2x"
             data-sizes="auto"
-            alt="我的配置文件" />
+            alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/21/012423-173132.jpeg" />
     </a><figcaption class="image-caption">我的配置文件</figcaption>
     </figure></p>
 <h1 id="简单的使用">简单的使用</h1>
-<p>先随便拿一个模板，我用的是<a href="ftp://ftp.springernature.com/cs-proceeding/llncs/llncs2e.zip" target="_blank" rel="noopener noreffer">Springer LNCS LaTeX投稿模板</a></p>
+<p>先随便拿一个模板，我用的是<a href="ftp://ftp.springernature.com/cs-proceeding/llncs/llncs2e.zip" target="_blank" rel="noopener noreffer ">Springer LNCS LaTeX投稿模板</a></p>
 <p><figure><a class="lightgallery" href="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/21/005644-394312.jpeg" title="简单的使用" data-thumbnail="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/21/005644-394312.jpeg" data-sub-html="<h2>简单的使用</h2><p>简单的使用</p>">
         <img
             class="lazyload"
-            src="/svg/loading/normal.min.svg"
+            src="/svg/loading.min.svg"
             data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/21/005644-394312.jpeg"
             data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/21/005644-394312.jpeg, https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/21/005644-394312.jpeg 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/21/005644-394312.jpeg 2x"
             data-sizes="auto"
-            alt="简单的使用" />
+            alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202005/21/005644-394312.jpeg" />
     </a><figcaption class="image-caption">简单的使用</figcaption>
     </figure></p>
 <p>非常简单的使用了一下，目前感觉有以下三大优势。</p>
@@ -348,11 +344,11 @@
 </ul>
 <h2 id="结论">结论</h2>
 <p>其实好看这一点就赢了，应该是再也不会用WinEdt了。</p>
-<p>注：目前插件（不过似乎不是插件的问题，是latex本身设计的问题）不支持使用中文路径下的文件，可参考<a href="https://www.zhihu.com/question/293760216" target="_blank" rel="noopener noreffer">TexLive+VSCode如何支持中文路径</a>解决这个问题。不过我个人建议在无中文的路径下编辑，编辑完了再移动文件。</p>
+<p>注：目前插件（不过似乎不是插件的问题，是latex本身设计的问题）不支持使用中文路径下的文件，可参考<a href="https://www.zhihu.com/question/293760216" target="_blank" rel="noopener noreffer ">TexLive+VSCode如何支持中文路径</a>解决这个问题。不过我个人建议在无中文的路径下编辑，编辑完了再移动文件。</p>
 <h1 id="参考资料">参考资料</h1>
 <ul>
 <li>
-<p>使用VSCode编写LaTeX <a href="https://zhuanlan.zhihu.com/p/38178015" target="_blank" rel="noopener noreffer">知乎：使用VSCode编写LaTeX</a></p>
+<p>使用VSCode编写LaTeX <a href="https://zhuanlan.zhihu.com/p/38178015" target="_blank" rel="noopener noreffer ">知乎：使用VSCode编写LaTeX</a></p>
 </li>
 <li>
 <p>LaTeX初体验 <a href="/posts/latex%e5%88%9d%e4%bd%93%e9%aa%8c/" rel="">草祭の博客:  LaTeX初体验</a></p>
@@ -362,43 +358,40 @@
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>本文于 2020-05-20 更新</span>
-            </div>
-            <div class="post-info-license"></div>
-        </div>
+                <span>更新于 2020-05-20</span>
+            </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://seacj.github.io/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/" data-title="VSCode上安装LaTeX"><i class="fab fa-weibo fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="http://localhost:1313/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/" data-title="VSCode上安装LaTeX" data-hashtags="LaTeX"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="http://localhost:1313/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/" data-title="VSCode上安装LaTeX"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/" data-hashtag="LaTeX"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/" data-title="VSCode上安装LaTeX"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://localhost:1313/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/" data-title="VSCode上安装LaTeX"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/" data-title="VSCode上安装LaTeX"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/" data-title="VSCode上安装LaTeX" data-description=""><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fvscode%25E4%25B8%258A%25E5%25AE%2589%25E8%25A3%2585latex%2f&amp;text=VSCode%e4%b8%8a%e5%ae%89%e8%a3%85LaTeX" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/latex/">LaTeX</a></section>
+        <section class="post-tags"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/tags/latex/">LaTeX</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/artbreeder/" class="prev" rel="prev" title="图片生成器Artbreeder"><i class="fas fa-angle-left fa-fw"></i>图片生成器Artbreeder</a>
-            <a href="/posts/android_jni/" class="next" rel="next" title="Android Studio上使用JNI">Android Studio上使用JNI<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/artbreeder/" class="prev" rel="prev" title="图片生成器Artbreeder"><i class="fas fa-angle-left" aria-hidden="true"></i>图片生成器Artbreeder</a>
+            <a href="/posts/android_jni/" class="next" rel="next" title="Android Studio上使用JNI">Android Studio上使用JNI<i class="fas fa-angle-right" aria-hidden="true"></i></a></div>
 </div>
-<div id="comments">
-
-        <script src="//code.tidio.co/qgrdxb76tups4kgrezsz6fwxcvqjbpsh.js"></script></div></article></div>
-            </main><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> <footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.6"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
-                <i class="fas fa-arrow-up fa-fw"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
-                <i class="fas fa-comment fa-fw"></i>
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><style>.lg-toolbar .lg-icon::after { color: #999; }</style><script type="text/javascript">
-    window.config = {"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{},"headerMode":{"desktop":null,"mobile":null},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"QVNQRH3FHN","algoliaIndex":"cj-blog","algoliaSearchKey":"50b1056efeb6f9195818878fca2394e0","highlightTag":"em","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};
-</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/algoliasearch/lite/browser.umd.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script src="/lib/katex/katex.min.js"></script><script src="/lib/katex/contrib/auto-render.min.js"></script><script src="/lib/katex/contrib/copy-tex.min.js"></script><script src="/lib/katex/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"QVNQRH3FHN","algoliaIndex":"cj-blog","algoliaSearchKey":"50b1056efeb6f9195818878fca2394e0","highlightTag":"em","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script src="/js/theme.min.js"></script></body>
 </html>

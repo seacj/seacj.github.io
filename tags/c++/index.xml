@@ -1,22 +1,79 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>C&#43;&#43; - 标签 - 草祭</title>
-        <link>https://seacj.github.io/tags/c&#43;&#43;/</link>
+        <link>http://localhost:1313/tags/c&#43;&#43;/</link>
         <description>C&#43;&#43; - 标签 - 草祭</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
-            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Wed, 05 Jun 2024 22:40:14 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/c&#43;&#43;/" rel="self" type="application/rss+xml" /><item>
-    <title>Clj临时</title>
-    <link>https://seacj.github.io/posts/clj%E4%B8%B4%E6%97%B6/</link>
-    <pubDate>Wed, 05 Jun 2024 22:40:14 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/clj%E4%B8%B4%E6%97%B6/</guid>
-    <description><![CDATA[参考资料： https://techdiylife.github.io/blog/topic.html?category2=t07&amp;blogid=0039 https://blog.csdn.net/qq_46106285/article/details/137430941 LangChain｜Ollama结合LangChain使用的速通版（包含代码以及切换各种模型的方式） https://cloud.tencent.com/developer/article/2324375 示例选择器 1. 安装anac]]></description>
-</item><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 10 May 2022 09:24:46 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/c&#43;&#43;/" rel="self" type="application/rss+xml" /><item>
     <title>C&#43;&#43;面向对象高级编程（上）</title>
-    <link>https://seacj.github.io/posts/houjiecpp1/</link>
+    <link>http://localhost:1313/posts/houjiecpp1/</link>
     <pubDate>Tue, 10 May 2022 09:24:46 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/houjiecpp1/</guid>
-    <description><![CDATA[复习Complex类的实现过程 构建复数Complex类的思考路程： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37]]></description>
-</item></channel>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/houjiecpp1/</guid>
+    <description><![CDATA[<h1 id="复习complex类的实现过程">复习Complex类的实现过程</h1>
+<p>构建复数Complex类的思考路程：</p>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-c&#43;&#43;">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cp">#ifndef __COMPLEX__
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define __COMPLEX__
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"> </span><span class="c1">//实际上include不一定要写在前面，只要在函数外面就行
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">using</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">complex</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">complex</span> <span class="p">(</span><span class="kt">double</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="kt">double</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">:</span> <span class="n">re</span><span class="p">(</span><span class="n">r</span><span class="p">),</span> <span class="n">im</span><span class="p">(</span><span class="n">i</span><span class="p">){}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">complex</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="o">+=</span> <span class="p">(</span><span class="k">const</span> <span class="n">complex</span><span class="o">&amp;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">double</span> <span class="nf">real</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span><span class="k">return</span> <span class="n">re</span><span class="p">;}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">double</span> <span class="nf">imag</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span><span class="k">return</span> <span class="n">im</span><span class="p">;}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">double</span> <span class="n">re</span><span class="p">,</span> <span class="n">im</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">friend</span> <span class="n">complex</span><span class="o">&amp;</span> <span class="n">__doapl</span><span class="p">(</span><span class="n">complex</span><span class="o">*</span><span class="p">,</span> <span class="k">const</span> <span class="n">complex</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//do assignment-plus,函数中想直接取得re和im，所以声明成友元函数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">complex</span><span class="o">&amp;</span> <span class="n">__doapl</span><span class="p">(</span><span class="n">complex</span><span class="o">*</span> <span class="n">ths</span><span class="p">,</span> <span class="k">const</span> <span class="n">complex</span> <span class="n">r</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ths</span><span class="o">-&gt;</span><span class="n">re</span> <span class="o">+=</span> <span class="n">r</span><span class="p">.</span><span class="n">re</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ths</span><span class="o">-&gt;</span><span class="n">im</span> <span class="o">+=</span> <span class="n">r</span><span class="p">.</span><span class="n">im</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">*</span><span class="n">ths</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">inline</span> <span class="n">complex</span><span class="o">&amp;</span> <span class="n">complex</span><span class="o">::</span><span class="k">operator</span> <span class="o">+=</span> <span class="p">(</span><span class="k">const</span> <span class="n">complex</span><span class="o">&amp;</span> <span class="n">r</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nf">__doapl</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//非成员函数
+</span></span></span><span class="line"><span class="cl"><span class="c1">//把+不设计为成员函数是因为不只是复数加复数，还可以是实数加复数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">inline</span> <span class="n">complex</span> <span class="k">operator</span> <span class="o">+</span> <span class="p">(</span><span class="k">const</span> <span class="n">complex</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="k">const</span> <span class="n">complex</span><span class="o">&amp;</span> <span class="n">y</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nf">complex</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">real</span><span class="p">()</span> <span class="o">+</span> <span class="n">y</span><span class="p">.</span><span class="n">real</span><span class="p">(),</span> <span class="n">x</span><span class="p">.</span><span class="n">imag</span><span class="p">()</span> <span class="o">+</span> <span class="n">y</span><span class="p">.</span><span class="n">imag</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">inline</span> <span class="n">complex</span> <span class="k">operator</span> <span class="o">+</span> <span class="p">(</span><span class="k">const</span> <span class="n">complex</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nf">complex</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">real</span><span class="p">()</span> <span class="o">+</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">.</span><span class="n">imag</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//操作符重载只能用在左边的变量上
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">inline</span> <span class="n">complex</span> <span class="k">operator</span> <span class="o">+</span> <span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="k">const</span> <span class="n">complex</span><span class="o">&amp;</span> <span class="n">y</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nf">complex</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">.</span><span class="n">real</span><span class="p">(),</span> <span class="n">y</span><span class="p">.</span><span class="n">imag</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//由于希望能够连用，如cout &lt;&lt; c1 &lt;&lt; endl; 所以有返回值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">ostream</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">os</span><span class="p">,</span> <span class="k">const</span> <span class="n">complex</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;(&#39;</span> <span class="o">&lt;&lt;</span> <span class="n">x</span><span class="p">.</span><span class="n">real</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">x</span><span class="p">.</span><span class="n">imag</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;)&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p>知识点</p>]]></description>
+</item>
+</channel>
 </rss>

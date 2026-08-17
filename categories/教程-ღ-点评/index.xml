@@ -1,57 +1,76 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>教程-ღ-点评 - 分类 - 草祭</title>
-        <link>https://seacj.github.io/categories/%E6%95%99%E7%A8%8B-%E1%83%A6-%E7%82%B9%E8%AF%84/</link>
+        <link>http://localhost:1313/categories/%E6%95%99%E7%A8%8B-%E1%83%A6-%E7%82%B9%E8%AF%84/</link>
         <description>教程-ღ-点评 - 分类 - 草祭</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
-            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Wed, 20 May 2020 17:22:34 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/categories/%E6%95%99%E7%A8%8B-%E1%83%A6-%E7%82%B9%E8%AF%84/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 20 May 2020 17:22:34 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E6%95%99%E7%A8%8B-%E1%83%A6-%E7%82%B9%E8%AF%84/" rel="self" type="application/rss+xml" /><item>
     <title>VSCode上安装LaTeX</title>
-    <link>https://seacj.github.io/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/</link>
+    <link>http://localhost:1313/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/</link>
     <pubDate>Wed, 20 May 2020 17:22:34 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/</guid>
-    <description><![CDATA[题记 最近又要用到latex，虽然说我自己不喜欢用（比如我觉得几秒的编译影响体验，能做到像markdown一样几乎是即时展示的就好了），真希望]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/</guid>
+    <description><![CDATA[<h2 id="题记">题记</h2>
+<p>最近又要用到latex，虽然说我自己不喜欢用（比如我觉得几秒的编译影响体验，能做到像markdown一样几乎是即时展示的就好了），真希望所有期刊和会议都像ICASSP2020一样有那么好用的word模板（好用指各种格式直接有母板，一键格式化，序号全都自动生成。不过word写公式依然是个问题，有一些兼容性的问题）。</p>]]></description>
+</item>
+<item>
     <title>图片生成器Artbreeder</title>
-    <link>https://seacj.github.io/posts/artbreeder/</link>
+    <link>http://localhost:1313/posts/artbreeder/</link>
     <pubDate>Mon, 18 May 2020 14:03:39 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/artbreeder/</guid>
-    <description><![CDATA[题记 想给我的博客换个头像，顺便查了一下avatar的词源，是印度教里面神仙下凡的意思，觉得也是挺有意思的。那既然是avatar，肯定是想要“]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/artbreeder/</guid>
+    <description><![CDATA[<h2 id="题记">题记</h2>
+<p>想给我的博客换个头像，顺便查了一下avatar的词源，是印度教里面神仙下凡的意思，觉得也是挺有意思的。那既然是avatar，肯定是想要“独一无二”的。自己做觉得自己水平非常有限，网上的捏脸和像素画又觉得很一般，这时候就自然的想到我的b站收藏夹里面<a href="https://space.bilibili.com/125526" target="_blank" rel="noopener noreffer ">LKs</a>的一个<a href="https://www.bilibili.com/video/BV1a741137NS" target="_blank" rel="noopener noreffer ">网站推荐视频</a>提到了一个名为Artbreeder的网站。之前简单的体验过，还是有点惊艳的，所以决定自己用它来“合成”一个博客的头像。</p>]]></description>
+</item>
+<item>
     <title>双拼打字</title>
-    <link>https://seacj.github.io/posts/%E5%8F%8C%E6%8B%BC%E6%89%93%E5%AD%97/</link>
+    <link>http://localhost:1313/posts/%E5%8F%8C%E6%8B%BC%E6%89%93%E5%AD%97/</link>
     <pubDate>Fri, 21 Feb 2020 22:46:57 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%8F%8C%E6%8B%BC%E6%89%93%E5%AD%97/</guid>
-    <description><![CDATA[题记 看到有人用双拼打字感觉挺好的，稍微搜了一下关于双拼的评价，感觉还不错，其中节奏感这三个字是最吸引我的地方，每个字都需要按两个键的特点实际]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E5%8F%8C%E6%8B%BC%E6%89%93%E5%AD%97/</guid>
+    <description><![CDATA[<h2 id="题记">题记</h2>
+<p>看到有人用双拼打字感觉挺好的，稍微搜了一下关于双拼的评价，感觉还不错，其中<strong>节奏感</strong>这三个字是最吸引我的地方，每个字都需要按两个键的特点实际使用的时候应该挺爽的。我有时总感觉打中文的时候不顺畅，希望双拼能拯救我吧。</p>]]></description>
+</item>
+<item>
     <title>罗技K480蓝牙键盘の体验</title>
-    <link>https://seacj.github.io/posts/%E7%BD%97%E6%8A%80k480%E8%93%9D%E7%89%99%E9%94%AE%E7%9B%98%E4%BD%93%E9%AA%8C/</link>
+    <link>http://localhost:1313/posts/%E7%BD%97%E6%8A%80k480%E8%93%9D%E7%89%99%E9%94%AE%E7%9B%98%E4%BD%93%E9%AA%8C/</link>
     <pubDate>Wed, 08 Jan 2020 13:44:08 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E7%BD%97%E6%8A%80k480%E8%93%9D%E7%89%99%E9%94%AE%E7%9B%98%E4%BD%93%E9%AA%8C/</guid>
-    <description><![CDATA[入手2周罗技的K480键盘，写一下个人的体验。 我的使用环境 一个台式机和一个笔记本(因为笔记本弄了个支架，所以不会使用笔记本自带的键盘)，都是]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E7%BD%97%E6%8A%80k480%E8%93%9D%E7%89%99%E9%94%AE%E7%9B%98%E4%BD%93%E9%AA%8C/</guid>
+    <description><![CDATA[<p>入手2周罗技的K480键盘，写一下个人的体验。</p>
+<h2 id="我的使用环境">我的使用环境</h2>
+<p>一个台式机和一个笔记本(因为笔记本弄了个支架，所以不会使用笔记本自带的键盘)，都是windows系统，平时用来敲代码写文档。</p>]]></description>
+</item>
+<item>
     <title>English Dictation 01</title>
-    <link>https://seacj.github.io/posts/englishdictation01/</link>
+    <link>http://localhost:1313/posts/englishdictation01/</link>
     <pubDate>Sat, 14 Sep 2019 01:22:22 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/englishdictation01/</guid>
-    <description><![CDATA[题记 想随便练练英语听力吧，刚好找到一个挺有趣的教英语的老师，他的视频挺不错的。打算做个系列文章稍微简单地记录一下，文章结构就用第一次听写 + 原]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/englishdictation01/</guid>
+    <description><![CDATA[<h2 id="题记">题记</h2>
+<p>想随便练练英语听力吧，刚好找到一个挺有趣的教英语的老师，他的视频挺不错的。打算做个系列文章稍微简单地记录一下，文章结构就用<code>第一次听写 + 原文 </code>的形式</p>]]></description>
+</item>
+<item>
     <title>LaTeX初体验</title>
-    <link>https://seacj.github.io/posts/latex%E5%88%9D%E4%BD%93%E9%AA%8C/</link>
+    <link>http://localhost:1313/posts/latex%E5%88%9D%E4%BD%93%E9%AA%8C/</link>
     <pubDate>Wed, 31 Jul 2019 16:32:27 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/latex%E5%88%9D%E4%BD%93%E9%AA%8C/</guid>
-    <description><![CDATA[感觉做科研的话很多人都在用LaTeX，这里记录一下初次使用LaTeX的心得。 使用TeXworks编辑器，排版工具使用TeXworks上的Xe]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/latex%E5%88%9D%E4%BD%93%E9%AA%8C/</guid>
+    <description><![CDATA[<p>感觉做科研的话很多人都在用LaTeX，这里记录一下初次使用LaTeX的心得。<br>
+使用TeXworks编辑器，排版工具使用TeXworks上的XeLaTeX。<br>
+感谢Liam Huang分享的教程, 这篇文章只是简单演示一下我按照教程第一次使用LaTeX的情况，如果需要学习LaTeX，建议直接看Liam Huang的教程：<br>
+TeX Live 下载及安装说明：https://liam.page/texlive/<br>
+一份其实很短的 LaTeX 入门文档：  <a href="https://liam.page/2014/09/08/latex-introduction/" target="_blank" rel="noopener noreffer ">https://liam.page/2014/09/08/latex-introduction/</a></p>]]></description>
+</item>
+<item>
     <title>打字练习</title>
-    <link>https://seacj.github.io/posts/%E6%89%93%E5%AD%97/</link>
+    <link>http://localhost:1313/posts/%E6%89%93%E5%AD%97/</link>
     <pubDate>Tue, 23 Jul 2019 14:45:49 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E6%89%93%E5%AD%97/</guid>
-    <description><![CDATA[学了那么多年计算机，感觉自己打字速度依然不太行，盲打的速度太慢，所以最近开始练习打字。这里推荐我筛选出来的两个打字练习的网站，并给出我的一些]]></description>
-</item></channel>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E6%89%93%E5%AD%97/</guid>
+    <description><![CDATA[<p>学了那么多年计算机，感觉自己打字速度依然不太行，盲打的速度太慢，所以最近开始练习打字。这里推荐我筛选出来的两个打字练习的网站，并给出我的一些体验心得。<br>
+1.https://www.keybr.com/<br>
+强烈推荐，界面简介舒适，有多种统计数据可以看到自己的进步。<br>
+足够智能：根据你的打字速度逐步提高难度，会对出错较多的键位提高出现的次数。</p>]]></description>
+</item>
+</channel>
 </rss>

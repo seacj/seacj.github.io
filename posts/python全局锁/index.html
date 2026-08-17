@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Python全局锁(GIL) - 草祭</title>
-        <meta name="Description" content=""><meta property="og:title" content="Python全局锁(GIL)" />
-<meta property="og:description" content="题记 使用threading进行多线程处理的时候，运算速度并没有提高。原因在于python中的全局锁(GIL, global interpreter lock). 样例 计算圆周率的程序 代码 点" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://seacj.github.io/posts/python%E5%85%A8%E5%B1%80%E9%94%81/" />
-<meta property="article:published_time" content="2019-09-20T11:40:17+08:00" />
-<meta property="article:modified_time" content="2019-09-20T11:40:17+08:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Python全局锁(GIL)"/>
-<meta name="twitter:description" content="题记 使用threading进行多线程处理的时候，运算速度并没有提高。原因在于python中的全局锁(GIL, global interpreter lock). 样例 计算圆周率的程序 代码 点"/>
-<meta name="application-name" content="草祭">
-<meta name="apple-mobile-web-app-title" content="草祭"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <title>Python全局锁(GIL) - 草祭</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/posts/python%E5%85%A8%E5%B1%80%E9%94%81/">
+  <meta property="og:site_name" content="草祭">
+  <meta property="og:title" content="Python全局锁(GIL)">
+  <meta property="og:description" content="题记 使用threading进行多线程处理的时候，运算速度并没有提高。原因在于python中的全局锁(GIL, global interpreter lock).
+样例 计算圆周率的程序
+代码 点击展开代码import threading import random import math import time def print_run_time(func): def wrapper(*args, **kw): begin_time = time.time() ret = func(*args, **kw) end_time = time.time() run_time = end_time - begin_time print(&#39;Run time&#39;,run_time) return ret return wrapper @print_run_time def run(): sample_count = 10000000 #采样次数 inner = 0 #落在圆内的点 i = 0 while i &lt;sample_count: x_i = random.uniform(-1,1) y_i = random.uniform(-1,1) if (math.pow(x_i,2) &#43; math.pow(y_i,2)) &lt; 1: inner&#43;=1 i&#43;=1 pi = 4*(inner * 1.0)/sample_count print(pi) @print_run_time def single_run(): print(&#39;single&#39;,&#39;=&#39;*20) for _ in range(5): run() @print_run_time def multi_run(): print(&#39;multi&#39;,&#39;=&#39;*20) ts = [] for i in range(5): ts.append(threading.Thread(target=run)) ts[i].start() for i in range(5): ts[i].join() if __name__ == &#39;__main__&#39;: multi_run() single_run()结果 ~/dataset/xiaoaiKWS/G/code$ python3 测试多线程速度.py">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2019-09-20T11:40:17+08:00">
+    <meta property="article:modified_time" content="2019-09-20T11:40:17+08:00">
+    <meta property="article:tag" content="Python">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Python全局锁(GIL)">
+  <meta name="twitter:description" content="题记 使用threading进行多线程处理的时候，运算速度并没有提高。原因在于python中的全局锁(GIL, global interpreter lock).
+样例 计算圆周率的程序
+代码 点击展开代码import threading import random import math import time def print_run_time(func): def wrapper(*args, **kw): begin_time = time.time() ret = func(*args, **kw) end_time = time.time() run_time = end_time - begin_time print(&#39;Run time&#39;,run_time) return ret return wrapper @print_run_time def run(): sample_count = 10000000 #采样次数 inner = 0 #落在圆内的点 i = 0 while i &lt;sample_count: x_i = random.uniform(-1,1) y_i = random.uniform(-1,1) if (math.pow(x_i,2) &#43; math.pow(y_i,2)) &lt; 1: inner&#43;=1 i&#43;=1 pi = 4*(inner * 1.0)/sample_count print(pi) @print_run_time def single_run(): print(&#39;single&#39;,&#39;=&#39;*20) for _ in range(5): run() @print_run_time def multi_run(): print(&#39;multi&#39;,&#39;=&#39;*20) ts = [] for i in range(5): ts.append(threading.Thread(target=run)) ts[i].start() for i in range(5): ts[i].join() if __name__ == &#39;__main__&#39;: multi_run() single_run()结果 ~/dataset/xiaoaiKWS/G/code$ python3 测试多线程速度.py">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/python%E5%85%A8%E5%B1%80%E9%94%81/" /><link rel="prev" href="https://seacj.github.io/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%841/" /><link rel="next" href="https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2004/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/python%E5%85%A8%E5%B1%80%E9%94%81/" /><link rel="prev" href="http://localhost:1313/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%841/" /><link rel="next" href="http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2004/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -26,44 +36,56 @@
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/seacj.github.io\/posts\/python%E5%85%A8%E5%B1%80%E9%94%81\/"
-        },"genre": "posts","keywords": "python","wordcount":  1097 ,
-        "url": "https:\/\/seacj.github.io\/posts\/python%E5%85%A8%E5%B1%80%E9%94%81\/","datePublished": "2019-09-20T11:40:17+08:00","dateModified": "2019-09-20T11:40:17+08:00","author": {
+            "@id": "http:\/\/localhost:1313\/posts\/python%E5%85%A8%E5%B1%80%E9%94%81\/"
+        },"genre": "posts","keywords": "python","wordcount":  1049 ,
+        "url": "http:\/\/localhost:1313\/posts\/python%E5%85%A8%E5%B1%80%E9%94%81\/","datePublished": "2019-09-20T11:40:17+08:00","dateModified": "2019-09-20T11:40:17+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
                 "@type": "Person",
-                "name": "草祭"
+                "name": "xxxx"
             },"description": ""
     }
     </script></head>
-    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="草祭">草祭</a>
+            <a href="/" title="草祭">My cool site</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="我只能为您最多找15篇文章" id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
                         </span>
                     </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                    <i class="fas fa-adjust fa-fw"></i>
-                </a>
-            </div>
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </a></div>
         </div>
     </div>
 </header><header class="mobile" id="header-mobile">
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="草祭">草祭</a>
+                <a href="/" title="草祭">My cool site</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -73,45 +95,39 @@
                     <div class="search mobile" id="search-mobile">
                         <input type="text" placeholder="我只能为您最多找15篇文章" id="search-input-mobile">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
                         </span>
                     </div>
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
                 </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                <i class="fas fa-adjust fa-fw"></i>
+                <i class="fas fa-adjust" aria-hidden="true"></i>
             </a></div>
     </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Python全局锁(GIL)</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>草祭</a></span>&nbsp;
-                    <span class="post-category">收录于<a href="/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/">
-                                <i class="far fa-folder fa-fw"></i>编程-ღ-技术
-                            </a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-09-20>2019-09-20</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>约 1097 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>预计阅读 3 分钟&nbsp;</div>
-        </div><div class="details toc" id="toc-static">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Python全局锁(GIL)</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>xxxx</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/"><i class="far fa-folder" aria-hidden="true"></i>编程-ღ-技术</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2019-09-20">2019-09-20</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;约 1049 字&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
@@ -149,109 +165,60 @@
 <h2 id="代码">代码</h2>
 <details>
 <summary>点击展开代码</summary>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">threading</span>
-<span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">import</span> <span class="nn">math</span>
-<span class="kn">import</span> <span class="nn">time</span>
-
-<span class="k">def</span> <span class="nf">print_run_time</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
-        <span class="n">begin_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-        <span class="n">ret</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
-        <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-        <span class="n">run_time</span> <span class="o">=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">begin_time</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Run time&#39;</span><span class="p">,</span><span class="n">run_time</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">ret</span>
-    <span class="k">return</span> <span class="n">wrapper</span>
-
-<span class="nd">@print_run_time</span>
-<span class="k">def</span> <span class="nf">run</span><span class="p">():</span>
-    <span class="n">sample_count</span> <span class="o">=</span> <span class="mi">10000000</span> <span class="c1">#采样次数</span>
-    <span class="n">inner</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">#落在圆内的点</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span><span class="n">sample_count</span><span class="p">:</span>
-        <span class="n">x_i</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-        <span class="n">y_i</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="n">y_i</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="n">inner</span><span class="o">+=</span><span class="mi">1</span>
-        <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
-    <span class="n">pi</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="p">(</span><span class="n">inner</span> <span class="o">*</span> <span class="mf">1.0</span><span class="p">)</span><span class="o">/</span><span class="n">sample_count</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
-    
-<span class="nd">@print_run_time</span>
-<span class="k">def</span> <span class="nf">single_run</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;single&#39;</span><span class="p">,</span><span class="s1">&#39;=&#39;</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-        <span class="n">run</span><span class="p">()</span>
-        
-<span class="nd">@print_run_time</span>
-<span class="k">def</span> <span class="nf">multi_run</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;multi&#39;</span><span class="p">,</span><span class="s1">&#39;=&#39;</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
-    <span class="n">ts</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-        <span class="n">ts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">run</span><span class="p">))</span>
-        <span class="n">ts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-        <span class="n">ts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">multi_run</span><span class="p">()</span>
-    <span class="n">single_run</span><span class="p">()</span>
-</code></pre></td></tr></table>
-</div>
-</div></details>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-python">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">threading</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">random</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">math</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">print_run_time</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">begin_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ret</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">run_time</span> <span class="o">=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">begin_time</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Run time&#39;</span><span class="p">,</span><span class="n">run_time</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">ret</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">wrapper</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@print_run_time</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">run</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sample_count</span> <span class="o">=</span> <span class="mi">10000000</span> <span class="c1">#采样次数</span>
+</span></span><span class="line"><span class="cl">    <span class="n">inner</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">#落在圆内的点</span>
+</span></span><span class="line"><span class="cl">    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span><span class="n">sample_count</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x_i</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">y_i</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="n">y_i</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">inner</span><span class="o">+=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pi</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="p">(</span><span class="n">inner</span> <span class="o">*</span> <span class="mf">1.0</span><span class="p">)</span><span class="o">/</span><span class="n">sample_count</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="nd">@print_run_time</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">single_run</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;single&#39;</span><span class="p">,</span><span class="s1">&#39;=&#39;</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">run</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl"><span class="nd">@print_run_time</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">multi_run</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;multi&#39;</span><span class="p">,</span><span class="s1">&#39;=&#39;</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ts</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">run</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">multi_run</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">single_run</span><span class="p">()</span></span></span></code></pre></div></div>
+</details>
 <h2 id="结果">结果</h2>
 <blockquote>
 <p>~/dataset/xiaoaiKWS/G/code$ python3 测试多线程速度.py</p>
@@ -278,13 +245,12 @@
 <p>Run time 10.204853534698486</p>
 <p>3.1416324</p>
 <p>Run time 10.210267305374146</p>
-<p>Run time <strong>51.180365800857544</strong></p>
-</blockquote>
+<p>Run time <strong>51.180365800857544</strong></p></blockquote>
 <h2 id="启示">启示</h2>
 <p>多线程速度要慢于串行，多线程不适合cpu密集型程序(但是可以用在IO密集的程序里).</p>
 <h1 id="gil">GIL</h1>
-<p>参考: <a href="http://cenalulu.github.io/python/gil-in-python/">http://cenalulu.github.io/python/gil-in-python/</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/20953544">https://zhuanlan.zhihu.com/p/20953544</a></p>
+<p>参考: <a href="http://cenalulu.github.io/python/gil-in-python/" target="_blank" rel="noopener noreffer ">http://cenalulu.github.io/python/gil-in-python/</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/20953544" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/20953544</a></p>
 <h2 id="为什么有gil">为什么有GIL</h2>
 <p>GIL是线程之间的排他锁(官方文档使用<code>mutex</code>这个词)，用于保持线程间数据的一致性和状态的同步(这本身是一个非常难的议题, MySQL用了五年时间优化，而python作为高度社区化团队开发为解决这个问题更为艰难)，而GIL是一种非常简单粗暴但是优雅的方法.</p>
 <h2 id="图解多线程">图解多线程</h2>
@@ -308,76 +274,72 @@
 <h3 id="两个线程均为cpu密集型运算线程">两个线程均为CPU密集型运算线程</h3>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="http://www.dabeaz.com/images/GIL_2cpu.png"
         data-srcset="http://www.dabeaz.com/images/GIL_2cpu.png, http://www.dabeaz.com/images/GIL_2cpu.png 1.5x, http://www.dabeaz.com/images/GIL_2cpu.png 2x"
         data-sizes="auto"
-        alt="GIL Performance"
+        alt="http://www.dabeaz.com/images/GIL_2cpu.png"
         title="GIL Performance" /></p>
 <h3 id="一个io密集型和一个cpu密集型线程">一个IO密集型和一个CPU密集型线程</h3>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="http://www.dabeaz.com/images/GIL_ioclose.png"
         data-srcset="http://www.dabeaz.com/images/GIL_ioclose.png, http://www.dabeaz.com/images/GIL_ioclose.png 1.5x, http://www.dabeaz.com/images/GIL_ioclose.png 2x"
         data-sizes="auto"
-        alt="GIL IO Performance"
+        alt="http://www.dabeaz.com/images/GIL_ioclose.png"
         title="GIL IO Performance" /></p>
 <p>IO密集型代码(文件处理、网络爬虫等)，多线程能够有效提升效率(单线程下有IO操作会进行IO等待，造成不必要的时间浪费，而开启多线程能在线程A等待时，自动切换到线程B，可以不浪费CPU的资源，从而能提升程序执行效率)。<strong>所以python的多线程对IO密集型代码比较友好。</strong></p>
 <h1 id="结论">结论</h1>
-<p>python尽量使用<strong>多进程</strong> （<a href="https://www.liaoxuefeng.com/wiki/1016959663602400/1017628290184064" target="_blank" rel="noopener noreffer">使用python multiprocessing模块</a>），而不是多线程，因为每个进程有各自独立的GIL，互不干扰，这样就可以真正意义上的并行执行.</p>
+<p>python尽量使用<strong>多进程</strong> （<a href="https://www.liaoxuefeng.com/wiki/1016959663602400/1017628290184064" target="_blank" rel="noopener noreffer ">使用python multiprocessing模块</a>），而不是多线程，因为每个进程有各自独立的GIL，互不干扰，这样就可以真正意义上的并行执行.</p>
 <h1 id="扩展资料">扩展资料</h1>
 <blockquote>
 <ul>
 <li>
-<p>IO同步和异步，阻塞和非阻塞 <a href="https://juejin.im/post/5b94e2995188255c5c45d0ec">https://juejin.im/post/5b94e2995188255c5c45d0ec</a></p>
+<p>IO同步和异步，阻塞和非阻塞 <a href="https://juejin.im/post/5b94e2995188255c5c45d0ec" target="_blank" rel="noopener noreffer ">https://juejin.im/post/5b94e2995188255c5c45d0ec</a></p>
 </li>
 <li>
-<p>廖雪峰python3多进程多线程 (适合代码学习) <a href="https://www.liaoxuefeng.com/wiki/1016959663602400/1017628290184064">https://www.liaoxuefeng.com/wiki/1016959663602400/1017628290184064</a></p>
+<p>廖雪峰python3多进程多线程 (适合代码学习) <a href="https://www.liaoxuefeng.com/wiki/1016959663602400/1017628290184064" target="_blank" rel="noopener noreffer ">https://www.liaoxuefeng.com/wiki/1016959663602400/1017628290184064</a></p>
 </li>
-</ul>
-</blockquote>
+</ul></blockquote>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>本文于 2019-09-20 更新</span>
-            </div>
-            <div class="post-info-license"></div>
-        </div>
+                <span>更新于 2019-09-20</span>
+            </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://seacj.github.io/posts/python%E5%85%A8%E5%B1%80%E9%94%81/" data-title="Python全局锁(GIL)"><i class="fab fa-weibo fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="http://localhost:1313/posts/python%E5%85%A8%E5%B1%80%E9%94%81/" data-title="Python全局锁(GIL)" data-hashtags="python"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="http://localhost:1313/posts/python%E5%85%A8%E5%B1%80%E9%94%81/" data-title="Python全局锁(GIL)"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/python%E5%85%A8%E5%B1%80%E9%94%81/" data-hashtag="python"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/python%E5%85%A8%E5%B1%80%E9%94%81/" data-title="Python全局锁(GIL)"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://localhost:1313/posts/python%E5%85%A8%E5%B1%80%E9%94%81/" data-title="Python全局锁(GIL)"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/python%E5%85%A8%E5%B1%80%E9%94%81/" data-title="Python全局锁(GIL)"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/posts/python%E5%85%A8%E5%B1%80%E9%94%81/" data-title="Python全局锁(GIL)" data-description=""><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpython%25E5%2585%25A8%25E5%25B1%2580%25E9%2594%2581%2f&amp;text=Python%e5%85%a8%e5%b1%80%e9%94%81%28GIL%29" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/python/">python</a></section>
+        <section class="post-tags"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/tags/python/">Python</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%841/" class="prev" rel="prev" title="内存层次设计"><i class="fas fa-angle-left fa-fw"></i>内存层次设计</a>
-            <a href="/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2004/" class="next" rel="next" title="建站历史004">建站历史004<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%841/" class="prev" rel="prev" title="内存层次设计"><i class="fas fa-angle-left" aria-hidden="true"></i>内存层次设计</a>
+            <a href="/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2004/" class="next" rel="next" title="建站历史004">建站历史004<i class="fas fa-angle-right" aria-hidden="true"></i></a></div>
 </div>
-<div id="comments">
-
-        <script src="//code.tidio.co/qgrdxb76tups4kgrezsz6fwxcvqjbpsh.js"></script></div></article></div>
-            </main><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> <footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.6"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
-                <i class="fas fa-arrow-up fa-fw"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
-                <i class="fas fa-comment fa-fw"></i>
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><style>.lg-toolbar .lg-icon::after { color: #999; }</style><script type="text/javascript">
-    window.config = {"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{},"headerMode":{"desktop":null,"mobile":null},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"QVNQRH3FHN","algoliaIndex":"cj-blog","algoliaSearchKey":"50b1056efeb6f9195818878fca2394e0","highlightTag":"em","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};
-</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/algoliasearch/lite/browser.umd.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script src="/lib/katex/katex.min.js"></script><script src="/lib/katex/contrib/auto-render.min.js"></script><script src="/lib/katex/contrib/copy-tex.min.js"></script><script src="/lib/katex/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"QVNQRH3FHN","algoliaIndex":"cj-blog","algoliaSearchKey":"50b1056efeb6f9195818878fca2394e0","highlightTag":"em","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script src="/js/theme.min.js"></script></body>
 </html>

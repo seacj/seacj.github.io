@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>每日Leetcode03 - 草祭</title>
-        <meta name="Description" content=""><meta property="og:title" content="每日Leetcode03" />
-<meta property="og:description" content="39. Combination Sum tag. array Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target. The same repeated number may be chosen from candidates unlimited number of times. Example 1: 1 2 3 4 5 6 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ] So" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://seacj.github.io/posts/leetcodedaily3/" />
-<meta property="article:published_time" content="2019-08-24T18:48:25+08:00" />
-<meta property="article:modified_time" content="2019-08-24T18:48:25+08:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="每日Leetcode03"/>
-<meta name="twitter:description" content="39. Combination Sum tag. array Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target. The same repeated number may be chosen from candidates unlimited number of times. Example 1: 1 2 3 4 5 6 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ] So"/>
-<meta name="application-name" content="草祭">
-<meta name="apple-mobile-web-app-title" content="草祭"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <title>每日Leetcode03 - 草祭</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/posts/leetcodedaily3/">
+  <meta property="og:site_name" content="草祭">
+  <meta property="og:title" content="每日Leetcode03">
+  <meta property="og:description" content="39. Combination Sum tag. array
+Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
+The same repeated number may be chosen from candidates unlimited number of times.
+Example 1:
+Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ]Solution来源：https://leetcode-cn.com/problems/combination-sum/solution/xue-yi-tao-zou-tian-xia-hui-su-suan-fa-by-powcai/">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2019-08-24T18:48:25+08:00">
+    <meta property="article:modified_time" content="2019-08-24T18:48:25+08:00">
+    <meta property="article:tag" content="算法">
+    <meta property="article:tag" content="Leetcode">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="每日Leetcode03">
+  <meta name="twitter:description" content="39. Combination Sum tag. array
+Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
+The same repeated number may be chosen from candidates unlimited number of times.
+Example 1:
+Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ]Solution来源：https://leetcode-cn.com/problems/combination-sum/solution/xue-yi-tao-zou-tian-xia-hui-su-suan-fa-by-powcai/">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/leetcodedaily3/" /><link rel="prev" href="https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2003/" /><link rel="next" href="https://seacj.github.io/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/leetcodedaily3/" /><link rel="prev" href="http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2003/" /><link rel="next" href="http://localhost:1313/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -26,44 +41,56 @@
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/seacj.github.io\/posts\/leetcodedaily3\/"
-        },"genre": "posts","keywords": "算法, leetcode","wordcount":  2003 ,
-        "url": "https:\/\/seacj.github.io\/posts\/leetcodedaily3\/","datePublished": "2019-08-24T18:48:25+08:00","dateModified": "2019-08-24T18:48:25+08:00","author": {
+            "@id": "http:\/\/localhost:1313\/posts\/leetcodedaily3\/"
+        },"genre": "posts","keywords": "算法, leetcode","wordcount":  1871 ,
+        "url": "http:\/\/localhost:1313\/posts\/leetcodedaily3\/","datePublished": "2019-08-24T18:48:25+08:00","dateModified": "2019-08-24T18:48:25+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
                 "@type": "Person",
-                "name": "草祭"
+                "name": "xxxx"
             },"description": ""
     }
     </script></head>
-    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="草祭">草祭</a>
+            <a href="/" title="草祭">My cool site</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="我只能为您最多找15篇文章" id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
                         </span>
                     </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                    <i class="fas fa-adjust fa-fw"></i>
-                </a>
-            </div>
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </a></div>
         </div>
     </div>
 </header><header class="mobile" id="header-mobile">
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="草祭">草祭</a>
+                <a href="/" title="草祭">My cool site</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -73,45 +100,39 @@
                     <div class="search mobile" id="search-mobile">
                         <input type="text" placeholder="我只能为您最多找15篇文章" id="search-input-mobile">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
                         </span>
                     </div>
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
                 </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                <i class="fas fa-adjust fa-fw"></i>
+                <i class="fas fa-adjust" aria-hidden="true"></i>
             </a></div>
     </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">每日Leetcode03</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>草祭</a></span>&nbsp;
-                    <span class="post-category">收录于<a href="/categories/%E7%AE%97%E6%B3%95/">
-                                <i class="far fa-folder fa-fw"></i>算法
-                            </a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-08-24>2019-08-24</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>约 2003 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>预计阅读 4 分钟&nbsp;</div>
-        </div><div class="details toc" id="toc-static">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">每日Leetcode03</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>xxxx</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%AE%97%E6%B3%95/"><i class="far fa-folder" aria-hidden="true"></i>算法</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2019-08-24">2019-08-24</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;约 1871 字&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
@@ -125,179 +146,109 @@
 <p>Given a <strong>set</strong> of candidate numbers (<code>candidates</code>) <strong>(without duplicates)</strong> and a target number (<code>target</code>), find all unique combinations in <code>candidates</code> where the candidate numbers sums to <code>target</code>.</p>
 <p>The <strong>same</strong> repeated number may be chosen from <code>candidates</code> unlimited number of times.</p>
 <p>Example 1:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html">Input: candidates = [2,3,6,7], target = 7,
-A solution set is:
-[
-  [7],
-  [2,2,3]
-]
-</code></pre></td></tr></table>
-</div>
-</div><p>Solution来源：https://leetcode-cn.com/problems/combination-sum/solution/xue-yi-tao-zou-tian-xia-hui-su-suan-fa-by-powcai/</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python3" data-lang="python3"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">combinationSum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">candidates</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">target</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
-    	<span class="c1"># 剪枝的前提是数组元素排序</span>
-        <span class="c1"># 深度深的边不能比深度浅的边还小</span>
-        <span class="c1"># 要排序的理由：1、前面用过的数后面不能再用；2、下一层边上的数不能小于上一层边上的数。</span>
-        <span class="n">candidates</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">candidates</span><span class="p">)</span>
-        <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">def</span> <span class="nf">backtrack</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">tmp_sum</span><span class="p">,</span> <span class="n">tmp</span><span class="p">):</span>
-            <span class="k">if</span>  <span class="n">tmp_sum</span> <span class="o">&gt;</span> <span class="n">target</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span>
-                <span class="k">return</span> 
-            <span class="k">if</span> <span class="n">tmp_sum</span> <span class="o">==</span> <span class="n">target</span><span class="p">:</span>
-                <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
-                <span class="k">return</span> 
-            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-                <span class="k">if</span> <span class="n">tmp_sum</span> <span class="o">+</span> <span class="n">candidates</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">target</span><span class="p">:</span>
-                    <span class="k">break</span>
-                <span class="n">backtrack</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">tmp_sum</span> <span class="o">+</span> <span class="n">candidates</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="n">tmp</span><span class="o">+</span><span class="p">[</span><span class="n">candidates</span><span class="p">[</span><span class="n">j</span><span class="p">]])</span>
-        <span class="n">backtrack</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">[])</span>
-        <span class="k">return</span> <span class="n">res</span>
-
-<span class="n">作者</span><span class="err">：</span><span class="n">powcai</span>
-<span class="n">链接</span><span class="err">：</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">leetcode</span><span class="o">-</span><span class="n">cn</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">problems</span><span class="o">/</span><span class="n">combination</span><span class="o">-</span><span class="nb">sum</span><span class="o">/</span><span class="n">solution</span><span class="o">/</span><span class="n">xue</span><span class="o">-</span><span class="n">yi</span><span class="o">-</span><span class="n">tao</span><span class="o">-</span><span class="n">zou</span><span class="o">-</span><span class="n">tian</span><span class="o">-</span><span class="n">xia</span><span class="o">-</span><span class="n">hui</span><span class="o">-</span><span class="n">su</span><span class="o">-</span><span class="n">suan</span><span class="o">-</span><span class="n">fa</span><span class="o">-</span><span class="n">by</span><span class="o">-</span><span class="n">powcai</span><span class="o">/</span>
-<span class="n">来源</span><span class="err">：</span><span class="n">力扣</span><span class="err">（</span><span class="n">LeetCode</span><span class="err">）</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>这道题的图解: <a href="https://leetcode-cn.com/problems/combination-sum/solution/hui-su-suan-fa-jian-zhi-python-dai-ma-java-dai-m-2/">https://leetcode-cn.com/problems/combination-sum/solution/hui-su-suan-fa-jian-zhi-python-dai-ma-java-dai-m-2/</a></p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-html">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">Input: candidates = [2,3,6,7], target = 7,
+</span></span><span class="line"><span class="cl">A solution set is:
+</span></span><span class="line"><span class="cl">[
+</span></span><span class="line"><span class="cl">  [7],
+</span></span><span class="line"><span class="cl">  [2,2,3]
+</span></span><span class="line"><span class="cl">]</span></span></code></pre></div></div>
+<p>Solution来源：https://leetcode-cn.com/problems/combination-sum/solution/xue-yi-tao-zou-tian-xia-hui-su-suan-fa-by-powcai/</p>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-python3">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python3" data-lang="python3"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">combinationSum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">candidates</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">target</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+</span></span><span class="line"><span class="cl">    	<span class="c1"># 剪枝的前提是数组元素排序</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 深度深的边不能比深度浅的边还小</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 要排序的理由：1、前面用过的数后面不能再用；2、下一层边上的数不能小于上一层边上的数。</span>
+</span></span><span class="line"><span class="cl">        <span class="n">candidates</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">candidates</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">backtrack</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">tmp_sum</span><span class="p">,</span> <span class="n">tmp</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span>  <span class="n">tmp_sum</span> <span class="o">&gt;</span> <span class="n">target</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> 
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">tmp_sum</span> <span class="o">==</span> <span class="n">target</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> 
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">tmp_sum</span> <span class="o">+</span> <span class="n">candidates</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">target</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">break</span>
+</span></span><span class="line"><span class="cl">                <span class="n">backtrack</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">tmp_sum</span> <span class="o">+</span> <span class="n">candidates</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="n">tmp</span><span class="o">+</span><span class="p">[</span><span class="n">candidates</span><span class="p">[</span><span class="n">j</span><span class="p">]])</span>
+</span></span><span class="line"><span class="cl">        <span class="n">backtrack</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">[])</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">作者</span><span class="err">：</span><span class="n">powcai</span>
+</span></span><span class="line"><span class="cl"><span class="n">链接</span><span class="err">：</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">leetcode</span><span class="o">-</span><span class="n">cn</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">problems</span><span class="o">/</span><span class="n">combination</span><span class="o">-</span><span class="nb">sum</span><span class="o">/</span><span class="n">solution</span><span class="o">/</span><span class="n">xue</span><span class="o">-</span><span class="n">yi</span><span class="o">-</span><span class="n">tao</span><span class="o">-</span><span class="n">zou</span><span class="o">-</span><span class="n">tian</span><span class="o">-</span><span class="n">xia</span><span class="o">-</span><span class="n">hui</span><span class="o">-</span><span class="n">su</span><span class="o">-</span><span class="n">suan</span><span class="o">-</span><span class="n">fa</span><span class="o">-</span><span class="n">by</span><span class="o">-</span><span class="n">powcai</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl"><span class="n">来源</span><span class="err">：</span><span class="n">力扣</span><span class="err">（</span><span class="n">LeetCode</span><span class="err">）</span></span></span></code></pre></div></div>
+<p>这道题的图解: <a href="https://leetcode-cn.com/problems/combination-sum/solution/hui-su-suan-fa-jian-zhi-python-dai-ma-java-dai-m-2/" target="_blank" rel="noopener noreffer ">https://leetcode-cn.com/problems/combination-sum/solution/hui-su-suan-fa-jian-zhi-python-dai-ma-java-dai-m-2/</a></p>
 <blockquote>
 <p>输入: <code>candidates = [2, 3, 6, 7]</code>，<code>target = 7</code>，所求解集为: <code>[[7], [2, 2, 3]]</code></p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://ae01.alicdn.com/kf/Ha20d1438c73d485e8f5c7009315a0c63K.jpg"
         data-srcset="https://ae01.alicdn.com/kf/Ha20d1438c73d485e8f5c7009315a0c63K.jpg, https://ae01.alicdn.com/kf/Ha20d1438c73d485e8f5c7009315a0c63K.jpg 1.5x, https://ae01.alicdn.com/kf/Ha20d1438c73d485e8f5c7009315a0c63K.jpg 2x"
         data-sizes="auto"
-        alt="例题图解,这张图画出的结果有 4 个 0，对应的路径是 &lt;code&gt;[[2, 2, 3], [2, 3, 2], [3, 2, 2], [7]]&lt;/code&gt;"
-        title="例题图解,这张图画出的结果有 4 个 0，对应的路径是 &lt;code&gt;[[2, 2, 3], [2, 3, 2], [3, 2, 2], [7]]&lt;/code&gt;" /></p>
+        alt="https://ae01.alicdn.com/kf/Ha20d1438c73d485e8f5c7009315a0c63K.jpg"
+        title="例题图解,这张图画出的结果有 4 个 0，对应的路径是 [[2, 2, 3], [2, 3, 2], [3, 2, 2], [7]]" /></p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://ae01.alicdn.com/kf/Hc77dda3a5d5846a89055bdf27338132cy.jpg"
         data-srcset="https://ae01.alicdn.com/kf/Hc77dda3a5d5846a89055bdf27338132cy.jpg, https://ae01.alicdn.com/kf/Hc77dda3a5d5846a89055bdf27338132cy.jpg 1.5x, https://ae01.alicdn.com/kf/Hc77dda3a5d5846a89055bdf27338132cy.jpg 2x"
         data-sizes="auto"
-        alt="例题图解, 排序之后"
+        alt="https://ae01.alicdn.com/kf/Hc77dda3a5d5846a89055bdf27338132cy.jpg"
         title="例题图解, 排序之后" /></p>
-<p>补充：事实上，不排序也是可以的，只要保证按顺序读取，也可以通过测试用例。但排序更好一些，这样“剪枝”工作可以更彻底一些。</p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python3" data-lang="python3"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">combinationSum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">candidates</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">target</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
-        <span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">candidates</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">return</span> <span class="p">[]</span>
-
-        <span class="c1"># 剪枝的前提是数组元素排序</span>
-        <span class="c1"># 深度深的边不能比深度浅的边还小</span>
-        <span class="c1"># 要排序的理由：1、前面用过的数后面不能再用；2、下一层边上的数不能小于上一层边上的数。</span>
-        <span class="n">candidates</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-        <span class="c1"># 在遍历的过程中记录路径，一般而言它是一个栈</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="c1"># 注意要传入 size ，在 range 中， size 取不到</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__dfs</span><span class="p">(</span><span class="n">candidates</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">res</span>
-
-    <span class="k">def</span> <span class="nf">__dfs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">candidates</span><span class="p">,</span> <span class="n">begin</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
-        <span class="c1"># 先写递归终止的情况</span>
-        <span class="k">if</span> <span class="n">target</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="c1"># Python 中可变对象是引用传递，因此需要将当前 path 里的值拷贝出来</span>
-            <span class="c1"># 或者使用 path.copy()</span>
-            <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">[:])</span>
-
-        <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">begin</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
-            <span class="n">residue</span> <span class="o">=</span> <span class="n">target</span> <span class="o">-</span> <span class="n">candidates</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
-            <span class="o">//</span> <span class="err">“</span><span class="n">剪枝</span><span class="err">”</span><span class="n">操作</span><span class="err">，</span><span class="n">不必递归到下一层</span><span class="err">，</span><span class="n">并且后面的分支也不必执行</span>
-            <span class="k">if</span> <span class="n">residue</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="k">break</span>
-            <span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">candidates</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
-            <span class="c1"># 因为下一层不能比上一层还小，起始索引还从 index 开始</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">__dfs</span><span class="p">(</span><span class="n">candidates</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="n">residue</span><span class="p">)</span>
-            <span class="n">path</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-
-<span class="n">作者</span><span class="err">：</span><span class="n">liweiwei1419</span>
-<span class="n">链接</span><span class="err">：</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">leetcode</span><span class="o">-</span><span class="n">cn</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">problems</span><span class="o">/</span><span class="n">combination</span><span class="o">-</span><span class="nb">sum</span><span class="o">/</span><span class="n">solution</span><span class="o">/</span><span class="n">hui</span><span class="o">-</span><span class="n">su</span><span class="o">-</span><span class="n">suan</span><span class="o">-</span><span class="n">fa</span><span class="o">-</span><span class="n">jian</span><span class="o">-</span><span class="n">zhi</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">dai</span><span class="o">-</span><span class="n">ma</span><span class="o">-</span><span class="n">java</span><span class="o">-</span><span class="n">dai</span><span class="o">-</span><span class="n">m</span><span class="o">-</span><span class="mi">2</span><span class="o">/</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>在力扣讨论区提到这是一道典型的<strong>回溯算法</strong>题，<a href="/posts/%e5%9b%9e%e6%ba%af%e7%ae%97%e6%b3%95/" rel="">点击了解回溯算法</a>。</p>
+<p>补充：事实上，不排序也是可以的，只要保证按顺序读取，也可以通过测试用例。但排序更好一些，这样“剪枝”工作可以更彻底一些。</p></blockquote>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-python3">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python3" data-lang="python3"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">combinationSum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">candidates</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">target</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">candidates</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># 剪枝的前提是数组元素排序</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 深度深的边不能比深度浅的边还小</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 要排序的理由：1、前面用过的数后面不能再用；2、下一层边上的数不能小于上一层边上的数。</span>
+</span></span><span class="line"><span class="cl">        <span class="n">candidates</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 在遍历的过程中记录路径，一般而言它是一个栈</span>
+</span></span><span class="line"><span class="cl">        <span class="n">path</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 注意要传入 size ，在 range 中， size 取不到</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">__dfs</span><span class="p">(</span><span class="n">candidates</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">__dfs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">candidates</span><span class="p">,</span> <span class="n">begin</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 先写递归终止的情况</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">target</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># Python 中可变对象是引用传递，因此需要将当前 path 里的值拷贝出来</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># 或者使用 path.copy()</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">[:])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">begin</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">residue</span> <span class="o">=</span> <span class="n">target</span> <span class="o">-</span> <span class="n">candidates</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="o">//</span> <span class="err">“</span><span class="n">剪枝</span><span class="err">”</span><span class="n">操作</span><span class="err">，</span><span class="n">不必递归到下一层</span><span class="err">，</span><span class="n">并且后面的分支也不必执行</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">residue</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">break</span>
+</span></span><span class="line"><span class="cl">            <span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">candidates</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># 因为下一层不能比上一层还小，起始索引还从 index 开始</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">__dfs</span><span class="p">(</span><span class="n">candidates</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="n">residue</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">path</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">作者</span><span class="err">：</span><span class="n">liweiwei1419</span>
+</span></span><span class="line"><span class="cl"><span class="n">链接</span><span class="err">：</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">leetcode</span><span class="o">-</span><span class="n">cn</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">problems</span><span class="o">/</span><span class="n">combination</span><span class="o">-</span><span class="nb">sum</span><span class="o">/</span><span class="n">solution</span><span class="o">/</span><span class="n">hui</span><span class="o">-</span><span class="n">su</span><span class="o">-</span><span class="n">suan</span><span class="o">-</span><span class="n">fa</span><span class="o">-</span><span class="n">jian</span><span class="o">-</span><span class="n">zhi</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">dai</span><span class="o">-</span><span class="n">ma</span><span class="o">-</span><span class="n">java</span><span class="o">-</span><span class="n">dai</span><span class="o">-</span><span class="n">m</span><span class="o">-</span><span class="mi">2</span><span class="o">/</span></span></span></code></pre></div></div>
+<p>在力扣讨论区提到这是一道典型的<strong>回溯算法</strong>题，<a href="/posts/%e5%9b%9e%e6%ba%af%e7%ae%97%e6%b3%95/" rel="">点击了解回溯算法</a>。</p>
 <h1 id="40-combination-sum-ii">40. Combination Sum II</h1>
 <p>tag. List</p>
 <details>
@@ -310,109 +261,63 @@ A solution set is:
 <li>The solution set must not contain duplicate combinations.</li>
 </ul>
 <p><strong>Example 1:</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html">Input: candidates = [10,1,2,7,6,1,5], target = 8,
-A solution set is:
-[
-  [1, 7],
-  [1, 2, 5],
-  [2, 6],
-  [1, 1, 6]
-]
-</code></pre></td></tr></table>
-</div>
-</div></details>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-html">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">Input: candidates = [10,1,2,7,6,1,5], target = 8,
+</span></span><span class="line"><span class="cl">A solution set is:
+</span></span><span class="line"><span class="cl">[
+</span></span><span class="line"><span class="cl">  [1, 7],
+</span></span><span class="line"><span class="cl">  [1, 2, 5],
+</span></span><span class="line"><span class="cl">  [2, 6],
+</span></span><span class="line"><span class="cl">  [1, 1, 6]
+</span></span><span class="line"><span class="cl">]</span></span></code></pre></div></div>
+</details>
 <p>这道题和上面的第39道题非常相似，不同的是candidates里面的数字<strong>只能取一次</strong>。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python3" data-lang="python3"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">combinationSum2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">candidates</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">target</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
-        <span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">candidates</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">return</span> <span class="p">[]</span>
-        <span class="n">candidates</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-        <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">__dfs</span><span class="p">(</span><span class="n">candidates</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">[],</span> <span class="n">target</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">res</span>
-
-    <span class="k">def</span> <span class="nf">__dfs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">candidates</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">residue</span><span class="p">,</span> <span class="n">res</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">residue</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">[:])</span>
-            <span class="k">return</span>
-
-        <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
-            <span class="k">if</span> <span class="n">candidates</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">residue</span><span class="p">:</span>
-                <span class="k">break</span>
-
-            <span class="c1"># 剪枝的前提是数组升序排序</span>
-            <span class="k">if</span> <span class="n">index</span> <span class="o">&gt;</span> <span class="n">start</span> <span class="ow">and</span> <span class="n">candidates</span><span class="p">[</span><span class="n">index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">candidates</span><span class="p">[</span><span class="n">index</span><span class="p">]:</span>
-                <span class="c1"># [1, 1, 2, 5, 6, 7, 10]</span>
-                <span class="c1"># 0 号索引的 1 ，从后面 6 个元素中搜索</span>
-                <span class="c1"># 1 号索引也是 1 ，从后面 5 个元素（是上面 6 个元素的真子集）中搜索，</span>
-                <span class="c1"># 这种情况显然上面已经包含。</span>
-                <span class="k">continue</span>
-
-            <span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">candidates</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
-            <span class="c1"># 这里要传入 index + 1，因为当前元素不能被重复使用</span>
-            <span class="c1"># 如果 index + 1 越界，传递到下一个方法中，什么也不执行</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">__dfs</span><span class="p">(</span><span class="n">candidates</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">residue</span> <span class="o">-</span> <span class="n">candidates</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="n">res</span><span class="p">)</span>
-            <span class="n">path</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-
-<span class="n">作者</span><span class="err">：</span><span class="n">liweiwei1419</span>
-<span class="n">链接</span><span class="err">：</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">leetcode</span><span class="o">-</span><span class="n">cn</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">problems</span><span class="o">/</span><span class="n">combination</span><span class="o">-</span><span class="nb">sum</span><span class="o">-</span><span class="n">ii</span><span class="o">/</span><span class="n">solution</span><span class="o">/</span><span class="n">hui</span><span class="o">-</span><span class="n">su</span><span class="o">-</span><span class="n">suan</span><span class="o">-</span><span class="n">fa</span><span class="o">-</span><span class="n">jian</span><span class="o">-</span><span class="n">zhi</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">dai</span><span class="o">-</span><span class="n">ma</span><span class="o">-</span><span class="n">java</span><span class="o">-</span><span class="n">dai</span><span class="o">-</span><span class="n">m</span><span class="o">-</span><span class="mi">3</span><span class="o">/</span>
-</code></pre></td></tr></table>
-</div>
-</div><h1 id="202-happy-number">202. Happy Number</h1>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-python3">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python3" data-lang="python3"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">combinationSum2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">candidates</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">target</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">candidates</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">candidates</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">__dfs</span><span class="p">(</span><span class="n">candidates</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">[],</span> <span class="n">target</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">__dfs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">candidates</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">residue</span><span class="p">,</span> <span class="n">res</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">residue</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">[:])</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">candidates</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">residue</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">break</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1"># 剪枝的前提是数组升序排序</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">index</span> <span class="o">&gt;</span> <span class="n">start</span> <span class="ow">and</span> <span class="n">candidates</span><span class="p">[</span><span class="n">index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">candidates</span><span class="p">[</span><span class="n">index</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># [1, 1, 2, 5, 6, 7, 10]</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># 0 号索引的 1 ，从后面 6 个元素中搜索</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># 1 号索引也是 1 ，从后面 5 个元素（是上面 6 个元素的真子集）中搜索，</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># 这种情况显然上面已经包含。</span>
+</span></span><span class="line"><span class="cl">                <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">candidates</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># 这里要传入 index + 1，因为当前元素不能被重复使用</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># 如果 index + 1 越界，传递到下一个方法中，什么也不执行</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">__dfs</span><span class="p">(</span><span class="n">candidates</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">residue</span> <span class="o">-</span> <span class="n">candidates</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="n">res</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">path</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">作者</span><span class="err">：</span><span class="n">liweiwei1419</span>
+</span></span><span class="line"><span class="cl"><span class="n">链接</span><span class="err">：</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">leetcode</span><span class="o">-</span><span class="n">cn</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">problems</span><span class="o">/</span><span class="n">combination</span><span class="o">-</span><span class="nb">sum</span><span class="o">-</span><span class="n">ii</span><span class="o">/</span><span class="n">solution</span><span class="o">/</span><span class="n">hui</span><span class="o">-</span><span class="n">su</span><span class="o">-</span><span class="n">suan</span><span class="o">-</span><span class="n">fa</span><span class="o">-</span><span class="n">jian</span><span class="o">-</span><span class="n">zhi</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">dai</span><span class="o">-</span><span class="n">ma</span><span class="o">-</span><span class="n">java</span><span class="o">-</span><span class="n">dai</span><span class="o">-</span><span class="n">m</span><span class="o">-</span><span class="mi">3</span><span class="o">/</span></span></span></code></pre></div></div>
+<h1 id="202-happy-number">202. Happy Number</h1>
 <p>tag. Math</p>
 <details>
 <summary>点击展开详情</summary>
@@ -424,110 +329,83 @@ A solution set is:
 Output: true<br>
 Explanation:<br>
 $$
-1^2 + 9^2 = 82\<br>
-8^2 + 2^2 = 68\<br>
-6^2 + 8^2 = 100\<br>
-1^2 + 0^2 + 0^2 = 1\<br>
+1^2 + 9^2 = 82\
+8^2 + 2^2 = 68\
+6^2 + 8^2 = 100\
+1^2 + 0^2 + 0^2 = 1\
 $$
 我的Solution：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python3" data-lang="python3">	<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">isHappy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="n">cur</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-            <span class="n">tmp</span> <span class="o">=</span> <span class="mi">0</span>
-            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cur</span><span class="p">)):</span>
-                <span class="n">tmp</span><span class="o">+=</span><span class="nb">int</span><span class="p">(</span><span class="n">cur</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span>
-            <span class="k">if</span> <span class="n">tmp</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-                <span class="k">return</span> <span class="kc">True</span>
-            <span class="k">elif</span> <span class="n">tmp</span> <span class="o">==</span> <span class="mi">4</span> <span class="ow">or</span> <span class="n">tmp</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
-                <span class="k">return</span> <span class="kc">False</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">cur</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>这道题应该算是纯数学题，需要知道的是：是Happy number会回归到1；如果不是Happy number，计算过程中会回归到3或4。这是数学上的证明，但是如果没有这个数学支持的话，应该把这道题理解成，出现循环(即算出之前算过的数)就不是Happy number，代码就是：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-python3" data-lang="python3"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">isHappy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="n">seen</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">}</span>
-        <span class="k">while</span> <span class="n">n</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
-            <span class="n">seen</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-            <span class="n">n</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
-        <span class="k">return</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span>
-
-<span class="n">链接</span><span class="err">：</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">leetcode</span><span class="o">-</span><span class="n">cn</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">problems</span><span class="o">/</span><span class="n">happy</span><span class="o">-</span><span class="n">number</span><span class="o">/</span><span class="n">solution</span><span class="o">/</span><span class="n">python</span><span class="o">-</span><span class="mi">1</span><span class="n">xing</span><span class="o">-</span><span class="n">by</span><span class="o">-</span><span class="n">knifezhu</span><span class="o">-</span><span class="mi">9</span><span class="o">/</span>
-</code></pre></td></tr></table>
-</div>
-</div></div><div class="post-footer" id="post-footer">
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-python3">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python3" data-lang="python3"><span class="line"><span class="cl">	<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">isHappy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cur</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">tmp</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cur</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">tmp</span><span class="o">+=</span><span class="nb">int</span><span class="p">(</span><span class="n">cur</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">tmp</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">            <span class="k">elif</span> <span class="n">tmp</span> <span class="o">==</span> <span class="mi">4</span> <span class="ow">or</span> <span class="n">tmp</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">            <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">cur</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span></span></span></code></pre></div></div>
+<p>这道题应该算是纯数学题，需要知道的是：是Happy number会回归到1；如果不是Happy number，计算过程中会回归到3或4。这是数学上的证明，但是如果没有这个数学支持的话，应该把这道题理解成，出现循环(即算出之前算过的数)就不是Happy number，代码就是：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-python3">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python3" data-lang="python3"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">isHappy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">seen</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">n</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">seen</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">n</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">链接</span><span class="err">：</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">leetcode</span><span class="o">-</span><span class="n">cn</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">problems</span><span class="o">/</span><span class="n">happy</span><span class="o">-</span><span class="n">number</span><span class="o">/</span><span class="n">solution</span><span class="o">/</span><span class="n">python</span><span class="o">-</span><span class="mi">1</span><span class="n">xing</span><span class="o">-</span><span class="n">by</span><span class="o">-</span><span class="n">knifezhu</span><span class="o">-</span><span class="mi">9</span><span class="o">/</span></span></span></code></pre></div></div>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>本文于 2019-08-24 更新</span>
-            </div>
-            <div class="post-info-license"></div>
-        </div>
+                <span>更新于 2019-08-24</span>
+            </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://seacj.github.io/posts/leetcodedaily3/" data-title="每日Leetcode03"><i class="fab fa-weibo fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="http://localhost:1313/posts/leetcodedaily3/" data-title="每日Leetcode03" data-hashtags="算法,leetcode"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="http://localhost:1313/posts/leetcodedaily3/" data-title="每日Leetcode03"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/leetcodedaily3/" data-hashtag="算法"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/leetcodedaily3/" data-title="每日Leetcode03"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://localhost:1313/posts/leetcodedaily3/" data-title="每日Leetcode03"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/leetcodedaily3/" data-title="每日Leetcode03"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/posts/leetcodedaily3/" data-title="每日Leetcode03" data-description=""><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fleetcodedaily3%2f&amp;text=%e6%af%8f%e6%97%a5Leetcode03" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>,&nbsp;<a href="/tags/leetcode/">leetcode</a></section>
+        <section class="post-tags"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>,&nbsp;<a href="/tags/leetcode/">Leetcode</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2003/" class="prev" rel="prev" title="建站历史003"><i class="fas fa-angle-left fa-fw"></i>建站历史003</a>
-            <a href="/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" class="next" rel="next" title="回溯算法初探">回溯算法初探<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2003/" class="prev" rel="prev" title="建站历史003"><i class="fas fa-angle-left" aria-hidden="true"></i>建站历史003</a>
+            <a href="/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" class="next" rel="next" title="回溯算法初探">回溯算法初探<i class="fas fa-angle-right" aria-hidden="true"></i></a></div>
 </div>
-<div id="comments">
-
-        <script src="//code.tidio.co/qgrdxb76tups4kgrezsz6fwxcvqjbpsh.js"></script></div></article></div>
-            </main><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> <footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.6"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
-                <i class="fas fa-arrow-up fa-fw"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
-                <i class="fas fa-comment fa-fw"></i>
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><style>.lg-toolbar .lg-icon::after { color: #999; }</style><script type="text/javascript">
-    window.config = {"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{},"headerMode":{"desktop":null,"mobile":null},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"QVNQRH3FHN","algoliaIndex":"cj-blog","algoliaSearchKey":"50b1056efeb6f9195818878fca2394e0","highlightTag":"em","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};
-</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/algoliasearch/lite/browser.umd.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script src="/lib/katex/katex.min.js"></script><script src="/lib/katex/contrib/auto-render.min.js"></script><script src="/lib/katex/contrib/copy-tex.min.js"></script><script src="/lib/katex/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"QVNQRH3FHN","algoliaIndex":"cj-blog","algoliaSearchKey":"50b1056efeb6f9195818878fca2394e0","highlightTag":"em","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script src="/js/theme.min.js"></script></body>
 </html>

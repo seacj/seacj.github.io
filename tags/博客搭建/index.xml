@@ -1,78 +1,132 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>博客搭建 - 标签 - 草祭</title>
-        <link>https://seacj.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
+        <link>http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
         <description>博客搭建 - 标签 - 草祭</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
-            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Thu, 23 Jul 2020 16:43:32 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 23 Jul 2020 16:43:32 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="self" type="application/rss+xml" /><item>
     <title>建站历史008</title>
-    <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2008/</link>
+    <link>http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2008/</link>
     <pubDate>Thu, 23 Jul 2020 16:43:32 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2008/</guid>
-    <description><![CDATA[凭借本博客喜获github北极开源贡献者徽章 这两天，在 GitHub 上积极贡献代码的许多开发者都收到了「Arctic Code Vault Contributor」的荣誉勋]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2008/</guid>
+    <description><![CDATA[<p>凭借本博客喜获github北极开源贡献者徽章</p>
+<p></p>
+<blockquote>
+<p>这两天，在 GitHub 上积极贡献代码的许多开发者都收到了「Arctic Code Vault Contributor」的荣誉勋章的通知，并非常兴奋地晒起了朋友圈。因为这标志着自己在 GitHub 上贡献的代码、写的库都被 GitHub 打包运送到了北极永冻土数百米深处的一个暗室里保存了起来，这些代码与库将被保存 1000 多年。</p>]]></description>
+</item>
+<item>
     <title>建站历史007</title>
-    <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2007/</link>
+    <link>http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2007/</link>
     <pubDate>Tue, 12 May 2020 13:00:23 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2007/</guid>
-    <description><![CDATA[添加即时通讯 修改Hugo主题为LoveIt 修改彩蛋页面 新增站内搜索（第一次配置好了之后，以后更新博客只需要运行hugo-algolia -s就]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2007/</guid>
+    <description><![CDATA[<ul>
+<li>添加即时通讯</li>
+<li>修改Hugo主题为LoveIt</li>
+<li>修改<a href="/playhouse.html" rel="">彩蛋页面</a></li>
+<li>新增站内搜索（第一次配置好了之后，以后更新博客只需要运行<code>hugo-algolia -s</code>就能更新搜索了。简单的使用是没有问题的，但是会有一些小bug，不过问题不大吧，就不修复了）</li>
+<li>使用typora-plugins-win-img</li>
+<li>新增RSS</li>
+</ul>
+<blockquote>
+<p>相关链接</p>]]></description>
+</item>
+<item>
     <title>测试博客新主题</title>
-    <link>https://seacj.github.io/posts/%E6%B5%8B%E8%AF%95%E6%96%B0%E4%B8%BB%E9%A2%98loveit/</link>
+    <link>http://localhost:1313/posts/%E6%B5%8B%E8%AF%95%E6%96%B0%E4%B8%BB%E9%A2%98loveit/</link>
     <pubDate>Mon, 11 May 2020 17:45:40 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E6%B5%8B%E8%AF%95%E6%96%B0%E4%B8%BB%E9%A2%98loveit/</guid>
-    <description><![CDATA[题记 又想折腾一下博客，用LeaveIt主题有段时间了，打算换一个主题，Hugo官网的top1的主题academic折腾了一下感觉不太适合我，]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E6%B5%8B%E8%AF%95%E6%96%B0%E4%B8%BB%E9%A2%98loveit/</guid>
+    <description><![CDATA[<h1 id="题记">题记</h1>
+<p>又想折腾一下博客，用LeaveIt主题有段时间了，打算换一个主题，Hugo官网的top1的主题academic折腾了一下感觉不太适合我，因为外观太官方了正式了，所以就换成LoveIt主题。这篇博客就是简单的展示一下LoveIt主题的显示，也用来为以后主题迁移做调试使用。</p>]]></description>
+</item>
+<item>
     <title>建站历史006</title>
-    <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2006/</link>
+    <link>http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2006/</link>
     <pubDate>Wed, 08 Apr 2020 16:22:17 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2006/</guid>
-    <description><![CDATA[修改文章分类 修改字体大小（修改LeaveIt\assets\css_common_page\post.scss中的font-size） 新增音]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2006/</guid>
+    <description><![CDATA[<ul>
+<li>
+<p>修改文章分类</p>
+</li>
+<li>
+<p><del>修改字体大小（修改LeaveIt\assets\css_common_page\post.scss中的font-size）</del></p>
+</li>
+<li>
+<p>新增音频播放器</p>]]></description>
+</item>
+<item>
     <title>Git学习</title>
-    <link>https://seacj.github.io/posts/git%E5%AD%A6%E4%B9%A0/</link>
+    <link>http://localhost:1313/posts/git%E5%AD%A6%E4%B9%A0/</link>
     <pubDate>Tue, 03 Mar 2020 18:24:03 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/git%E5%AD%A6%E4%B9%A0/</guid>
-    <description><![CDATA[题记 Git是一个非常优秀的开源的分布式版本控制系统，非常值得好好学习一下。 这里分享一个可能是学习git的最好的网站：https://lear]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/git%E5%AD%A6%E4%B9%A0/</guid>
+    <description><![CDATA[<h2 id="题记">题记</h2>
+<p><code>Git</code>是一个非常优秀的开源的分布式版本控制系统，非常值得好好学习一下。</p>
+<p>这里分享一个可能是学习git的最好的网站：https://learngitbranching.js.org/ ，这篇博客用来记录我在这里学习到的知识点。并附上示意图的链接,没有附上图片的原因是希望图片能作为cheat sheet。</p>]]></description>
+</item>
+<item>
     <title>记一次Ubuntu图形化界面配置</title>
-    <link>https://seacj.github.io/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/</link>
+    <link>http://localhost:1313/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/</link>
     <pubDate>Sun, 01 Mar 2020 15:29:17 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/</guid>
-    <description><![CDATA[题记 以前配实验室的服务器的时候经常出现各种问题，但是因为又不是自己的服务器，所以不敢乱整，很多问题只要影响不大就将就着用了。不过现在买了个服]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/</guid>
+    <description><![CDATA[<h2 id="题记">题记</h2>
+<p>以前配实验室的服务器的时候经常出现各种问题，但是因为又不是自己的服务器，所以不敢乱整，很多问题只要影响不大就将就着用了。不过现在买了个服务器，当然要折腾一下。所以先从远程搭建图形化界面开始吧。这<strong>不是教程</strong>，只是记录一下我的实验而已，不过应该还是有借鉴价值的，至少先踩一些坑。</p>]]></description>
+</item>
+<item>
     <title>部署博客到阿里云服务器</title>
-    <link>https://seacj.github.io/posts/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+    <link>http://localhost:1313/posts/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
     <pubDate>Sat, 29 Feb 2020 19:18:30 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
-    <description><![CDATA[题记 终于还是花了100RMB钱买了一年的阿里云服务器，现在把github pages的网站部署到服务器上。由于踩的坑有点多，所以全篇下来可能有]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+    <description><![CDATA[<h2 id="题记">题记</h2>
+<p>终于还是花了100RMB钱买了一年的阿里云服务器，现在把github pages的网站部署到服务器上。由于踩的坑有点多，所以全篇下来可能有点啰嗦。</p>]]></description>
+</item>
+<item>
     <title>Git hooks初探</title>
-    <link>https://seacj.github.io/posts/git_hooks%E5%88%9D%E6%8E%A2/</link>
+    <link>http://localhost:1313/posts/git_hooks%E5%88%9D%E6%8E%A2/</link>
     <pubDate>Sat, 29 Feb 2020 17:57:41 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/git_hooks%E5%88%9D%E6%8E%A2/</guid>
-    <description><![CDATA[题记 由于打算把博客从Git Pages同步到自己的服务器上，需要借助Git hooks技术，所以来简单学习一下。 Git hooks是什么 Git Hooks就]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/git_hooks%E5%88%9D%E6%8E%A2/</guid>
+    <description><![CDATA[<h2 id="题记">题记</h2>
+<p>由于打算把博客从Git Pages同步到自己的服务器上，需要借助Git hooks技术，所以来简单学习一下。</p>
+<h1 id="git-hooks是什么">Git hooks是什么</h1>
+<p>Git Hooks就是那些在Git执行特定事件（如commit、push、receive等）后触发运行的脚本（这个脚本可以是shell、python、Ruby等等）。可以类比成一个触发器，当监听到某种事件时，就会自动触发，并执行脚本。</p>]]></description>
+</item>
+<item>
     <title>建站历史005</title>
-    <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2005/</link>
+    <link>http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2005/</link>
     <pubDate>Wed, 26 Feb 2020 20:30:05 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2005/</guid>
-    <description><![CDATA[修改阅读进度条外观 在主页增加邮箱联系方式 删除Tool页面 修改引用内容的背景色 同时部署 Hugo 静态博客到 Netlify 和 Github Pages seacj.netlify.com 在阿里云新增4个国际DNS服务器(]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2005/</guid>
+    <description><![CDATA[<ul>
+<li>修改阅读进度条外观</li>
+<li>在主页增加邮箱联系方式</li>
+<li>删除Tool页面</li>
+<li>修改引用内容的背景色</li>
+<li>同时部署 Hugo 静态博客到 Netlify 和 Github Pages <a href="http://seacj.netlify.com" target="_blank" rel="noopener noreffer ">seacj.netlify.com</a></li>
+<li><del>在阿里云新增4个国际DNS服务器(可能会加快域名解析速度)</del> 据说这样配有可能会导致网站被墙掉&hellip;</li>
+</ul>
+<h2 id="相关链接">相关链接</h2>
+<ul>
+<li>LeaveIt主题配置 <a href="https://github.com/liuzc/LeaveIt" target="_blank">LeaveIt Hugo Theme 作者github</a></li>
+<li>网站迁移至码云 <a href="/posts/%e7%bd%91%e7%ab%99%e8%bf%81%e7%a7%bb%e8%87%b3gitee/" rel="">码云托管的文章</a></li>
+<li>添加阅读进度条 <a href="https://mogeko.me/2019/070/" target="_blank">为 LeaveIt 主题添加阅读进度条</a></li>
+<li>Coding静态网站官方文档 <a href="https://e.coding.net/help/knowledge-base/static-website/" target="_blank" rel="noopener noreffer ">Coding如何搭建静态网站</a></li>
+<li>同时部署 Hugo 静态博客到 Netlify 和 Github Pages <a href="https://www.nashome.cn/post/hugo-netlify/" target="_blank" rel="noopener noreffer ">同时部署 Hugo 静态博客到 Netlify 和 Github Pages</a></li>
+</ul>]]></description>
+</item>
+<item>
     <title>博客迁移至码云</title>
-    <link>https://seacj.github.io/posts/%E7%BD%91%E7%AB%99%E8%BF%81%E7%A7%BB%E8%87%B3gitee/</link>
+    <link>http://localhost:1313/posts/%E7%BD%91%E7%AB%99%E8%BF%81%E7%A7%BB%E8%87%B3gitee/</link>
     <pubDate>Tue, 25 Feb 2020 22:01:23 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E7%BD%91%E7%AB%99%E8%BF%81%E7%A7%BB%E8%87%B3gitee/</guid>
-    <description><![CDATA[题记 之前我的个人博客都是直接挂在github上，但是考虑到国内访问github的速度不是很稳定，VPN有时候都不好使，如下： 来自 185.199.xxx.xxx 的回复: 字]]></description>
-</item></channel>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E7%BD%91%E7%AB%99%E8%BF%81%E7%A7%BB%E8%87%B3gitee/</guid>
+    <description><![CDATA[<h2 id="题记">题记</h2>
+<p>之前我的个人博客都是直接挂在github上，但是考虑到国内访问github的速度不是很稳定，VPN有时候都不好使，如下：</p>
+<p><code>来自 185.199.xxx.xxx 的回复: 字节=32 时间=175ms TTL=52</code></p>]]></description>
+</item>
+</channel>
 </rss>

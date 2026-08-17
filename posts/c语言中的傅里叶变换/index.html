@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>C语言傅里叶变换库 - 草祭</title>
-        <meta name="Description" content=""><meta property="og:title" content="C语言傅里叶变换库" />
-<meta property="og:description" content="C语言里面可以用2个库FFTW和kissfft做傅里叶变换，第一次装的时候因为不懂dll、lib怎么用所以配置了很久。 代码的例子如下，由于我" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://seacj.github.io/posts/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" />
-<meta property="article:published_time" content="2020-08-24T17:13:53+08:00" />
-<meta property="article:modified_time" content="2020-08-24T17:13:53+08:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="C语言傅里叶变换库"/>
-<meta name="twitter:description" content="C语言里面可以用2个库FFTW和kissfft做傅里叶变换，第一次装的时候因为不懂dll、lib怎么用所以配置了很久。 代码的例子如下，由于我"/>
-<meta name="application-name" content="草祭">
-<meta name="apple-mobile-web-app-title" content="草祭"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <title>C语言傅里叶变换库 - 草祭</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/posts/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">
+  <meta property="og:site_name" content="草祭">
+  <meta property="og:title" content="C语言傅里叶变换库">
+  <meta property="og:description" content="C语言里面可以用2个库FFTW和kissfft做傅里叶变换，第一次装的时候因为不懂dll、lib怎么用所以配置了很久。
+代码的例子如下，由于我是做语音的所以只给了语音里面的例子，sndfile库是用来读写音频的，例子是时域转频域，再从频域转时域。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-08-24T17:13:53+08:00">
+    <meta property="article:modified_time" content="2020-08-24T17:13:53+08:00">
+    <meta property="article:tag" content="信号处理">
+    <meta property="article:tag" content="C语言">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="C语言傅里叶变换库">
+  <meta name="twitter:description" content="C语言里面可以用2个库FFTW和kissfft做傅里叶变换，第一次装的时候因为不懂dll、lib怎么用所以配置了很久。
+代码的例子如下，由于我是做语音的所以只给了语音里面的例子，sndfile库是用来读写音频的，例子是时域转频域，再从频域转时域。">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" /><link rel="prev" href="https://seacj.github.io/posts/%E5%92%B2%E8%89%AF%E7%94%B0%E7%9A%84%E6%80%9D%E6%83%B3%E5%AE%9E%E9%AA%8C/" /><link rel="next" href="https://seacj.github.io/posts/%E9%94%99%E6%8E%92%E9%97%AE%E9%A2%98/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" /><link rel="prev" href="http://localhost:1313/posts/%E5%92%B2%E8%89%AF%E7%94%B0%E7%9A%84%E6%80%9D%E6%83%B3%E5%AE%9E%E9%AA%8C/" /><link rel="next" href="http://localhost:1313/posts/%E9%94%99%E6%8E%92%E9%97%AE%E9%A2%98/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -26,44 +35,56 @@
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/seacj.github.io\/posts\/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2\/"
-        },"genre": "posts","keywords": "信号处理, C语言","wordcount":  1044 ,
-        "url": "https:\/\/seacj.github.io\/posts\/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2\/","datePublished": "2020-08-24T17:13:53+08:00","dateModified": "2020-08-24T17:13:53+08:00","author": {
+            "@id": "http:\/\/localhost:1313\/posts\/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2\/"
+        },"genre": "posts","keywords": "信号处理, C语言","wordcount":  924 ,
+        "url": "http:\/\/localhost:1313\/posts\/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2\/","datePublished": "2020-08-24T17:13:53+08:00","dateModified": "2020-08-24T17:13:53+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
                 "@type": "Person",
-                "name": "草祭"
+                "name": "xxxx"
             },"description": ""
     }
     </script></head>
-    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="草祭">草祭</a>
+            <a href="/" title="草祭">My cool site</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="我只能为您最多找15篇文章" id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
                         </span>
                     </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                    <i class="fas fa-adjust fa-fw"></i>
-                </a>
-            </div>
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </a></div>
         </div>
     </div>
 </header><header class="mobile" id="header-mobile">
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="草祭">草祭</a>
+                <a href="/" title="草祭">My cool site</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -73,45 +94,39 @@
                     <div class="search mobile" id="search-mobile">
                         <input type="text" placeholder="我只能为您最多找15篇文章" id="search-input-mobile">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
                         </span>
                     </div>
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
                 </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                <i class="fas fa-adjust fa-fw"></i>
+                <i class="fas fa-adjust" aria-hidden="true"></i>
             </a></div>
     </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">C语言傅里叶变换库</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>草祭</a></span>&nbsp;
-                    <span class="post-category">收录于<a href="/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/">
-                                <i class="far fa-folder fa-fw"></i>编程-ღ-技术
-                            </a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-08-24>2020-08-24</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>约 1044 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>预计阅读 3 分钟&nbsp;</div>
-        </div><div class="details toc" id="toc-static">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">C语言傅里叶变换库</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>xxxx</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/"><i class="far fa-folder" aria-hidden="true"></i>编程-ღ-技术</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2020-08-24">2020-08-24</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;约 924 字&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
@@ -121,259 +136,133 @@
 </nav></div>
             </div><div class="content" id="content"><p>C语言里面可以用2个库FFTW和kissfft做傅里叶变换，第一次装的时候因为不懂dll、lib怎么用所以配置了很久。</p>
 <p>代码的例子如下，由于我是做语音的所以只给了语音里面的例子，sndfile库是用来读写音频的，例子是时域转频域，再从频域转时域。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">  1
-</span><span class="lnt">  2
-</span><span class="lnt">  3
-</span><span class="lnt">  4
-</span><span class="lnt">  5
-</span><span class="lnt">  6
-</span><span class="lnt">  7
-</span><span class="lnt">  8
-</span><span class="lnt">  9
-</span><span class="lnt"> 10
-</span><span class="lnt"> 11
-</span><span class="lnt"> 12
-</span><span class="lnt"> 13
-</span><span class="lnt"> 14
-</span><span class="lnt"> 15
-</span><span class="lnt"> 16
-</span><span class="lnt"> 17
-</span><span class="lnt"> 18
-</span><span class="lnt"> 19
-</span><span class="lnt"> 20
-</span><span class="lnt"> 21
-</span><span class="lnt"> 22
-</span><span class="lnt"> 23
-</span><span class="lnt"> 24
-</span><span class="lnt"> 25
-</span><span class="lnt"> 26
-</span><span class="lnt"> 27
-</span><span class="lnt"> 28
-</span><span class="lnt"> 29
-</span><span class="lnt"> 30
-</span><span class="lnt"> 31
-</span><span class="lnt"> 32
-</span><span class="lnt"> 33
-</span><span class="lnt"> 34
-</span><span class="lnt"> 35
-</span><span class="lnt"> 36
-</span><span class="lnt"> 37
-</span><span class="lnt"> 38
-</span><span class="lnt"> 39
-</span><span class="lnt"> 40
-</span><span class="lnt"> 41
-</span><span class="lnt"> 42
-</span><span class="lnt"> 43
-</span><span class="lnt"> 44
-</span><span class="lnt"> 45
-</span><span class="lnt"> 46
-</span><span class="lnt"> 47
-</span><span class="lnt"> 48
-</span><span class="lnt"> 49
-</span><span class="lnt"> 50
-</span><span class="lnt"> 51
-</span><span class="lnt"> 52
-</span><span class="lnt"> 53
-</span><span class="lnt"> 54
-</span><span class="lnt"> 55
-</span><span class="lnt"> 56
-</span><span class="lnt"> 57
-</span><span class="lnt"> 58
-</span><span class="lnt"> 59
-</span><span class="lnt"> 60
-</span><span class="lnt"> 61
-</span><span class="lnt"> 62
-</span><span class="lnt"> 63
-</span><span class="lnt"> 64
-</span><span class="lnt"> 65
-</span><span class="lnt"> 66
-</span><span class="lnt"> 67
-</span><span class="lnt"> 68
-</span><span class="lnt"> 69
-</span><span class="lnt"> 70
-</span><span class="lnt"> 71
-</span><span class="lnt"> 72
-</span><span class="lnt"> 73
-</span><span class="lnt"> 74
-</span><span class="lnt"> 75
-</span><span class="lnt"> 76
-</span><span class="lnt"> 77
-</span><span class="lnt"> 78
-</span><span class="lnt"> 79
-</span><span class="lnt"> 80
-</span><span class="lnt"> 81
-</span><span class="lnt"> 82
-</span><span class="lnt"> 83
-</span><span class="lnt"> 84
-</span><span class="lnt"> 85
-</span><span class="lnt"> 86
-</span><span class="lnt"> 87
-</span><span class="lnt"> 88
-</span><span class="lnt"> 89
-</span><span class="lnt"> 90
-</span><span class="lnt"> 91
-</span><span class="lnt"> 92
-</span><span class="lnt"> 93
-</span><span class="lnt"> 94
-</span><span class="lnt"> 95
-</span><span class="lnt"> 96
-</span><span class="lnt"> 97
-</span><span class="lnt"> 98
-</span><span class="lnt"> 99
-</span><span class="lnt">100
-</span><span class="lnt">101
-</span><span class="lnt">102
-</span><span class="lnt">103
-</span><span class="lnt">104
-</span><span class="lnt">105
-</span><span class="lnt">106
-</span><span class="lnt">107
-</span><span class="lnt">108
-</span><span class="lnt">109
-</span><span class="lnt">110
-</span><span class="lnt">111
-</span><span class="lnt">112
-</span><span class="lnt">113
-</span><span class="lnt">114
-</span><span class="lnt">115
-</span><span class="lnt">116
-</span><span class="lnt">117
-</span><span class="lnt">118
-</span><span class="lnt">119
-</span><span class="lnt">120
-</span><span class="lnt">121
-</span><span class="lnt">122
-</span><span class="lnt">123
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-C" data-lang="C"><span class="cp">#include</span> <span class="cpf">&#34;kiss_fftr.h&#34;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&#34;fftw3.h&#34;</span><span class="cp">
-</span><span class="cp">#include</span>	<span class="cpf">&lt;sndfile.h&gt;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&#34;kiss_fft.h&#34;</span><span class="cp">
-</span><span class="cp"></span>
-<span class="kt">void</span> <span class="nf">fft_d</span><span class="p">(</span><span class="kt">double</span> <span class="o">*</span> <span class="n">in</span><span class="p">,</span> <span class="n">fftw_complex</span><span class="o">*</span> <span class="n">out</span><span class="p">,</span> <span class="kt">int</span> <span class="n">nfft</span><span class="p">)</span> <span class="p">{</span>
-	<span class="n">fftw_plan</span> <span class="n">p</span><span class="p">;</span>
-	<span class="c1">//p = fftw_plan_dft_1d(nfft, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
-</span><span class="c1"></span>	<span class="c1">// 一维实数据的DFT
-</span><span class="c1"></span>	<span class="n">p</span> <span class="o">=</span> <span class="n">fftw_plan_dft_r2c_1d</span><span class="p">(</span><span class="n">nfft</span><span class="p">,</span> <span class="n">in</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">FFTW_ESTIMATE</span><span class="p">);</span>
-	<span class="n">fftw_execute</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
-	<span class="n">fftw_destroy_plan</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="nf">ifft_d</span><span class="p">(</span><span class="n">fftw_complex</span><span class="o">*</span> <span class="n">in</span><span class="p">,</span> <span class="kt">double</span><span class="o">*</span> <span class="n">out</span><span class="p">,</span> <span class="kt">int</span> <span class="n">nfft</span><span class="p">)</span> <span class="p">{</span>
-	<span class="n">fftw_plan</span> <span class="n">p</span><span class="p">;</span>
-	<span class="c1">//p = fftw_plan_dft_1d(nfft, in, out, FFTW_BACKWARD, FFTW_ESTIMATE);
-</span><span class="c1"></span>	<span class="n">p</span> <span class="o">=</span> <span class="n">fftw_plan_dft_c2r_1d</span><span class="p">(</span><span class="n">nfft</span><span class="p">,</span> <span class="n">in</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">FFTW_ESTIMATE</span><span class="p">);</span>
-	<span class="n">fftw_execute</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
-	<span class="n">fftw_destroy_plan</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="nf">testfft</span><span class="p">()</span> <span class="p">{</span>
-	<span class="kt">int</span> <span class="n">method</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-	<span class="c1">//const int N = 11125;
-</span><span class="c1"></span>	<span class="n">SF_INFO</span> <span class="n">sf_info</span><span class="p">;</span>
-	<span class="n">SNDFILE</span> <span class="o">*</span><span class="n">snd_file</span><span class="p">;</span>
-	<span class="n">snd_file</span> <span class="o">=</span> <span class="n">sf_open</span><span class="p">(</span><span class="s">&#34;p232_084_8kHz.wav&#34;</span><span class="p">,</span> <span class="n">SFM_READ</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sf_info</span><span class="p">);</span>
-
-	<span class="kt">float</span> <span class="n">buf2</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
-	<span class="c1">//buf2 = (double *)malloc(sf_info.frames * sizeof(double));
-</span><span class="c1"></span>	<span class="c1">//sf_readf_double(snd_file, buf2, sf_info.frames);
-</span><span class="c1"></span>	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;Sample Rate : %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">sf_info</span><span class="p">.</span><span class="n">samplerate</span><span class="p">);</span>
-	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;Channels : %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">sf_info</span><span class="p">.</span><span class="n">channels</span><span class="p">);</span>
-	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;Sections  : %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">sf_info</span><span class="p">.</span><span class="n">sections</span><span class="p">);</span>
-	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;Frames   : %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">sf_info</span><span class="p">.</span><span class="n">frames</span><span class="p">);</span>
-	<span class="kt">int</span> <span class="n">n_frames</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">sf_info</span><span class="p">.</span><span class="n">frames</span> <span class="o">/</span> <span class="n">M</span><span class="p">;</span>
-
-	<span class="n">SNDFILE</span>	<span class="o">*</span><span class="n">output_file</span><span class="p">;</span>
-	<span class="n">SF_INFO</span> <span class="n">outsf_info</span><span class="p">;</span>
-
-	<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">output_file</span> <span class="o">=</span> <span class="n">sf_open</span><span class="p">(</span><span class="s">&#34;sine.wav&#34;</span><span class="p">,</span> <span class="n">SFM_WRITE</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sf_info</span><span class="p">)))</span>
-	<span class="p">{</span>
-		<span class="n">printf</span><span class="p">(</span><span class="s">&#34;Error : Not able to open output file.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-		<span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-	<span class="p">}</span>
-	<span class="k">if</span> <span class="p">(</span><span class="n">method</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span><span class="c1">//方法一使用kissfft
-</span><span class="c1"></span>		<span class="n">kiss_fft_cpx</span> <span class="n">cpx_in</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
-		<span class="n">kiss_fft_cpx</span> <span class="n">cx_out</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
-		<span class="n">kiss_fft_cfg</span> <span class="n">cfg</span> <span class="o">=</span> <span class="n">kiss_fft_alloc</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
-
-
-		<span class="n">kiss_fftr_cfg</span> <span class="n">icfg</span> <span class="o">=</span> <span class="n">kiss_fftr_alloc</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-		<span class="n">kiss_fft_cpx</span> <span class="n">freq_data</span><span class="p">[</span><span class="n">M</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
-		<span class="n">kiss_fft_scalar</span> <span class="n">time_data</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
-		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">n_frames</span><span class="p">;</span> <span class="n">n</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-			<span class="n">sf_readf_float</span><span class="p">(</span><span class="n">snd_file</span><span class="p">,</span> <span class="n">buf2</span><span class="p">,</span> <span class="n">M</span><span class="p">);</span>
-
-			<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">M</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="n">cpx_in</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">r</span> <span class="o">=</span> <span class="n">buf2</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-				<span class="n">cpx_in</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-			<span class="p">}</span>
-
-			<span class="n">kiss_fft</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">cpx_in</span><span class="p">,</span> <span class="n">cx_out</span><span class="p">);</span>
-
-			<span class="cm">/* inverse FFT */</span>
-			<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">M</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="n">freq_data</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">r</span> <span class="o">=</span> <span class="n">cx_out</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">r</span><span class="p">;</span>
-				<span class="n">freq_data</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">i</span> <span class="o">=</span> <span class="n">cx_out</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">i</span><span class="p">;</span>
-			<span class="p">}</span>
-			<span class="n">kiss_fftri</span><span class="p">(</span><span class="n">icfg</span><span class="p">,</span> <span class="n">freq_data</span><span class="p">,</span> <span class="n">time_data</span><span class="p">);</span>
-
-			<span class="kt">float</span> <span class="n">write_data</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
-			<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">M</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="n">write_data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">time_data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">M</span><span class="p">;</span>
-				<span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%f %f %f</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">write_data</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">buf2</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">cpx_in</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">r</span><span class="p">);</span>
-			<span class="p">}</span>
-			<span class="n">sf_write_float</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="n">write_data</span><span class="p">,</span> <span class="n">M</span><span class="p">);</span>
-		<span class="p">}</span>
-		<span class="n">free</span><span class="p">(</span><span class="n">cfg</span><span class="p">);</span>
-	<span class="p">}</span>
-	<span class="k">else</span> <span class="p">{</span><span class="c1">//方法二：使用FFTW
-</span><span class="c1"></span>		<span class="kt">double</span> <span class="n">in</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
-		<span class="n">fftw_complex</span> <span class="n">out</span><span class="p">[</span><span class="n">M</span><span class="o">*</span><span class="mi">2</span><span class="p">];</span>
-
-		<span class="n">fftw_complex</span> <span class="n">freq_data</span><span class="p">[</span><span class="n">M</span> <span class="o">*</span> <span class="mi">2</span><span class="p">];</span>
-		<span class="kt">double</span> <span class="n">time_data</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
-
-		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">n_frames</span><span class="p">;</span> <span class="n">n</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-			<span class="n">sf_readf_float</span><span class="p">(</span><span class="n">snd_file</span><span class="p">,</span> <span class="n">buf2</span><span class="p">,</span> <span class="n">M</span><span class="p">);</span>
-			<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">M</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="n">in</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">buf2</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-			<span class="p">}</span>
-			<span class="n">fft_d</span><span class="p">(</span><span class="n">in</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">M</span><span class="p">);</span>
-
-			<span class="cm">/* inverse FFT */</span>
-			<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">M</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="n">freq_data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">out</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
-				<span class="n">freq_data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">out</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span>
-			<span class="p">}</span>
-			<span class="n">ifft_d</span><span class="p">(</span><span class="n">freq_data</span><span class="p">,</span> <span class="n">time_data</span><span class="p">,</span> <span class="n">M</span><span class="p">);</span>
-
-			<span class="kt">float</span> <span class="n">write_data</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
-			<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">M</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-			<span class="p">{</span>
-				<span class="n">write_data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">time_data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">M</span><span class="p">;</span>
-				<span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%f %f %f</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">write_data</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">buf2</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">in</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-			<span class="p">}</span>
-			<span class="n">sf_write_float</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="n">write_data</span><span class="p">,</span> <span class="n">M</span><span class="p">);</span>
-		<span class="p">}</span>
-	<span class="p">}</span>
-	
-	<span class="n">sf_close</span><span class="p">(</span><span class="n">output_file</span><span class="p">);</span>
-	<span class="n">sf_close</span><span class="p">(</span><span class="n">snd_file</span><span class="p">);</span>
-	
-<span class="p">}</span>
-
-
-</code></pre></td></tr></table>
-</div>
-</div><h1 id="小总结">小总结</h1>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-C">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;kiss_fftr.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;fftw3.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span>	<span class="cpf">&lt;sndfile.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;kiss_fft.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">fft_d</span><span class="p">(</span><span class="kt">double</span> <span class="o">*</span> <span class="n">in</span><span class="p">,</span> <span class="n">fftw_complex</span><span class="o">*</span> <span class="n">out</span><span class="p">,</span> <span class="kt">int</span> <span class="n">nfft</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">fftw_plan</span> <span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//p = fftw_plan_dft_1d(nfft, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// 一维实数据的DFT
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">p</span> <span class="o">=</span> <span class="nf">fftw_plan_dft_r2c_1d</span><span class="p">(</span><span class="n">nfft</span><span class="p">,</span> <span class="n">in</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">FFTW_ESTIMATE</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">fftw_execute</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">fftw_destroy_plan</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">ifft_d</span><span class="p">(</span><span class="n">fftw_complex</span><span class="o">*</span> <span class="n">in</span><span class="p">,</span> <span class="kt">double</span><span class="o">*</span> <span class="n">out</span><span class="p">,</span> <span class="kt">int</span> <span class="n">nfft</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">fftw_plan</span> <span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//p = fftw_plan_dft_1d(nfft, in, out, FFTW_BACKWARD, FFTW_ESTIMATE);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">p</span> <span class="o">=</span> <span class="nf">fftw_plan_dft_c2r_1d</span><span class="p">(</span><span class="n">nfft</span><span class="p">,</span> <span class="n">in</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">FFTW_ESTIMATE</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">fftw_execute</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">fftw_destroy_plan</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">testfft</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">method</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//const int N = 11125;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">SF_INFO</span> <span class="n">sf_info</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">SNDFILE</span> <span class="o">*</span><span class="n">snd_file</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">snd_file</span> <span class="o">=</span> <span class="nf">sf_open</span><span class="p">(</span><span class="s">&#34;p232_084_8kHz.wav&#34;</span><span class="p">,</span> <span class="n">SFM_READ</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sf_info</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="kt">float</span> <span class="n">buf2</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//buf2 = (double *)malloc(sf_info.frames * sizeof(double));
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//sf_readf_double(snd_file, buf2, sf_info.frames);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Sample Rate : %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">sf_info</span><span class="p">.</span><span class="n">samplerate</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Channels : %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">sf_info</span><span class="p">.</span><span class="n">channels</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Sections  : %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">sf_info</span><span class="p">.</span><span class="n">sections</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Frames   : %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">sf_info</span><span class="p">.</span><span class="n">frames</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">n_frames</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">sf_info</span><span class="p">.</span><span class="n">frames</span> <span class="o">/</span> <span class="n">M</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">SNDFILE</span>	<span class="o">*</span><span class="n">output_file</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">SF_INFO</span> <span class="n">outsf_info</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">output_file</span> <span class="o">=</span> <span class="nf">sf_open</span><span class="p">(</span><span class="s">&#34;sine.wav&#34;</span><span class="p">,</span> <span class="n">SFM_WRITE</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sf_info</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Error : Not able to open output file.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">method</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span><span class="c1">//方法一使用kissfft
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">kiss_fft_cpx</span> <span class="n">cpx_in</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">		<span class="n">kiss_fft_cpx</span> <span class="n">cx_out</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">		<span class="n">kiss_fft_cfg</span> <span class="n">cfg</span> <span class="o">=</span> <span class="nf">kiss_fft_alloc</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="n">kiss_fftr_cfg</span> <span class="n">icfg</span> <span class="o">=</span> <span class="nf">kiss_fftr_alloc</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="n">kiss_fft_cpx</span> <span class="n">freq_data</span><span class="p">[</span><span class="n">M</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">		<span class="n">kiss_fft_scalar</span> <span class="n">time_data</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">n_frames</span><span class="p">;</span> <span class="n">n</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">sf_readf_float</span><span class="p">(</span><span class="n">snd_file</span><span class="p">,</span> <span class="n">buf2</span><span class="p">,</span> <span class="n">M</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">M</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="n">cpx_in</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">r</span> <span class="o">=</span> <span class="n">buf2</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">				<span class="n">cpx_in</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="nf">kiss_fft</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">cpx_in</span><span class="p">,</span> <span class="n">cx_out</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="cm">/* inverse FFT */</span>
+</span></span><span class="line"><span class="cl">			<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">M</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="n">freq_data</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">r</span> <span class="o">=</span> <span class="n">cx_out</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">r</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="n">freq_data</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">i</span> <span class="o">=</span> <span class="n">cx_out</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">kiss_fftri</span><span class="p">(</span><span class="n">icfg</span><span class="p">,</span> <span class="n">freq_data</span><span class="p">,</span> <span class="n">time_data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="kt">float</span> <span class="n">write_data</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">			<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">M</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="n">write_data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">time_data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">M</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%f %f %f</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">write_data</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">buf2</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">cpx_in</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">r</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">sf_write_float</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="n">write_data</span><span class="p">,</span> <span class="n">M</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">free</span><span class="p">(</span><span class="n">cfg</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span> <span class="p">{</span><span class="c1">//方法二：使用FFTW
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="kt">double</span> <span class="n">in</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">		<span class="n">fftw_complex</span> <span class="n">out</span><span class="p">[</span><span class="n">M</span><span class="o">*</span><span class="mi">2</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="n">fftw_complex</span> <span class="n">freq_data</span><span class="p">[</span><span class="n">M</span> <span class="o">*</span> <span class="mi">2</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">double</span> <span class="n">time_data</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">n_frames</span><span class="p">;</span> <span class="n">n</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">sf_readf_float</span><span class="p">(</span><span class="n">snd_file</span><span class="p">,</span> <span class="n">buf2</span><span class="p">,</span> <span class="n">M</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">M</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="n">in</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">buf2</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">fft_d</span><span class="p">(</span><span class="n">in</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">M</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="cm">/* inverse FFT */</span>
+</span></span><span class="line"><span class="cl">			<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">M</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="n">freq_data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">out</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">				<span class="n">freq_data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">out</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">ifft_d</span><span class="p">(</span><span class="n">freq_data</span><span class="p">,</span> <span class="n">time_data</span><span class="p">,</span> <span class="n">M</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="kt">float</span> <span class="n">write_data</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">			<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">M</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="n">write_data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">time_data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">M</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%f %f %f</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">write_data</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">buf2</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">in</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">sf_write_float</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="n">write_data</span><span class="p">,</span> <span class="n">M</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="nf">sf_close</span><span class="p">(</span><span class="n">output_file</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">sf_close</span><span class="p">(</span><span class="n">snd_file</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<h1 id="小总结">小总结</h1>
 <ol>
 <li>
 <p>kissfft用结构体存复数(.r是实数、.c是虚数)，fftw是二维数组（array[0]是实数、[1]是虚数）。</p>
@@ -391,59 +280,56 @@
 <h1 id="参考资料">参考资料</h1>
 <ul>
 <li>
-<p><a href="https://www.cnblogs.com/aiguona/p/9407425.html" target="_blank" rel="noopener noreffer">FFTW3学习笔记2：FFTW（快速傅里叶变换）中文参考</a></p>
+<p><a href="https://www.cnblogs.com/aiguona/p/9407425.html" target="_blank" rel="noopener noreffer ">FFTW3学习笔记2：FFTW（快速傅里叶变换）中文参考</a></p>
 </li>
 <li>
-<p><a href="https://www.geek-share.com/detail/2753550972.html" target="_blank" rel="noopener noreffer">Win10+VS2017安装FFTW库</a> 【里面有找不到dll文件的解决方法】</p>
+<p><a href="https://www.geek-share.com/detail/2753550972.html" target="_blank" rel="noopener noreffer ">Win10+VS2017安装FFTW库</a> 【里面有找不到dll文件的解决方法】</p>
 </li>
 <li>
-<p>FFTW官网 <a href="http://fftw.org/install/windows.html">http://fftw.org/install/windows.html</a></p>
+<p>FFTW官网 <a href="http://fftw.org/install/windows.html" target="_blank" rel="noopener noreffer ">http://fftw.org/install/windows.html</a></p>
 </li>
 <li>
-<p>kissfft下载地址 <a href="http://sourceforge.net/projects/kissfft/">http://sourceforge.net/projects/kissfft/</a></p>
+<p>kissfft下载地址 <a href="http://sourceforge.net/projects/kissfft/" target="_blank" rel="noopener noreffer ">http://sourceforge.net/projects/kissfft/</a></p>
 </li>
 </ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>本文于 2020-08-24 更新</span>
-            </div>
-            <div class="post-info-license"></div>
-        </div>
+                <span>更新于 2020-08-24</span>
+            </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://seacj.github.io/posts/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" data-title="C语言傅里叶变换库"><i class="fab fa-weibo fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="http://localhost:1313/posts/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" data-title="C语言傅里叶变换库" data-hashtags="信号处理,C语言"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="http://localhost:1313/posts/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" data-title="C语言傅里叶变换库"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" data-hashtag="信号处理"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" data-title="C语言傅里叶变换库"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://localhost:1313/posts/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" data-title="C语言傅里叶变换库"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" data-title="C语言傅里叶变换库"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/posts/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" data-title="C语言傅里叶变换库" data-description=""><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fc%25E8%25AF%25AD%25E8%25A8%2580%25E4%25B8%25AD%25E7%259A%2584%25E5%2582%2585%25E9%2587%258C%25E5%258F%25B6%25E5%258F%2598%25E6%258D%25A2%2f&amp;text=C%e8%af%ad%e8%a8%80%e5%82%85%e9%87%8c%e5%8f%b6%e5%8f%98%e6%8d%a2%e5%ba%93" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/">信号处理</a>,&nbsp;<a href="/tags/c%E8%AF%AD%E8%A8%80/">C语言</a></section>
+        <section class="post-tags"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/tags/%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/">信号处理</a>,&nbsp;<a href="/tags/c%E8%AF%AD%E8%A8%80/">C语言</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/%E5%92%B2%E8%89%AF%E7%94%B0%E7%9A%84%E6%80%9D%E6%83%B3%E5%AE%9E%E9%AA%8C/" class="prev" rel="prev" title="咲良田的思想实验"><i class="fas fa-angle-left fa-fw"></i>咲良田的思想实验</a>
-            <a href="/posts/%E9%94%99%E6%8E%92%E9%97%AE%E9%A2%98/" class="next" rel="next" title="错排问题">错排问题<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/%E5%92%B2%E8%89%AF%E7%94%B0%E7%9A%84%E6%80%9D%E6%83%B3%E5%AE%9E%E9%AA%8C/" class="prev" rel="prev" title="咲良田的思想实验"><i class="fas fa-angle-left" aria-hidden="true"></i>咲良田的思想实验</a>
+            <a href="/posts/%E9%94%99%E6%8E%92%E9%97%AE%E9%A2%98/" class="next" rel="next" title="错排问题">错排问题<i class="fas fa-angle-right" aria-hidden="true"></i></a></div>
 </div>
-<div id="comments">
-
-        <script src="//code.tidio.co/qgrdxb76tups4kgrezsz6fwxcvqjbpsh.js"></script></div></article></div>
-            </main><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> <footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.6"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
-                <i class="fas fa-arrow-up fa-fw"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
-                <i class="fas fa-comment fa-fw"></i>
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><style>.lg-toolbar .lg-icon::after { color: #999; }</style><script type="text/javascript">
-    window.config = {"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{},"headerMode":{"desktop":null,"mobile":null},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"QVNQRH3FHN","algoliaIndex":"cj-blog","algoliaSearchKey":"50b1056efeb6f9195818878fca2394e0","highlightTag":"em","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};
-</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/algoliasearch/lite/browser.umd.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script src="/lib/katex/katex.min.js"></script><script src="/lib/katex/contrib/auto-render.min.js"></script><script src="/lib/katex/contrib/copy-tex.min.js"></script><script src="/lib/katex/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"QVNQRH3FHN","algoliaIndex":"cj-blog","algoliaSearchKey":"50b1056efeb6f9195818878fca2394e0","highlightTag":"em","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script src="/js/theme.min.js"></script></body>
 </html>

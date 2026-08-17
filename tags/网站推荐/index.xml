@@ -1,15 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>网站推荐 - 标签 - 草祭</title>
-        <link>https://seacj.github.io/tags/%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/</link>
+        <link>http://localhost:1313/tags/%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/</link>
         <description>网站推荐 - 标签 - 草祭</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
-            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Mon, 18 May 2020 14:03:39 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 18 May 2020 14:03:39 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/" rel="self" type="application/rss+xml" /><item>
     <title>图片生成器Artbreeder</title>
-    <link>https://seacj.github.io/posts/artbreeder/</link>
+    <link>http://localhost:1313/posts/artbreeder/</link>
     <pubDate>Mon, 18 May 2020 14:03:39 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/artbreeder/</guid>
-    <description><![CDATA[题记 想给我的博客换个头像，顺便查了一下avatar的词源，是印度教里面神仙下凡的意思，觉得也是挺有意思的。那既然是avatar，肯定是想要“]]></description>
-</item></channel>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/artbreeder/</guid>
+    <description><![CDATA[<h2 id="题记">题记</h2>
+<p>想给我的博客换个头像，顺便查了一下avatar的词源，是印度教里面神仙下凡的意思，觉得也是挺有意思的。那既然是avatar，肯定是想要“独一无二”的。自己做觉得自己水平非常有限，网上的捏脸和像素画又觉得很一般，这时候就自然的想到我的b站收藏夹里面<a href="https://space.bilibili.com/125526" target="_blank" rel="noopener noreffer ">LKs</a>的一个<a href="https://www.bilibili.com/video/BV1a741137NS" target="_blank" rel="noopener noreffer ">网站推荐视频</a>提到了一个名为Artbreeder的网站。之前简单的体验过，还是有点惊艳的，所以决定自己用它来“合成”一个博客的头像。</p>]]></description>
+</item>
+</channel>
 </rss>

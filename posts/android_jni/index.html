@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Android Studio上使用JNI - 草祭</title>
-        <meta name="Description" content=""><meta property="og:title" content="Android Studio上使用JNI" />
-<meta property="og:description" content="题记 做了一个C程序，需要移植到安卓上，移植到安卓上就需要使用JNI（Java Native Interface），这里做一个Android Studio(A" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://seacj.github.io/posts/android_jni/" />
-<meta property="article:published_time" content="2020-06-04T13:43:41+08:00" />
-<meta property="article:modified_time" content="2020-06-04T13:43:41+08:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Android Studio上使用JNI"/>
-<meta name="twitter:description" content="题记 做了一个C程序，需要移植到安卓上，移植到安卓上就需要使用JNI（Java Native Interface），这里做一个Android Studio(A"/>
-<meta name="application-name" content="草祭">
-<meta name="apple-mobile-web-app-title" content="草祭"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <title>Android Studio上使用JNI - 草祭</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/posts/android_jni/">
+  <meta property="og:site_name" content="草祭">
+  <meta property="og:title" content="Android Studio上使用JNI">
+  <meta property="og:description" content="题记 做了一个C程序，需要移植到安卓上，移植到安卓上就需要使用JNI（Java Native Interface），这里做一个Android Studio(AS)上使用JNI的记录。版本和环境信息如下，不同版本的AS操作有较大区别，也只能踩坑试试才知道行不行：">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-06-04T13:43:41+08:00">
+    <meta property="article:modified_time" content="2020-06-04T13:43:41+08:00">
+    <meta property="article:tag" content="Java">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Android Studio上使用JNI">
+  <meta name="twitter:description" content="题记 做了一个C程序，需要移植到安卓上，移植到安卓上就需要使用JNI（Java Native Interface），这里做一个Android Studio(AS)上使用JNI的记录。版本和环境信息如下，不同版本的AS操作有较大区别，也只能踩坑试试才知道行不行：">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://seacj.github.io/posts/android_jni/" /><link rel="prev" href="https://seacj.github.io/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/" /><link rel="next" href="https://seacj.github.io/posts/ide%E6%8F%92%E4%BB%B6%E5%88%B7leetcode/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/android_jni/" /><link rel="prev" href="http://localhost:1313/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/" /><link rel="next" href="http://localhost:1313/posts/ide%E6%8F%92%E4%BB%B6%E5%88%B7leetcode/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -26,44 +32,56 @@
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/seacj.github.io\/posts\/android_jni\/"
-        },"genre": "posts","keywords": "java","wordcount":  2620 ,
-        "url": "https:\/\/seacj.github.io\/posts\/android_jni\/","datePublished": "2020-06-04T13:43:41+08:00","dateModified": "2020-06-04T13:43:41+08:00","author": {
+            "@id": "http:\/\/localhost:1313\/posts\/android_jni\/"
+        },"genre": "posts","keywords": "java","wordcount":  2544 ,
+        "url": "http:\/\/localhost:1313\/posts\/android_jni\/","datePublished": "2020-06-04T13:43:41+08:00","dateModified": "2020-06-04T13:43:41+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
                 "@type": "Person",
-                "name": "草祭"
+                "name": "xxxx"
             },"description": ""
     }
     </script></head>
-    <body><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="草祭">草祭</a>
+            <a href="/" title="草祭">My cool site</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="我只能为您最多找15篇文章" id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
                         </span>
                     </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                    <i class="fas fa-adjust fa-fw"></i>
-                </a>
-            </div>
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </a></div>
         </div>
     </div>
 </header><header class="mobile" id="header-mobile">
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="草祭">草祭</a>
+                <a href="/" title="草祭">My cool site</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -73,45 +91,39 @@
                     <div class="search mobile" id="search-mobile">
                         <input type="text" placeholder="我只能为您最多找15篇文章" id="search-input-mobile">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
                         </span>
                     </div>
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
                 </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                <i class="fas fa-adjust fa-fw"></i>
+                <i class="fas fa-adjust" aria-hidden="true"></i>
             </a></div>
     </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Android Studio上使用JNI</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>草祭</a></span>&nbsp;
-                    <span class="post-category">收录于<a href="/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/">
-                                <i class="far fa-folder fa-fw"></i>编程-ღ-技术
-                            </a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-06-04>2020-06-04</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>约 2620 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>预计阅读 6 分钟&nbsp;</div>
-        </div><div class="details toc" id="toc-static">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Android Studio上使用JNI</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle" aria-hidden="true"></i>xxxx</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/"><i class="far fa-folder" aria-hidden="true"></i>编程-ღ-技术</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp;<time datetime="2020-06-04">2020-06-04</time>&nbsp;<i class="fas fa-pencil-alt" aria-hidden="true"></i>&nbsp;约 2544 字&nbsp;
+                <i class="far fa-clock" aria-hidden="true"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
@@ -153,426 +165,340 @@
 <p>做了一个C程序，需要移植到安卓上，移植到安卓上就需要使用JNI（Java Native Interface），这里做一个Android Studio(AS)上使用JNI的记录。版本和环境信息如下，不同版本的AS操作有较大区别，也只能踩坑试试才知道行不行：</p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/135937-338208.png"
         data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/135937-338208.png, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/135937-338208.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/135937-338208.png 2x"
         data-sizes="auto"
-        alt="版本信息"
+        alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/135937-338208.png"
         title="版本信息" /></p>
 <h1 id="步骤">步骤</h1>
 <h2 id="step-1-下载ndk">Step 1. 下载NDK</h2>
 <p>NDK(Native Developer Kit)是谷歌给开发人员的工具包，感觉主要功能就是能够更容易使用JNI的工具。</p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/135515-417065.png"
         data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/135515-417065.png, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/135515-417065.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/135515-417065.png 2x"
         data-sizes="auto"
-        alt="NDK下载"
+        alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/135515-417065.png"
         title="NDK下载" /></p>
 <p>下载之后解压，并将解压后的目录加入环境变量，我的路径是<code>G:\android-ndk-r21</code>。</p>
 <p>在终端输入 ndk-build 验证一下配置是否成功：</p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/144547-26915.png"
         data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/144547-26915.png, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/144547-26915.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/144547-26915.png 2x"
         data-sizes="auto"
-        alt="ndk-build"
+        alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/144547-26915.png"
         title="ndk-build" /></p>
 <h2 id="step-2-新建项目">Step 2. 新建项目</h2>
 <p>新建一个项目，不需要勾选<code>Include C++ support</code>.，新建之后调整成<code>Project</code>视图。</p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/135732-467251.png"
         data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/135732-467251.png, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/135732-467251.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/135732-467251.png 2x"
         data-sizes="auto"
-        alt="image-20200604135729797"
+        alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/135732-467251.png"
         title="image-20200604135729797" /></p>
 <h2 id="step-3-as环境配置">Step 3. AS环境配置</h2>
 <h3 id="配置ndk路径">配置NDK路径</h3>
 <p><code>Ctrl+Alt+Shift+S</code>打开配置，设定NDK路径：</p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/144736-824145.png"
         data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/144736-824145.png, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/144736-824145.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/144736-824145.png 2x"
         data-sizes="auto"
-        alt="设定NDK路径"
+        alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/144736-824145.png"
         title="设定NDK路径" /></p>
 <h3 id="配置buildgradle文件">配置build.gradle文件</h3>
 <p>打开app文件夹中的build.gradle文件，在defaultConfig中输入以下代码，其中<code>moduleName</code>与最后生成的.so文件的文件名有关，即<code>lib[moduleName].so</code>，且Java源文件中loadLibrary方法的参数就是这个moduleName的名字。<code>abiFilters</code>表示CPU的型号，不过好像可以删掉，不删的话反而在调试的时候可能手机型号不支持。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle"><span class="n">ndk</span><span class="o">{</span>
-    <span class="n">moduleName</span> <span class="s2">&#34;SEnhanceNDK&#34;</span>
-    <span class="c1">// abiFilters &#34;arm64-v8a&#34;, &#34;armeabi-v7a&#34;, &#34;x86&#34;, &#34;x86_64&#34;
-</span><span class="c1"></span><span class="o">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>同样在这个build.gradle文件中，在buildTypes下输入以下代码。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle">        <span class="n">sourceSets</span> <span class="o">{</span>
-            <span class="n">main</span><span class="o">()</span> <span class="o">{</span>
-<span class="c1">//            jniLibs.srcDirs = [&#39;src/main/libs&#39;]
-</span><span class="c1"></span>                <span class="n">jniLibs</span><span class="o">.</span><span class="na">srcDirs</span> <span class="o">=</span> <span class="o">[]</span>
-                <span class="n">jni</span><span class="o">.</span><span class="na">srcDirs</span> <span class="o">=</span> <span class="o">[]</span> <span class="c1">//屏蔽掉默认的jni编译生成过程
-</span><span class="c1"></span>            <span class="o">}</span>
-        <span class="o">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>ref. <a href="https://blog.csdn.net/qq_36317441/article/details/82256630" target="_blank" rel="noopener noreffer">Error: Your project contains C++ files but it is not using a supported native build system.</a></p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-gradle">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl"><span class="n">ndk</span><span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">moduleName</span> <span class="s2">&#34;SEnhanceNDK&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// abiFilters &#34;arm64-v8a&#34;, &#34;armeabi-v7a&#34;, &#34;x86&#34;, &#34;x86_64&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span></span></span></code></pre></div></div>
+<p>同样在这个build.gradle文件中，在buildTypes下输入以下代码。</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-gradle">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl">        <span class="n">sourceSets</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">main</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//            jniLibs.srcDirs = [&#39;src/main/libs&#39;]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="n">jniLibs</span><span class="o">.</span><span class="na">srcDirs</span> <span class="o">=</span> <span class="o">[]</span>
+</span></span><span class="line"><span class="cl">                <span class="n">jni</span><span class="o">.</span><span class="na">srcDirs</span> <span class="o">=</span> <span class="o">[]</span> <span class="c1">//屏蔽掉默认的jni编译生成过程
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span></span></span></code></pre></div></div>
+<p>ref. <a href="https://blog.csdn.net/qq_36317441/article/details/82256630" target="_blank" rel="noopener noreffer ">Error: Your project contains C++ files but it is not using a supported native build system.</a></p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/154043-14117.png"
         data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/154043-14117.png, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/154043-14117.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/154043-14117.png 2x"
         data-sizes="auto"
-        alt="build.gradle"
+        alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/154043-14117.png"
         title="build.gradle" /></p>
 <h3 id="新建androidmk和applicationmk">新建Android.mk和Application.mk</h3>
 <p>跳过这步在后续步骤中报的错（图示第一次输入命令<code>ndk-build</code>是没有这两个.mk文件的情况）：</p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/27/144807-575140.png"
         data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/27/144807-575140.png, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/27/144807-575140.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/27/144807-575140.png 2x"
         data-sizes="auto"
-        alt="image-20200627144804323"
+        alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/27/144807-575140.png"
         title="image-20200627144804323" /></p>
 <p>在jni目录下新建Android.mk和Application.mk，输入内容如下：</p>
 <p>Android.mk：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-mk" data-lang="mk"><span class="nv">LOCAL_PATH</span> <span class="o">:=</span> <span class="k">$(</span>call my-dir<span class="k">)</span>
-<span class="err">include</span> <span class="k">$(</span><span class="nv">CLEAR_VARS</span><span class="k">)</span>
-
-<span class="nv">LOCAL_MODULE</span> <span class="o">:=</span> myNDK <span class="c1"># moduleName</span>
-<span class="nv">LOCAL_SRC_FILES</span> <span class="o">:=</span> com_whu_jniproj_JNI.c <span class="c1"># 下一步中c文件名字</span>
-
-<span class="err">include</span> <span class="k">$(</span><span class="nv">BUILD_SHARED_LIBRARY</span><span class="k">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Application.mk：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-mk" data-lang="mk"><span class="nv">APP_ABI</span> <span class="o">:=</span> all
-</code></pre></td></tr></table>
-</div>
-</div><p><img
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-mk">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mk" data-lang="mk"><span class="line"><span class="cl"><span class="nv">LOCAL_PATH</span> <span class="o">:=</span> <span class="k">$(</span>call my-dir<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="err">include</span> <span class="k">$(</span><span class="nv">CLEAR_VARS</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">LOCAL_MODULE</span> <span class="o">:=</span> myNDK <span class="c1"># moduleName</span>
+</span></span><span class="line"><span class="cl"><span class="nv">LOCAL_SRC_FILES</span> <span class="o">:=</span> com_whu_jniproj_JNI.c <span class="c1"># 下一步中c文件名字</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">include</span> <span class="k">$(</span><span class="nv">BUILD_SHARED_LIBRARY</span><span class="k">)</span></span></span></code></pre></div></div>
+<p>Application.mk：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-mk">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mk" data-lang="mk"><span class="line"><span class="cl"><span class="nv">APP_ABI</span> <span class="o">:=</span> all
+</span></span></code></pre></div></div>
+<p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/27/144513-44216.png"
         data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/27/144513-44216.png, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/27/144513-44216.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/27/144513-44216.png 2x"
         data-sizes="auto"
-        alt="image-20200627144503239"
+        alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/27/144513-44216.png"
         title="image-20200627144503239" /></p>
 <h2 id="step-4-编写jni文件并生成so文件">Step 4. 编写JNI文件，并生成.so文件</h2>
 <h3 id="1-创建java源文件编写-native-方法">1. 创建JAVA源文件，编写 native 方法</h3>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/145325-314803.png"
         data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/145325-314803.png, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/145325-314803.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/145325-314803.png 2x"
         data-sizes="auto"
-        alt="创建JAVA源文件"
+        alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/145325-314803.png"
         title="创建JAVA源文件" /></p>
 <p>如图示创建一个java文件，写入代码（注意修改代码中package的名称），然后复制这个文件的路径,命令行切换到main/java目录中.</p>
 <p>输入命令<code>javah -d ../jni com.xxx.xxx.JNI</code>，其中<code>com.xxx.xxx.JNI</code>需要替换成你复制的路径。</p>
-<p>p.s. 新版本的jdk没有javah的命令，有资料说可以用javac -h这种命令，但是我尝试之后并没有解决，所以我的建议是直接换成<a href="https://repo.huaweicloud.com/java/jdk/8u202-b08/" target="_blank" rel="noopener noreffer">jdk8</a>，而且安装也很简单</p>
+<p>p.s. 新版本的jdk没有javah的命令，有资料说可以用javac -h这种命令，但是我尝试之后并没有解决，所以我的建议是直接换成<a href="https://repo.huaweicloud.com/java/jdk/8u202-b08/" target="_blank" rel="noopener noreffer ">jdk8</a>，而且安装也很简单</p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/145728-913415.png"
         data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/145728-913415.png, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/145728-913415.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/145728-913415.png 2x"
         data-sizes="auto"
-        alt="image-20200604145724280"
+        alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/145728-913415.png"
         title="image-20200604145724280" /></p>
 <p>命令执行完之后，就会生成一个.h文件，在同级目录创建一个名字相同的.c文件，输入以下代码用于测试，注意函数名要和.h文件的函数名一致：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-C" data-lang="C"><span class="cp">#include</span> <span class="cpf">&#34;com_whu_senhance_JNI.h&#34;</span><span class="cp">
-</span><span class="cp"></span>
-<span class="kt">char</span><span class="o">*</span> <span class="nf">gettext</span><span class="p">(){</span>
-    <span class="k">return</span> <span class="s">&#34;Hi&#34;</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="cm">/**
-</span><span class="cm">jstring: 返回值
-</span><span class="cm">Java_全类名_方法名
-</span><span class="cm">JNIEnv* env: 里面有很多方法
-</span><span class="cm">jobject jobj：谁调用这个方法就是谁；即JNI.this
-</span><span class="cm">*/</span>
-<span class="n">jstring</span> <span class="nf">Java_com_whu_senhance_JNI_sayHello</span><span class="p">(</span><span class="n">JNIEnv</span><span class="o">*</span> <span class="n">env</span><span class="p">,</span> <span class="n">jobject</span> <span class="n">jobj</span><span class="p">){</span>
-    <span class="c1">//jstring     (*NewStringUTF)(JNIEnv*, const char*);
-</span><span class="c1"></span>    <span class="kt">char</span><span class="o">*</span> <span class="n">text</span> <span class="o">=</span> <span class="s">&#34;I am from C&#34;</span><span class="p">;</span>
-    <span class="n">text</span> <span class="o">=</span> <span class="n">gettext</span><span class="p">();</span>
-    <span class="k">return</span> <span class="p">(</span><span class="o">*</span><span class="n">env</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">NewStringUTF</span><span class="p">(</span><span class="n">env</span><span class="p">,</span><span class="n">text</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="2-生成so文件">2. 生成.so文件</h3>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-C">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;com_whu_senhance_JNI.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">char</span><span class="o">*</span> <span class="nf">gettext</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s">&#34;Hi&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">jstring: 返回值
+</span></span></span><span class="line"><span class="cl"><span class="cm">Java_全类名_方法名
+</span></span></span><span class="line"><span class="cl"><span class="cm">JNIEnv* env: 里面有很多方法
+</span></span></span><span class="line"><span class="cl"><span class="cm">jobject jobj：谁调用这个方法就是谁；即JNI.this
+</span></span></span><span class="line"><span class="cl"><span class="cm">*/</span>
+</span></span><span class="line"><span class="cl"><span class="n">jstring</span> <span class="nf">Java_com_whu_senhance_JNI_sayHello</span><span class="p">(</span><span class="n">JNIEnv</span><span class="o">*</span> <span class="n">env</span><span class="p">,</span> <span class="n">jobject</span> <span class="n">jobj</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//jstring     (*NewStringUTF)(JNIEnv*, const char*);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">char</span><span class="o">*</span> <span class="n">text</span> <span class="o">=</span> <span class="s">&#34;I am from C&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">text</span> <span class="o">=</span> <span class="nf">gettext</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">(</span><span class="o">*</span><span class="n">env</span><span class="p">)</span><span class="o">-&gt;</span><span class="nf">NewStringUTF</span><span class="p">(</span><span class="n">env</span><span class="p">,</span><span class="n">text</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<h3 id="2-生成so文件">2. 生成.so文件</h3>
 <p><strong>方法一</strong>. 在jni目录中，执行<code>ndk-build</code>命令。</p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/155042-216540.png"
         data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/155042-216540.png, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/155042-216540.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/155042-216540.png 2x"
         data-sizes="auto"
-        alt="ndk-build"
+        alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/155042-216540.png"
         title="ndk-build" /></p>
 <p>执行结束后会生成<code>libs</code>和<code>obj</code>文件夹，里面就是.so文件，需要创建一个名为<code>jniLibs</code>的文件夹，然后把libs中的内容全部复制进这个文件夹里面，才能使用.so文件。</p>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/155222-964975.png"
         data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/155222-964975.png, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/155222-964975.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/155222-964975.png 2x"
         data-sizes="auto"
-        alt="libs"
+        alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/155222-964975.png"
         title="libs" /></p>
 <p><strong>方法二</strong>. AS菜单栏<code>Build-&gt;Rebuild Project</code></p>
 <p><del>Rebuild这个方法好像不太行，不确定问题在哪里，可能与build.gradle文件jniLibs.srcDirs或者jni.srcDirs的配置有关。</del></p>
 <p>对build.gradle文件进行修改：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-gradle" data-lang="gradle">        <span class="n">sourceSets</span> <span class="o">{</span>
-            <span class="n">main</span><span class="o">()</span> <span class="o">{</span>
-<span class="c1">//            jniLibs.srcDirs = [&#39;src/main/libs&#39;]
-</span><span class="c1"></span>                <span class="n">jniLibs</span><span class="o">.</span><span class="na">srcDirs</span> <span class="o">=</span> <span class="o">[]</span>
-                <span class="n">jni</span><span class="o">.</span><span class="na">srcDirs</span> <span class="o">=</span> <span class="o">[</span><span class="s1">&#39;src/main/jni&#39;</span><span class="o">]</span>
-            <span class="o">}</span>
-        <span class="o">}</span>
-        <span class="n">externalNativeBuild</span><span class="o">{</span>
-            <span class="n">ndkBuild</span><span class="o">{</span>
-                <span class="n">path</span> <span class="nf">file</span><span class="o">(</span><span class="s1">&#39;src/main/jni/Android.mk&#39;</span><span class="o">)</span>
-            <span class="o">}</span>
-        <span class="o">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>然后rebuild，生成.so文件在app/build/intermediates/ndkBuild/debug/obj/local(实际上还有其他2个目录也生成了.so文件&quot;D:\AndroidStudioProjects\JNIProj\app\build\intermediates\transforms\stripDebugSymbol\debug\0\lib\x86\libmyNDK.so&quot;和&quot;D:\AndroidStudioProjects\JNIProj\app\build\intermediates\transforms\mergeJniLibs\debug\0\lib\x86\libmyNDK.so&rdquo;)路径中（看参考资料，可能有的在intermediates/ndk路径里面，我这里没有ndk文件夹生成）。</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-gradle">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl">        <span class="n">sourceSets</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">main</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//            jniLibs.srcDirs = [&#39;src/main/libs&#39;]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="n">jniLibs</span><span class="o">.</span><span class="na">srcDirs</span> <span class="o">=</span> <span class="o">[]</span>
+</span></span><span class="line"><span class="cl">                <span class="n">jni</span><span class="o">.</span><span class="na">srcDirs</span> <span class="o">=</span> <span class="o">[</span><span class="s1">&#39;src/main/jni&#39;</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">            <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">externalNativeBuild</span><span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ndkBuild</span><span class="o">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">path</span> <span class="nf">file</span><span class="o">(</span><span class="s1">&#39;src/main/jni/Android.mk&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">            <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span></span></span></code></pre></div></div>
+<p>然后rebuild，生成.so文件在app/build/intermediates/ndkBuild/debug/obj/local(实际上还有其他2个目录也生成了.so文件&quot;D:\AndroidStudioProjects\JNIProj\app\build\intermediates\transforms\stripDebugSymbol\debug\0\lib\x86\libmyNDK.so&quot;和&quot;D:\AndroidStudioProjects\JNIProj\app\build\intermediates\transforms\mergeJniLibs\debug\0\lib\x86\libmyNDK.so&quot;)路径中（看参考资料，可能有的在intermediates/ndk路径里面，我这里没有ndk文件夹生成）。</p>
 <p>与方法一不同，使用这个方式不需要复制.so的位置，可能默认的jnilib就是这个路径。</p>
 <h2 id="step-5-修改mainactivity并执行程序">Step 5. 修改MainActivity并执行程序</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com.whu.senhance</span><span class="o">;</span>
-
-<span class="kn">import</span> <span class="nn">android.support.v7.app.AppCompatActivity</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
-
-    <span class="nd">@Override</span>
-    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
-        <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
-        <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
-        <span class="n">String</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JNI</span><span class="o">().</span><span class="na">sayHello</span><span class="o">();</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;result = &#34;</span><span class="o">+</span><span class="n">result</span><span class="o">);</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><h1 id="结果">结果</h1>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">com.whu.senhance</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">android.support.v7.app.AppCompatActivity</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">android.os.Bundle</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MainActivity</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AppCompatActivity</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">setContentView</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">layout</span><span class="p">.</span><span class="na">activity_main</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JNI</span><span class="p">().</span><span class="na">sayHello</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;result = &#34;</span><span class="o">+</span><span class="n">result</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
+<h1 id="结果">结果</h1>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/160746-340394.png"
         data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/160746-340394.png, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/160746-340394.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/160746-340394.png 2x"
         data-sizes="auto"
-        alt="结果"
+        alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/04/160746-340394.png"
         title="结果" /></p>
 <h1 id="参考资料">参考资料</h1>
 <ul>
-<li>JNI 开发详细初体验(Mac Android Studio 3.1+) - 掘金 <a href="https://juejin.im/post/5b90a7c1e51d450e697311de">https://juejin.im/post/5b90a7c1e51d450e697311de</a></li>
+<li>JNI 开发详细初体验(Mac Android Studio 3.1+) - 掘金 <a href="https://juejin.im/post/5b90a7c1e51d450e697311de" target="_blank" rel="noopener noreffer ">https://juejin.im/post/5b90a7c1e51d450e697311de</a></li>
 <li>尚硅谷Android视频教程《JNI》【注：AS版本很老】
-<a href="https://www.bilibili.com/video/BV1qW411L7oY?p=35">https://www.bilibili.com/video/BV1qW411L7oY?p=35</a></li>
-<li>Android+真机调试 <a href="https://www.cnblogs.com/xqz0618/p/12725515.html">https://www.cnblogs.com/xqz0618/p/12725515.html</a></li>
+<a href="https://www.bilibili.com/video/BV1qW411L7oY?p=35" target="_blank" rel="noopener noreffer ">https://www.bilibili.com/video/BV1qW411L7oY?p=35</a></li>
+<li>Android+真机调试 <a href="https://www.cnblogs.com/xqz0618/p/12725515.html" target="_blank" rel="noopener noreffer ">https://www.cnblogs.com/xqz0618/p/12725515.html</a></li>
 <li>Android之JNI实现函数中LOG打印 【注：LOCAL_LDLIBS += -L$(SYSROOT)/usr/lib -llog要写在include $(CLEAR_VARS)的后面】https://blog.csdn.net/jjunjoe/article/details/7020236</li>
 </ul>
 <h1 id="其他事项">其他事项</h1>
 <h2 id="androidmk添加目录中所有源文件">Android.mk添加目录中所有源文件</h2>
-<p>ref. <a href="http://www.appblog.cn/2018/06/26/Android.mk%E6%B7%BB%E5%8A%A0%E7%9B%AE%E5%BD%95%E4%B8%AD%E6%89%80%E6%9C%89%E6%BA%90%E6%96%87%E4%BB%B6/" target="_blank" rel="noopener noreffer">Android.mk添加目录中所有源文件</a></p>
+<p>ref. <a href="http://www.appblog.cn/2018/06/26/Android.mk%E6%B7%BB%E5%8A%A0%E7%9B%AE%E5%BD%95%E4%B8%AD%E6%89%80%E6%9C%89%E6%BA%90%E6%96%87%E4%BB%B6/" target="_blank" rel="noopener noreffer ">Android.mk添加目录中所有源文件</a></p>
 <p>使用场景：com_whu_jniproj_JNI.c中include了cljtest.h，并且使用了cljtest中的函数。</p>
 <p>报错：</p>
 <ol>
 <li>如果Android.mk为 LOCAL_SRC_FILES := com_whu_jniproj_JNI.c时，Build就会报错：</li>
 </ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Build command failed.
-Error while executing process G:\android-ndk-r21\ndk-build.cmd with arguments {NDK_PROJECT_PATH=null APP_BUILD_SCRIPT=D:\AndroidStudioProjects\JNIProj\app\src\main\jni\Android.mk NDK_APPLICATION_MK=D:\AndroidStudioProjects\JNIProj\app\src\main\jni\Application.mk APP_ABI=x86_64 NDK_ALL_ABIS=x86_64 NDK_DEBUG=1 APP_PLATFORM=android-21 NDK_OUT=D:/AndroidStudioProjects/JNIProj/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT=D:\AndroidStudioProjects\JNIProj\app\build\intermediates\ndkBuild\debug\lib D:/AndroidStudioProjects/JNIProj/app/build/intermediates/ndkBuild/debug/obj/local/x86_64/libmyNDK.so}
-[x86_64] Compile        : myNDK &lt;= com_whu_jniproj_JNI.c
-[x86_64] SharedLibrary  : libmyNDK.so
-D:/AndroidStudioProjects/JNIProj/app/src/main/jni/com_whu_jniproj_JNI.c:17: error: undefined reference to &#39;gettesttext&#39;
-clang++: error: linker command failed with exit code 1 (use -v to see invocation)
-make: *** [G:/android-ndk-r21/build//../build/core/build-binary.mk:725: D:/AndroidStudioProjects/JNIProj/app/build/intermediates/ndkBuild/debug/obj/local/x86_64/libmyNDK.so] Error 1
-</code></pre></td></tr></table>
-</div>
-</div><ol start="2">
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-log">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Build command failed.
+</span></span><span class="line"><span class="cl">Error while executing process G:\android-ndk-r21\ndk-build.cmd with arguments {NDK_PROJECT_PATH=null APP_BUILD_SCRIPT=D:\AndroidStudioProjects\JNIProj\app\src\main\jni\Android.mk NDK_APPLICATION_MK=D:\AndroidStudioProjects\JNIProj\app\src\main\jni\Application.mk APP_ABI=x86_64 NDK_ALL_ABIS=x86_64 NDK_DEBUG=1 APP_PLATFORM=android-21 NDK_OUT=D:/AndroidStudioProjects/JNIProj/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT=D:\AndroidStudioProjects\JNIProj\app\build\intermediates\ndkBuild\debug\lib D:/AndroidStudioProjects/JNIProj/app/build/intermediates/ndkBuild/debug/obj/local/x86_64/libmyNDK.so}
+</span></span><span class="line"><span class="cl">[x86_64] Compile        : myNDK &lt;= com_whu_jniproj_JNI.c
+</span></span><span class="line"><span class="cl">[x86_64] SharedLibrary  : libmyNDK.so
+</span></span><span class="line"><span class="cl">D:/AndroidStudioProjects/JNIProj/app/src/main/jni/com_whu_jniproj_JNI.c:17: error: undefined reference to &#39;gettesttext&#39;
+</span></span><span class="line"><span class="cl">clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+</span></span><span class="line"><span class="cl">make: *** [G:/android-ndk-r21/build//../build/core/build-binary.mk:725: D:/AndroidStudioProjects/JNIProj/app/build/intermediates/ndkBuild/debug/obj/local/x86_64/libmyNDK.so] Error 1</span></span></code></pre></div></div>
+<ol start="2">
 <li>如果Android.mk为 LOCAL_SRC_FILES := cljtest.c时，Build通过，报错：</li>
 </ol>
 <p><img
         class="lazyload"
-        src="/svg/loading/small.min.svg"
+        src="/svg/loading.min.svg"
         data-src="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/27/155834-570184.png"
         data-srcset="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/27/155834-570184.png, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/27/155834-570184.png 1.5x, https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/27/155834-570184.png 2x"
         data-sizes="auto"
-        alt="报错"
+        alt="https://raw.githubusercontent.com/seacj/typora-image/master/image/202006/27/155834-570184.png"
         title="报错" /></p>
 <ol start="3">
 <li>如果Android.mk为 LOCAL_SRC_FILES := cljtest.c com_whu_jniproj_JNI.c时，不报错。</li>
 </ol>
 <p>调试方法，在android.mk中使用下列代码，然后在终端中使用ndk-build编译：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-mk" data-lang="mk"><span class="k">$(</span><span class="nv">warning</span> &#34;<span class="nv">the</span> <span class="nv">value</span> <span class="nv">of</span> <span class="nv">LOCAL_PATH</span> <span class="nv">is</span> <span class="k">$(</span><span class="nv">LOCAL_PATH</span><span class="k">)</span>&#34;<span class="k">)</span>
-<span class="k">$(</span><span class="nv">warning</span> &#34;<span class="nv">the</span> <span class="nv">value</span> <span class="nv">of</span> <span class="nv">LOCAL_SRC_FILES</span> <span class="nv">is</span> <span class="k">$(</span><span class="nv">LOCAL_SRC_FILES</span><span class="k">)</span>&#34;<span class="k">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>由于ref中的其他方案都报错，只能使用下面这种，注意这个方法不会递归找.c文件，是单目录的，不过也比一个一个加方便多了：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-mk" data-lang="mk"><span class="nv">FILE_LIST</span> <span class="o">:=</span> <span class="k">$(</span>wildcard <span class="k">$(</span>LOCAL_PATH<span class="k">)</span>/*.c<span class="k">)</span>
-<span class="nv">LOCAL_SRC_FILES</span> <span class="o">:=</span> <span class="k">$(</span>FILE_LIST:<span class="k">$(</span>LOCAL_PATH<span class="k">)</span>/%<span class="o">=</span>%<span class="k">)</span>
-</code></pre></td></tr></table>
-</div>
-</div></div><div class="post-footer" id="post-footer">
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-mk">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mk" data-lang="mk"><span class="line"><span class="cl"><span class="k">$(</span><span class="nv">warning</span> &#34;<span class="nv">the</span> <span class="nv">value</span> <span class="nv">of</span> <span class="nv">LOCAL_PATH</span> <span class="nv">is</span> <span class="k">$(</span><span class="nv">LOCAL_PATH</span><span class="k">)</span>&#34;<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">$(</span><span class="nv">warning</span> &#34;<span class="nv">the</span> <span class="nv">value</span> <span class="nv">of</span> <span class="nv">LOCAL_SRC_FILES</span> <span class="nv">is</span> <span class="k">$(</span><span class="nv">LOCAL_SRC_FILES</span><span class="k">)</span>&#34;<span class="k">)</span></span></span></code></pre></div></div>
+<p>由于ref中的其他方案都报错，只能使用下面这种，注意这个方法不会递归找.c文件，是单目录的，不过也比一个一个加方便多了：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-mk">
+        <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
+        <span class="copy" title="复制到剪贴板"><i class="far fa-copy" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mk" data-lang="mk"><span class="line"><span class="cl"><span class="nv">FILE_LIST</span> <span class="o">:=</span> <span class="k">$(</span>wildcard <span class="k">$(</span>LOCAL_PATH<span class="k">)</span>/*.c<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">LOCAL_SRC_FILES</span> <span class="o">:=</span> <span class="k">$(</span>FILE_LIST:<span class="k">$(</span>LOCAL_PATH<span class="k">)</span>/%<span class="o">=</span>%<span class="k">)</span>
+</span></span></code></pre></div></div>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>本文于 2020-06-04 更新</span>
-            </div>
-            <div class="post-info-license"></div>
-        </div>
+                <span>更新于 2020-06-04</span>
+            </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://seacj.github.io/posts/android_jni/" data-title="Android Studio上使用JNI"><i class="fab fa-weibo fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="http://localhost:1313/posts/android_jni/" data-title="Android Studio上使用JNI" data-hashtags="java"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="http://localhost:1313/posts/android_jni/" data-title="Android Studio上使用JNI"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/android_jni/" data-hashtag="java"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/android_jni/" data-title="Android Studio上使用JNI"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://localhost:1313/posts/android_jni/" data-title="Android Studio上使用JNI"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/android_jni/" data-title="Android Studio上使用JNI"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/posts/android_jni/" data-title="Android Studio上使用JNI" data-description=""><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fandroid_jni%2f&amp;text=Android%20Studio%e4%b8%8a%e4%bd%bf%e7%94%a8JNI" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/java/">java</a></section>
+        <section class="post-tags"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<a href="/tags/java/">Java</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/" class="prev" rel="prev" title="VSCode上安装LaTeX"><i class="fas fa-angle-left fa-fw"></i>VSCode上安装LaTeX</a>
-            <a href="/posts/ide%E6%8F%92%E4%BB%B6%E5%88%B7leetcode/" class="next" rel="next" title="IDE插件刷LeetCode">IDE插件刷LeetCode<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/vscode%E4%B8%8A%E5%AE%89%E8%A3%85latex/" class="prev" rel="prev" title="VSCode上安装LaTeX"><i class="fas fa-angle-left" aria-hidden="true"></i>VSCode上安装LaTeX</a>
+            <a href="/posts/ide%E6%8F%92%E4%BB%B6%E5%88%B7leetcode/" class="next" rel="next" title="IDE插件刷LeetCode">IDE插件刷LeetCode<i class="fas fa-angle-right" aria-hidden="true"></i></a></div>
 </div>
-<div id="comments">
-
-        <script src="//code.tidio.co/qgrdxb76tups4kgrezsz6fwxcvqjbpsh.js"></script></div></article></div>
-            </main><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> <footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.70.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.6"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">草祭</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
-                <i class="fas fa-arrow-up fa-fw"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
-                <i class="fas fa-comment fa-fw"></i>
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><style>.lg-toolbar .lg-icon::after { color: #999; }</style><script type="text/javascript">
-    window.config = {"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{},"headerMode":{"desktop":null,"mobile":null},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"QVNQRH3FHN","algoliaIndex":"cj-blog","algoliaSearchKey":"50b1056efeb6f9195818878fca2394e0","highlightTag":"em","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};
-</script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=html5shiv%2CElement.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/algoliasearch/lite/browser.umd.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script src="/lib/katex/katex.min.js"></script><script src="/lib/katex/contrib/auto-render.min.js"></script><script src="/lib/katex/contrib/copy-tex.min.js"></script><script src="/lib/katex/contrib/mhchem.min.js"></script><script>window.config={"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"QVNQRH3FHN","algoliaIndex":"cj-blog","algoliaSearchKey":"50b1056efeb6f9195818878fca2394e0","highlightTag":"em","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script src="/js/theme.min.js"></script></body>
 </html>

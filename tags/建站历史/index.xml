@@ -1,64 +1,150 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>建站历史 - 标签 - 草祭</title>
-        <link>https://seacj.github.io/tags/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2/</link>
+        <link>http://localhost:1313/tags/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2/</link>
         <description>建站历史 - 标签 - 草祭</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>swampman@foxmail.com (草祭)</managingEditor>
-            <webMaster>swampman@foxmail.com (草祭)</webMaster><lastBuildDate>Thu, 23 Jul 2020 16:43:32 &#43;0800</lastBuildDate><atom:link href="https://seacj.github.io/tags/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 23 Jul 2020 16:43:32 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2/" rel="self" type="application/rss+xml" /><item>
     <title>建站历史008</title>
-    <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2008/</link>
+    <link>http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2008/</link>
     <pubDate>Thu, 23 Jul 2020 16:43:32 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2008/</guid>
-    <description><![CDATA[凭借本博客喜获github北极开源贡献者徽章 这两天，在 GitHub 上积极贡献代码的许多开发者都收到了「Arctic Code Vault Contributor」的荣誉勋]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2008/</guid>
+    <description><![CDATA[<p>凭借本博客喜获github北极开源贡献者徽章</p>
+<p></p>
+<blockquote>
+<p>这两天，在 GitHub 上积极贡献代码的许多开发者都收到了「Arctic Code Vault Contributor」的荣誉勋章的通知，并非常兴奋地晒起了朋友圈。因为这标志着自己在 GitHub 上贡献的代码、写的库都被 GitHub 打包运送到了北极永冻土数百米深处的一个暗室里保存了起来，这些代码与库将被保存 1000 多年。</p>]]></description>
+</item>
+<item>
     <title>建站历史007</title>
-    <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2007/</link>
+    <link>http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2007/</link>
     <pubDate>Tue, 12 May 2020 13:00:23 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2007/</guid>
-    <description><![CDATA[添加即时通讯 修改Hugo主题为LoveIt 修改彩蛋页面 新增站内搜索（第一次配置好了之后，以后更新博客只需要运行hugo-algolia -s就]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2007/</guid>
+    <description><![CDATA[<ul>
+<li>添加即时通讯</li>
+<li>修改Hugo主题为LoveIt</li>
+<li>修改<a href="/playhouse.html" rel="">彩蛋页面</a></li>
+<li>新增站内搜索（第一次配置好了之后，以后更新博客只需要运行<code>hugo-algolia -s</code>就能更新搜索了。简单的使用是没有问题的，但是会有一些小bug，不过问题不大吧，就不修复了）</li>
+<li>使用typora-plugins-win-img</li>
+<li>新增RSS</li>
+</ul>
+<blockquote>
+<p>相关链接</p>]]></description>
+</item>
+<item>
     <title>建站历史006</title>
-    <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2006/</link>
+    <link>http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2006/</link>
     <pubDate>Wed, 08 Apr 2020 16:22:17 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2006/</guid>
-    <description><![CDATA[修改文章分类 修改字体大小（修改LeaveIt\assets\css_common_page\post.scss中的font-size） 新增音]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2006/</guid>
+    <description><![CDATA[<ul>
+<li>
+<p>修改文章分类</p>
+</li>
+<li>
+<p><del>修改字体大小（修改LeaveIt\assets\css_common_page\post.scss中的font-size）</del></p>
+</li>
+<li>
+<p>新增音频播放器</p>]]></description>
+</item>
+<item>
     <title>建站历史005</title>
-    <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2005/</link>
+    <link>http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2005/</link>
     <pubDate>Wed, 26 Feb 2020 20:30:05 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2005/</guid>
-    <description><![CDATA[修改阅读进度条外观 在主页增加邮箱联系方式 删除Tool页面 修改引用内容的背景色 同时部署 Hugo 静态博客到 Netlify 和 Github Pages seacj.netlify.com 在阿里云新增4个国际DNS服务器(]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2005/</guid>
+    <description><![CDATA[<ul>
+<li>修改阅读进度条外观</li>
+<li>在主页增加邮箱联系方式</li>
+<li>删除Tool页面</li>
+<li>修改引用内容的背景色</li>
+<li>同时部署 Hugo 静态博客到 Netlify 和 Github Pages <a href="http://seacj.netlify.com" target="_blank" rel="noopener noreffer ">seacj.netlify.com</a></li>
+<li><del>在阿里云新增4个国际DNS服务器(可能会加快域名解析速度)</del> 据说这样配有可能会导致网站被墙掉&hellip;</li>
+</ul>
+<h2 id="相关链接">相关链接</h2>
+<ul>
+<li>LeaveIt主题配置 <a href="https://github.com/liuzc/LeaveIt" target="_blank">LeaveIt Hugo Theme 作者github</a></li>
+<li>网站迁移至码云 <a href="/posts/%e7%bd%91%e7%ab%99%e8%bf%81%e7%a7%bb%e8%87%b3gitee/" rel="">码云托管的文章</a></li>
+<li>添加阅读进度条 <a href="https://mogeko.me/2019/070/" target="_blank">为 LeaveIt 主题添加阅读进度条</a></li>
+<li>Coding静态网站官方文档 <a href="https://e.coding.net/help/knowledge-base/static-website/" target="_blank" rel="noopener noreffer ">Coding如何搭建静态网站</a></li>
+<li>同时部署 Hugo 静态博客到 Netlify 和 Github Pages <a href="https://www.nashome.cn/post/hugo-netlify/" target="_blank" rel="noopener noreffer ">同时部署 Hugo 静态博客到 Netlify 和 Github Pages</a></li>
+</ul>]]></description>
+</item>
+<item>
     <title>建站历史004</title>
-    <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2004/</link>
+    <link>http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2004/</link>
     <pubDate>Fri, 20 Sep 2019 21:46:59 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2004/</guid>
-    <description><![CDATA[添加即使通讯 修改主页 添加Tool页面 相关链接 添加即使通讯 博客添加在线通讯 LeaveIt主题配置 LeaveIt Hugo Theme 作者github]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2004/</guid>
+    <description><![CDATA[<ul>
+<li>添加即使通讯</li>
+<li>修改主页</li>
+<li>添加Tool页面</li>
+</ul>
+<blockquote>
+<p>相关链接</p></blockquote>
+<blockquote>
+<ul>
+<li>添加即使通讯 <a href="/posts/博客添加在线通讯/" target="_blank">博客添加在线通讯</a></li>
+<li>LeaveIt主题配置 <a href="https://github.com/liuzc/LeaveIt" target="_blank">LeaveIt Hugo Theme 作者github</a></li>
+</ul></blockquote>]]></description>
+</item>
+<item>
     <title>建站历史003</title>
-    <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2003/</link>
+    <link>http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2003/</link>
     <pubDate>Fri, 23 Aug 2019 12:43:09 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2003/</guid>
-    <description><![CDATA[添加侧边导航栏 修改代码高亮 添加阅读进度条 相关链接 侧边导航栏 Hugo博客侧边导航栏 代码高亮 代码高亮 添加阅读进度条 为 LeaveIt 主题添加阅读进度条]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2003/</guid>
+    <description><![CDATA[<ul>
+<li>添加侧边导航栏</li>
+<li>修改代码高亮</li>
+<li>添加阅读进度条</li>
+</ul>
+<blockquote>
+<p>相关链接</p></blockquote>
+<blockquote>
+<ul>
+<li>侧边导航栏 <a href="/posts/博客侧边导航栏/" target="_blank">Hugo博客侧边导航栏</a></li>
+<li>代码高亮 <a href="/posts/博客代码高亮/" target="_blank">代码高亮</a></li>
+<li>添加阅读进度条 <a href="https://mogeko.me/2019/070/" target="_blank">为 LeaveIt 主题添加阅读进度条</a></li>
+</ul></blockquote>]]></description>
+</item>
+<item>
     <title>建站历史002</title>
-    <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2002/</link>
+    <link>http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2002/</link>
     <pubDate>Mon, 01 Jul 2019 17:58:52 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2002/</guid>
-    <description><![CDATA[添加鼠标跟随的鲸鱼特效 添加访客人次计数功能(相同访客不重复累加) 绑定价值199RMB的域名yyqx.online/ 添加网页图标 相关链接 鲸鱼特]]></description>
-</item><item>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2002/</guid>
+    <description><![CDATA[<ul>
+<li>添加鼠标跟随的鲸鱼特效</li>
+<li>添加访客人次计数功能(相同访客不重复累加)</li>
+<li>绑定价值199RMB的域名<a href="//www.yyqx.online/" target="_blank" rel="noopener noreffer ">yyqx.online/</a></li>
+<li>添加网页图标</li>
+</ul>
+<blockquote>
+<p>相关链接</p></blockquote>
+<blockquote>
+<ul>
+<li>鲸鱼特效 <a href="https://www.html5tricks.com/html5-whale.html" target="_blank">HTML5鲸鱼动画</a></li>
+<li>访客计数 <a href="https://blog.hgtweb.com/2018/busuanzi/" target="_blank">不蒜子 - 极简网页计数器</a></li>
+<li>在哪里买域名 <a href="https://wanwang.aliyun.com/domain/yumingheji" target="_blank">阿里巴巴万网</a></li>
+<li>网页图标生成和使用 <a href="https://realfavicongenerator.net/" target="_blank">Favicon Generator</a></li>
+<li>域名绑定 <a href="https://blog.csdn.net/qq_29232943/article/details/52786603" target="_blank">GitHub Pages 绑定来自阿里云的域名</a></li>
+<li>为什么要写技术博客 <a href="https://www.bilibili.com/video/av56930990" target="_blank">b站up主CodeSheep视频 - 为什么程序员必须写技术博客?以及如何写?</a></li>
+</ul></blockquote>]]></description>
+</item>
+<item>
     <title>建站历史001</title>
-    <link>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2001/</link>
+    <link>http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2001/</link>
     <pubDate>Sun, 30 Jun 2019 13:23:35 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://seacj.github.io/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2001/</guid>
-    <description><![CDATA[建站有一段时间了，中途其实折腾了挺多东西的，特别是在 hugo-theme-learn 这个主题上折腾了太久，现在换成 LeaveIt 感觉好看多了。 &ldquo;博客搭建&quot;这个t]]></description>
-</item></channel>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/%E5%BB%BA%E7%AB%99%E5%8E%86%E5%8F%B2001/</guid>
+    <description><![CDATA[<p>建站有一段时间了，中途其实折腾了挺多东西的，特别是在
+<a href="learn.netlify.com/en/cont/" target="_blank">hugo-theme-learn</a>
+这个主题上折腾了太久，现在换成
+<a href="https://themes.gohugo.io/leaveit/" target="_blank">LeaveIt</a>
+感觉好看多了。
+&ldquo;博客搭建&quot;这个tag以后就用来记录这个博客搭建的过程，标题带&quot;建站历史&quot;就简单记录一下这个破站更新的过程吧。</p>]]></description>
+</item>
+</channel>
 </rss>
