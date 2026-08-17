@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>声纹识别 - 标签 - 草祭</title>
-        <link>http://localhost:1313/tags/%E5%A3%B0%E7%BA%B9%E8%AF%86%E5%88%AB/</link>
+        <link>http://localhost:13981/tags/%E5%A3%B0%E7%BA%B9%E8%AF%86%E5%88%AB/</link>
         <description>声纹识别 - 标签 - 草祭</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 02 Jan 2020 20:13:20 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%A3%B0%E7%BA%B9%E8%AF%86%E5%88%AB/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 02 Jan 2020 20:13:20 &#43;0800</lastBuildDate><atom:link href="http://localhost:13981/tags/%E5%A3%B0%E7%BA%B9%E8%AF%86%E5%88%AB/" rel="self" type="application/rss+xml" /><item>
     <title>声纹识别X-Vector</title>
-    <link>http://localhost:1313/posts/x-vector/</link>
+    <link>http://localhost:13981/posts/x-vector/</link>
     <pubDate>Thu, 02 Jan 2020 20:13:20 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:1313/posts/x-vector/</guid>
+    <guid>http://localhost:13981/posts/x-vector/</guid>
     <description><![CDATA[<h2 id="背景">背景</h2>
 <p>声纹识别上x-vector被作为很多赛事的baseline使用，包括aishell2018、ASVspoof2019。介绍x-vector的文章主要有[1] [2]两篇，[1]介绍x-vector的整体和细节部分，[2]对实验进行了补充分析。</p>]]></description>
 </item>

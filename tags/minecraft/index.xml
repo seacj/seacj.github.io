@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Minecraft - 标签 - 草祭</title>
-        <link>http://localhost:1313/tags/minecraft/</link>
+        <link>http://localhost:13981/tags/minecraft/</link>
         <description>Minecraft - 标签 - 草祭</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 13 Mar 2020 01:53:35 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/minecraft/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 13 Mar 2020 01:53:35 &#43;0800</lastBuildDate><atom:link href="http://localhost:13981/tags/minecraft/" rel="self" type="application/rss+xml" /><item>
     <title>Ubuntu搭建minecraft服务器</title>
-    <link>http://localhost:1313/posts/ubuntu%E6%90%AD%E5%BB%BAminecraft%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+    <link>http://localhost:13981/posts/ubuntu%E6%90%AD%E5%BB%BAminecraft%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
     <pubDate>Fri, 13 Mar 2020 01:53:35 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:1313/posts/ubuntu%E6%90%AD%E5%BB%BAminecraft%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+    <guid>http://localhost:13981/posts/ubuntu%E6%90%AD%E5%BB%BAminecraft%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
     <description><![CDATA[<h2 id="题记">题记</h2>
 <p>最近在b站刷了好几个游戏区up主更新了<strong>Minecraft</strong>(我的世界)的视频，心血来潮我也想开始玩一玩，依稀记得好像Minecraft可以装在远程，然后多人共同使用，查了一下<em>同时联机人数为5或以下，内存需要512MB</em> ，所以心血来潮在我的<strong>乞丐配置</strong>的服务器上建一个Minecraft服务器。我主要参照<a href="https://linux.cn/article-9480-1.html" target="_blank" rel="noopener noreffer ">如何搭建一个“我的世界”服务器 - 快速指南</a>进行搭建，这篇博客就来记录一下我搭建的过程。</p>]]></description>
 </item>

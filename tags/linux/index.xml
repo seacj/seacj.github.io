@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Linux - 标签 - 草祭</title>
-        <link>http://localhost:1313/tags/linux/</link>
+        <link>http://localhost:13981/tags/linux/</link>
         <description>Linux - 标签 - 草祭</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 27 Nov 2020 15:23:31 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/linux/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 27 Nov 2020 15:23:31 &#43;0800</lastBuildDate><atom:link href="http://localhost:13981/tags/linux/" rel="self" type="application/rss+xml" /><item>
     <title>力扣shell题</title>
-    <link>http://localhost:1313/posts/%E5%8A%9B%E6%89%A3shell%E9%A2%98/</link>
+    <link>http://localhost:13981/posts/%E5%8A%9B%E6%89%A3shell%E9%A2%98/</link>
     <pubDate>Fri, 27 Nov 2020 15:23:31 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:1313/posts/%E5%8A%9B%E6%89%A3shell%E9%A2%98/</guid>
+    <guid>http://localhost:13981/posts/%E5%8A%9B%E6%89%A3shell%E9%A2%98/</guid>
     <description><![CDATA[<h1 id="192-统计词频"><a href="https://leetcode-cn.com/problems/word-frequency/" target="_blank" rel="noopener noreffer ">192. 统计词频</a></h1>
 <p>写一个 bash 脚本以统计一个文本文件 <code>words.txt</code> 中每个单词出现的频率。</p>
 <div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
@@ -21,64 +21,64 @@
 </item>
 <item>
     <title>Tmux学习</title>
-    <link>http://localhost:1313/posts/tmux%E5%AD%A6%E4%B9%A0/</link>
+    <link>http://localhost:13981/posts/tmux%E5%AD%A6%E4%B9%A0/</link>
     <pubDate>Sat, 18 Jul 2020 16:07:38 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:1313/posts/tmux%E5%AD%A6%E4%B9%A0/</guid>
+    <guid>http://localhost:13981/posts/tmux%E5%AD%A6%E4%B9%A0/</guid>
     <description><![CDATA[<h2 id="题记">题记</h2>
 <p>用了快半年的<strong>screen</strong>，最近想换成<strong>tmux</strong>试一试，所以用博客记录一下简单的使用体验。这篇博客的内容主要参考了<a href="https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/" target="_blank" rel="noopener noreffer ">How to Use tmux on Linux (and Why It’s Better Than Screen)</a>。</p>]]></description>
 </item>
 <item>
     <title>记一次服务器被黑</title>
-    <link>http://localhost:1313/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/</link>
+    <link>http://localhost:13981/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/</link>
     <pubDate>Tue, 09 Jun 2020 14:41:26 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:1313/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/</guid>
+    <guid>http://localhost:13981/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A2%AB%E9%BB%91/</guid>
     <description><![CDATA[<h2 id="题记">题记</h2>
 <p>早上起来室友在群里发消息说服务器被人黑了，还被用来挖矿了，多了一个<code>dota3.tar.gz</code>的文件，又让我开始警觉。我赶紧看了一下自己的阿里云服务器，发现每天都有ip在访问ssh，心态有点爆炸，不知道是本来就很普遍，还是我被盯上了。其实挖矿已经算好的了，前不久b站的<a href="https://www.bilibili.com/video/BV1ii4y1t7i1" target="_blank" rel="noopener noreffer ">党妹</a>服务器被植入勒索软件，服务器里面所有文件包括他的视频素材都不能打开。这篇博客记录一下我看的一些数据资料，还有提升一下服务器安全等级的过程。</p>]]></description>
 </item>
 <item>
     <title>Ubuntu搭建minecraft服务器</title>
-    <link>http://localhost:1313/posts/ubuntu%E6%90%AD%E5%BB%BAminecraft%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+    <link>http://localhost:13981/posts/ubuntu%E6%90%AD%E5%BB%BAminecraft%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
     <pubDate>Fri, 13 Mar 2020 01:53:35 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:1313/posts/ubuntu%E6%90%AD%E5%BB%BAminecraft%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+    <guid>http://localhost:13981/posts/ubuntu%E6%90%AD%E5%BB%BAminecraft%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
     <description><![CDATA[<h2 id="题记">题记</h2>
 <p>最近在b站刷了好几个游戏区up主更新了<strong>Minecraft</strong>(我的世界)的视频，心血来潮我也想开始玩一玩，依稀记得好像Minecraft可以装在远程，然后多人共同使用，查了一下<em>同时联机人数为5或以下，内存需要512MB</em> ，所以心血来潮在我的<strong>乞丐配置</strong>的服务器上建一个Minecraft服务器。我主要参照<a href="https://linux.cn/article-9480-1.html" target="_blank" rel="noopener noreffer ">如何搭建一个“我的世界”服务器 - 快速指南</a>进行搭建，这篇博客就来记录一下我搭建的过程。</p>]]></description>
 </item>
 <item>
     <title>Awk学习</title>
-    <link>http://localhost:1313/posts/awk%E5%AD%A6%E4%B9%A0/</link>
+    <link>http://localhost:13981/posts/awk%E5%AD%A6%E4%B9%A0/</link>
     <pubDate>Thu, 12 Mar 2020 00:55:02 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:1313/posts/awk%E5%AD%A6%E4%B9%A0/</guid>
+    <guid>http://localhost:13981/posts/awk%E5%AD%A6%E4%B9%A0/</guid>
     <description><![CDATA[<h2 id="题记">题记</h2>
 <p><code>awk</code>是unix下很实用的文本编辑语言。可以快速处理很多操作。参考资料是b站up主正月点灯笼的<a href="https://www.bilibili.com/video/av4282247" target="_blank" rel="noopener noreffer ">awk入门教程</a>。这篇博客用来记录一下awk里面非常基础的操作。</p>]]></description>
 </item>
 <item>
     <title>记一次Ubuntu图形化界面配置</title>
-    <link>http://localhost:1313/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/</link>
+    <link>http://localhost:13981/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/</link>
     <pubDate>Sun, 01 Mar 2020 15:29:17 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:1313/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/</guid>
+    <guid>http://localhost:13981/posts/%E9%85%8D%E7%BD%AE%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2/</guid>
     <description><![CDATA[<h2 id="题记">题记</h2>
 <p>以前配实验室的服务器的时候经常出现各种问题，但是因为又不是自己的服务器，所以不敢乱整，很多问题只要影响不大就将就着用了。不过现在买了个服务器，当然要折腾一下。所以先从远程搭建图形化界面开始吧。这<strong>不是教程</strong>，只是记录一下我的实验而已，不过应该还是有借鉴价值的，至少先踩一些坑。</p>]]></description>
 </item>
 <item>
     <title>部署博客到阿里云服务器</title>
-    <link>http://localhost:1313/posts/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+    <link>http://localhost:13981/posts/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
     <pubDate>Sat, 29 Feb 2020 19:18:30 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:1313/posts/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+    <guid>http://localhost:13981/posts/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%88%B0%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
     <description><![CDATA[<h2 id="题记">题记</h2>
 <p>终于还是花了100RMB钱买了一年的阿里云服务器，现在把github pages的网站部署到服务器上。由于踩的坑有点多，所以全篇下来可能有点啰嗦。</p>]]></description>
 </item>
 <item>
     <title>Shell学习</title>
-    <link>http://localhost:1313/posts/shell%E5%AD%A6%E4%B9%A0/</link>
+    <link>http://localhost:13981/posts/shell%E5%AD%A6%E4%B9%A0/</link>
     <pubDate>Fri, 10 Jan 2020 16:25:48 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:1313/posts/shell%E5%AD%A6%E4%B9%A0/</guid>
+    <guid>http://localhost:13981/posts/shell%E5%AD%A6%E4%B9%A0/</guid>
     <description><![CDATA[<h2 id="题记">题记</h2>
 <p>由于要跑kaldi(一个语音识别工具)，里面有很多shell脚本要运行，所以快速学习一遍shell，主要是参考https://www.runoob.com/linux/linux-shell-variable.html 学习。</p>]]></description>
 </item>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=13981&amp;path=livereload" data-no-instant defer></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Leetcode354俄罗斯套娃 - 草祭</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/">
+        <title>Leetcode354俄罗斯套娃 - 草祭</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:13981/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/">
   <meta property="og:site_name" content="草祭">
   <meta property="og:title" content="Leetcode354俄罗斯套娃">
   <meta property="og:description" content="俄罗斯套娃题题目 给定一些标记了宽度和高度的信封，宽度和高度以整数对形式 (w, h) 出现。当另一个信封的宽度和高度都比这个信封大的时候，这个信封就可以放进另一个信封里，如同俄罗斯套娃一样。">
@@ -24,7 +24,7 @@
 <meta name="apple-mobile-web-app-title" content="My cool site">
 <meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/" /><link rel="prev" href="http://localhost:1313/posts/%E9%9A%8F%E7%AC%9420210203/" /><link rel="next" href="http://localhost:1313/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%94%A8lmdb%E7%BB%99%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96%E5%8A%A0%E9%80%9F/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:13981/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/" /><link rel="prev" href="http://localhost:13981/posts/%E9%9A%8F%E7%AC%9420210203/" /><link rel="next" href="http://localhost:13981/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%94%A8lmdb%E7%BB%99%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96%E5%8A%A0%E9%80%9F/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -34,9 +34,9 @@
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/localhost:1313\/posts\/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83\/"
+            "@id": "http:\/\/localhost:13981\/posts\/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83\/"
         },"genre": "posts","keywords": "算法, leetcode, 动态规划","wordcount":  1412 ,
-        "url": "http:\/\/localhost:1313\/posts\/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83\/","datePublished": "2021-03-04T11:39:44+08:00","dateModified": "2021-03-04T11:39:44+08:00","publisher": {
+        "url": "http:\/\/localhost:13981\/posts\/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83\/","datePublished": "2021-03-04T11:39:44+08:00","dateModified": "2021-03-04T11:39:44+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -163,7 +163,7 @@
 <p>问题的关键是状态转移方程为 : <em>dp</em>[<em>i</em>]=max(<em>dp</em>[<em>j</em>])+1,其中0≤<em>j</em>&lt;<em>i</em>且<em>num</em>[<em>j</em>]&lt;<em>num</em>[<em>i</em>]。</p>
 <p>需要注意的是这里的状态dp[j]指的是以第j个数字结尾的子序列(注意是子序列以num[i]结尾)的最长的长度。</p>
 <p>根据状态转移方程，代码就出来了：</p>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
     <div class="code-header language-python">
         <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
         <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
@@ -218,7 +218,7 @@
       </tr>
   </tbody>
 </table>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
     <div class="code-header language-python">
         <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
         <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
@@ -344,7 +344,7 @@
       </tr>
   </tbody>
 </table>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
     <div class="code-header language-python">
         <span class="code-title"><i class="arrow fas fa-angle-right" aria-hidden="true"></i></span>
         <span class="ellipses"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></span>
@@ -396,7 +396,7 @@
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="http://localhost:1313/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/" data-title="Leetcode354俄罗斯套娃" data-hashtags="算法,leetcode,动态规划"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="http://localhost:1313/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/" data-title="Leetcode354俄罗斯套娃"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/" data-hashtag="算法"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/" data-title="Leetcode354俄罗斯套娃"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://localhost:1313/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/" data-title="Leetcode354俄罗斯套娃"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/" data-title="Leetcode354俄罗斯套娃"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/" data-title="Leetcode354俄罗斯套娃" data-description=""><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fleetcode354%25E4%25BF%2584%25E7%25BD%2597%25E6%2596%25AF%25E5%25A5%2597%25E5%25A8%2583%2f&amp;text=Leetcode354%e4%bf%84%e7%bd%97%e6%96%af%e5%a5%97%e5%a8%83" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 X" data-sharer="x" data-url="http://localhost:13981/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/" data-title="Leetcode354俄罗斯套娃" data-hashtags="算法,leetcode,动态规划"><i class="fab fa-x-twitter" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Threads" data-sharer="threads" data-url="http://localhost:13981/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/" data-title="Leetcode354俄罗斯套娃"><i class="fab fa-threads" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:13981/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/" data-hashtag="算法"><i class="fab fa-facebook-square" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://localhost:13981/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/" data-title="Leetcode354俄罗斯套娃"><i class="fab fa-hacker-news" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://localhost:13981/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/" data-title="Leetcode354俄罗斯套娃"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:13981/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/" data-title="Leetcode354俄罗斯套娃"><i class="fab fa-weibo" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Diaspora" data-sharer="diaspora" data-url="http://localhost:13981/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/" data-title="Leetcode354俄罗斯套娃" data-description=""><i class="fab fa-diaspora" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a13981%2fposts%2fleetcode354%25E4%25BF%2584%25E7%25BD%2597%25E6%2596%25AF%25E5%25A5%2597%25E5%25A8%2583%2f&amp;text=Leetcode354%e4%bf%84%e7%bd%97%e6%96%af%e5%a5%97%e5%a8%83" target="_blank" title="分享到 Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
