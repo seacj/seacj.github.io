@@ -1,46 +1,46 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Categories - 分类 - 草祭</title>
-        <link>http://localhost:13981/categories/</link>
+        <link>https://yyqx.online/categories/</link>
         <description>Categories - 分类 - 草祭</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 10 May 2022 09:24:46 &#43;0800</lastBuildDate><atom:link href="http://localhost:13981/categories/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 10 May 2022 09:24:46 &#43;0800</lastBuildDate><atom:link href="https://yyqx.online/categories/" rel="self" type="application/rss+xml" /><item>
     <title>编程-ღ-技术</title>
-    <link>http://localhost:13981/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/</link>
+    <link>https://yyqx.online/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/</link>
     <pubDate>Tue, 10 May 2022 09:24:46 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:13981/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/</guid>
+    <guid>https://yyqx.online/categories/%E7%BC%96%E7%A8%8B-%E1%83%A6-%E6%8A%80%E6%9C%AF/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>算法</title>
-    <link>http://localhost:13981/categories/%E7%AE%97%E6%B3%95/</link>
+    <link>https://yyqx.online/categories/%E7%AE%97%E6%B3%95/</link>
     <pubDate>Sat, 21 Aug 2021 20:22:03 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:13981/categories/%E7%AE%97%E6%B3%95/</guid>
+    <guid>https://yyqx.online/categories/%E7%AE%97%E6%B3%95/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>随笔-ღ-心得</title>
-    <link>http://localhost:13981/categories/%E9%9A%8F%E7%AC%94-%E1%83%A6-%E5%BF%83%E5%BE%97/</link>
+    <link>https://yyqx.online/categories/%E9%9A%8F%E7%AC%94-%E1%83%A6-%E5%BF%83%E5%BE%97/</link>
     <pubDate>Wed, 03 Feb 2021 17:14:46 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:13981/categories/%E9%9A%8F%E7%AC%94-%E1%83%A6-%E5%BF%83%E5%BE%97/</guid>
+    <guid>https://yyqx.online/categories/%E9%9A%8F%E7%AC%94-%E1%83%A6-%E5%BF%83%E5%BE%97/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>博客</title>
-    <link>http://localhost:13981/categories/%E5%8D%9A%E5%AE%A2/</link>
+    <link>https://yyqx.online/categories/%E5%8D%9A%E5%AE%A2/</link>
     <pubDate>Thu, 23 Jul 2020 16:43:32 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:13981/categories/%E5%8D%9A%E5%AE%A2/</guid>
+    <guid>https://yyqx.online/categories/%E5%8D%9A%E5%AE%A2/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>教程-ღ-点评</title>
-    <link>http://localhost:13981/categories/%E6%95%99%E7%A8%8B-%E1%83%A6-%E7%82%B9%E8%AF%84/</link>
+    <link>https://yyqx.online/categories/%E6%95%99%E7%A8%8B-%E1%83%A6-%E7%82%B9%E8%AF%84/</link>
     <pubDate>Wed, 20 May 2020 17:22:34 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:13981/categories/%E6%95%99%E7%A8%8B-%E1%83%A6-%E7%82%B9%E8%AF%84/</guid>
+    <guid>https://yyqx.online/categories/%E6%95%99%E7%A8%8B-%E1%83%A6-%E7%82%B9%E8%AF%84/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

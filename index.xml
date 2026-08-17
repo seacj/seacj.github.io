@@ -1,16 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>草祭</title>
-        <link>http://localhost:13981/</link>
+        <link>https://yyqx.online/</link>
         <description>This is my cool site</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 10 May 2022 09:24:46 &#43;0800</lastBuildDate>
-            <atom:link href="http://localhost:13981/index.xml" rel="self" type="application/rss+xml" />
+            <atom:link href="https://yyqx.online/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>C&#43;&#43;面向对象高级编程</title>
-    <link>http://localhost:13981/posts/cpp%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B/</link>
+    <link>https://yyqx.online/posts/cpp%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B/</link>
     <pubDate>Tue, 10 May 2022 09:24:46 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:13981/posts/cpp%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B/</guid>
+    <guid>https://yyqx.online/posts/cpp%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B/</guid>
     <description><![CDATA[<h1 id="复习complex类的实现过程">复习Complex类的实现过程</h1>
 <p>构建复数Complex类的思考路程：</p>
 <div class="code-block code-line-numbers" style="counter-reset: code-block 0">
@@ -79,10 +79,10 @@
 </item>
 <item>
     <title>Leetcode滑动窗口</title>
-    <link>http://localhost:13981/posts/leetcode%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</link>
+    <link>https://yyqx.online/posts/leetcode%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</link>
     <pubDate>Sat, 21 Aug 2021 20:22:03 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:13981/posts/leetcode%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</guid>
+    <guid>https://yyqx.online/posts/leetcode%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</guid>
     <description><![CDATA[<h1 id="题记">题记</h1>
 <p>滑动窗口每次做完，过一段时间又忘了，所以还是需要在一起总结一下。</p>
 <h1 id="模板">模板</h1>
@@ -90,10 +90,10 @@
 </item>
 <item>
     <title>python中自定义排序函数</title>
-    <link>http://localhost:13981/posts/%E6%8E%92%E5%BA%8F/</link>
+    <link>https://yyqx.online/posts/%E6%8E%92%E5%BA%8F/</link>
     <pubDate>Thu, 27 May 2021 11:13:18 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:13981/posts/%E6%8E%92%E5%BA%8F/</guid>
+    <guid>https://yyqx.online/posts/%E6%8E%92%E5%BA%8F/</guid>
     <description><![CDATA[<p>不从算法层面讨论，而看看python实现上怎么写。</p>
 <h2 id="现有字典-d-a24g52i12k33请按value值进行排序">现有字典 d= {&lsquo;a&rsquo;:24,&lsquo;g&rsquo;:52,&lsquo;i&rsquo;:12,&lsquo;k&rsquo;:33}请按value值进行排序?</h2>
 <div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
@@ -107,48 +107,48 @@
 </item>
 <item>
     <title>机器学习用lmdb给数据读取加速</title>
-    <link>http://localhost:13981/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%94%A8lmdb%E7%BB%99%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96%E5%8A%A0%E9%80%9F/</link>
+    <link>https://yyqx.online/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%94%A8lmdb%E7%BB%99%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96%E5%8A%A0%E9%80%9F/</link>
     <pubDate>Wed, 28 Apr 2021 10:35:19 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:13981/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%94%A8lmdb%E7%BB%99%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96%E5%8A%A0%E9%80%9F/</guid>
+    <guid>https://yyqx.online/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%94%A8lmdb%E7%BB%99%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96%E5%8A%A0%E9%80%9F/</guid>
     <description><![CDATA[<h1 id="lmdb数据库">LMDB数据库</h1>
 <p>感觉最近训练模型的时候，GPU利用率经常是间断出现0%，试了很多方法比如dataloader的多个worker，prefetch，感觉速度没达到预期，而且依然会出现0%的情况，所以使用LMDB试试能不能提升效率。</p>]]></description>
 </item>
 <item>
     <title>Leetcode354俄罗斯套娃</title>
-    <link>http://localhost:13981/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/</link>
+    <link>https://yyqx.online/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/</link>
     <pubDate>Thu, 04 Mar 2021 11:39:44 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:13981/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/</guid>
+    <guid>https://yyqx.online/posts/leetcode354%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83/</guid>
     <description><![CDATA[<h2 id="俄罗斯套娃题题目">俄罗斯套娃题题目</h2>
 <p>给定一些标记了宽度和高度的信封，宽度和高度以整数对形式 (w, h) 出现。当另一个信封的宽度和高度都比这个信封大的时候，这个信封就可以放进另一个信封里，如同俄罗斯套娃一样。</p>]]></description>
 </item>
 <item>
     <title>随笔20210203</title>
-    <link>http://localhost:13981/posts/%E9%9A%8F%E7%AC%9420210203/</link>
+    <link>https://yyqx.online/posts/%E9%9A%8F%E7%AC%9420210203/</link>
     <pubDate>Wed, 03 Feb 2021 17:14:46 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:13981/posts/%E9%9A%8F%E7%AC%9420210203/</guid>
+    <guid>https://yyqx.online/posts/%E9%9A%8F%E7%AC%9420210203/</guid>
     <description><![CDATA[<p>归根结底，之所以熬夜，只是不再期待明天而已</p>
 <p>但是现在，我想明天早上，去买一份肠粉当作早餐，如果有豆浆或者绿豆沙，我要买一杯</p>
 <p>现在天气很好，我要出门，买两斤15块一斤的油炸鸡锁骨了</p>]]></description>
 </item>
 <item>
     <title>回溯算法题</title>
-    <link>http://localhost:13981/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E9%A2%98/</link>
+    <link>https://yyqx.online/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E9%A2%98/</link>
     <pubDate>Thu, 10 Dec 2020 11:06:09 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:13981/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E9%A2%98/</guid>
+    <guid>https://yyqx.online/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E9%A2%98/</guid>
     <description><![CDATA[<h2 id="题记">题记</h2>
 <p>一年半之前写了一篇回溯算法的<a href="/posts/%e5%9b%9e%e6%ba%af%e7%ae%97%e6%b3%95" rel="">博客</a>, 不过只是简单的了解了一下,真要写题还是写不出来(过了一年半,不会写的题还是不会写),所以再集中刷一下题.</p>
 <p>回溯法通常应用在树形问题上.</p>]]></description>
 </item>
 <item>
     <title>力扣shell题</title>
-    <link>http://localhost:13981/posts/%E5%8A%9B%E6%89%A3shell%E9%A2%98/</link>
+    <link>https://yyqx.online/posts/%E5%8A%9B%E6%89%A3shell%E9%A2%98/</link>
     <pubDate>Fri, 27 Nov 2020 15:23:31 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:13981/posts/%E5%8A%9B%E6%89%A3shell%E9%A2%98/</guid>
+    <guid>https://yyqx.online/posts/%E5%8A%9B%E6%89%A3shell%E9%A2%98/</guid>
     <description><![CDATA[<h1 id="192-统计词频"><a href="https://leetcode-cn.com/problems/word-frequency/" target="_blank" rel="noopener noreffer ">192. 统计词频</a></h1>
 <p>写一个 bash 脚本以统计一个文本文件 <code>words.txt</code> 中每个单词出现的频率。</p>
 <div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
@@ -161,10 +161,10 @@
 </item>
 <item>
     <title>Leetcode数组和字符串</title>
-    <link>http://localhost:13981/posts/leetcode%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+    <link>https://yyqx.online/posts/leetcode%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
     <pubDate>Mon, 02 Nov 2020 15:04:35 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:13981/posts/leetcode%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+    <guid>https://yyqx.online/posts/leetcode%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
     <description><![CDATA[<h1 id="题记">题记</h1>
 <p>看到一个说法，面试考数组、字符串题的频率最高，所以来刷一下这类题。这次根据leetocde提供的<a href="https://leetcode-cn.com/leetbook/read/array-and-string/yf47s/" target="_blank" rel="noopener noreffer ">教程</a>的顺序来学习。</p>
 <h1 id="数组简介">数组简介</h1>
@@ -173,10 +173,10 @@
 </item>
 <item>
     <title>Leetcode链表题</title>
-    <link>http://localhost:13981/posts/leetcode%E9%93%BE%E8%A1%A8/</link>
+    <link>https://yyqx.online/posts/leetcode%E9%93%BE%E8%A1%A8/</link>
     <pubDate>Tue, 13 Oct 2020 20:05:17 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:13981/posts/leetcode%E9%93%BE%E8%A1%A8/</guid>
+    <guid>https://yyqx.online/posts/leetcode%E9%93%BE%E8%A1%A8/</guid>
     <description><![CDATA[<h1 id="题记">题记</h1>
 <p>这两天刷了十道链表题，打算做个总结，刚好leetcode也提供了一个系统学习的<a href="https://leetcode-cn.com/leetbook/read/linked-list/jbex5/" target="_blank" rel="noopener noreffer ">链接</a>，这里做一个小总结。</p>
 <h1 id="双指针技巧">双指针技巧</h1>

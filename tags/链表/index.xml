@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>链表 - 标签 - 草祭</title>
-        <link>http://localhost:13981/tags/%E9%93%BE%E8%A1%A8/</link>
+        <link>https://yyqx.online/tags/%E9%93%BE%E8%A1%A8/</link>
         <description>链表 - 标签 - 草祭</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 13 Oct 2020 20:05:17 &#43;0800</lastBuildDate><atom:link href="http://localhost:13981/tags/%E9%93%BE%E8%A1%A8/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 13 Oct 2020 20:05:17 &#43;0800</lastBuildDate><atom:link href="https://yyqx.online/tags/%E9%93%BE%E8%A1%A8/" rel="self" type="application/rss+xml" /><item>
     <title>Leetcode链表题</title>
-    <link>http://localhost:13981/posts/leetcode%E9%93%BE%E8%A1%A8/</link>
+    <link>https://yyqx.online/posts/leetcode%E9%93%BE%E8%A1%A8/</link>
     <pubDate>Tue, 13 Oct 2020 20:05:17 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:13981/posts/leetcode%E9%93%BE%E8%A1%A8/</guid>
+    <guid>https://yyqx.online/posts/leetcode%E9%93%BE%E8%A1%A8/</guid>
     <description><![CDATA[<h1 id="题记">题记</h1>
 <p>这两天刷了十道链表题，打算做个总结，刚好leetcode也提供了一个系统学习的<a href="https://leetcode-cn.com/leetbook/read/linked-list/jbex5/" target="_blank" rel="noopener noreffer ">链接</a>，这里做一个小总结。</p>
 <h1 id="双指针技巧">双指针技巧</h1>

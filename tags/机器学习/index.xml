@@ -1,23 +1,23 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>机器学习 - 标签 - 草祭</title>
-        <link>http://localhost:13981/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+        <link>https://yyqx.online/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
         <description>机器学习 - 标签 - 草祭</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 28 Apr 2021 10:35:19 &#43;0800</lastBuildDate><atom:link href="http://localhost:13981/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 28 Apr 2021 10:35:19 &#43;0800</lastBuildDate><atom:link href="https://yyqx.online/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
     <title>机器学习用lmdb给数据读取加速</title>
-    <link>http://localhost:13981/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%94%A8lmdb%E7%BB%99%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96%E5%8A%A0%E9%80%9F/</link>
+    <link>https://yyqx.online/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%94%A8lmdb%E7%BB%99%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96%E5%8A%A0%E9%80%9F/</link>
     <pubDate>Wed, 28 Apr 2021 10:35:19 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:13981/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%94%A8lmdb%E7%BB%99%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96%E5%8A%A0%E9%80%9F/</guid>
+    <guid>https://yyqx.online/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%94%A8lmdb%E7%BB%99%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96%E5%8A%A0%E9%80%9F/</guid>
     <description><![CDATA[<h1 id="lmdb数据库">LMDB数据库</h1>
 <p>感觉最近训练模型的时候，GPU利用率经常是间断出现0%，试了很多方法比如dataloader的多个worker，prefetch，感觉速度没达到预期，而且依然会出现0%的情况，所以使用LMDB试试能不能提升效率。</p>]]></description>
 </item>
 <item>
     <title>声纹识别X-Vector</title>
-    <link>http://localhost:13981/posts/x-vector/</link>
+    <link>https://yyqx.online/posts/x-vector/</link>
     <pubDate>Thu, 02 Jan 2020 20:13:20 &#43;0800</pubDate>
     <author>xxxx</author>
-    <guid>http://localhost:13981/posts/x-vector/</guid>
+    <guid>https://yyqx.online/posts/x-vector/</guid>
     <description><![CDATA[<h2 id="背景">背景</h2>
 <p>声纹识别上x-vector被作为很多赛事的baseline使用，包括aishell2018、ASVspoof2019。介绍x-vector的文章主要有[1] [2]两篇，[1]介绍x-vector的整体和细节部分，[2]对实验进行了补充分析。</p>]]></description>
 </item>
